@@ -1,0 +1,1307 @@
+
+/*Template Name: Pilot - Responsive Landing Page Template
+Theme URL: http://themeforest.net/user/DSA79/
+Description: Pilot - Responsive Landing Page Template
+Author: DSA79
+Author URL: http://themeforest.net/user/DSA79
+Version: 1.0.0
+Website: www.dsathemes.com
+Tags: responsive, html5 template, one page, landing, mobile app, company, creative, business, corporate, project
+*/
+
+
+/* ------------------------------------------ */
+/*             TABLE OF CONTENTS
+/* ------------------------------------------ */
+
+/*   01 - General & Basic Styles   */
+/*   02 - Header & Navigation      */
+/*   03 - Intro      			   */
+/*   04 - Banner_1    			   */
+/*   05 - Features                 */
+/*   06 - Banner_2	               */
+/*   07 - Newsletter               */
+/*   08 - Screens			       */
+/*   09 - Banner_3	               */
+/*   10 - Testimonials Rotator	   */
+/*   11 - Pricing	               */
+/*   12 - Contact	               */
+/*   13 - Footer         		   */
+/*   14 - Scroll to Top	   		   */
+/*   15 - Contact Form Response    */
+
+
+
+/* ==========================================================================
+   01. GENERAL & BASIC STYLES
+   ========================================================================== */ 
+
+/*------------------------------------------*/
+/*	 Preload Animation 
+/*------------------------------------------*/
+#preloader{
+	position: fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:99999; 
+	background-color:#fff;
+}
+
+#status{
+	position:absolute;
+	top:50%; 
+	left:50%; 
+	margin:-100px 0 0 -100px;
+	width:200px;
+	height:200px;
+	background-image:url(../img/icons/loader.gif);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:125px 125px;
+}        
+   
+/*------------------------------------------*/
+/*	 Parallax Settings
+/*------------------------------------------*/
+
+.parallax {
+	background-attachment: fixed !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#newsletter { 
+	background-image: url(../img/parallax_bg/newsletter_bkg.jpg);  
+}
+
+#testimonials-rotator { 
+	background-image: url(../img/parallax_bg/testimonials_bkg.jpg); 
+}
+
+/*------------------------------------------*/
+/*	 Headers
+/*------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0; 
+	margin-bottom: 10px;
+}
+
+/*------------------------------------------*/
+/*	 Link Setting
+/*------------------------------------------*/
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+a:hover {
+	color: #444;
+	text-decoration: none;
+}
+
+a:focus {
+	color: #f8f8f8;
+	outline: none;
+	text-decoration: none;
+} 
+
+/*------------------------------------------*/
+/*	 Lists
+/*------------------------------------------*/
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*------------------------------------------*/
+/*	 Theme Button
+/*------------------------------------------*/
+
+.btn-theme {
+	background-color: #d5512b;
+	border: 1px solid #bc4726;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	padding: 10px 20px;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.btn-theme:hover {
+	background-color: #bc4726;
+	border-color: #d5512b;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------------*/
+/*	 Black Button
+/*------------------------------------------*/
+
+.btn-black {
+	background-color: #444;
+	border: 1px solid #444;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	padding: 10px 20px;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.btn-black:hover {
+	background-color: #222;
+	border-color: #222;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------------*/
+/*	 Button Large
+/*------------------------------------------*/
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 18px;
+}
+
+/*------------------------------------------*/
+/*	 Button Hover/Focus
+/*------------------------------------------*/
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:focus {
+	color: #f8f8f8;
+	text-decoration: none;
+}
+
+/*------------------------------------------*/
+/*	 Section Titlebar
+/*------------------------------------------*/
+
+.titlebar {
+	margin-bottom: 50px;
+}
+
+.titlebar h2 {
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+
+.titlebar h3 {
+	line-height: 30px;
+}
+
+.titlebar h3 span {
+	color: #d5512b;
+}
+
+.titlebar p {
+	color: #444;
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+
+
+/* ==========================================================================
+   02. HEADER & NAVIGATION
+   ========================================================================== */
+
+/*------------------------------------------*/
+/*	 Logo Image    
+/*------------------------------------------*/
+
+.navbar-brand {
+	padding: 10px 15px;
+}  
+
+.navbar-brand:hover {
+	color: #fff;
+} 
+      
+/*------------------------------------------*/
+/*	 Navigation Menu    
+/*------------------------------------------*/
+
+.navbar {	
+	margin-bottom: 0;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+	padding: 30px 0px;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.navbar-fixed-top { 
+	border-bottom: none;
+}
+
+.navbar-nav > li > a {
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	line-height: 60px;
+	font-weight: 900;
+	text-transform: uppercase;
+	display: block;
+	padding: 0 15px;
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	 Navbar Scroll   
+/*------------------------------------------*/
+
+.scroll-fixed-navbar {
+	padding: 0px;
+	background-color: #d2512c;
+}
+
+.scroll-fixed-navbar .navbar-nav > li > a,
+.scroll-fixed-navbar .navbar-brand .black-color { 
+		color: #fff;
+}
+
+/*------------------------------------------*/
+/*	 Menu Hover
+/*------------------------------------------*/
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a.selected-nav {
+	color: #fff;
+    background-color: transparent;
+}
+
+.scroll-fixed-navbar .navbar-nav > li > a:hover, 
+.scroll-fixed-navbar .navbar-nav > li > a.selected-nav {
+	color: #333;
+}
+
+/*------------------------------------------*/
+/*	 Responsive Menu    
+/*------------------------------------------*/
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+	background-color: none;
+    padding: 10px;
+	margin: 13px 30px 13px 0;
+	border: none;
+	color: #fff;
+	border: 2px solid #fff;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+
+
+
+/* ==========================================================================
+   03. INTRO   
+   ========================================================================== */   
+
+#intro {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	display: block;
+	overflow: hidden;
+	padding: 0 !important;
+}
+  
+#slides {
+	position: relative;
+}
+
+#slides .scrollable {
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	*zoom: 1;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#slides .scrollable:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*------------------------------------------*/
+/*	 Intro Page Content   
+/*------------------------------------------*/
+
+.intro-content {
+	width: 80%; 
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	padding: 50px;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.intro-content h1 {
+	font-size: 500%;	
+	font-weight: 900; 
+	line-height: 95%;
+	margin-bottom: 20px; 
+}
+
+.intro-content h3 {
+	font-size: 200%;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-top: 0; 
+}
+
+/*------------------------------------------*/
+/*	 Intro Page Pagination   
+/*------------------------------------------*/
+
+.slides-pagination {
+	width: 100%;
+	position: absolute;
+	bottom: 24%;
+	z-index: 20;
+	text-align: center;
+}
+
+.slides-pagination a {
+	width: 30px;
+	height: 4px;
+	background: #ffffff;
+	color: #1a1a1a;
+	opacity: 0.5; 
+	-moz-opacity: 0.5; 
+	filter: alpha(opacity=50);
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	zoom: 1;
+	*display: inline;
+	margin: 2px;
+	overflow: hidden;
+	text-indent: -100%;
+}
+	
+.slides-pagination a:hover,
+.slides-pagination a.current {
+	opacity: 1; 
+	-moz-opacity: 1; 
+	filter: alpha(opacity=100);
+}
+   
+/*------------------------------------------*/
+/*	 Intro Page Scroll Down Button
+/*------------------------------------------*/
+
+.scroll-down {
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 5%;
+	z-index: 99;
+}
+
+.scroll-down span {
+	background: transparent;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto 10px;
+	border: 2px solid #fff;
+	box-shadow: 0px 0px 0px 0 rgba(10, 10, 10, 0.15);
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+.scroll-down span:hover {
+	background: #d2512c;
+	border-color: #d2512c;
+	box-shadow: 0px 0px 0px 10px rgba(240, 240, 240, 0.3);
+}
+
+.scroll-down span [class*="fa-"] {
+	color: #fff;
+	font-size: 36px;
+	line-height: 40px;
+}
+
+
+
+/* ==========================================================================
+   04. BANNER_1
+   ========================================================================== */
+
+#banner_1 {
+	padding-top: 80px;
+	border-bottom: 1px solid #ddd;
+}
+
+.banner_1_content h3 {
+	color: #d5512b;
+	margin-bottom: 20px;
+}
+
+.banner_1_content p {
+	color: #444;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.banner_1_content p strong {
+	line-height: 24px;
+}
+
+/*------------------------------------------*/
+/*	  Banner_1 Image
+/*------------------------------------------*/
+
+#banner_1 .img-responsive { 
+	display: inline-block; 
+}
+
+
+
+/* ==========================================================================
+   05. FEATURES
+   ========================================================================== */
+
+#features {
+	padding-top: 80px;
+	padding-bottom: 40px;
+	background-color: #ecf0f1;
+	border-bottom: 1px solid #ddd;
+}  
+   
+/*------------------------------------------*/
+/*	  Feature Box
+/*------------------------------------------*/
+
+.feature-box {
+	margin-bottom: 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/*------------------------------------------*/
+/*	  Feature Box Icon
+/*------------------------------------------*/
+
+.feature-box-icon {
+    background-color: #d5512b;
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    border-radius: 30px;
+    color: #FFF;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*------------------------------------------*/
+/*	  Feature Box Content
+/*------------------------------------------*/
+
+.feature-box-content {
+	padding-left: 70px;
+}
+
+.feature-box-content h4 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+
+
+/* ==========================================================================
+   06. BANNER_2
+   ========================================================================== */
+
+#banner_2 {
+	padding-top: 100px;
+}
+
+.banner_2_content h3 {
+	color: #d5512b;
+	margin-bottom: 20px;
+}
+
+.banner_2_content p {
+	color: #444;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/*------------------------------------------*/
+/*	  Banner List Content
+/*------------------------------------------*/
+
+.list-item {
+	margin-bottom: 20px;
+}
+
+.list-item i {
+	color: #d5512b;
+	margin-right: 8px;
+	font-size: 18px;
+}
+
+.list-item h5 {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+
+
+/* ==========================================================================
+   07. NEWSLETTER  
+   ========================================================================== */
+
+#subscribe {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #fff;
+} 
+
+/*------------------------------------------*/
+/*	  Newsletter Title
+/*------------------------------------------*/
+
+#newsletter_title h1 {
+	font-weight: 900;
+}
+
+#newsletter_title p {
+	line-height: 24px;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	padding: 0 8%;
+}
+
+/*------------------------------------------*/
+/*	  Newsletter Form
+/*------------------------------------------*/
+
+.subscribe-form {
+	margin: 25px auto 14px;
+    position: relative;
+    z-index: 10;
+	width: 90%;
+}
+
+.subscribe-form input {
+	border: 1px solid #ddd;
+	border-right: none;	
+	width: 100%;
+}
+
+.subscribe-input {
+    width: 75%;
+    height: 54px;
+	color: #222;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	padding-left: 10px;
+}
+
+.subscribe-submit {
+	width: 30%;
+	height: 54px;
+	position: absolute;
+    top: 0px;
+    right: 0px;
+	background-color: #d5512b;
+	border: 1px solid #d5512b;
+    color: #fff;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	text-decoration: none;
+	text-align: center;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+}
+
+.subscribe-submit:active {
+    outline: 0;
+}
+
+.subscribe-submit:hover {
+    opacity:0.9;
+}
+
+/*------------------------------------------*/
+/*	  Newsletter Form Error Message 
+/*------------------------------------------*/
+
+.error {
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	padding: 5px;
+}
+ 
+
+ 
+/* ==========================================================================
+   08. SCREENS 
+   ========================================================================== */
+
+#screens {
+	padding-top: 80px;
+	padding-bottom: 60px;
+	background-color: #ecf0f1;
+	border-bottom: 1px solid #ddd;
+} 
+
+#screenshot_1, 
+#screenshot_2,
+#screenshot_3,
+#screenshot_4,
+#screenshot_5,
+#screenshot_6, 
+#screenshot_7, 
+#screenshot_8 { 
+	margin-bottom: 40px;
+}
+
+/*------------------------------------------*/
+/*	  Image Hover Effect
+/*------------------------------------------*/
+
+.hover-details {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	-moz-transition: all ease 400ms ease-in-out;
+	-webkit-transition: all ease 400ms ease-in-out;
+	-o-transition: all ease 400ms ease-in-out;
+	transition: all ease 400ms ease-in-out;
+}
+
+.hover-details .img-cover {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(10, 10, 10, 0.55);
+	-moz-transition: all ease 400ms ease-in-out;
+	-webkit-transition: all ease 400ms ease-in-out;
+	-o-transition: all ease 400ms ease-in-out;
+	transition: all ease 400ms ease-in-out;
+}
+
+.hover-details > img {
+	width: 100%;
+	height: auto;
+	-moz-transition: all ease 400ms ease-in-out;
+	-webkit-transition: all ease 400ms ease-in-out;
+	-o-transition: all ease 400ms ease-in-out;
+	transition: all ease 400ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	  Image Zoom Icon
+/*------------------------------------------*/
+
+.image_zoom {
+	width:50px;
+	height:50px;
+	background-image: url(../img/icons/zoom-ico.png); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: #d5512b;	
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	border-radius: 50%;
+	margin-top: -25px;
+	margin-left:  -25px;
+	-webkit-transition: all ease 400ms ease-in-out;
+	-moz-transition: all ease 400ms ease-in-out;
+	-ms-transition: all ease 400ms ease-in-out;
+	-o-transition: all ease 400ms ease-in-out;
+	transition: all ease 400ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	 Image Title
+/*------------------------------------------*/
+
+.img-cover h3 {
+	width: 100%;	
+	position: absolute;
+	bottom: -28%;
+	color: #f8f8f8;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;	
+	padding: 0 10px;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	 Image Scale ( Hover Effect )
+/*------------------------------------------*/
+
+.hover-details:hover > img {
+	transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+}
+
+.hover-details:hover .image_zoom {
+	top: 45%;
+}
+
+.hover-details:hover .img-cover h3 {
+	bottom: 28%;
+}
+
+.hover-details:hover .img-cover {
+	opacity: 1;
+}
+
+.image_zoom:hover {
+	background-color: #333;
+}
+
+
+
+/* ==========================================================================
+   09. BANNER_3
+   ========================================================================== */
+
+#banner_3 {
+	padding-top: 80px;
+}
+
+.banner_3_content h3 {
+	color: #d5512b;
+	margin-bottom: 20px;
+}
+
+.banner_3_content p {
+	color: #444;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.stores a {
+	margin-right: 5px;
+}
+
+.stores a:last-child {
+	margin-right: 0;
+}
+
+/*------------------------------------------*/
+/*	  Banner_3 Image
+/*------------------------------------------*/
+
+#banner_3 .img-responsive { 
+	display: inline-block; 
+}
+
+
+
+/* ==========================================================================
+   10. TESTIMONIALS ROTATOR
+   ========================================================================== */
+
+.testimonials {
+	margin: 50px 8%;
+}
+
+.slides {
+	margin: 10px 0 50px;
+}
+
+/*------------------------------------------*/
+/*	 Author Avatar
+/*------------------------------------------*/
+
+.flexslider .slides img { 
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	text-align: center;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*------------------------------------------*/
+/*	 Message Author
+/*------------------------------------------*/
+
+.testimonials p.author {
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	margin-bottom: 0;
+	padding-top: 10px;
+}
+
+.testimonials p.author span {
+	color: #d5512b;
+	font-weight: 900;
+}
+
+/*------------------------------------------*/
+/*	 Testimonial Message Text
+/*------------------------------------------*/
+
+.testimonials p {
+	color: #fff;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 30px;
+	margin-bottom: 60px;
+    padding-top: 10px;
+}
+
+
+/* ==========================================================================
+   11. PRICING 
+   ========================================================================== */
+
+#pricing {
+	padding-top: 80px;
+	padding-bottom: 50px;
+} 
+
+#pricing-table-holder {
+	padding: 0 30px; 
+}
+
+#price_1, #price_2, #price_3 {
+	margin-bottom: 50px;
+}
+
+.pricing-table {
+	border: 1px solid #cfcfcf;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/*------------------------------------------*/
+/*	  Pricing Table Header
+/*------------------------------------------*/
+
+.pricing-table .price-header {
+	border-bottom: 1px solid #e7e7e7;
+	position: relative;
+}
+
+.pricing-table .plan-title {
+	color: #333;
+	font-size: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+    padding: 30px 15px;
+    margin: 0;
+	-webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;	
+}
+
+/*------------------------------------------*/
+/*	  Pricing Table Price Plan
+/*------------------------------------------*/
+
+.pricing-table .plan-price {
+    background-color: #f3f3f3;
+	margin: 0;
+	line-height: normal;
+    padding: 20px;
+    border-top: 1px solid #e7e7e7;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;	
+}
+
+.pricing-table .plan-price h2 {
+	color:  #222;
+	font-size: 44px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.pricing-table .plan-price span {
+	color: #999;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/*------------------------------------------*/
+/*	  Pricing Table Body
+/*------------------------------------------*/
+
+.pricing-table ul.features {
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+    padding: 5px 20px;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.pricing-table ul.features li {
+    border-top: 1px solid #e7e7e7;
+    padding: 10px 25px; 
+}
+
+.pricing-table ul.features li:nth-child(1),
+.pricing-table.featured ul.features li:nth-child(1) {
+    border: none;
+}
+
+/*------------------------------------------*/
+/*	  Pricing Table Footer
+/*------------------------------------------*/
+
+.pricing-table .price-footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #e7e7e7;
+	-webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	  Featured Table
+/*------------------------------------------*/
+
+.pricing-table.featured .plan-title {
+	background-color: #d5512b;
+	color: #f7f7f7;
+}
+
+.pricing-table.featured .plan-price {
+	background-color: #d5512b;
+	color: #f7f7f7;
+	border-top: 1px solid #bc4726;
+}
+
+.pricing-table.featured .plan-price h2,
+.pricing-table.featured .plan-price span { 
+		color: #f7f7f7;
+}
+
+
+
+/* ==========================================================================
+   12. CONTACTS 
+   ========================================================================== */
+
+#contact {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	border-top: 1px solid #ddd;
+	background-image: url(../img/thumbs/contact_bkg.jpg);
+	background-repeat: repeat;
+	background-position: center center;
+	overflow: hidden;
+} 
+
+/*------------------------------------------*/
+/*	  Contact Form Input
+/*------------------------------------------*/
+
+#contact-form .form-control {
+	height: 50px;
+	font-size: 16px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+	background-color: #f3f3f3;
+	color: #444;
+	font-size: 16px;
+	margin-bottom: 15px;
+	padding: 8px;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	box-shadow: 0 0 0 0;
+}
+
+#contact-form textarea {
+	min-height:180px;
+}
+
+/*------------------------------------------*/
+/*	  Contact Form Input Focus
+/*------------------------------------------*/
+
+.form-control:focus {
+    outline: 0px none;
+    box-shadow: none;
+}
+
+/*------------------------------------------*/
+/*	  Contact Form Submit Button
+/*------------------------------------------*/
+
+#form_btn {
+	margin-top: 30px;
+}
+
+/*------------------------------------------*/
+/*	  Contact Form Error Message 
+/*------------------------------------------*/
+
+.error {
+	color: #af3809;
+}
+
+
+ 
+/* ==========================================================================
+   13. FOOTER
+   ========================================================================== */
+
+#footer {
+	width: 100%;
+	background-color: #333;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+#footer p {
+	color: #999;
+	font-size: 13px;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 0;	
+}
+
+/*------------------------------------------*/
+/*	 Footer Social Icons  
+/*------------------------------------------*/
+
+.footer-socials {
+	display: inline-block; 
+	padding-left: 0;
+	margin-bottom: 3px;
+}
+
+.footer-socials li {
+	float: left;
+	width: auto !important;
+    display: inline-block !important;
+    vertical-align: top;
+    clear: none !important;
+}
+
+.foo_social {
+    width: 40px;
+    height: 40px;
+	color: #777;
+	font-size: 18px;
+    line-height: 40px;
+	text-align: center;
+	margin: 0 5px;
+    display: block;
+    text-decoration: none;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+/*------------------------------------------*/
+/*	 Footer Icons Hover 
+/*------------------------------------------*/
+
+.ico-facebook:hover {color: #3b5998;}
+.ico-twitter:hover {color: #00a9ed;}
+.ico-google-plus:hover {color: #cd1111;}
+.ico-linkedin:hover {color: #015886;}
+.ico-dribbble:hover {color: #d92d84;}
+.ico-instagram:hover {color: #beb3a8;}
+.ico-pinterest:hover {color: #ac281a }
+.ico-dropbox:hover {color: #008ad2;}
+.ico-skype:hover  {color: #00a9ed; }
+.ico-youtube:hover {color: #cd1b20;}
+.ico-tumblr:hover {color: #3a5976;}
+.ico-vimeo:hover {color: #00adee;}
+.ico-flickr:hover {color: #d2d2d2 }
+.ico-github:hover {color: #222;}
+.ico-renren:hover {color: #364a83;}
+.ico-vk:hover {color: #3b5998;}
+.ico-xing:hover {color: #015f5e; }
+.ico-weibo:hover {color: #be4443;}
+.ico-rss:hover {color: #ff6600;}
+
+
+
+/* ==========================================================================
+   14. SCROLL TO TOP   
+   ========================================================================== */
+
+#scrollUp {
+	display: none;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-image: url(../img/icons/back-to-top.png);
+	background-repeat: no-repeat;
+	background-position: 50% 48%;
+	background-color:rgba(213, 81, 43, 0.65);	
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	-webkit-transition: all 250ms linear;
+	-moz-transition: all 250ms linear;
+	transition: all 250ms linear;	
+}
+
+#scrollUp:hover {
+	background-color: rgba(188, 71, 38, 0.95);
+}
+
+nav a#pull {  
+    display: none;  
+}
+
+
+
+/* ==========================================================================
+   14. CONTACT FORM RESPONSE PAGE   
+   ========================================================================== */
+   
+#form_response {
+	margin: 50px auto; 
+}
+
+#form_response .img-responsive { display: inline-block; }
+
+#form_response h1 {
+	font-size: 40px; 
+	font-weight: 700;
+	margin-top: 10px;
+}
+
+#form_response p {
+	font-size: 18px; 
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
