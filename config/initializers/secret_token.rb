@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-LeanRails::Application.config.secret_key_base = 'f10cdf7b74c8af75049987274382dc05899e14d7fa4e05f76fed9eef7f7de9e020a199029c7bfb171c3f6a472a17864c82091e25cb3258db18c7600754a073c2'
+DemoFirstengage::Application.config.secret_key_base = 'f60d34e8c60e9f007a2a847d27d90dcb8f87623396049d8c69e2562e2997db74b449767e096fdce1a842ac399355b182a661d6b4fe8a49e7ff82b26b45b222bd'

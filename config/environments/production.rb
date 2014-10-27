@@ -1,6 +1,8 @@
-LeanRails::Application.configure do
+DemoFirstengage::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.logger = Logger.new(STDOUT)
+  config.logger.level = Logger::DEBUG
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -20,7 +22,17 @@ LeanRails::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  #  config.serve_static_assets = false
+  config.serve_static_assets = true
+
+  config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
+  config.assets.precompile += %w( login.js footer.js login.css dashboard.js first_engage.js dashboard.css first_engage.css)
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.ttf *.eot *.svg *.woff)
+
+  config.less.compress = true
+
+  # Precompile additional assets
+  config.assets.precompile += %w( .gif .jpeg .png .svg .eot .woff .ttf )
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -64,6 +76,9 @@ LeanRails::Application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).

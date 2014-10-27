@@ -1,22 +1,21 @@
-set :user, "bitnami"
+set :user, "ec2-user"
 set :use_sudo, false
-set :application, "ec2-54-234-160-131.compute-1.amazonaws.com"
+set :application, "10.123.12.222"
 set :scm, 'git'
 set :branch, "master"
-set :scm_username, 'prakash0450@gmail.com'
-set :scm_password, 'q2W#e4R%'
+set :scm_username, 'ff-pteli'
+set :scm_password, '769cf08411b4fb028a209d768cddaf84f8abc061'
 set :scm_verbose, true
 #set :repository,  "git@github.com:FirstFuel/ProductDemo.git"
-set :repository, "https://'prakash0450@gmail.com':'q2W#e4R%'@github.com/prakash0450/client-proto.git"
-
-set :shared, '../shared/rails'
+set :repository, "https://ff-pteli:769cf08411b4fb028a209d768cddaf84f8abc061@github.com/FirstFuel/demo_firstengage.git"
+set :shared, '../shared/firstfuel'
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
 # via the :deploy_to variable:
 # set :deploy_to, "/var/www/#{application}"
 
-set :deploy_to, "/home/#{user}/hadoop_client"
+set :deploy_to, "/home/#{user}/first_engage"
 # set :deploy_to, "/home/#{user}/firstfuel.com"
 
 #set :deploy_to, "/home/#{user}/firstfuel.com"
@@ -33,7 +32,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 #ssh_options[:auth_methods] = %w(password keyboard-interactive)
 #ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "firstfuel-dev-prakash.pem")]
-ssh_options[:keys] = "/Users/pteli/.ssh/HadoopEC2cluster.pem"
+ssh_options[:keys] = "/Users/pteli/.ssh/firstfuel-production-qa.pem"
 
 # =============================================================================
 # You shouldn't have to modify the rest of these
