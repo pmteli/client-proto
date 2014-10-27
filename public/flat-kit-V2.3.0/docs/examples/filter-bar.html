@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>filter-bar example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.filter-bar.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.filter-bar.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">filter-bar example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>filter-bar component</strong></p>
+			</div>
+<!-- Filters -->
+<div class="filter-bar">
+	<form class="form-inline">
+		
+		<!-- From -->
+		<div class="form-group col-md-2 padding-none">
+			<label>From:</label>
+			<div class="input-group">
+				<input type="text" name="from" id="dateRangeFrom" class="form-control" value="08/05/13" />
+				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+			</div>
+		</div>
+		<!-- // From END -->
+		
+		<!-- To -->
+		<div class="form-group col-md-2 padding-none">
+			<label>To:</label>
+			<div class="input-group">
+				<input type="text" name="to" id="dateRangeTo" class="form-control" value="08/18/13" />
+				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+			</div>
+		</div>
+		<!-- // To END -->
+		
+		<!-- Min -->
+		<div class="form-group col-md-2 padding-none">
+			<label>Min:</label>
+			<div class="input-group">
+				<input type="text" name="from" class="form-control" value="100" />
+				<span class="input-group-addon"><i class="fa fa-euro"></i></span>
+			</div>
+		</div>
+		<!-- // Min END -->
+		
+		<!-- Max -->
+		<div class="form-group col-md-2 padding-none">
+			<label>Max:</label>
+			<div class="input-group">
+				<input type="text" name="from" class="form-control" value="500" />
+				<span class="input-group-addon"><i class="fa fa-euro"></i></span>
+			</div>
+		</div>
+		<!-- // Max END -->
+		
+		<!-- Select -->
+		<div class="form-group col-md-3 padding-none">
+			<label class="label-control">Select:</label>
+			<div class="col-md-8 padding-none">
+				<select name="from" class="form-control">
+					<option>Some option</option>
+					<option>Other option</option>
+					<option>Some other option</option>
+				</select>
+			</div>
+		</div>
+		<!-- // Select END -->
+		
+		<div class="clearfix"></div>
+	</form>
+</div>
+<!-- // Filters END -->
+
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+</body>
+</html>

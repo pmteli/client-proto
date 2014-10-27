@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>messages example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.messages.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.messages.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">messages example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>messages component</strong></p>
+			</div>
+<!-- Widget -->
+<div class="widget widget-messages widget-heading-simple widget-body-white">
+	<div class="widget-body padding-none">
+		
+		<div class="row row-merge borders">
+			<div class="col-md-3 listWrapper">
+				<div class="innerAll">
+					<form autocomplete="off" class="form-inline margin-none">
+						<div class="input-group input-group-sm">
+							<input type="text" class="form-control" placeholder="Find someone .." />
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-primary btn-xs pull-right"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+				</div>
+				<span class="results">1490 messages <i class="fa fa-circle-arrow-down"></i></span>
+				<ul class="list unstyled">
+															<li class="active">
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img data-src="holder.js/50x50/dark" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">adrian</span>
+								<small>Latest comment line...</small><br/>
+								<small class="text-italic text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> 17 days ago</small>
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img data-src="holder.js/50x50/dark" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">bogdan</span>
+								<small>Latest comment line...</small><br/>
+								<small class="text-italic text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> 17 days ago</small>
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img data-src="holder.js/50x50/dark" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">susanne</span>
+								<small>Latest comment line...</small><br/>
+								<small class="text-italic text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> 17 days ago</small>
+							</div>
+						</div>
+					</li>
+									</ul>
+			</div>
+			<div class="col-md-9 detailsWrapper">
+				<div class="ajax-loading hide">
+					<i class="fa fa-refresh text-primary-light fa fa-spin fa fa-4x"></i>
+				</div>
+				<div class="innerAll">
+					<div class="row">
+						<div class="col-md-9">
+							<h4 class="margin-none">
+								<a href="" class="btn btn-info"><i class="fa fa-user fa fa-fixed-width"></i> Bogdan</a>
+							</h4>
+						</div>
+						<div class="col-md-3 text-right">
+							<a href="" class="text-size-regular text-primary-light vertical-middle"><i class="fa fa-flag fa fa-fixed-width"></i> Report</a>
+						</div>
+					</div>
+				</div>
+				<a href="" class="load border-top ">Load earlier messages <i class="fa fa-refresh innerL third"></i></a>
+				
+				<div class="row row-merge borders border-top">
+					<div class="col-md-12">
+						<div class="innerAll">
+							<div class="media">
+								<a href="" class="thumb pull-left visible-md visible-lg"><img data-src="holder.js/50x50/white" alt="Image" class="media-object" /></a>
+								<div class="media-body">
+									<small class="pull-right text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> July 8, 2013 <em>12:38 pm</em></small>
+									<strong class="text-primary">adrian</strong><br/>
+									<small>Hello bogdan. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, reiciendis soluta libero eligendi fuga quam nam tempora illum iste atque hic eveniet vel accusantium ad quisquam a sequi impedit cumque! Autem, ipsam esse officia amet.</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-merge borders border-bottom">
+					<div class="col-md-12">
+						<div class="innerAll">
+							<div class="media">
+								<a href="" class="thumb pull-left visible-md visible-lg"><img data-src="holder.js/50x50/white" alt="Image" class="media-object" /></a>
+								<div class="media-body">
+									<small class="pull-right text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> July 8, 2013 <em>12:38 pm</em></small>
+									<strong class="text-primary">bogdan</strong><br/>
+									<small>Hello adrian. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, reiciendis soluta libero eligendi fuga quam nam tempora illum iste atque hic eveniet vel accusantium ad quisquam a sequi impedit cumque! Autem, ipsam esse officia amet.</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<span href="" class="load"><i class="fa fa-calendar innerR third"></i>Today</span>
+
+				<div class="row row-merge borders border-top">
+					<div class="col-md-12">
+						<div class="innerAll">
+							<div class="media">
+								<a href="" class="thumb pull-left visible-md visible-lg"><img data-src="holder.js/50x50/white" alt="Image" class="media-object" /></a>
+						
+								<div class="media-body">
+									<small class="pull-right text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> <em>12:38 pm</em></small>
+									<strong class="text-primary">adrian</strong><br/>
+									<small>Hello bogdan. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quos soluta cupiditate dolor nobis id!</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-merge borders border-bottom">
+					<div class="col-md-12">
+						<div class="innerAll">
+							<div class="media">
+								<a href="" class="thumb pull-left visible-md visible-lg"><img data-src="holder.js/50x50/white" alt="Image" class="media-object" /></a>
+								<div class="media-body">
+									<small class="pull-right text-primary-light"><i class="fa fa-calendar fa fa-fixed-width"></i> <em>12:38 pm</em></small>
+									<strong class="text-primary">bogdan</strong><br/>
+									<small>Hello adrian. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quas alias voluptatum odit nemo consequuntur blanditiis praesentium pariatur vitae dolore earum saepe dolorum maiores vero fuga sequi quibusdam labore optio doloribus consectetur laudantium in id quae nostrum dignissimos quidem voluptatibus!</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="innerAll">
+					<form role="form">
+						<div class="form-group">
+							<textarea placeholder="Type in your message .. " class="form-control" rows="5"></textarea>
+						</div>
+						<div class="form-group">
+							<div class="text-right">
+								<button type="button" class="btn btn-primary">Send <i class="fa-fw fa fa-envelope"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!-- // Widget END -->
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/messages/assets/js/messages.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/holder/holder.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile-my-account example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.profile-my-account.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.profile-my-account.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">profile-my-account example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>profile-my-account component</strong></p>
+			</div>
+<!-- Widget -->
+<div class="widget widget-tabs widget-tabs-gray border-bottom-none">
+
+	<!-- Widget heading -->
+	<div class="widget-head">
+		<ul>
+			<li class="active"><a class="glyphicons edit" href="#account-details" data-toggle="tab"><i></i>Account details</a></li>
+			<li><a class="glyphicons settings" href="#account-settings" data-toggle="tab"><i></i>Account settings</a></li>
+		</ul>
+	</div>
+	<!-- // Widget heading END -->
+	
+	<div class="widget-body">
+		<form class="form-horizontal">
+			<div class="tab-content">
+			
+				<!-- Tab content -->
+				<div class="tab-pane active" id="account-details">
+				
+					<!-- Row -->
+					<div class="row">
+					
+						<!-- Column -->
+						<div class="col-md-6">
+						
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">First name</label>
+								<div class="col-md-9">
+									<div class="input-group">
+										<input type="text" value="John" class="form-control" />
+										<span class="input-group-addon" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="First name is mandatory"><i class="icon-question-sign"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Last name</label>
+								<div class="col-md-9">
+									<div class="input-group">
+										<input type="text" value="Doe" class="form-control" />
+										<span class="input-group-addon" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="Last name is mandatory"><i class="icon-question-sign"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Date of birth</label>
+								<div class="col-md-9">
+									<div class="input-group">
+										<input type="text" id="datepicker1" class="form-control" value="13/06/1988" />
+										<span class="input-group-addon"><i class="icon-calendar"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+						</div>
+						<!-- // Column END -->
+						
+						<!-- Column -->
+						<div class="col-md-6">
+						
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Gender</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Age</label>
+								<div class="col-md-9">
+									<input type="text" value="25" class="form-control" />
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+						</div>
+						<!-- // Column END -->
+						
+					</div>
+					<!-- // Row END -->
+					
+					<div class="separator line bottom"></div>
+					
+					<textarea id="mustHaveId" class="wysihtml5 form-control" rows="5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</textarea>
+					
+					<!-- Form actions -->
+					<div class="separator top">
+						<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save changes</button>
+						<button type="button" class="btn btn-icon btn-default glyphicons circle_remove"><i></i>Cancel</button>
+					</div>
+					<!-- // Form actions END -->
+					
+				</div>
+				<!-- // Tab content END -->
+				
+				<!-- Tab content -->
+				<div class="tab-pane" id="account-settings">
+				
+					<!-- Row -->
+					<div class="row">
+					
+						<!-- Column -->
+						<div class="col-md-3">
+							<strong>Change password</strong>
+							<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<!-- // Column END -->
+						
+						<!-- Column -->
+						<div class="col-md-9">
+							<label for="inputUsername">Username</label>
+							<div class="input-group">
+								<input type="text" id="inputUsername" class="form-control" value="john.doe2012" disabled="disabled" />
+								<span class="input-group-addon" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Username can't be changed"><i class="icon-question-sign"></i></span>
+							</div>
+							<div class="separator bottom"></div>
+									
+							<label for="inputPasswordOld">Old password</label>
+							<div class="input-group">
+								<input type="password" id="inputPasswordOld" class="form-control" value="" placeholder="Leave empty for no change" />
+								<span class="input-group-addon" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Leave empty if you don't wish to change the password"><i class="icon-question-sign"></i></span>
+							</div>
+							<div class="separator bottom"></div>
+							
+							<label for="inputPasswordNew">New password</label>
+							<input type="password" id="inputPasswordNew" class="form-control" value="" placeholder="Leave empty for no change" />
+							<div class="separator bottom"></div>
+							
+							<label for="inputPasswordNew2">Repeat new password</label>
+							<input type="password" id="inputPasswordNew2" class="form-control" value="" placeholder="Leave empty for no change" />
+							<div class="separator bottom"></div>
+						</div>
+						<!-- // Column END -->
+						
+					</div>
+					<!-- // Row END -->
+					
+					<div class="separator line bottom"></div>
+					
+					<!-- Row -->
+					<div class="row">
+					
+						<!-- Column -->
+						<div class="col-md-3">
+							<strong>Contact details</strong>
+							<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<!-- // Column END -->
+						
+						<!-- Column -->
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-6">
+									<label for="inputPhone">Phone</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-phone"></i></span>
+										<input type="text" id="inputPhone" class="form-control" placeholder="01234567897" />
+									</div>
+									<div class="separator bottom"></div>
+										
+									<label for="inputEmail">E-mail</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-envelope"></i></span>
+										<input type="text" id="inputEmail" class="form-control" placeholder="contact@mosaicpro.biz" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputWebsite">Website</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-link"></i></span>
+										<input type="text" id="inputWebsite" class="form-control" placeholder="http://www.mosaicpro.biz" />
+									</div>
+									<div class="separator bottom"></div>
+								</div>
+								<div class="col-md-6">
+									<label for="inputFacebook">Facebook</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-facebook"></i></span>
+										<input type="text" id="inputFacebook" class="form-control" placeholder="mosaicpro" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputTwitter">Twitter</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-twitter"></i></span>
+										<input type="text" id="inputTwitter" class="form-control" placeholder="mosaicpro" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputSkype">Skype ID</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-skype"></i></span>
+										<input type="text" id="inputSkype" class="form-control" placeholder="mySkypeID" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputgplus">Google</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-google-plus-sign"></i></span>
+										<input type="text" id="inputgplus" class="form-control" placeholder="google ID" />
+									</div>
+									<div class="separator bottom"></div>
+								</div>
+							</div>
+						</div>
+						<!-- // Column END -->
+						
+					</div>
+					<!-- // Row END -->
+					
+					<!-- Form actions -->
+					<div class="form-actions" style="margin: 0;">
+						<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save changes</button>
+					</div>
+					<!-- // Form actions END -->
+					
+				</div>
+				<!-- // Tab content END -->
+			</div>
+		</form>
+	</div>
+</div>
+<!-- // Widget END -->
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0"></script>
+</body>
+</html>

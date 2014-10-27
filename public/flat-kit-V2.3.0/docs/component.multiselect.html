@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.multiselect.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.multiselect.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'multiselect'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.multiselect</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-571c610e621821c561835ca1fce397b1" data-toggle="collapse">multiselect.custom</a></h4>
+							<div class="collapse in" id="view-571c610e621821c561835ca1fce397b1">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-571c610e621821c561835ca1fce397b1" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-571c610e621821c561835ca1fce397b1" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-571c610e621821c561835ca1fce397b1" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-571c610e621821c561835ca1fce397b1" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/multiselect.custom.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-571c610e621821c561835ca1fce397b1">
+												 
+
+<select multiple id="multiselect-custom" class="multiselect" name="multiselect-custom[]">
+	<option value="elem_1" selected>elem 1</option>
+	<option value="elem_2">elem 2</option>
+	<option value="elem_3">elem 3</option>
+	<option value="elem_4">elem 4</option>
+	<option value="elem_5">elem 5</option>
+	<option value="elem_6">elem 6</option>
+	<option value="elem_7">elem 7</option>
+	<option value="elem_8">elem 8</option>
+	<option value="elem_9">elem 9</option>
+	<option value="elem_10">elem 10</option>
+	<option value="elem_11">elem 11</option>
+	<option value="elem_12">elem 12</option>
+	<option value="elem_13">elem 13</option>
+	<option value="elem_14">elem 14</option>
+	<option value="elem_15">elem 15</option>
+	<option value="elem_16">elem 16</option>
+	<option value="elem_17">elem 17</option>
+	<option value="elem_18">elem 18</option>
+	<option value="elem_19">elem 19</option>
+	<option value="elem_20">elem 20</option>
+	<option value="elem_21">elem 21</option>
+	<option value="elem_22">elem 22</option>
+	<option value="elem_23">elem 23</option>
+	<option value="elem_24">elem 24</option>
+	<option value="elem_25">elem 25</option>
+	<option value="elem_26">elem 26</option>
+	<option value="elem_27">elem 27</option>
+	<option value="elem_28">elem 28</option>
+	<option value="elem_29">elem 29</option>
+	<option value="elem_30">elem 30</option>
+	<option value="elem_31">elem 31</option>
+	<option value="elem_32">elem 32</option>
+	<option value="elem_33">elem 33</option>
+	<option value="elem_34">elem 34</option>
+	<option value="elem_35">elem 35</option>
+	<option value="elem_36">elem 36</option>
+	<option value="elem_37">elem 37</option>
+	<option value="elem_38">elem 38</option>
+	<option value="elem_39">elem 39</option>
+	<option value="elem_40">elem 40</option>
+	<option value="elem_41">elem 41</option>
+	<option value="elem_42" selected>elem 42</option>
+	<option value="elem_43">elem 43</option>
+	<option value="elem_44">elem 44</option>
+	<option value="elem_45">elem 45</option>
+	<option value="elem_46">elem 46</option>
+	<option value="elem_47">elem 47</option>
+	<option value="elem_48">elem 48</option>
+	<option value="elem_49">elem 49</option>
+	<option value="elem_50">elem 50</option>
+	<option value="elem_51">elem 51</option>
+	<option value="elem_52">elem 52</option>
+	<option value="elem_53">elem 53</option>
+	<option value="elem_54">elem 54</option>
+	<option value="elem_55">elem 55</option>
+	<option value="elem_56">elem 56</option>
+	<option value="elem_57">elem 57</option>
+	<option value="elem_58">elem 58</option>
+	<option value="elem_59">elem 59</option>
+	<option value="elem_60">elem 60</option>
+	<option value="elem_61">elem 61</option>
+	<option value="elem_62">elem 62</option>
+	<option value="elem_63">elem 63</option>
+	<option value="elem_64">elem 64</option>
+	<option value="elem_65">elem 65</option>
+	<option value="elem_66">elem 66</option>
+	<option value="elem_67">elem 67</option>
+	<option value="elem_68">elem 68</option>
+	<option value="elem_69">elem 69</option>
+	<option value="elem_70">elem 70</option>
+	<option value="elem_71">elem 71</option>
+	<option value="elem_72">elem 72</option>
+	<option value="elem_73">elem 73</option>
+	<option value="elem_74">elem 74</option>
+	<option value="elem_75">elem 75</option>
+	<option value="elem_76">elem 76</option>
+	<option value="elem_77">elem 77</option>
+	<option value="elem_78">elem 78</option>
+	<option value="elem_79">elem 79</option>
+	<option value="elem_80">elem 80</option>
+	<option value="elem_81">elem 81</option>
+	<option value="elem_82">elem 82</option>
+	<option value="elem_83">elem 83</option>
+	<option value="elem_84">elem 84</option>
+	<option value="elem_85">elem 85</option>
+	<option value="elem_86">elem 86</option>
+	<option value="elem_87">elem 87</option>
+	<option value="elem_88">elem 88</option>
+	<option value="elem_89">elem 89</option>
+	<option value="elem_90">elem 90</option>
+	<option value="elem_91">elem 91</option>
+	<option value="elem_92">elem 92</option>
+	<option value="elem_93">elem 93</option>
+	<option value="elem_94">elem 94</option>
+	<option value="elem_95">elem 95</option>
+	<option value="elem_96">elem 96</option>
+	<option value="elem_97">elem 97</option>
+	<option value="elem_98">elem 98</option>
+	<option value="elem_99">elem 99</option>
+	<option value="elem_100">elem 100</option>
+</select>											</div>
+											<div class="tab-pane" id="source-571c610e621821c561835ca1fce397b1">
+												<pre class="prettyprint"> 
+
+&lt;select multiple id=&quot;multiselect-custom&quot; class=&quot;multiselect&quot; name=&quot;multiselect-custom[]&quot;&gt;
+	&lt;option value=&quot;elem_1&quot; selected&gt;elem 1&lt;/option&gt;
+	&lt;option value=&quot;elem_2&quot;&gt;elem 2&lt;/option&gt;
+	&lt;option value=&quot;elem_3&quot;&gt;elem 3&lt;/option&gt;
+	&lt;option value=&quot;elem_4&quot;&gt;elem 4&lt;/option&gt;
+	&lt;option value=&quot;elem_5&quot;&gt;elem 5&lt;/option&gt;
+	&lt;option value=&quot;elem_6&quot;&gt;elem 6&lt;/option&gt;
+	&lt;option value=&quot;elem_7&quot;&gt;elem 7&lt;/option&gt;
+	&lt;option value=&quot;elem_8&quot;&gt;elem 8&lt;/option&gt;
+	&lt;option value=&quot;elem_9&quot;&gt;elem 9&lt;/option&gt;
+	&lt;option value=&quot;elem_10&quot;&gt;elem 10&lt;/option&gt;
+	&lt;option value=&quot;elem_11&quot;&gt;elem 11&lt;/option&gt;
+	&lt;option value=&quot;elem_12&quot;&gt;elem 12&lt;/option&gt;
+	&lt;option value=&quot;elem_13&quot;&gt;elem 13&lt;/option&gt;
+	&lt;option value=&quot;elem_14&quot;&gt;elem 14&lt;/option&gt;
+	&lt;option value=&quot;elem_15&quot;&gt;elem 15&lt;/option&gt;
+	&lt;option value=&quot;elem_16&quot;&gt;elem 16&lt;/option&gt;
+	&lt;option value=&quot;elem_17&quot;&gt;elem 17&lt;/option&gt;
+	&lt;option value=&quot;elem_18&quot;&gt;elem 18&lt;/option&gt;
+	&lt;option value=&quot;elem_19&quot;&gt;elem 19&lt;/option&gt;
+	&lt;option value=&quot;elem_20&quot;&gt;elem 20&lt;/option&gt;
+	&lt;option value=&quot;elem_21&quot;&gt;elem 21&lt;/option&gt;
+	&lt;option value=&quot;elem_22&quot;&gt;elem 22&lt;/option&gt;
+	&lt;option value=&quot;elem_23&quot;&gt;elem 23&lt;/option&gt;
+	&lt;option value=&quot;elem_24&quot;&gt;elem 24&lt;/option&gt;
+	&lt;option value=&quot;elem_25&quot;&gt;elem 25&lt;/option&gt;
+	&lt;option value=&quot;elem_26&quot;&gt;elem 26&lt;/option&gt;
+	&lt;option value=&quot;elem_27&quot;&gt;elem 27&lt;/option&gt;
+	&lt;option value=&quot;elem_28&quot;&gt;elem 28&lt;/option&gt;
+	&lt;option value=&quot;elem_29&quot;&gt;elem 29&lt;/option&gt;
+	&lt;option value=&quot;elem_30&quot;&gt;elem 30&lt;/option&gt;
+	&lt;option value=&quot;elem_31&quot;&gt;elem 31&lt;/option&gt;
+	&lt;option value=&quot;elem_32&quot;&gt;elem 32&lt;/option&gt;
+	&lt;option value=&quot;elem_33&quot;&gt;elem 33&lt;/option&gt;
+	&lt;option value=&quot;elem_34&quot;&gt;elem 34&lt;/option&gt;
+	&lt;option value=&quot;elem_35&quot;&gt;elem 35&lt;/option&gt;
+	&lt;option value=&quot;elem_36&quot;&gt;elem 36&lt;/option&gt;
+	&lt;option value=&quot;elem_37&quot;&gt;elem 37&lt;/option&gt;
+	&lt;option value=&quot;elem_38&quot;&gt;elem 38&lt;/option&gt;
+	&lt;option value=&quot;elem_39&quot;&gt;elem 39&lt;/option&gt;
+	&lt;option value=&quot;elem_40&quot;&gt;elem 40&lt;/option&gt;
+	&lt;option value=&quot;elem_41&quot;&gt;elem 41&lt;/option&gt;
+	&lt;option value=&quot;elem_42&quot; selected&gt;elem 42&lt;/option&gt;
+	&lt;option value=&quot;elem_43&quot;&gt;elem 43&lt;/option&gt;
+	&lt;option value=&quot;elem_44&quot;&gt;elem 44&lt;/option&gt;
+	&lt;option value=&quot;elem_45&quot;&gt;elem 45&lt;/option&gt;
+	&lt;option value=&quot;elem_46&quot;&gt;elem 46&lt;/option&gt;
+	&lt;option value=&quot;elem_47&quot;&gt;elem 47&lt;/option&gt;
+	&lt;option value=&quot;elem_48&quot;&gt;elem 48&lt;/option&gt;
+	&lt;option value=&quot;elem_49&quot;&gt;elem 49&lt;/option&gt;
+	&lt;option value=&quot;elem_50&quot;&gt;elem 50&lt;/option&gt;
+	&lt;option value=&quot;elem_51&quot;&gt;elem 51&lt;/option&gt;
+	&lt;option value=&quot;elem_52&quot;&gt;elem 52&lt;/option&gt;
+	&lt;option value=&quot;elem_53&quot;&gt;elem 53&lt;/option&gt;
+	&lt;option value=&quot;elem_54&quot;&gt;elem 54&lt;/option&gt;
+	&lt;option value=&quot;elem_55&quot;&gt;elem 55&lt;/option&gt;
+	&lt;option value=&quot;elem_56&quot;&gt;elem 56&lt;/option&gt;
+	&lt;option value=&quot;elem_57&quot;&gt;elem 57&lt;/option&gt;
+	&lt;option value=&quot;elem_58&quot;&gt;elem 58&lt;/option&gt;
+	&lt;option value=&quot;elem_59&quot;&gt;elem 59&lt;/option&gt;
+	&lt;option value=&quot;elem_60&quot;&gt;elem 60&lt;/option&gt;
+	&lt;option value=&quot;elem_61&quot;&gt;elem 61&lt;/option&gt;
+	&lt;option value=&quot;elem_62&quot;&gt;elem 62&lt;/option&gt;
+	&lt;option value=&quot;elem_63&quot;&gt;elem 63&lt;/option&gt;
+	&lt;option value=&quot;elem_64&quot;&gt;elem 64&lt;/option&gt;
+	&lt;option value=&quot;elem_65&quot;&gt;elem 65&lt;/option&gt;
+	&lt;option value=&quot;elem_66&quot;&gt;elem 66&lt;/option&gt;
+	&lt;option value=&quot;elem_67&quot;&gt;elem 67&lt;/option&gt;
+	&lt;option value=&quot;elem_68&quot;&gt;elem 68&lt;/option&gt;
+	&lt;option value=&quot;elem_69&quot;&gt;elem 69&lt;/option&gt;
+	&lt;option value=&quot;elem_70&quot;&gt;elem 70&lt;/option&gt;
+	&lt;option value=&quot;elem_71&quot;&gt;elem 71&lt;/option&gt;
+	&lt;option value=&quot;elem_72&quot;&gt;elem 72&lt;/option&gt;
+	&lt;option value=&quot;elem_73&quot;&gt;elem 73&lt;/option&gt;
+	&lt;option value=&quot;elem_74&quot;&gt;elem 74&lt;/option&gt;
+	&lt;option value=&quot;elem_75&quot;&gt;elem 75&lt;/option&gt;
+	&lt;option value=&quot;elem_76&quot;&gt;elem 76&lt;/option&gt;
+	&lt;option value=&quot;elem_77&quot;&gt;elem 77&lt;/option&gt;
+	&lt;option value=&quot;elem_78&quot;&gt;elem 78&lt;/option&gt;
+	&lt;option value=&quot;elem_79&quot;&gt;elem 79&lt;/option&gt;
+	&lt;option value=&quot;elem_80&quot;&gt;elem 80&lt;/option&gt;
+	&lt;option value=&quot;elem_81&quot;&gt;elem 81&lt;/option&gt;
+	&lt;option value=&quot;elem_82&quot;&gt;elem 82&lt;/option&gt;
+	&lt;option value=&quot;elem_83&quot;&gt;elem 83&lt;/option&gt;
+	&lt;option value=&quot;elem_84&quot;&gt;elem 84&lt;/option&gt;
+	&lt;option value=&quot;elem_85&quot;&gt;elem 85&lt;/option&gt;
+	&lt;option value=&quot;elem_86&quot;&gt;elem 86&lt;/option&gt;
+	&lt;option value=&quot;elem_87&quot;&gt;elem 87&lt;/option&gt;
+	&lt;option value=&quot;elem_88&quot;&gt;elem 88&lt;/option&gt;
+	&lt;option value=&quot;elem_89&quot;&gt;elem 89&lt;/option&gt;
+	&lt;option value=&quot;elem_90&quot;&gt;elem 90&lt;/option&gt;
+	&lt;option value=&quot;elem_91&quot;&gt;elem 91&lt;/option&gt;
+	&lt;option value=&quot;elem_92&quot;&gt;elem 92&lt;/option&gt;
+	&lt;option value=&quot;elem_93&quot;&gt;elem 93&lt;/option&gt;
+	&lt;option value=&quot;elem_94&quot;&gt;elem 94&lt;/option&gt;
+	&lt;option value=&quot;elem_95&quot;&gt;elem 95&lt;/option&gt;
+	&lt;option value=&quot;elem_96&quot;&gt;elem 96&lt;/option&gt;
+	&lt;option value=&quot;elem_97&quot;&gt;elem 97&lt;/option&gt;
+	&lt;option value=&quot;elem_98&quot;&gt;elem 98&lt;/option&gt;
+	&lt;option value=&quot;elem_99&quot;&gt;elem 99&lt;/option&gt;
+	&lt;option value=&quot;elem_100&quot;&gt;elem 100&lt;/option&gt;
+&lt;/select&gt;</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-571c610e621821c561835ca1fce397b1">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/multiselect/assets/lib/css/multi-select.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/multiselect/assets/custom/less/multiselect.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-571c610e621821c561835ca1fce397b1">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/multiselect/assets/lib/js/jquery.multi-select.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/multiselect/assets/custom/js/multiselect.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-ee65458b039901d2d96b2d1366873cfa" data-toggle="collapse">multiselect.groups</a></h4>
+							<div class="collapse in" id="view-ee65458b039901d2d96b2d1366873cfa">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-ee65458b039901d2d96b2d1366873cfa" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-ee65458b039901d2d96b2d1366873cfa" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-ee65458b039901d2d96b2d1366873cfa" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-ee65458b039901d2d96b2d1366873cfa" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/multiselect.groups.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-ee65458b039901d2d96b2d1366873cfa">
+												 
+
+<select id="multiselect-optgroup" multiple="multiple">
+	<optgroup label="Friends">
+		<option value="1">Yoda</option>
+		<option value="2">Obiwan</option>
+	</optgroup>
+	<optgroup label="Enemies">
+		<option value="3">Palpatine</option>
+		<option value="4">Darth Vader</option>
+	</optgroup>
+</select>											</div>
+											<div class="tab-pane" id="source-ee65458b039901d2d96b2d1366873cfa">
+												<pre class="prettyprint"> 
+
+&lt;select id=&quot;multiselect-optgroup&quot; multiple=&quot;multiple&quot;&gt;
+	&lt;optgroup label=&quot;Friends&quot;&gt;
+		&lt;option value=&quot;1&quot;&gt;Yoda&lt;/option&gt;
+		&lt;option value=&quot;2&quot;&gt;Obiwan&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup label=&quot;Enemies&quot;&gt;
+		&lt;option value=&quot;3&quot;&gt;Palpatine&lt;/option&gt;
+		&lt;option value=&quot;4&quot;&gt;Darth Vader&lt;/option&gt;
+	&lt;/optgroup&gt;
+&lt;/select&gt;</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-ee65458b039901d2d96b2d1366873cfa">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/multiselect/assets/lib/css/multi-select.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/multiselect/assets/custom/less/multiselect.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-ee65458b039901d2d96b2d1366873cfa">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/multiselect/assets/lib/js/jquery.multi-select.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/multiselect/assets/custom/js/multiselect.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-ef0e68968343f7d976e6852f93235ccb" data-toggle="collapse">multiselect.selected-options</a></h4>
+							<div class="collapse in" id="view-ef0e68968343f7d976e6852f93235ccb">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-ef0e68968343f7d976e6852f93235ccb" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-ef0e68968343f7d976e6852f93235ccb" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-ef0e68968343f7d976e6852f93235ccb" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-ef0e68968343f7d976e6852f93235ccb" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/multiselect.selected-options.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-ef0e68968343f7d976e6852f93235ccb">
+												 
+
+<select multiple id="pre-selected-options" class="multiselect" name="pre-selected-options[]">
+	<option value="elem_1" selected>elem 1</option>
+	<option value="elem_2">elem 2</option>
+	<option value="elem_3">elem 3</option>
+	<option value="elem_4">elem 4</option>
+	<option value="elem_5">elem 5</option>
+	<option value="elem_6">elem 6</option>
+	<option value="elem_7">elem 7</option>
+	<option value="elem_8">elem 8</option>
+	<option value="elem_9">elem 9</option>
+	<option value="elem_10">elem 10</option>
+	<option value="elem_11">elem 11</option>
+	<option value="elem_12">elem 12</option>
+	<option value="elem_13">elem 13</option>
+	<option value="elem_14">elem 14</option>
+	<option value="elem_15">elem 15</option>
+	<option value="elem_16">elem 16</option>
+	<option value="elem_17">elem 17</option>
+	<option value="elem_18">elem 18</option>
+	<option value="elem_19">elem 19</option>
+	<option value="elem_20">elem 20</option>
+	<option value="elem_21">elem 21</option>
+	<option value="elem_22">elem 22</option>
+	<option value="elem_23">elem 23</option>
+	<option value="elem_24">elem 24</option>
+	<option value="elem_25">elem 25</option>
+	<option value="elem_26">elem 26</option>
+	<option value="elem_27">elem 27</option>
+	<option value="elem_28">elem 28</option>
+	<option value="elem_29">elem 29</option>
+	<option value="elem_30">elem 30</option>
+	<option value="elem_31">elem 31</option>
+	<option value="elem_32">elem 32</option>
+	<option value="elem_33">elem 33</option>
+	<option value="elem_34">elem 34</option>
+	<option value="elem_35">elem 35</option>
+	<option value="elem_36">elem 36</option>
+	<option value="elem_37">elem 37</option>
+	<option value="elem_38">elem 38</option>
+	<option value="elem_39">elem 39</option>
+	<option value="elem_40">elem 40</option>
+	<option value="elem_41">elem 41</option>
+	<option value="elem_42" selected>elem 42</option>
+	<option value="elem_43">elem 43</option>
+	<option value="elem_44">elem 44</option>
+	<option value="elem_45">elem 45</option>
+	<option value="elem_46">elem 46</option>
+	<option value="elem_47">elem 47</option>
+	<option value="elem_48">elem 48</option>
+	<option value="elem_49">elem 49</option>
+	<option value="elem_50">elem 50</option>
+	<option value="elem_51">elem 51</option>
+	<option value="elem_52">elem 52</option>
+	<option value="elem_53">elem 53</option>
+	<option value="elem_54">elem 54</option>
+	<option value="elem_55">elem 55</option>
+	<option value="elem_56">elem 56</option>
+	<option value="elem_57">elem 57</option>
+	<option value="elem_58">elem 58</option>
+	<option value="elem_59">elem 59</option>
+	<option value="elem_60">elem 60</option>
+	<option value="elem_61">elem 61</option>
+	<option value="elem_62">elem 62</option>
+	<option value="elem_63">elem 63</option>
+	<option value="elem_64">elem 64</option>
+	<option value="elem_65">elem 65</option>
+	<option value="elem_66">elem 66</option>
+	<option value="elem_67">elem 67</option>
+	<option value="elem_68">elem 68</option>
+	<option value="elem_69">elem 69</option>
+	<option value="elem_70">elem 70</option>
+	<option value="elem_71">elem 71</option>
+	<option value="elem_72">elem 72</option>
+	<option value="elem_73">elem 73</option>
+	<option value="elem_74">elem 74</option>
+	<option value="elem_75">elem 75</option>
+	<option value="elem_76">elem 76</option>
+	<option value="elem_77">elem 77</option>
+	<option value="elem_78">elem 78</option>
+	<option value="elem_79">elem 79</option>
+	<option value="elem_80">elem 80</option>
+	<option value="elem_81">elem 81</option>
+	<option value="elem_82">elem 82</option>
+	<option value="elem_83">elem 83</option>
+	<option value="elem_84">elem 84</option>
+	<option value="elem_85">elem 85</option>
+	<option value="elem_86">elem 86</option>
+	<option value="elem_87">elem 87</option>
+	<option value="elem_88">elem 88</option>
+	<option value="elem_89">elem 89</option>
+	<option value="elem_90">elem 90</option>
+	<option value="elem_91">elem 91</option>
+	<option value="elem_92">elem 92</option>
+	<option value="elem_93">elem 93</option>
+	<option value="elem_94">elem 94</option>
+	<option value="elem_95">elem 95</option>
+	<option value="elem_96">elem 96</option>
+	<option value="elem_97">elem 97</option>
+	<option value="elem_98">elem 98</option>
+	<option value="elem_99">elem 99</option>
+	<option value="elem_100">elem 100</option>
+</select>											</div>
+											<div class="tab-pane" id="source-ef0e68968343f7d976e6852f93235ccb">
+												<pre class="prettyprint"> 
+
+&lt;select multiple id=&quot;pre-selected-options&quot; class=&quot;multiselect&quot; name=&quot;pre-selected-options[]&quot;&gt;
+	&lt;option value=&quot;elem_1&quot; selected&gt;elem 1&lt;/option&gt;
+	&lt;option value=&quot;elem_2&quot;&gt;elem 2&lt;/option&gt;
+	&lt;option value=&quot;elem_3&quot;&gt;elem 3&lt;/option&gt;
+	&lt;option value=&quot;elem_4&quot;&gt;elem 4&lt;/option&gt;
+	&lt;option value=&quot;elem_5&quot;&gt;elem 5&lt;/option&gt;
+	&lt;option value=&quot;elem_6&quot;&gt;elem 6&lt;/option&gt;
+	&lt;option value=&quot;elem_7&quot;&gt;elem 7&lt;/option&gt;
+	&lt;option value=&quot;elem_8&quot;&gt;elem 8&lt;/option&gt;
+	&lt;option value=&quot;elem_9&quot;&gt;elem 9&lt;/option&gt;
+	&lt;option value=&quot;elem_10&quot;&gt;elem 10&lt;/option&gt;
+	&lt;option value=&quot;elem_11&quot;&gt;elem 11&lt;/option&gt;
+	&lt;option value=&quot;elem_12&quot;&gt;elem 12&lt;/option&gt;
+	&lt;option value=&quot;elem_13&quot;&gt;elem 13&lt;/option&gt;
+	&lt;option value=&quot;elem_14&quot;&gt;elem 14&lt;/option&gt;
+	&lt;option value=&quot;elem_15&quot;&gt;elem 15&lt;/option&gt;
+	&lt;option value=&quot;elem_16&quot;&gt;elem 16&lt;/option&gt;
+	&lt;option value=&quot;elem_17&quot;&gt;elem 17&lt;/option&gt;
+	&lt;option value=&quot;elem_18&quot;&gt;elem 18&lt;/option&gt;
+	&lt;option value=&quot;elem_19&quot;&gt;elem 19&lt;/option&gt;
+	&lt;option value=&quot;elem_20&quot;&gt;elem 20&lt;/option&gt;
+	&lt;option value=&quot;elem_21&quot;&gt;elem 21&lt;/option&gt;
+	&lt;option value=&quot;elem_22&quot;&gt;elem 22&lt;/option&gt;
+	&lt;option value=&quot;elem_23&quot;&gt;elem 23&lt;/option&gt;
+	&lt;option value=&quot;elem_24&quot;&gt;elem 24&lt;/option&gt;
+	&lt;option value=&quot;elem_25&quot;&gt;elem 25&lt;/option&gt;
+	&lt;option value=&quot;elem_26&quot;&gt;elem 26&lt;/option&gt;
+	&lt;option value=&quot;elem_27&quot;&gt;elem 27&lt;/option&gt;
+	&lt;option value=&quot;elem_28&quot;&gt;elem 28&lt;/option&gt;
+	&lt;option value=&quot;elem_29&quot;&gt;elem 29&lt;/option&gt;
+	&lt;option value=&quot;elem_30&quot;&gt;elem 30&lt;/option&gt;
+	&lt;option value=&quot;elem_31&quot;&gt;elem 31&lt;/option&gt;
+	&lt;option value=&quot;elem_32&quot;&gt;elem 32&lt;/option&gt;
+	&lt;option value=&quot;elem_33&quot;&gt;elem 33&lt;/option&gt;
+	&lt;option value=&quot;elem_34&quot;&gt;elem 34&lt;/option&gt;
+	&lt;option value=&quot;elem_35&quot;&gt;elem 35&lt;/option&gt;
+	&lt;option value=&quot;elem_36&quot;&gt;elem 36&lt;/option&gt;
+	&lt;option value=&quot;elem_37&quot;&gt;elem 37&lt;/option&gt;
+	&lt;option value=&quot;elem_38&quot;&gt;elem 38&lt;/option&gt;
+	&lt;option value=&quot;elem_39&quot;&gt;elem 39&lt;/option&gt;
+	&lt;option value=&quot;elem_40&quot;&gt;elem 40&lt;/option&gt;
+	&lt;option value=&quot;elem_41&quot;&gt;elem 41&lt;/option&gt;
+	&lt;option value=&quot;elem_42&quot; selected&gt;elem 42&lt;/option&gt;
+	&lt;option value=&quot;elem_43&quot;&gt;elem 43&lt;/option&gt;
+	&lt;option value=&quot;elem_44&quot;&gt;elem 44&lt;/option&gt;
+	&lt;option value=&quot;elem_45&quot;&gt;elem 45&lt;/option&gt;
+	&lt;option value=&quot;elem_46&quot;&gt;elem 46&lt;/option&gt;
+	&lt;option value=&quot;elem_47&quot;&gt;elem 47&lt;/option&gt;
+	&lt;option value=&quot;elem_48&quot;&gt;elem 48&lt;/option&gt;
+	&lt;option value=&quot;elem_49&quot;&gt;elem 49&lt;/option&gt;
+	&lt;option value=&quot;elem_50&quot;&gt;elem 50&lt;/option&gt;
+	&lt;option value=&quot;elem_51&quot;&gt;elem 51&lt;/option&gt;
+	&lt;option value=&quot;elem_52&quot;&gt;elem 52&lt;/option&gt;
+	&lt;option value=&quot;elem_53&quot;&gt;elem 53&lt;/option&gt;
+	&lt;option value=&quot;elem_54&quot;&gt;elem 54&lt;/option&gt;
+	&lt;option value=&quot;elem_55&quot;&gt;elem 55&lt;/option&gt;
+	&lt;option value=&quot;elem_56&quot;&gt;elem 56&lt;/option&gt;
+	&lt;option value=&quot;elem_57&quot;&gt;elem 57&lt;/option&gt;
+	&lt;option value=&quot;elem_58&quot;&gt;elem 58&lt;/option&gt;
+	&lt;option value=&quot;elem_59&quot;&gt;elem 59&lt;/option&gt;
+	&lt;option value=&quot;elem_60&quot;&gt;elem 60&lt;/option&gt;
+	&lt;option value=&quot;elem_61&quot;&gt;elem 61&lt;/option&gt;
+	&lt;option value=&quot;elem_62&quot;&gt;elem 62&lt;/option&gt;
+	&lt;option value=&quot;elem_63&quot;&gt;elem 63&lt;/option&gt;
+	&lt;option value=&quot;elem_64&quot;&gt;elem 64&lt;/option&gt;
+	&lt;option value=&quot;elem_65&quot;&gt;elem 65&lt;/option&gt;
+	&lt;option value=&quot;elem_66&quot;&gt;elem 66&lt;/option&gt;
+	&lt;option value=&quot;elem_67&quot;&gt;elem 67&lt;/option&gt;
+	&lt;option value=&quot;elem_68&quot;&gt;elem 68&lt;/option&gt;
+	&lt;option value=&quot;elem_69&quot;&gt;elem 69&lt;/option&gt;
+	&lt;option value=&quot;elem_70&quot;&gt;elem 70&lt;/option&gt;
+	&lt;option value=&quot;elem_71&quot;&gt;elem 71&lt;/option&gt;
+	&lt;option value=&quot;elem_72&quot;&gt;elem 72&lt;/option&gt;
+	&lt;option value=&quot;elem_73&quot;&gt;elem 73&lt;/option&gt;
+	&lt;option value=&quot;elem_74&quot;&gt;elem 74&lt;/option&gt;
+	&lt;option value=&quot;elem_75&quot;&gt;elem 75&lt;/option&gt;
+	&lt;option value=&quot;elem_76&quot;&gt;elem 76&lt;/option&gt;
+	&lt;option value=&quot;elem_77&quot;&gt;elem 77&lt;/option&gt;
+	&lt;option value=&quot;elem_78&quot;&gt;elem 78&lt;/option&gt;
+	&lt;option value=&quot;elem_79&quot;&gt;elem 79&lt;/option&gt;
+	&lt;option value=&quot;elem_80&quot;&gt;elem 80&lt;/option&gt;
+	&lt;option value=&quot;elem_81&quot;&gt;elem 81&lt;/option&gt;
+	&lt;option value=&quot;elem_82&quot;&gt;elem 82&lt;/option&gt;
+	&lt;option value=&quot;elem_83&quot;&gt;elem 83&lt;/option&gt;
+	&lt;option value=&quot;elem_84&quot;&gt;elem 84&lt;/option&gt;
+	&lt;option value=&quot;elem_85&quot;&gt;elem 85&lt;/option&gt;
+	&lt;option value=&quot;elem_86&quot;&gt;elem 86&lt;/option&gt;
+	&lt;option value=&quot;elem_87&quot;&gt;elem 87&lt;/option&gt;
+	&lt;option value=&quot;elem_88&quot;&gt;elem 88&lt;/option&gt;
+	&lt;option value=&quot;elem_89&quot;&gt;elem 89&lt;/option&gt;
+	&lt;option value=&quot;elem_90&quot;&gt;elem 90&lt;/option&gt;
+	&lt;option value=&quot;elem_91&quot;&gt;elem 91&lt;/option&gt;
+	&lt;option value=&quot;elem_92&quot;&gt;elem 92&lt;/option&gt;
+	&lt;option value=&quot;elem_93&quot;&gt;elem 93&lt;/option&gt;
+	&lt;option value=&quot;elem_94&quot;&gt;elem 94&lt;/option&gt;
+	&lt;option value=&quot;elem_95&quot;&gt;elem 95&lt;/option&gt;
+	&lt;option value=&quot;elem_96&quot;&gt;elem 96&lt;/option&gt;
+	&lt;option value=&quot;elem_97&quot;&gt;elem 97&lt;/option&gt;
+	&lt;option value=&quot;elem_98&quot;&gt;elem 98&lt;/option&gt;
+	&lt;option value=&quot;elem_99&quot;&gt;elem 99&lt;/option&gt;
+	&lt;option value=&quot;elem_100&quot;&gt;elem 100&lt;/option&gt;
+&lt;/select&gt;</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-ef0e68968343f7d976e6852f93235ccb">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/multiselect/assets/lib/css/multi-select.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/multiselect/assets/custom/less/multiselect.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-ef0e68968343f7d976e6852f93235ccb">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/multiselect/assets/lib/js/jquery.multi-select.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/multiselect/assets/custom/js/multiselect.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/multiselect/assets/lib/js/jquery.multi-select.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/multiselect/assets/custom/js/multiselect.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.ribbon.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.ribbon.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'ribbon'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.ribbon</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-2f2830c1cda46cdd0c8acade6d54d05f" data-toggle="collapse">ribbon-danger</a></h4>
+							<div class="collapse in" id="view-2f2830c1cda46cdd0c8acade6d54d05f">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-2f2830c1cda46cdd0c8acade6d54d05f" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-2f2830c1cda46cdd0c8acade6d54d05f" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-2f2830c1cda46cdd0c8acade6d54d05f" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-danger.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-2f2830c1cda46cdd0c8acade6d54d05f">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper"><div class="ribbon danger">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-2f2830c1cda46cdd0c8acade6d54d05f">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon danger&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-2f2830c1cda46cdd0c8acade6d54d05f">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-adaae5aebb6d0865c356602ecf4e4207" data-toggle="collapse">ribbon-default</a></h4>
+							<div class="collapse in" id="view-adaae5aebb6d0865c356602ecf4e4207">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-adaae5aebb6d0865c356602ecf4e4207" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-adaae5aebb6d0865c356602ecf4e4207" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-adaae5aebb6d0865c356602ecf4e4207" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-default.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-adaae5aebb6d0865c356602ecf4e4207">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper"><div class="ribbon">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-adaae5aebb6d0865c356602ecf4e4207">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-adaae5aebb6d0865c356602ecf4e4207">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-de55f0bb9a5277e54430a34d1ccee9e4" data-toggle="collapse">ribbon-inverse</a></h4>
+							<div class="collapse in" id="view-de55f0bb9a5277e54430a34d1ccee9e4">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-de55f0bb9a5277e54430a34d1ccee9e4" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-de55f0bb9a5277e54430a34d1ccee9e4" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-de55f0bb9a5277e54430a34d1ccee9e4" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-inverse.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-de55f0bb9a5277e54430a34d1ccee9e4">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper"><div class="ribbon inverse">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-de55f0bb9a5277e54430a34d1ccee9e4">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon inverse&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-de55f0bb9a5277e54430a34d1ccee9e4">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-005b7926ac4397f8449c02ae2a19972b" data-toggle="collapse">ribbon-primary</a></h4>
+							<div class="collapse in" id="view-005b7926ac4397f8449c02ae2a19972b">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-005b7926ac4397f8449c02ae2a19972b" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-005b7926ac4397f8449c02ae2a19972b" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-005b7926ac4397f8449c02ae2a19972b" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-primary.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-005b7926ac4397f8449c02ae2a19972b">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper"><div class="ribbon primary">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-005b7926ac4397f8449c02ae2a19972b">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon primary&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-005b7926ac4397f8449c02ae2a19972b">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-2d15d7fb42dfb84759c692dcdbff49c9" data-toggle="collapse">ribbon-success-small</a></h4>
+							<div class="collapse in" id="view-2d15d7fb42dfb84759c692dcdbff49c9">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-2d15d7fb42dfb84759c692dcdbff49c9" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-2d15d7fb42dfb84759c692dcdbff49c9" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-2d15d7fb42dfb84759c692dcdbff49c9" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-success-small.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-2d15d7fb42dfb84759c692dcdbff49c9">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper small"><div class="ribbon success">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-2d15d7fb42dfb84759c692dcdbff49c9">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper small&quot;&gt;&lt;div class=&quot;ribbon success&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-2d15d7fb42dfb84759c692dcdbff49c9">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-0b0495693cb47a13433ebe139a524cda" data-toggle="collapse">ribbon-success</a></h4>
+							<div class="collapse in" id="view-0b0495693cb47a13433ebe139a524cda">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-0b0495693cb47a13433ebe139a524cda" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-0b0495693cb47a13433ebe139a524cda" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-0b0495693cb47a13433ebe139a524cda" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-success.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-0b0495693cb47a13433ebe139a524cda">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper"><div class="ribbon success">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-0b0495693cb47a13433ebe139a524cda">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon success&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-0b0495693cb47a13433ebe139a524cda">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-1797b8117f5b88f7fa97d384c4e0c478" data-toggle="collapse">ribbon-warning-small</a></h4>
+							<div class="collapse in" id="view-1797b8117f5b88f7fa97d384c4e0c478">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-1797b8117f5b88f7fa97d384c4e0c478" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-1797b8117f5b88f7fa97d384c4e0c478" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-1797b8117f5b88f7fa97d384c4e0c478" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-warning-small.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-1797b8117f5b88f7fa97d384c4e0c478">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper small"><div class="ribbon warning">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-1797b8117f5b88f7fa97d384c4e0c478">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper small&quot;&gt;&lt;div class=&quot;ribbon warning&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-1797b8117f5b88f7fa97d384c4e0c478">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-7f09446daa2ed088c57420201c84d01d" data-toggle="collapse">ribbon-warning</a></h4>
+							<div class="collapse in" id="view-7f09446daa2ed088c57420201c84d01d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-7f09446daa2ed088c57420201c84d01d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-7f09446daa2ed088c57420201c84d01d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-7f09446daa2ed088c57420201c84d01d" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/ribbon-warning.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-7f09446daa2ed088c57420201c84d01d">
+												<!-- Ribbon -->
+<div class="ribbon-wrapper"><div class="ribbon warning">50% Off</div></div>
+
+											</div>
+											<div class="tab-pane" id="source-7f09446daa2ed088c57420201c84d01d">
+												<pre class="prettyprint">&lt;!-- Ribbon --&gt;
+&lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon warning&quot;&gt;50% Off&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-7f09446daa2ed088c57420201c84d01d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ui/ribbons/assets/ribbons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

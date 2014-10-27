@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.select2.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.select2.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'select2'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.select2</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-a627f3c3e46a00bf366d4dff525eeec1" data-toggle="collapse">select2</a></h4>
+							<div class="collapse in" id="view-a627f3c3e46a00bf366d4dff525eeec1">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-a627f3c3e46a00bf366d4dff525eeec1" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-a627f3c3e46a00bf366d4dff525eeec1" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-a627f3c3e46a00bf366d4dff525eeec1" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-a627f3c3e46a00bf366d4dff525eeec1" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/select2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-a627f3c3e46a00bf366d4dff525eeec1">
+												<div class="widget">
+	<div class="widget-head">
+		<h4 class="heading">Advanced Select controls</h4>
+	</div>
+	<div class="widget-body">
+		<div class="row">
+			<div class="col-md-6">
+				<h5>Basics</h5>
+				<select style="width: 100%;" id="select2_1">
+	               <optgroup label="Alaskan/Hawaiian Time Zone">
+	                   <option value="AK">Alaska</option>
+	                   <option value="HI">Hawaii</option>
+	               </optgroup>
+	               <optgroup label="Pacific Time Zone">
+	                   <option value="CA">California</option>
+	                   <option value="NV">Nevada</option>
+	                   <option value="OR">Oregon</option>
+	                   <option value="WA">Washington</option>
+	               </optgroup>
+	               <optgroup label="Mountain Time Zone">
+	                   <option value="AZ">Arizona</option>
+	                   <option value="CO">Colorado</option>
+	                   <option value="ID">Idaho</option>
+	                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+	                   <option value="NM">New Mexico</option>
+	                   <option value="ND">North Dakota</option>
+	                   <option value="UT">Utah</option>
+	                   <option value="WY">Wyoming</option>
+	               </optgroup>
+	               <optgroup label="Central Time Zone">
+	                   <option value="AL">Alabama</option>
+	                   <option value="AR">Arkansas</option>
+	                   <option value="IL">Illinois</option>
+	                   <option value="IA">Iowa</option>
+	                   <option value="KS">Kansas</option>
+	                   <option value="KY">Kentucky</option>
+	                   <option value="LA">Louisiana</option>
+	                   <option value="MN">Minnesota</option>
+	                   <option value="MS">Mississippi</option>
+	                   <option value="MO">Missouri</option>
+	                   <option value="OK">Oklahoma</option>
+	                   <option value="SD">South Dakota</option>
+	                   <option value="TX">Texas</option>
+	                   <option value="TN">Tennessee</option>
+	                   <option value="WI">Wisconsin</option>
+	               </optgroup>
+	               <optgroup label="Eastern Time Zone">
+	                   <option value="CT">Connecticut</option>
+	                   <option value="DE">Delaware</option>
+	                   <option value="FL">Florida</option>
+	                   <option value="GA">Georgia</option>
+	                   <option value="IN">Indiana</option>
+	                   <option value="ME">Maine</option>
+	                   <option value="MD">Maryland</option>
+	                   <option value="MA">Massachusetts</option>
+	                   <option value="MI">Michigan</option>
+	                   <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+	                   <option value="NY">New York</option>
+	                   <option value="NC">North Carolina</option>
+	                   <option value="OH">Ohio</option>
+	                   <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+	                   <option value="VT">Vermont</option><option value="VA">Virginia</option>
+	                   <option value="WV">West Virginia</option>
+	               </optgroup>
+	        	</select>
+				<div class="separator bottom"></div>
+
+				<h5>Multi-Value Select Boxes</h5>
+				<select multiple="multiple" style="width: 100%;" id="select2_2">
+	               <optgroup label="Alaskan/Hawaiian Time Zone">
+	                   <option value="AK">Alaska</option>
+	                   <option value="HI">Hawaii</option>
+	               </optgroup>
+	               <optgroup label="Pacific Time Zone">
+	                   <option value="CA">California</option>
+	                   <option value="NV">Nevada</option>
+	                   <option value="OR">Oregon</option>
+	                   <option value="WA">Washington</option>
+	               </optgroup>
+	               <optgroup label="Mountain Time Zone">
+	                   <option value="AZ">Arizona</option>
+	                   <option value="CO">Colorado</option>
+	                   <option value="ID">Idaho</option>
+	                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+	                   <option value="NM">New Mexico</option>
+	                   <option value="ND">North Dakota</option>
+	                   <option value="UT">Utah</option>
+	                   <option value="WY">Wyoming</option>
+	               </optgroup>
+	               <optgroup label="Central Time Zone">
+	                   <option value="AL">Alabama</option>
+	                   <option value="AR">Arkansas</option>
+	                   <option value="IL">Illinois</option>
+	                   <option value="IA">Iowa</option>
+	                   <option value="KS">Kansas</option>
+	                   <option value="KY">Kentucky</option>
+	                   <option value="LA">Louisiana</option>
+	                   <option value="MN">Minnesota</option>
+	                   <option value="MS">Mississippi</option>
+	                   <option value="MO">Missouri</option>
+	                   <option value="OK">Oklahoma</option>
+	                   <option value="SD">South Dakota</option>
+	                   <option value="TX">Texas</option>
+	                   <option value="TN">Tennessee</option>
+	                   <option value="WI">Wisconsin</option>
+	               </optgroup>
+	               <optgroup label="Eastern Time Zone">
+	                   <option value="CT">Connecticut</option>
+	                   <option value="DE">Delaware</option>
+	                   <option value="FL">Florida</option>
+	                   <option value="GA">Georgia</option>
+	                   <option value="IN">Indiana</option>
+	                   <option value="ME">Maine</option>
+	                   <option value="MD">Maryland</option>
+	                   <option value="MA">Massachusetts</option>
+	                   <option value="MI">Michigan</option>
+	                   <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+	                   <option value="NY">New York</option>
+	                   <option value="NC">North Carolina</option>
+	                   <option value="OH">Ohio</option>
+	                   <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+	                   <option value="VT">Vermont</option><option value="VA">Virginia</option>
+	                   <option value="WV">West Virginia</option>
+	               </optgroup>
+	        	</select>
+				<div class="separator bottom"></div>
+
+				<h5>Placeholders</h5>
+				<select style="width: 100%;" id="select2_3">
+					<option></option>
+					<optgroup label="Alaskan/Hawaiian Time Zone">
+	                   <option value="AK">Alaska</option>
+	                   <option value="HI">Hawaii</option>
+	               </optgroup>
+	               <optgroup label="Pacific Time Zone">
+	                   <option value="CA">California</option>
+	                   <option value="NV">Nevada</option>
+	                   <option value="OR">Oregon</option>
+	                   <option value="WA">Washington</option>
+	               </optgroup>
+	               <optgroup label="Mountain Time Zone">
+	                   <option value="AZ">Arizona</option>
+	                   <option value="CO">Colorado</option>
+	                   <option value="ID">Idaho</option>
+	                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+	                   <option value="NM">New Mexico</option>
+	                   <option value="ND">North Dakota</option>
+	                   <option value="UT">Utah</option>
+	                   <option value="WY">Wyoming</option>
+	               </optgroup>
+	               <optgroup label="Central Time Zone">
+	                   <option value="AL">Alabama</option>
+	                   <option value="AR">Arkansas</option>
+	                   <option value="IL">Illinois</option>
+	                   <option value="IA">Iowa</option>
+	                   <option value="KS">Kansas</option>
+	                   <option value="KY">Kentucky</option>
+	                   <option value="LA">Louisiana</option>
+	                   <option value="MN">Minnesota</option>
+	                   <option value="MS">Mississippi</option>
+	                   <option value="MO">Missouri</option>
+	                   <option value="OK">Oklahoma</option>
+	                   <option value="SD">South Dakota</option>
+	                   <option value="TX">Texas</option>
+	                   <option value="TN">Tennessee</option>
+	                   <option value="WI">Wisconsin</option>
+	               </optgroup>
+	               <optgroup label="Eastern Time Zone">
+	                   <option value="CT">Connecticut</option>
+	                   <option value="DE">Delaware</option>
+	                   <option value="FL">Florida</option>
+	                   <option value="GA">Georgia</option>
+	                   <option value="IN">Indiana</option>
+	                   <option value="ME">Maine</option>
+	                   <option value="MD">Maryland</option>
+	                   <option value="MA">Massachusetts</option>
+	                   <option value="MI">Michigan</option>
+	                   <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+	                   <option value="NY">New York</option>
+	                   <option value="NC">North Carolina</option>
+	                   <option value="OH">Ohio</option>
+	                   <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+	                   <option value="VT">Vermont</option><option value="VA">Virginia</option>
+	                   <option value="WV">West Virginia</option>
+	               </optgroup>
+	        	</select>
+	        	<div class="separator bottom"></div>
+				<select multiple="multiple" style="width: 100%;" id="select2_4">
+	               <optgroup label="Alaskan/Hawaiian Time Zone">
+	                   <option value="AK">Alaska</option>
+	                   <option value="HI">Hawaii</option>
+	               </optgroup>
+	               <optgroup label="Pacific Time Zone">
+	                   <option value="CA">California</option>
+	                   <option value="NV">Nevada</option>
+	                   <option value="OR">Oregon</option>
+	                   <option value="WA">Washington</option>
+	               </optgroup>
+	               <optgroup label="Mountain Time Zone">
+	                   <option value="AZ">Arizona</option>
+	                   <option value="CO">Colorado</option>
+	                   <option value="ID">Idaho</option>
+	                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+	                   <option value="NM">New Mexico</option>
+	                   <option value="ND">North Dakota</option>
+	                   <option value="UT">Utah</option>
+	                   <option value="WY">Wyoming</option>
+	               </optgroup>
+	               <optgroup label="Central Time Zone">
+	                   <option value="AL">Alabama</option>
+	                   <option value="AR">Arkansas</option>
+	                   <option value="IL">Illinois</option>
+	                   <option value="IA">Iowa</option>
+	                   <option value="KS">Kansas</option>
+	                   <option value="KY">Kentucky</option>
+	                   <option value="LA">Louisiana</option>
+	                   <option value="MN">Minnesota</option>
+	                   <option value="MS">Mississippi</option>
+	                   <option value="MO">Missouri</option>
+	                   <option value="OK">Oklahoma</option>
+	                   <option value="SD">South Dakota</option>
+	                   <option value="TX">Texas</option>
+	                   <option value="TN">Tennessee</option>
+	                   <option value="WI">Wisconsin</option>
+	               </optgroup>
+	               <optgroup label="Eastern Time Zone">
+	                   <option value="CT">Connecticut</option>
+	                   <option value="DE">Delaware</option>
+	                   <option value="FL">Florida</option>
+	                   <option value="GA">Georgia</option>
+	                   <option value="IN">Indiana</option>
+	                   <option value="ME">Maine</option>
+	                   <option value="MD">Maryland</option>
+	                   <option value="MA">Massachusetts</option>
+	                   <option value="MI">Michigan</option>
+	                   <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+	                   <option value="NY">New York</option>
+	                   <option value="NC">North Carolina</option>
+	                   <option value="OH">Ohio</option>
+	                   <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+	                   <option value="VT">Vermont</option><option value="VA">Virginia</option>
+	                   <option value="WV">West Virginia</option>
+	               </optgroup>
+	        	</select>
+			</div>
+			<div class="col-md-6">
+				<h5>Tagging Support</h5>
+				<input type="hidden" id="select2_5" style="width: 100%;" value="brown,red,green" />
+				<div class="separator bottom"></div>
+				<h5>Disabled Mode</h5>
+		        <select disabled="disabled" id="select2_6_1" style="width:100%">
+		        	<optgroup label="Alaskan/Hawaiian Time Zone">
+		                   <option value="AK">Alaska</option>
+		                   <option value="HI">Hawaii</option>
+		               </optgroup>
+		               <optgroup label="Pacific Time Zone">
+		                   <option value="CA">California</option>
+		                   <option value="NV">Nevada</option>
+		                   <option value="OR">Oregon</option>
+		                   <option value="WA">Washington</option>
+		               </optgroup>
+		               <optgroup label="Mountain Time Zone">
+		                   <option value="AZ">Arizona</option>
+		                   <option value="CO">Colorado</option>
+		                   <option value="ID">Idaho</option>
+		                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+		                   <option value="NM">New Mexico</option>
+		                   <option value="ND">North Dakota</option>
+		                   <option value="UT">Utah</option>
+		                   <option value="WY">Wyoming</option>
+		               </optgroup>
+		               <optgroup label="Central Time Zone">
+		                   <option value="AL">Alabama</option>
+		                   <option value="AR">Arkansas</option>
+		                   <option value="IL">Illinois</option>
+		                   <option value="IA">Iowa</option>
+		                   <option value="KS">Kansas</option>
+		                   <option value="KY">Kentucky</option>
+		                   <option value="LA">Louisiana</option>
+		                   <option value="MN">Minnesota</option>
+		                   <option value="MS">Mississippi</option>
+		                   <option value="MO">Missouri</option>
+		                   <option value="OK">Oklahoma</option>
+		                   <option value="SD">South Dakota</option>
+		                   <option value="TX">Texas</option>
+		                   <option value="TN">Tennessee</option>
+		                   <option value="WI">Wisconsin</option>
+		               </optgroup>
+		               <optgroup label="Eastern Time Zone">
+		                   <option value="CT">Connecticut</option>
+		                   <option value="DE">Delaware</option>
+		                   <option value="FL">Florida</option>
+		                   <option value="GA">Georgia</option>
+		                   <option value="IN">Indiana</option>
+		                   <option value="ME">Maine</option>
+		                   <option value="MD">Maryland</option>
+		                   <option value="MA">Massachusetts</option>
+		                   <option value="MI">Michigan</option>
+		                   <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+		                   <option value="NY">New York</option>
+		                   <option value="NC">North Carolina</option>
+		                   <option value="OH">Ohio</option>
+		                   <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+		                   <option value="VT">Vermont</option><option value="VA">Virginia</option>
+		                   <option value="WV">West Virginia</option>
+		               </optgroup>
+		        </select>
+		        <div class="separator bottom"></div>
+				<select disabled="disabled" id="select2_6_2" multiple style="width:100%">
+					<optgroup label="Alaskan/Hawaiian Time Zone">
+		                   <option value="AK">Alaska</option>
+		                   <option value="HI">Hawaii</option>
+		               </optgroup>
+		               <optgroup label="Pacific Time Zone">
+		                   <option value="CA">California</option>
+		                   <option value="NV">Nevada</option>
+		                   <option value="OR">Oregon</option>
+		                   <option value="WA">Washington</option>
+		               </optgroup>
+		               <optgroup label="Mountain Time Zone">
+		                   <option value="AZ">Arizona</option>
+		                   <option value="CO">Colorado</option>
+		                   <option value="ID">Idaho</option>
+		                   <option value="MT">Montana</option><option value="NE">Nebraska</option>
+		                   <option value="NM">New Mexico</option>
+		                   <option value="ND">North Dakota</option>
+		                   <option value="UT">Utah</option>
+		                   <option value="WY">Wyoming</option>
+		               </optgroup>
+		               <optgroup label="Central Time Zone">
+		                   <option value="AL">Alabama</option>
+		                   <option value="AR">Arkansas</option>
+		                   <option value="IL">Illinois</option>
+		                   <option value="IA">Iowa</option>
+		                   <option value="KS">Kansas</option>
+		                   <option value="KY">Kentucky</option>
+		                   <option value="LA">Louisiana</option>
+		                   <option value="MN">Minnesota</option>
+		                   <option value="MS">Mississippi</option>
+		                   <option value="MO">Missouri</option>
+		                   <option value="OK">Oklahoma</option>
+		                   <option value="SD">South Dakota</option>
+		                   <option value="TX">Texas</option>
+		                   <option value="TN">Tennessee</option>
+		                   <option value="WI">Wisconsin</option>
+		               </optgroup>
+		               <optgroup label="Eastern Time Zone">
+		                   <option value="CT">Connecticut</option>
+		                   <option value="DE">Delaware</option>
+		                   <option value="FL">Florida</option>
+		                   <option value="GA">Georgia</option>
+		                   <option value="IN">Indiana</option>
+		                   <option value="ME">Maine</option>
+		                   <option value="MD">Maryland</option>
+		                   <option value="MA">Massachusetts</option>
+		                   <option value="MI">Michigan</option>
+		                   <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+		                   <option value="NY">New York</option>
+		                   <option value="NC">North Carolina</option>
+		                   <option value="OH">Ohio</option>
+		                   <option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option>
+		                   <option value="VT">Vermont</option><option value="VA">Virginia</option>
+		                   <option value="WV">West Virginia</option>
+		               </optgroup>
+				</select>
+				<div class="separator bottom"></div>
+				<div class="btn-group btn-group-sm">
+					<input type="button" id="select2_6_enable" class="btn btn-default" value="Enable"/> 
+					<input type="button" id="select2_6_disable" class="btn btn-default" value="Disable"/>
+				</div>
+				<div class="separator bottom"></div>
+				<h5>Templating</h5>
+				<select style="width: 100%;" id="select2_7">
+					<optgroup label="Alaskan/Hawaiian Time Zone">
+						<option value="AK">Alaska</option>
+						<option value="HI">Hawaii</option>
+					</optgroup>
+					<optgroup label="Pacific Time Zone">
+						<option value="CA">California</option>
+						<option value="NV">Nevada</option>
+						<option value="OR">Oregon</option>
+						<option value="WA">Washington</option>
+					</optgroup>
+					<optgroup label="Mountain Time Zone">
+						<option value="AZ">Arizona</option>
+						<option value="CO">Colorado</option>
+						<option value="ID">Idaho</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NM">New Mexico</option>
+						<option value="ND">North Dakota</option>
+						<option value="UT">Utah</option>
+						<option value="WY">Wyoming</option>
+					</optgroup>
+					<optgroup label="Central Time Zone">
+						<option value="AL">Alabama</option>
+						<option value="AR">Arkansas</option>
+						<option value="IL">Illinois</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="OK">Oklahoma</option>
+						<option value="SD">South Dakota</option>
+						<option value="TX">Texas</option>
+						<option value="TN">Tennessee</option>
+						<option value="WI">Wisconsin</option>
+					</optgroup>
+					<optgroup label="Eastern Time Zone">
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="IN">Indiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="OH">Ohio</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WV">West Virginia</option>
+					</optgroup>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-a627f3c3e46a00bf366d4dff525eeec1">
+												<pre class="prettyprint">&lt;div class=&quot;widget&quot;&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;h4 class=&quot;heading&quot;&gt;Advanced Select controls&lt;/h4&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;
+				&lt;h5&gt;Basics&lt;/h5&gt;
+				&lt;select style=&quot;width: 100%;&quot; id=&quot;select2_1&quot;&gt;
+	               &lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+	                   &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+	                   &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+	                   &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+	                   &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+	                   &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+	                   &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+	                   &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+	                   &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+	                   &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+	                   &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+	                   &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+	                   &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+	                   &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+	                   &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+	                   &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+	                   &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+	                   &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+	                   &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+	                   &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+	                   &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+	                   &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+	                   &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+	                   &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+	                   &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+	                   &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+	                   &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+	                   &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+	                   &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+	                   &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+	                   &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+	                   &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+	                   &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+	                   &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+	                   &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+	                   &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+	                   &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	        	&lt;/select&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+
+				&lt;h5&gt;Multi-Value Select Boxes&lt;/h5&gt;
+				&lt;select multiple=&quot;multiple&quot; style=&quot;width: 100%;&quot; id=&quot;select2_2&quot;&gt;
+	               &lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+	                   &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+	                   &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+	                   &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+	                   &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+	                   &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+	                   &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+	                   &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+	                   &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+	                   &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+	                   &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+	                   &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+	                   &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+	                   &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+	                   &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+	                   &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+	                   &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+	                   &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+	                   &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+	                   &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+	                   &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+	                   &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+	                   &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+	                   &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+	                   &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+	                   &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+	                   &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+	                   &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+	                   &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+	                   &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+	                   &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+	                   &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+	                   &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+	                   &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+	                   &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+	                   &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+	                   &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	        	&lt;/select&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+
+				&lt;h5&gt;Placeholders&lt;/h5&gt;
+				&lt;select style=&quot;width: 100%;&quot; id=&quot;select2_3&quot;&gt;
+					&lt;option&gt;&lt;/option&gt;
+					&lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+	                   &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+	                   &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+	                   &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+	                   &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+	                   &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+	                   &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+	                   &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+	                   &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+	                   &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+	                   &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+	                   &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+	                   &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+	                   &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+	                   &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+	                   &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+	                   &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+	                   &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+	                   &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+	                   &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+	                   &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+	                   &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+	                   &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+	                   &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+	                   &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+	                   &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+	                   &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+	                   &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+	                   &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+	                   &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+	                   &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+	                   &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+	                   &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+	                   &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+	                   &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+	                   &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+	                   &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	        	&lt;/select&gt;
+	        	&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;select multiple=&quot;multiple&quot; style=&quot;width: 100%;&quot; id=&quot;select2_4&quot;&gt;
+	               &lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+	                   &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+	                   &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+	                   &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+	                   &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+	                   &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+	                   &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+	                   &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+	                   &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+	                   &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+	                   &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+	                   &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+	                   &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+	                   &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+	                   &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+	                   &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+	                   &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+	                   &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+	                   &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+	                   &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+	                   &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+	                   &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+	                   &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+	                   &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+	                   &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+	                   &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	               &lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+	                   &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+	                   &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+	                   &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+	                   &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+	                   &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+	                   &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+	                   &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+	                   &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+	                   &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+	                   &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+	                   &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+	                   &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+	                   &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+	                   &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+	                   &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+	               &lt;/optgroup&gt;
+	        	&lt;/select&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;
+				&lt;h5&gt;Tagging Support&lt;/h5&gt;
+				&lt;input type=&quot;hidden&quot; id=&quot;select2_5&quot; style=&quot;width: 100%;&quot; value=&quot;brown,red,green&quot; /&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;h5&gt;Disabled Mode&lt;/h5&gt;
+		        &lt;select disabled=&quot;disabled&quot; id=&quot;select2_6_1&quot; style=&quot;width:100%&quot;&gt;
+		        	&lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+		                   &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+		                   &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+		                   &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+		                   &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+		                   &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+		                   &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+		                   &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+		                   &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+		                   &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+		                   &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+		                   &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+		                   &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+		                   &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+		                   &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+		                   &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+		                   &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+		                   &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+		                   &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+		                   &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+		                   &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+		                   &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+		                   &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+		                   &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+		                   &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+		                   &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+		                   &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+		                   &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+		                   &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+		                   &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+		                   &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+		                   &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+		                   &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+		                   &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+		                   &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+		                   &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+		                   &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+		                   &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+		                   &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+		                   &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+		                   &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+		                   &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+		                   &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+		                   &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+		                   &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+		                   &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		        &lt;/select&gt;
+		        &lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;select disabled=&quot;disabled&quot; id=&quot;select2_6_2&quot; multiple style=&quot;width:100%&quot;&gt;
+					&lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+		                   &lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+		                   &lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+		                   &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+		                   &lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+		                   &lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+		                   &lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+		                   &lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+		                   &lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+		                   &lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+		                   &lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+		                   &lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+		                   &lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+		                   &lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+		                   &lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+		                   &lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+		                   &lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+		                   &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+		                   &lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+		                   &lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+		                   &lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+		                   &lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+		                   &lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+		                   &lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+		                   &lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+		                   &lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+		                   &lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+		                   &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+		                   &lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+		                   &lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+		               &lt;/optgroup&gt;
+		               &lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+		                   &lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+		                   &lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+		                   &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+		                   &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+		                   &lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+		                   &lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+		                   &lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+		                   &lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+		                   &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+		                   &lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+		                   &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+		                   &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+		                   &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+		                   &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+		                   &lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+		                   &lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+		               &lt;/optgroup&gt;
+				&lt;/select&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;div class=&quot;btn-group btn-group-sm&quot;&gt;
+					&lt;input type=&quot;button&quot; id=&quot;select2_6_enable&quot; class=&quot;btn btn-default&quot; value=&quot;Enable&quot;/&gt; 
+					&lt;input type=&quot;button&quot; id=&quot;select2_6_disable&quot; class=&quot;btn btn-default&quot; value=&quot;Disable&quot;/&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;h5&gt;Templating&lt;/h5&gt;
+				&lt;select style=&quot;width: 100%;&quot; id=&quot;select2_7&quot;&gt;
+					&lt;optgroup label=&quot;Alaskan/Hawaiian Time Zone&quot;&gt;
+						&lt;option value=&quot;AK&quot;&gt;Alaska&lt;/option&gt;
+						&lt;option value=&quot;HI&quot;&gt;Hawaii&lt;/option&gt;
+					&lt;/optgroup&gt;
+					&lt;optgroup label=&quot;Pacific Time Zone&quot;&gt;
+						&lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+						&lt;option value=&quot;NV&quot;&gt;Nevada&lt;/option&gt;
+						&lt;option value=&quot;OR&quot;&gt;Oregon&lt;/option&gt;
+						&lt;option value=&quot;WA&quot;&gt;Washington&lt;/option&gt;
+					&lt;/optgroup&gt;
+					&lt;optgroup label=&quot;Mountain Time Zone&quot;&gt;
+						&lt;option value=&quot;AZ&quot;&gt;Arizona&lt;/option&gt;
+						&lt;option value=&quot;CO&quot;&gt;Colorado&lt;/option&gt;
+						&lt;option value=&quot;ID&quot;&gt;Idaho&lt;/option&gt;
+						&lt;option value=&quot;MT&quot;&gt;Montana&lt;/option&gt;
+						&lt;option value=&quot;NE&quot;&gt;Nebraska&lt;/option&gt;
+						&lt;option value=&quot;NM&quot;&gt;New Mexico&lt;/option&gt;
+						&lt;option value=&quot;ND&quot;&gt;North Dakota&lt;/option&gt;
+						&lt;option value=&quot;UT&quot;&gt;Utah&lt;/option&gt;
+						&lt;option value=&quot;WY&quot;&gt;Wyoming&lt;/option&gt;
+					&lt;/optgroup&gt;
+					&lt;optgroup label=&quot;Central Time Zone&quot;&gt;
+						&lt;option value=&quot;AL&quot;&gt;Alabama&lt;/option&gt;
+						&lt;option value=&quot;AR&quot;&gt;Arkansas&lt;/option&gt;
+						&lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+						&lt;option value=&quot;IA&quot;&gt;Iowa&lt;/option&gt;
+						&lt;option value=&quot;KS&quot;&gt;Kansas&lt;/option&gt;
+						&lt;option value=&quot;KY&quot;&gt;Kentucky&lt;/option&gt;
+						&lt;option value=&quot;LA&quot;&gt;Louisiana&lt;/option&gt;
+						&lt;option value=&quot;MN&quot;&gt;Minnesota&lt;/option&gt;
+						&lt;option value=&quot;MS&quot;&gt;Mississippi&lt;/option&gt;
+						&lt;option value=&quot;MO&quot;&gt;Missouri&lt;/option&gt;
+						&lt;option value=&quot;OK&quot;&gt;Oklahoma&lt;/option&gt;
+						&lt;option value=&quot;SD&quot;&gt;South Dakota&lt;/option&gt;
+						&lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+						&lt;option value=&quot;TN&quot;&gt;Tennessee&lt;/option&gt;
+						&lt;option value=&quot;WI&quot;&gt;Wisconsin&lt;/option&gt;
+					&lt;/optgroup&gt;
+					&lt;optgroup label=&quot;Eastern Time Zone&quot;&gt;
+						&lt;option value=&quot;CT&quot;&gt;Connecticut&lt;/option&gt;
+						&lt;option value=&quot;DE&quot;&gt;Delaware&lt;/option&gt;
+						&lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+						&lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+						&lt;option value=&quot;IN&quot;&gt;Indiana&lt;/option&gt;
+						&lt;option value=&quot;ME&quot;&gt;Maine&lt;/option&gt;
+						&lt;option value=&quot;MD&quot;&gt;Maryland&lt;/option&gt;
+						&lt;option value=&quot;MA&quot;&gt;Massachusetts&lt;/option&gt;
+						&lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+						&lt;option value=&quot;NH&quot;&gt;New Hampshire&lt;/option&gt;
+						&lt;option value=&quot;NJ&quot;&gt;New Jersey&lt;/option&gt;
+						&lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+						&lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+						&lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+						&lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;
+						&lt;option value=&quot;RI&quot;&gt;Rhode Island&lt;/option&gt;
+						&lt;option value=&quot;SC&quot;&gt;South Carolina&lt;/option&gt;
+						&lt;option value=&quot;VT&quot;&gt;Vermont&lt;/option&gt;
+						&lt;option value=&quot;VA&quot;&gt;Virginia&lt;/option&gt;
+						&lt;option value=&quot;WV&quot;&gt;West Virginia&lt;/option&gt;
+					&lt;/optgroup&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-a627f3c3e46a00bf366d4dff525eeec1">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/select2/assets/lib/css/select2.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/select2/assets/custom/less/select2.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-a627f3c3e46a00bf366d4dff525eeec1">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/select2/assets/lib/js/select2.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/select2/assets/custom/js/select2.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/select2/assets/lib/js/select2.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/select2/assets/custom/js/select2.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

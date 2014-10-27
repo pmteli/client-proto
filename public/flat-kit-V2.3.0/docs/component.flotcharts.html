@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.flotcharts.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.flotcharts.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'flotcharts'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.flotcharts</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-329ccd17c7dc8976be3dcaec05d5d267" data-toggle="collapse">flotchart-autoupdate</a></h4>
+							<div class="collapse in" id="view-329ccd17c7dc8976be3dcaec05d5d267">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-329ccd17c7dc8976be3dcaec05d5d267" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-329ccd17c7dc8976be3dcaec05d5d267" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-329ccd17c7dc8976be3dcaec05d5d267" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-329ccd17c7dc8976be3dcaec05d5d267" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-autoupdate.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-329ccd17c7dc8976be3dcaec05d5d267">
+												<!-- Live Chart -->
+<div id="chart_live" class="flotchart-holder"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-329ccd17c7dc8976be3dcaec05d5d267">
+												<pre class="prettyprint">&lt;!-- Live Chart --&gt;
+&lt;div id=&quot;chart_live&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-329ccd17c7dc8976be3dcaec05d5d267">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-329ccd17c7dc8976be3dcaec05d5d267">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-autoupdating.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-5ab90598478c6d715291693a3537f258" data-toggle="collapse">flotchart-bars-horizontal</a></h4>
+							<div class="collapse in" id="view-5ab90598478c6d715291693a3537f258">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-5ab90598478c6d715291693a3537f258" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-5ab90598478c6d715291693a3537f258" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-5ab90598478c6d715291693a3537f258" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-5ab90598478c6d715291693a3537f258" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-bars-horizontal.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-5ab90598478c6d715291693a3537f258">
+												<!-- Horizontal Bars Chart -->
+<div id="chart_horizontal_bars" class="flotchart-holder"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-5ab90598478c6d715291693a3537f258">
+												<pre class="prettyprint">&lt;!-- Horizontal Bars Chart --&gt;
+&lt;div id=&quot;chart_horizontal_bars&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-5ab90598478c6d715291693a3537f258">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-5ab90598478c6d715291693a3537f258">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-horizontal.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-719d8a5da66b3c5469709a138aeedf7d" data-toggle="collapse">flotchart-bars-ordered</a></h4>
+							<div class="collapse in" id="view-719d8a5da66b3c5469709a138aeedf7d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-719d8a5da66b3c5469709a138aeedf7d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-719d8a5da66b3c5469709a138aeedf7d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-719d8a5da66b3c5469709a138aeedf7d" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-719d8a5da66b3c5469709a138aeedf7d" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-bars-ordered.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-719d8a5da66b3c5469709a138aeedf7d">
+												<!-- Ordered bars Chart -->
+<div id="chart_ordered_bars" class="flotchart-holder"></div>
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-719d8a5da66b3c5469709a138aeedf7d">
+												<pre class="prettyprint">&lt;!-- Ordered bars Chart --&gt;
+&lt;div id=&quot;chart_ordered_bars&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-719d8a5da66b3c5469709a138aeedf7d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-719d8a5da66b3c5469709a138aeedf7d">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.orderBars.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-ordered.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-7cbb65b36c1dad2a6d0c0f11a66a30af" data-toggle="collapse">flotchart-bars-stacked</a></h4>
+							<div class="collapse in" id="view-7cbb65b36c1dad2a6d0c0f11a66a30af">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-7cbb65b36c1dad2a6d0c0f11a66a30af" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-7cbb65b36c1dad2a6d0c0f11a66a30af" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-7cbb65b36c1dad2a6d0c0f11a66a30af" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-7cbb65b36c1dad2a6d0c0f11a66a30af" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-bars-stacked.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-7cbb65b36c1dad2a6d0c0f11a66a30af">
+												<!-- Stacked bars Chart -->
+<div id="chart_stacked_bars" class="flotchart-holder"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-7cbb65b36c1dad2a6d0c0f11a66a30af">
+												<pre class="prettyprint">&lt;!-- Stacked bars Chart --&gt;
+&lt;div id=&quot;chart_stacked_bars&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-7cbb65b36c1dad2a6d0c0f11a66a30af">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-7cbb65b36c1dad2a6d0c0f11a66a30af">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-stacked.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-de3191ac0f80789d3a2a8c223dfe8cee" data-toggle="collapse">flotchart-donut</a></h4>
+							<div class="collapse in" id="view-de3191ac0f80789d3a2a8c223dfe8cee">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-de3191ac0f80789d3a2a8c223dfe8cee" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-de3191ac0f80789d3a2a8c223dfe8cee" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-de3191ac0f80789d3a2a8c223dfe8cee" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-de3191ac0f80789d3a2a8c223dfe8cee" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-donut.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-de3191ac0f80789d3a2a8c223dfe8cee">
+												<!-- Donut Chart -->
+<div id="chart_donut" class="flotchart-holder"></div>
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-de3191ac0f80789d3a2a8c223dfe8cee">
+												<pre class="prettyprint">&lt;!-- Donut Chart --&gt;
+&lt;div id=&quot;chart_donut&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-de3191ac0f80789d3a2a8c223dfe8cee">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-de3191ac0f80789d3a2a8c223dfe8cee">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.pie.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-donut.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-b7c80458a6675fce55d4bba83e362469" data-toggle="collapse">flotchart-line-2</a></h4>
+							<div class="collapse in" id="view-b7c80458a6675fce55d4bba83e362469">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-b7c80458a6675fce55d4bba83e362469" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-b7c80458a6675fce55d4bba83e362469" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-b7c80458a6675fce55d4bba83e362469" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-b7c80458a6675fce55d4bba83e362469" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-line-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-b7c80458a6675fce55d4bba83e362469">
+												<!-- Chart with lines and fill with no points -->
+<div id="chart_lines_fill_nopoints_2" class="flotchart-holder"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-b7c80458a6675fce55d4bba83e362469">
+												<pre class="prettyprint">&lt;!-- Chart with lines and fill with no points --&gt;
+&lt;div id=&quot;chart_lines_fill_nopoints_2&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-b7c80458a6675fce55d4bba83e362469">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-b7c80458a6675fce55d4bba83e362469">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-line-2.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-9599aa95b5bf1727b89b1da8328190b5" data-toggle="collapse">flotchart-line</a></h4>
+							<div class="collapse in" id="view-9599aa95b5bf1727b89b1da8328190b5">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-9599aa95b5bf1727b89b1da8328190b5" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-9599aa95b5bf1727b89b1da8328190b5" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-9599aa95b5bf1727b89b1da8328190b5" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-9599aa95b5bf1727b89b1da8328190b5" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-line.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-9599aa95b5bf1727b89b1da8328190b5">
+												<!-- Chart with lines and fill with no points -->
+<div id="chart_lines_fill_nopoints" class="flotchart-holder"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-9599aa95b5bf1727b89b1da8328190b5">
+												<pre class="prettyprint">&lt;!-- Chart with lines and fill with no points --&gt;
+&lt;div id=&quot;chart_lines_fill_nopoints&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-9599aa95b5bf1727b89b1da8328190b5">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-9599aa95b5bf1727b89b1da8328190b5">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-line.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-e2a9e026c8e63b1ae45bcb0e46d846e3" data-toggle="collapse">flotchart-mixed-1</a></h4>
+							<div class="collapse in" id="view-e2a9e026c8e63b1ae45bcb0e46d846e3">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-e2a9e026c8e63b1ae45bcb0e46d846e3" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-e2a9e026c8e63b1ae45bcb0e46d846e3" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-e2a9e026c8e63b1ae45bcb0e46d846e3" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-e2a9e026c8e63b1ae45bcb0e46d846e3" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-mixed-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-e2a9e026c8e63b1ae45bcb0e46d846e3">
+												<!-- Chart with lines and fill with no points -->
+<div id="chart_mixed_1" class="flotchart-holder" style="height: 182px"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-e2a9e026c8e63b1ae45bcb0e46d846e3">
+												<pre class="prettyprint">&lt;!-- Chart with lines and fill with no points --&gt;
+&lt;div id=&quot;chart_mixed_1&quot; class=&quot;flotchart-holder&quot; style=&quot;height: 182px&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-e2a9e026c8e63b1ae45bcb0e46d846e3">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-e2a9e026c8e63b1ae45bcb0e46d846e3">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-mixed-1.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-8529b758d81b322e0d92abdf09c85328" data-toggle="collapse">flotchart-pie</a></h4>
+							<div class="collapse in" id="view-8529b758d81b322e0d92abdf09c85328">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-8529b758d81b322e0d92abdf09c85328" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-8529b758d81b322e0d92abdf09c85328" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-8529b758d81b322e0d92abdf09c85328" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-8529b758d81b322e0d92abdf09c85328" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-pie.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-8529b758d81b322e0d92abdf09c85328">
+												<!-- Pie Chart -->
+<div id="chart_pie" class="flotchart-holder"></div>
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-8529b758d81b322e0d92abdf09c85328">
+												<pre class="prettyprint">&lt;!-- Pie Chart --&gt;
+&lt;div id=&quot;chart_pie&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-8529b758d81b322e0d92abdf09c85328">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-8529b758d81b322e0d92abdf09c85328">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.pie.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-pie.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-385bb7215dd7b5a6a018d447c2ec7341" data-toggle="collapse">flotchart-simple</a></h4>
+							<div class="collapse in" id="view-385bb7215dd7b5a6a018d447c2ec7341">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-385bb7215dd7b5a6a018d447c2ec7341" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-385bb7215dd7b5a6a018d447c2ec7341" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-385bb7215dd7b5a6a018d447c2ec7341" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-385bb7215dd7b5a6a018d447c2ec7341" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/flotchart-simple.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-385bb7215dd7b5a6a018d447c2ec7341">
+												<!-- Simple Chart -->
+<div id="chart_simple" class="flotchart-holder"></div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-385bb7215dd7b5a6a018d447c2ec7341">
+												<pre class="prettyprint">&lt;!-- Simple Chart --&gt;
+&lt;div id=&quot;chart_simple&quot; class=&quot;flotchart-holder&quot;&gt;&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-385bb7215dd7b5a6a018d447c2ec7341">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/charts/flot/assets/custom/less/flotcharts.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;
+@import &quot;assets/components/modules/admin/ui/tooltips/assets/tooltips.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-385bb7215dd7b5a6a018d447c2ec7341">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-simple.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-autoupdating.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-horizontal.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.orderBars.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-ordered.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-stacked.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.pie.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-donut.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-line-2.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-line.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-mixed-1.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-pie.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-simple.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

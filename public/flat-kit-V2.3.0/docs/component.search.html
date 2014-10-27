@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.search.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.search.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'search'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.search</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-3a405c284a3489ffa9467ebcc0cf2504" data-toggle="collapse">search-advanced</a></h4>
+							<div class="collapse in" id="view-3a405c284a3489ffa9467ebcc0cf2504">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-3a405c284a3489ffa9467ebcc0cf2504" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-3a405c284a3489ffa9467ebcc0cf2504" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-3a405c284a3489ffa9467ebcc0cf2504" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-3a405c284a3489ffa9467ebcc0cf2504" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/search-advanced.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-3a405c284a3489ffa9467ebcc0cf2504">
+												<div class="widget widget-heading-simple widget-body-gray">
+	<div class="widget-body">
+		<div class="row">
+			<div class="col-md-4 center">
+				<label class="strong">Search for</label>
+				<input type="text" class="form-control" placeholder="Type your keywords .. " />
+				
+				<div class="separator top"></div>
+				<label class="strong">Options</label>
+				<div class="uniformjs">
+					<label class="checkbox" style="display: inline-block;">
+						<input type="checkbox" class="checkbox" value="1" />
+						Sexxxxy
+					</label>
+					<label class="checkbox" style="display: inline-block; margin-left: 10px; margin-top: 10px;">
+						<input type="checkbox" class="checkbox" value="1" checked="checked" />
+						Checked
+					</label>
+				</div>
+			</div>
+			<div class="col-md-4 center">
+				<label class="strong">Date from</label>
+				<div class="input-group date" id="datepicker1">
+				    <input class="form-control" type="text" value="14 February 2013">
+				    <span class="input-group-addon"><i class="fa fa-th"></i></span>
+				</div>
+				<div class="separator top"></div>
+
+				<label class="strong">Date to</label>
+				<div class="input-group date" id="datepicker2">
+				    <input class="form-control" type="text" value="14 February 2013">
+				    <span class="input-group-addon"><i class="fa fa-th"></i></span>
+				</div>
+			</div>
+			<div class="col-md-4 center">
+				<label class="strong">Other options</label><br/>
+				<div class="btn-group" data-toggle="buttons-checkbox">
+				    <button type="button" class="active btn btn-inverse">Left</button>
+				    <button type="button" class="active btn btn-inverse">Middle</button>
+				    <button type="button" class="btn btn-inverse">Right</button>
+				</div>
+				<div class="separator bottom"></div>
+				<button type="submit" class="btn btn-primary btn-large btn-block" data-loading-text="Now searching ..." data-toggle="btn-loading"><i class="fa fa-search"></i> Start Searching</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="widget widget-heading-simple widget-body-white margin-none">
+	<div class="widget-body">
+		<h5 class="text-uppercase strong separator bottom">30 Search results</h5>
+		
+		
+		<div class="panel-group accordion" id="tabAccountAccordion">
+
+		    <!-- Accordion Item -->
+		    <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#tabAccountAccordion" href="#collapse-1-1">Lorem ipsum dolor sit amet?</a></h4>
+		        </div>
+		        <div id="collapse-1-1" class="panel-collapse collapse">
+		            <div class="panel-body">
+		            	<div class="row">	
+							<div class="col-md-2 center">
+								<a href="" class="thumb"><img data-src="holder.js/110x100" alt="Image" /></a>
+							</div>
+							<div class="col-md-10">
+								<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+								<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+							</div>
+						</div>
+					</div>
+		        </div>
+		    </div>
+		    <!-- // Accordion Item END -->
+		
+		    <!-- Accordion Item -->
+		    <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#tabAccountAccordion" href="#collapse-2-1">Quisque porttitor elit ac mauris?</a></h4>
+		        </div>
+		        <div id="collapse-2-1" class="panel-collapse collapse in">
+		            <div class="panel-body">
+		            	<div class="row">	
+							<div class="col-md-2 center">
+								<a href="" class="thumb"><img data-src="holder.js/110x100" alt="Image" /></a>
+							</div>
+							<div class="col-md-10">
+								<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+								<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+							</div>
+						</div>
+					</div>
+		        </div>
+		    </div>
+		    <!-- // Accordion Item END -->
+		
+		    <!-- Accordion Item -->
+		    <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#tabAccountAccordion" href="#collapse-3-1">Vivamus eros tortor consequat sed?</a></h4>
+		        </div>
+		        <div id="collapse-3-1" class="panel-collapse collapse">
+		            <div class="panel-body">
+		            	<div class="row">	
+							<div class="col-md-2 center">
+								<a href="" class="thumb"><img data-src="holder.js/110x100" alt="Image" /></a>
+							</div>
+							<div class="col-md-10">
+								<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+								<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+							</div>
+						</div>
+					</div>
+		        </div>
+		    </div>
+		    <!-- // Accordion Item END -->
+		
+		    <!-- Accordion Item -->
+		    <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#tabAccountAccordion" href="#collapse-4-1">Etiam suscipit leo tincidunt mi volutpat?</a></h4>
+		        </div>
+		        <div id="collapse-4-1" class="panel-collapse collapse">
+		            <div class="panel-body">
+		            	<div class="row">	
+							<div class="col-md-2 center">
+								<a href="" class="thumb"><img data-src="holder.js/110x100" alt="Image" /></a>
+							</div>
+							<div class="col-md-10">
+								<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+								<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+							</div>
+						</div>
+					</div>
+		        </div>
+		    </div>
+		    <!-- // Accordion Item END -->
+		
+		</div>
+		<div class="separator bottom"></div>
+		<ul class="pagination margin-none">
+	        <li class="disabled"><a href="#">&lt;</a></li>
+	        <li class="active"><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+	        <li><a href="#">&gt;</a></li>
+	    </ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-3a405c284a3489ffa9467ebcc0cf2504">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot;&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-md-4 center&quot;&gt;
+				&lt;label class=&quot;strong&quot;&gt;Search for&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Type your keywords .. &quot; /&gt;
+				
+				&lt;div class=&quot;separator top&quot;&gt;&lt;/div&gt;
+				&lt;label class=&quot;strong&quot;&gt;Options&lt;/label&gt;
+				&lt;div class=&quot;uniformjs&quot;&gt;
+					&lt;label class=&quot;checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+						&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; value=&quot;1&quot; /&gt;
+						Sexxxxy
+					&lt;/label&gt;
+					&lt;label class=&quot;checkbox&quot; style=&quot;display: inline-block; margin-left: 10px; margin-top: 10px;&quot;&gt;
+						&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; value=&quot;1&quot; checked=&quot;checked&quot; /&gt;
+						Checked
+					&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-4 center&quot;&gt;
+				&lt;label class=&quot;strong&quot;&gt;Date from&lt;/label&gt;
+				&lt;div class=&quot;input-group date&quot; id=&quot;datepicker1&quot;&gt;
+				    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; value=&quot;14 February 2013&quot;&gt;
+				    &lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;separator top&quot;&gt;&lt;/div&gt;
+
+				&lt;label class=&quot;strong&quot;&gt;Date to&lt;/label&gt;
+				&lt;div class=&quot;input-group date&quot; id=&quot;datepicker2&quot;&gt;
+				    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; value=&quot;14 February 2013&quot;&gt;
+				    &lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-4 center&quot;&gt;
+				&lt;label class=&quot;strong&quot;&gt;Other options&lt;/label&gt;&lt;br/&gt;
+				&lt;div class=&quot;btn-group&quot; data-toggle=&quot;buttons-checkbox&quot;&gt;
+				    &lt;button type=&quot;button&quot; class=&quot;active btn btn-inverse&quot;&gt;Left&lt;/button&gt;
+				    &lt;button type=&quot;button&quot; class=&quot;active btn btn-inverse&quot;&gt;Middle&lt;/button&gt;
+				    &lt;button type=&quot;button&quot; class=&quot;btn btn-inverse&quot;&gt;Right&lt;/button&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-large btn-block&quot; data-loading-text=&quot;Now searching ...&quot; data-toggle=&quot;btn-loading&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt; Start Searching&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;widget widget-heading-simple widget-body-white margin-none&quot;&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;h5 class=&quot;text-uppercase strong separator bottom&quot;&gt;30 Search results&lt;/h5&gt;
+		
+		
+		&lt;div class=&quot;panel-group accordion&quot; id=&quot;tabAccountAccordion&quot;&gt;
+
+		    &lt;!-- Accordion Item --&gt;
+		    &lt;div class=&quot;panel panel-default&quot;&gt;
+		        &lt;div class=&quot;panel-heading&quot;&gt;
+		            &lt;h4 class=&quot;panel-title&quot;&gt;&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#tabAccountAccordion&quot; href=&quot;#collapse-1-1&quot;&gt;Lorem ipsum dolor sit amet?&lt;/a&gt;&lt;/h4&gt;
+		        &lt;/div&gt;
+		        &lt;div id=&quot;collapse-1-1&quot; class=&quot;panel-collapse collapse&quot;&gt;
+		            &lt;div class=&quot;panel-body&quot;&gt;
+		            	&lt;div class=&quot;row&quot;&gt;	
+							&lt;div class=&quot;col-md-2 center&quot;&gt;
+								&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/110x100&quot; alt=&quot;Image&quot; /&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;col-md-10&quot;&gt;
+								&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+								&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+								&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		    &lt;!-- // Accordion Item END --&gt;
+		
+		    &lt;!-- Accordion Item --&gt;
+		    &lt;div class=&quot;panel panel-default&quot;&gt;
+		        &lt;div class=&quot;panel-heading&quot;&gt;
+		            &lt;h4 class=&quot;panel-title&quot;&gt;&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#tabAccountAccordion&quot; href=&quot;#collapse-2-1&quot;&gt;Quisque porttitor elit ac mauris?&lt;/a&gt;&lt;/h4&gt;
+		        &lt;/div&gt;
+		        &lt;div id=&quot;collapse-2-1&quot; class=&quot;panel-collapse collapse in&quot;&gt;
+		            &lt;div class=&quot;panel-body&quot;&gt;
+		            	&lt;div class=&quot;row&quot;&gt;	
+							&lt;div class=&quot;col-md-2 center&quot;&gt;
+								&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/110x100&quot; alt=&quot;Image&quot; /&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;col-md-10&quot;&gt;
+								&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+								&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+								&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		    &lt;!-- // Accordion Item END --&gt;
+		
+		    &lt;!-- Accordion Item --&gt;
+		    &lt;div class=&quot;panel panel-default&quot;&gt;
+		        &lt;div class=&quot;panel-heading&quot;&gt;
+		            &lt;h4 class=&quot;panel-title&quot;&gt;&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#tabAccountAccordion&quot; href=&quot;#collapse-3-1&quot;&gt;Vivamus eros tortor consequat sed?&lt;/a&gt;&lt;/h4&gt;
+		        &lt;/div&gt;
+		        &lt;div id=&quot;collapse-3-1&quot; class=&quot;panel-collapse collapse&quot;&gt;
+		            &lt;div class=&quot;panel-body&quot;&gt;
+		            	&lt;div class=&quot;row&quot;&gt;	
+							&lt;div class=&quot;col-md-2 center&quot;&gt;
+								&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/110x100&quot; alt=&quot;Image&quot; /&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;col-md-10&quot;&gt;
+								&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+								&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+								&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		    &lt;!-- // Accordion Item END --&gt;
+		
+		    &lt;!-- Accordion Item --&gt;
+		    &lt;div class=&quot;panel panel-default&quot;&gt;
+		        &lt;div class=&quot;panel-heading&quot;&gt;
+		            &lt;h4 class=&quot;panel-title&quot;&gt;&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#tabAccountAccordion&quot; href=&quot;#collapse-4-1&quot;&gt;Etiam suscipit leo tincidunt mi volutpat?&lt;/a&gt;&lt;/h4&gt;
+		        &lt;/div&gt;
+		        &lt;div id=&quot;collapse-4-1&quot; class=&quot;panel-collapse collapse&quot;&gt;
+		            &lt;div class=&quot;panel-body&quot;&gt;
+		            	&lt;div class=&quot;row&quot;&gt;	
+							&lt;div class=&quot;col-md-2 center&quot;&gt;
+								&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/110x100&quot; alt=&quot;Image&quot; /&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;col-md-10&quot;&gt;
+								&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+								&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+								&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		    &lt;!-- // Accordion Item END --&gt;
+		
+		&lt;/div&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		&lt;ul class=&quot;pagination margin-none&quot;&gt;
+	        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;lt;&lt;/a&gt;&lt;/li&gt;
+	        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-3a405c284a3489ffa9467ebcc0cf2504">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/css/bootstrap-datepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/less/bootstrap-datepicker.less&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/uniform/assets/lib/css/uniform.default.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/uniform/assets/custom/less/uniformjs.less&quot;;
+@import &quot;assets/components/modules/admin/widgets/accordions/assets/less/accordions.less&quot;;
+@import &quot;assets/components/modules/admin/ui/pagination/pagination-bootstrap/assets/pagination.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/core/less/gallery.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-3a405c284a3489ffa9467ebcc0cf2504">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/holder/holder.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-aa5720d9edaaf59f0abaa39fbcd46546" data-toggle="collapse">search-media</a></h4>
+							<div class="collapse in" id="view-aa5720d9edaaf59f0abaa39fbcd46546">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-aa5720d9edaaf59f0abaa39fbcd46546" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-aa5720d9edaaf59f0abaa39fbcd46546" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-aa5720d9edaaf59f0abaa39fbcd46546" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-aa5720d9edaaf59f0abaa39fbcd46546" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/search-media.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-aa5720d9edaaf59f0abaa39fbcd46546">
+												<div class="widget widget-heading-simple widget-body-simple text-right">
+	<form class="input-group">
+	  	<input type="text" class="form-control" placeholder="Type your keywords .. " />
+	  	<span class="input-group-btn"><button type="submit" class="btn btn-inverse">Search</button></span>
+	</form>
+</div>
+<div class="widget widget-heading-simple widget-body-white margin-none">
+	<div class="widget-body">
+		<h5 class="text-uppercase strong separator bottom">30 Search results</h5>
+		
+		<!-- Gallery Layout -->
+		<div class="gallery gallery-2">
+			<ul class="row" data-toggle="modal-gallery" data-target="#modal-gallery" id="gallery-4" data-delegate="#gallery-4">
+								<li class="col-md-3 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/8.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/8.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/7.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/7.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/6.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/6.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/5.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/5.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/4.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/4.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3"><a class="thumb" href="../assets/images/gallery-2/3.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/3.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3"><a class="thumb" href="../assets/images/gallery-2/2.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/2.jpg" alt="photo" class="img-responsive" /></a></li>
+								<li class="col-md-3"><a class="thumb" href="../assets/images/gallery-2/1.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/1.jpg" alt="photo" class="img-responsive" /></a></li>
+							</ul>
+		</div>
+		<!-- // Gallery Layout END -->
+		
+		<hr class="separator" />
+		<ul class="pagination margin-none">
+	        <li class="disabled"><a href="#">&lt;</a></li>
+	        <li class="active"><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+	        <li><a href="#">&gt;</a></li>
+	    </ul>
+		
+	</div>
+</div>
+
+
+
+
+<!-- Blueimp Gallery -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev no-ajaxify">‹</a>
+    <a class="next no-ajaxify">›</a>
+    <a class="close no-ajaxify">×</a>
+    <a class="play-pause no-ajaxify"></a>
+    <ol class="indicator"></ol>
+</div>
+<!-- // Blueimp Gallery END -->
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-aa5720d9edaaf59f0abaa39fbcd46546">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-heading-simple widget-body-simple text-right&quot;&gt;
+	&lt;form class=&quot;input-group&quot;&gt;
+	  	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Type your keywords .. &quot; /&gt;
+	  	&lt;span class=&quot;input-group-btn&quot;&gt;&lt;button type=&quot;submit&quot; class=&quot;btn btn-inverse&quot;&gt;Search&lt;/button&gt;&lt;/span&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class=&quot;widget widget-heading-simple widget-body-white margin-none&quot;&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;h5 class=&quot;text-uppercase strong separator bottom&quot;&gt;30 Search results&lt;/h5&gt;
+		
+		&lt;!-- Gallery Layout --&gt;
+		&lt;div class=&quot;gallery gallery-2&quot;&gt;
+			&lt;ul class=&quot;row&quot; data-toggle=&quot;modal-gallery&quot; data-target=&quot;#modal-gallery&quot; id=&quot;gallery-4&quot; data-delegate=&quot;#gallery-4&quot;&gt;
+								&lt;li class=&quot;col-md-3 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/8.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/8.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/7.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/7.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/6.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/6.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/5.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/5.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/4.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/4.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/3.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/3.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/2.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/2.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+								&lt;li class=&quot;col-md-3&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/1.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/1.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;!-- // Gallery Layout END --&gt;
+		
+		&lt;hr class=&quot;separator&quot; /&gt;
+		&lt;ul class=&quot;pagination margin-none&quot;&gt;
+	        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;lt;&lt;/a&gt;&lt;/li&gt;
+	        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;!-- Blueimp Gallery --&gt;
+&lt;div id=&quot;blueimp-gallery&quot; class=&quot;blueimp-gallery blueimp-gallery-controls&quot;&gt;
+    &lt;div class=&quot;slides&quot;&gt;&lt;/div&gt;
+    &lt;h3 class=&quot;title&quot;&gt;&lt;/h3&gt;
+    &lt;a class=&quot;prev no-ajaxify&quot;&gt;&lsaquo;&lt;/a&gt;
+    &lt;a class=&quot;next no-ajaxify&quot;&gt;&rsaquo;&lt;/a&gt;
+    &lt;a class=&quot;close no-ajaxify&quot;&gt;&times;&lt;/a&gt;
+    &lt;a class=&quot;play-pause no-ajaxify&quot;&gt;&lt;/a&gt;
+    &lt;ol class=&quot;indicator&quot;&gt;&lt;/ol&gt;
+&lt;/div&gt;
+&lt;!-- // Blueimp Gallery END --&gt;
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-aa5720d9edaaf59f0abaa39fbcd46546">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/gallery/blueimp-gallery/assets/lib/css/blueimp-gallery.min.css&quot;;
+@import &quot;assets/components/modules/admin/gallery/blueimp-gallery/assets/custom/blueimp-gallery.less&quot;;
+@import &quot;assets/components/core/less/gallery.less&quot;;
+@import &quot;assets/components/modules/admin/ui/pagination/pagination-bootstrap/assets/pagination.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-aa5720d9edaaf59f0abaa39fbcd46546">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/blueimp-gallery.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/jquery.blueimp-gallery.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-2a3986e60f4df2f348ac4ee5eff2a1b0" data-toggle="collapse">search-simple</a></h4>
+							<div class="collapse in" id="view-2a3986e60f4df2f348ac4ee5eff2a1b0">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-2a3986e60f4df2f348ac4ee5eff2a1b0" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-2a3986e60f4df2f348ac4ee5eff2a1b0" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-2a3986e60f4df2f348ac4ee5eff2a1b0" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-2a3986e60f4df2f348ac4ee5eff2a1b0" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/search-simple.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-2a3986e60f4df2f348ac4ee5eff2a1b0">
+												<div class="widget widget-heading-simple widget-body-simple text-right">
+	<form class="input-group">
+	  	<input type="text" class="form-control" placeholder="Type your keywords .. " />
+	  	<span class="input-group-btn"><button type="submit" class="btn btn-inverse">Search</button></span>
+	</form>
+</div>
+<div class="widget widget-heading-simple widget-body-white margin-none">
+	<div class="widget-body">
+		<h5 class="text-uppercase strong separator bottom">30 Search results</h5>
+		
+		<div class="row">	
+			<div class="col-md-2 center">
+				<a href="" class="thumb"><img data-src="holder.js/150x100" alt="Image" class="img-responsive" /></a>
+			</div>
+			<div class="col-md-10">
+				<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+			</div>
+		</div>
+		<hr class="separator" />
+		<div class="row">	
+			<div class="col-md-10">
+				<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+			</div>
+			<div class="col-md-2 center">
+				<a href="" class="thumb"><img data-src="holder.js/150x100" alt="Image" class="img-responsive" /></a>
+			</div>
+		</div>
+		<hr class="separator" />
+		<div class="row">	
+			<div class="col-md-2 center">
+				<a href="" class="thumb"><img data-src="holder.js/150x100" alt="Image" class="img-responsive" /></a>
+			</div>
+			<div class="col-md-10">
+				<h5 class="strong text-uppercase">What is Lorem Ipsum?</h5>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				<p class="margin-none strong"><a href="" class="glyphicons single chevron-right"><i></i>read more</a></p>
+			</div>
+		</div>
+		<hr class="separator" />
+	    <ul class="pagination margin-none">
+	        <li class="disabled"><a href="#">&lt;</a></li>
+	        <li class="active"><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+	        <li><a href="#">&gt;</a></li>
+	    </ul>
+		
+	</div>
+</div>
+
+
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-2a3986e60f4df2f348ac4ee5eff2a1b0">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-heading-simple widget-body-simple text-right&quot;&gt;
+	&lt;form class=&quot;input-group&quot;&gt;
+	  	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Type your keywords .. &quot; /&gt;
+	  	&lt;span class=&quot;input-group-btn&quot;&gt;&lt;button type=&quot;submit&quot; class=&quot;btn btn-inverse&quot;&gt;Search&lt;/button&gt;&lt;/span&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class=&quot;widget widget-heading-simple widget-body-white margin-none&quot;&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;h5 class=&quot;text-uppercase strong separator bottom&quot;&gt;30 Search results&lt;/h5&gt;
+		
+		&lt;div class=&quot;row&quot;&gt;	
+			&lt;div class=&quot;col-md-2 center&quot;&gt;
+				&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/150x100&quot; alt=&quot;Image&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-10&quot;&gt;
+				&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+				&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+				&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;hr class=&quot;separator&quot; /&gt;
+		&lt;div class=&quot;row&quot;&gt;	
+			&lt;div class=&quot;col-md-10&quot;&gt;
+				&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+				&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+				&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-2 center&quot;&gt;
+				&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/150x100&quot; alt=&quot;Image&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;hr class=&quot;separator&quot; /&gt;
+		&lt;div class=&quot;row&quot;&gt;	
+			&lt;div class=&quot;col-md-2 center&quot;&gt;
+				&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img data-src=&quot;holder.js/150x100&quot; alt=&quot;Image&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-10&quot;&gt;
+				&lt;h5 class=&quot;strong text-uppercase&quot;&gt;What is Lorem Ipsum?&lt;/h5&gt;
+				&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p&gt;
+				&lt;p class=&quot;margin-none strong&quot;&gt;&lt;a href=&quot;&quot; class=&quot;glyphicons single chevron-right&quot;&gt;&lt;i&gt;&lt;/i&gt;read more&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;hr class=&quot;separator&quot; /&gt;
+	    &lt;ul class=&quot;pagination margin-none&quot;&gt;
+	        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;lt;&lt;/a&gt;&lt;/li&gt;
+	        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-2a3986e60f4df2f348ac4ee5eff2a1b0">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/ui/pagination/pagination-bootstrap/assets/pagination.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/core/less/gallery.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-2a3986e60f4df2f348ac4ee5eff2a1b0">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/plugins/holder/holder.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-baf34b5f0c7e37563d62ac6c1f2c2fe6" data-toggle="collapse">search-users</a></h4>
+							<div class="collapse in" id="view-baf34b5f0c7e37563d62ac6c1f2c2fe6">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-baf34b5f0c7e37563d62ac6c1f2c2fe6" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-baf34b5f0c7e37563d62ac6c1f2c2fe6" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-baf34b5f0c7e37563d62ac6c1f2c2fe6" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-baf34b5f0c7e37563d62ac6c1f2c2fe6" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/search-users.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-baf34b5f0c7e37563d62ac6c1f2c2fe6">
+												<div class="widget widget-heading-simple widget-body-simple text-right">
+	<form class="input-group">
+	  	<input type="text" class="form-control" placeholder="Type your keywords .. " />
+	  	<span class="input-group-btn"><button type="submit" class="btn btn-inverse">Search</button></span>
+	</form>
+</div>
+<div class="widget widget-heading-simple widget-body-white margin-none">
+	<div class="widget-body">
+		<h5 class="text-uppercase strong">30 Search results</h5>
+		<hr class="separator" />
+		<table class="table table-vertical-center">
+			<thead>
+				<tr>
+					<th class="center">Photo</th>
+					<th class="center">Full name</th>
+					<th class="center">Location</th>
+					<th class="center">Membership</th>
+					<th class="center">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+					<td class="strong center">Lorem Ipsum Dolor</td>
+					<td class="center">Romania <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+					<td class="center"><span class="label label-success"><i class="fa fa-ok"></i> Accepted</span></td>
+					<td class="center"><a href="" class="btn btn-xs btn-primary">View <i class="fa fa-eye-open"></i></a></td>
+				</tr>
+				<tr>
+					<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+					<td class="strong center">John Doe</td>
+					<td class="center">United States <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+					<td class="center"><span class="label label-success"><i class="fa fa-ok"></i> Accepted</span></td>
+					<td class="center"><a href="" class="btn btn-xs btn-primary">View <i class="fa fa-eye-open"></i></a></td>
+				</tr>
+				<tr>
+					<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+					<td class="strong center">Jane Doe</td>
+					<td class="center">Europe <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+					<td class="center"><span class="label label-danger"><i class="fa fa-remove"></i> Rejected</span></td>
+					<td class="center"><a href="" class="btn btn-xs btn-success">Accept <i class="fa fa-ok"></i></a></td>
+				</tr>
+				<tr>
+					<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+					<td class="strong center">Lorem Dolor</td>
+					<td class="center">Asia <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+					<td class="center"><span class="label label-danger"><i class="fa fa-remove"></i> Rejected</span></td>
+					<td class="center"><a href="" class="btn btn-xs btn-success">Accept <i class="fa fa-ok"></i></a></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr class="separator" />
+		<ul class="pagination margin-none">
+	        <li class="disabled"><a href="#">&lt;</a></li>
+	        <li class="active"><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+	        <li><a href="#">&gt;</a></li>
+	    </ul>
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-baf34b5f0c7e37563d62ac6c1f2c2fe6">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-heading-simple widget-body-simple text-right&quot;&gt;
+	&lt;form class=&quot;input-group&quot;&gt;
+	  	&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Type your keywords .. &quot; /&gt;
+	  	&lt;span class=&quot;input-group-btn&quot;&gt;&lt;button type=&quot;submit&quot; class=&quot;btn btn-inverse&quot;&gt;Search&lt;/button&gt;&lt;/span&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class=&quot;widget widget-heading-simple widget-body-white margin-none&quot;&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;h5 class=&quot;text-uppercase strong&quot;&gt;30 Search results&lt;/h5&gt;
+		&lt;hr class=&quot;separator&quot; /&gt;
+		&lt;table class=&quot;table table-vertical-center&quot;&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th class=&quot;center&quot;&gt;Photo&lt;/th&gt;
+					&lt;th class=&quot;center&quot;&gt;Full name&lt;/th&gt;
+					&lt;th class=&quot;center&quot;&gt;Location&lt;/th&gt;
+					&lt;th class=&quot;center&quot;&gt;Membership&lt;/th&gt;
+					&lt;th class=&quot;center&quot;&gt;Actions&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+					&lt;td class=&quot;strong center&quot;&gt;Lorem Ipsum Dolor&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;Romania &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;label label-success&quot;&gt;&lt;i class=&quot;fa fa-ok&quot;&gt;&lt;/i&gt; Accepted&lt;/span&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;btn btn-xs btn-primary&quot;&gt;View &lt;i class=&quot;fa fa-eye-open&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+					&lt;td class=&quot;strong center&quot;&gt;John Doe&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;United States &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;label label-success&quot;&gt;&lt;i class=&quot;fa fa-ok&quot;&gt;&lt;/i&gt; Accepted&lt;/span&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;btn btn-xs btn-primary&quot;&gt;View &lt;i class=&quot;fa fa-eye-open&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+					&lt;td class=&quot;strong center&quot;&gt;Jane Doe&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;Europe &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;label label-danger&quot;&gt;&lt;i class=&quot;fa fa-remove&quot;&gt;&lt;/i&gt; Rejected&lt;/span&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;btn btn-xs btn-success&quot;&gt;Accept &lt;i class=&quot;fa fa-ok&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+					&lt;td class=&quot;strong center&quot;&gt;Lorem Dolor&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;Asia &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;label label-danger&quot;&gt;&lt;i class=&quot;fa fa-remove&quot;&gt;&lt;/i&gt; Rejected&lt;/span&gt;&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;&lt;a href=&quot;&quot; class=&quot;btn btn-xs btn-success&quot;&gt;Accept &lt;i class=&quot;fa fa-ok&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+		
+		&lt;hr class=&quot;separator&quot; /&gt;
+		&lt;ul class=&quot;pagination margin-none&quot;&gt;
+	        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;lt;&lt;/a&gt;&lt;/li&gt;
+	        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-baf34b5f0c7e37563d62ac6c1f2c2fe6">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;assets/components/modules/admin/ui/pagination/pagination-bootstrap/assets/pagination.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/core/less/gallery.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;
+@import &quot;assets/components/core/less/labels.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-baf34b5f0c7e37563d62ac6c1f2c2fe6">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/plugins/holder/holder.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/blueimp-gallery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/jquery.blueimp-gallery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

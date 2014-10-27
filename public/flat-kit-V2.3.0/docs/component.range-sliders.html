@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.range-sliders.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.range-sliders.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'range-sliders'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.range-sliders</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-418792b597bf455d207de8ea38d15101" data-toggle="collapse">range-slider-basic</a></h4>
+							<div class="collapse in" id="view-418792b597bf455d207de8ea38d15101">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-418792b597bf455d207de8ea38d15101" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-418792b597bf455d207de8ea38d15101" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-418792b597bf455d207de8ea38d15101" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-418792b597bf455d207de8ea38d15101" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-basic.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-418792b597bf455d207de8ea38d15101">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSlider"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-418792b597bf455d207de8ea38d15101">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSlider&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-418792b597bf455d207de8ea38d15101">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-418792b597bf455d207de8ea38d15101">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-3010ad5a5cd3c58b0b6279221107f675" data-toggle="collapse">range-slider-date</a></h4>
+							<div class="collapse in" id="view-3010ad5a5cd3c58b0b6279221107f675">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-3010ad5a5cd3c58b0b6279221107f675" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-3010ad5a5cd3c58b0b6279221107f675" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-3010ad5a5cd3c58b0b6279221107f675" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-3010ad5a5cd3c58b0b6279221107f675" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-date.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-3010ad5a5cd3c58b0b6279221107f675">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderDate"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-3010ad5a5cd3c58b0b6279221107f675">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderDate&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-3010ad5a5cd3c58b0b6279221107f675">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-3010ad5a5cd3c58b0b6279221107f675">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-09ad1df004390c9c8de5bc25ab21a035" data-toggle="collapse">range-slider-edit</a></h4>
+							<div class="collapse in" id="view-09ad1df004390c9c8de5bc25ab21a035">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-09ad1df004390c9c8de5bc25ab21a035" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-09ad1df004390c9c8de5bc25ab21a035" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-09ad1df004390c9c8de5bc25ab21a035" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-09ad1df004390c9c8de5bc25ab21a035" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-edit.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-09ad1df004390c9c8de5bc25ab21a035">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderEdit" class="rangeslider-success"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-09ad1df004390c9c8de5bc25ab21a035">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderEdit&quot; class=&quot;rangeslider-success&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-09ad1df004390c9c8de5bc25ab21a035">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-09ad1df004390c9c8de5bc25ab21a035">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-8017c1e47dec018652792e6f90b692b9" data-toggle="collapse">range-slider-formatter</a></h4>
+							<div class="collapse in" id="view-8017c1e47dec018652792e6f90b692b9">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-8017c1e47dec018652792e6f90b692b9" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-8017c1e47dec018652792e6f90b692b9" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-8017c1e47dec018652792e6f90b692b9" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-8017c1e47dec018652792e6f90b692b9" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-formatter.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-8017c1e47dec018652792e6f90b692b9">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderFormatter"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-8017c1e47dec018652792e6f90b692b9">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderFormatter&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-8017c1e47dec018652792e6f90b692b9">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-8017c1e47dec018652792e6f90b692b9">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-f60092010da60dcd8c7bdd4f03d916c0" data-toggle="collapse">range-slider-no-arrows</a></h4>
+							<div class="collapse in" id="view-f60092010da60dcd8c7bdd4f03d916c0">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-f60092010da60dcd8c7bdd4f03d916c0" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-f60092010da60dcd8c7bdd4f03d916c0" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-f60092010da60dcd8c7bdd4f03d916c0" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-f60092010da60dcd8c7bdd4f03d916c0" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-no-arrows.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-f60092010da60dcd8c7bdd4f03d916c0">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderWArrows" class="rangeslider-warning"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-f60092010da60dcd8c7bdd4f03d916c0">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderWArrows&quot; class=&quot;rangeslider-warning&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-f60092010da60dcd8c7bdd4f03d916c0">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-f60092010da60dcd8c7bdd4f03d916c0">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-6c52992724c8f7da42b9db3bf38fc278" data-toggle="collapse">range-slider-ruler-date</a></h4>
+							<div class="collapse in" id="view-6c52992724c8f7da42b9db3bf38fc278">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-6c52992724c8f7da42b9db3bf38fc278" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-6c52992724c8f7da42b9db3bf38fc278" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-6c52992724c8f7da42b9db3bf38fc278" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-6c52992724c8f7da42b9db3bf38fc278" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-ruler-date.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-6c52992724c8f7da42b9db3bf38fc278">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderRulerDate" class="rangeslider-success"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-6c52992724c8f7da42b9db3bf38fc278">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderRulerDate&quot; class=&quot;rangeslider-success&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-6c52992724c8f7da42b9db3bf38fc278">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-6c52992724c8f7da42b9db3bf38fc278">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-5e5fc3b9c123fa63122241e0a3c87133" data-toggle="collapse">range-slider-ruler</a></h4>
+							<div class="collapse in" id="view-5e5fc3b9c123fa63122241e0a3c87133">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-5e5fc3b9c123fa63122241e0a3c87133" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-5e5fc3b9c123fa63122241e0a3c87133" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-5e5fc3b9c123fa63122241e0a3c87133" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-5e5fc3b9c123fa63122241e0a3c87133" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-ruler.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-5e5fc3b9c123fa63122241e0a3c87133">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderRuler" class="rangeslider-danger"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-5e5fc3b9c123fa63122241e0a3c87133">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderRuler&quot; class=&quot;rangeslider-danger&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-5e5fc3b9c123fa63122241e0a3c87133">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-5e5fc3b9c123fa63122241e0a3c87133">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-a6b16dc5d0e3c47c9c6f071aa56d3151" data-toggle="collapse">range-slider-step</a></h4>
+							<div class="collapse in" id="view-a6b16dc5d0e3c47c9c6f071aa56d3151">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-a6b16dc5d0e3c47c9c6f071aa56d3151" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-a6b16dc5d0e3c47c9c6f071aa56d3151" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-a6b16dc5d0e3c47c9c6f071aa56d3151" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-a6b16dc5d0e3c47c9c6f071aa56d3151" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-step.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-a6b16dc5d0e3c47c9c6f071aa56d3151">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderStep"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-a6b16dc5d0e3c47c9c6f071aa56d3151">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderStep&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-a6b16dc5d0e3c47c9c6f071aa56d3151">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-a6b16dc5d0e3c47c9c6f071aa56d3151">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-ac240e6d9e8b44ba0ce3d6e26f92bcd7" data-toggle="collapse">range-slider-wheel-scroll</a></h4>
+							<div class="collapse in" id="view-ac240e6d9e8b44ba0ce3d6e26f92bcd7">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-ac240e6d9e8b44ba0ce3d6e26f92bcd7" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-ac240e6d9e8b44ba0ce3d6e26f92bcd7" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-ac240e6d9e8b44ba0ce3d6e26f92bcd7" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-ac240e6d9e8b44ba0ce3d6e26f92bcd7" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-wheel-scroll.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-ac240e6d9e8b44ba0ce3d6e26f92bcd7">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderWheelScroll"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-ac240e6d9e8b44ba0ce3d6e26f92bcd7">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderWheelScroll&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-ac240e6d9e8b44ba0ce3d6e26f92bcd7">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-ac240e6d9e8b44ba0ce3d6e26f92bcd7">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-18cbcb8d51b83e249824c40d4a60258a" data-toggle="collapse">range-slider-wheel-zoom</a></h4>
+							<div class="collapse in" id="view-18cbcb8d51b83e249824c40d4a60258a">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-18cbcb8d51b83e249824c40d4a60258a" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-18cbcb8d51b83e249824c40d4a60258a" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-18cbcb8d51b83e249824c40d4a60258a" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-18cbcb8d51b83e249824c40d4a60258a" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/range-slider-wheel-zoom.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-18cbcb8d51b83e249824c40d4a60258a">
+												<!-- Slider -->
+<div class="sliderContainer">
+	<div id="rangeSliderWheelZoom"></div>
+</div>
+<!-- // Slider END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-18cbcb8d51b83e249824c40d4a60258a">
+												<pre class="prettyprint">&lt;!-- Slider --&gt;
+&lt;div class=&quot;sliderContainer&quot;&gt;
+	&lt;div id=&quot;rangeSliderWheelZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Slider END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-18cbcb8d51b83e249824c40d4a60258a">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/css/iThing.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/sliders/range-sliders/assets/custom/less/range-sliders.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-18cbcb8d51b83e249824c40d4a60258a">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/sliders/range-sliders/assets/lib/mousewheel/jquery.mousewheel.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/sliders/range-sliders/assets/lib/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/sliders/range-sliders/assets/custom/js/range-sliders.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<chart>
+  <series>
+    <value xid="0">May-11</value>
+    <value xid="1">Jun-11</value>
+    <value xid="2">Jul-11</value>
+    <value xid="3">Aug-11</value>
+    <value xid="4">Sep-11</value>
+    <value xid="5">Oct-11</value>
+    <value xid="6">Nov-11</value>
+    <value xid="7">Dec-11</value>
+    <value xid="8">Jan-12</value>
+    <value xid="9">Feb-12</value>
+    <value xid="10">Mar-12</value>
+    <value xid="11">Apr-12</value>
+  </series>
+  <graphs>
+    <graph gid="0">
+      <value xid="0">487</value>
+      <value xid="1">486</value>
+      <value xid="2">496</value>
+      <value xid="3">498</value>
+      <value xid="4">465</value>
+      <value xid="5">431</value>
+      <value xid="6">436</value>
+      <value xid="7">428</value>
+      <value xid="8">475</value>
+      <value xid="9">360</value>
+      <value xid="10">342</value>
+      <value xid="11">482</value>
+    </graph>
+    <graph gid="1">
+      <value xid="0">74.2</value>
+      <value xid="1">83.4</value>
+      <value xid="2">82.6</value>
+      <value xid="3">84.7</value>
+      <value xid="4">75.0</value>
+      <value xid="5">63.4</value>
+      <value xid="6">58.1</value>
+      <value xid="7">52.9</value>
+      <value xid="8">51.5</value>
+      <value xid="9">54.5</value>
+      <value xid="10">66.3</value>
+      <value xid="11">67.7</value>
+    </graph>
+  </graphs>
+</chart>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!--><html class="animations front fluid top-full menuh-top"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | Electric</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.your-electric2.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.your-electric2.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+</head>
+<body class="your-electric">
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="container-960 innerLR secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-960 innerLR clearfix">
+					<ul class="breadcrumb">
+						<li><a class="back-link" href="index.html">Your Portfolio</a></li>
+						<li class="separator"><i class="fa fa-angle-right"></i></li>
+						<li>
+							<select class="selectpicker">
+								<option>123 Main St, Boston MA 12345</option>
+								<option>987 A St, Boston MA 12345</option>
+								<option>567 First St, Boston MA 12345</option>
+							</select>
+						</li>
+					</ul>
+					<p class="document-links"><a href="location-profile.html" class="location-profile btn btn-default">Location Profile <span>50%</span></a><a href="#" class="fa fa-print btn btn-default"></a><a href="#" class="fa fa-download btn btn-default"></a></p>
+				</div>
+				
+				<div class="container-960 innerLR nav-container clearfix">
+					<ul class="topnav col-md-12">
+						
+						<li class="active"><a href="your-electric2.html"><span class="tab-icon icon-bolt fa fa-circle"><i class="fa fa-bolt"></i></span><span class="name data">Electric (YTD)</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-gas.html"><span class="tab-icon icon-fire fa fa-circle"><i class="fa fa-fire"></i></span><span class="name data">Gas (YTD)</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="savings.html"><span class="tab-icon icon-money fa fa-circle"><i class="fa fa-money"></i></span><span class="name data">Savings</span><span class="amount data">$000,000</span></a></li>
+					</ul>
+					<!-- // Top Menu Left END -->
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="dashboard" class="main">
+				<div class="container-960 innerLR clearfix">
+					<div class="primary-content col-md-12">
+
+						<div class="carousel carousel-1 slide widget" id="dashboard-carousel">
+							<div class="widget-head">
+								<ol class="carousel-indicators">
+									<li data-target="#dashboard-carousel" data-slide-to="0" class="active">Energy Cost</li>
+									<li data-target="#dashboard-carousel" data-slide-to="1">Chart Link</li>
+									<li data-target="#dashboard-carousel" data-slide-to="2">Chart Link</li>
+								</ol>
+							</div>
+							<div class="widget-body">
+								<div class="carousel-inner">
+											<!-- Item -->
+									<div class="item active">
+										<div class="row">
+											<div class="chart col-xs-7">
+												<div class="header">
+													<h2>Your Electric Cost</h2>
+													<select class="selectpicker col-md-4">
+														<option>2012 Vs 2013 Cost</option>
+														<option>2012 Vs 2013 Cost</option>
+														<option>2012 Vs 2013 Cost</option>
+													</select>
+												</div>
+												<img alt="[Image: Graph]" src="../assets/images/placeholder-electric-graph-sm.jpg" />
+												<a class="chart-toggle" href="#">toggle</a>
+											</div>
+											<div class="text col-xs-5 relativeWrap">
+												<div class="carousel-caption">
+													<h2>You Spent 55% More Than Last June</h2>
+													<h3>Install Programmable Thermometers</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu.</p>
+													<p class="notes">Up to $400 in instant rebates<br />Expires: 01/11/14</p>
+													<p class="button"><a href="#" class="btn btn-primary">I'm Interested</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // Item END -->
+											<!-- Item -->
+									<div class="item">
+										<div class="row">
+											<div class="chart col-xs-7">
+												<div class="header">
+													<h2>Your Electric Cost</h2>
+													<select class="selectpicker col-md-4">
+														<option>2012 Vs 2013 Cost</option>
+														<option>2012 Vs 2013 Cost</option>
+														<option>2012 Vs 2013 Cost</option>
+													</select>
+												</div>
+												<img alt="[Image: Graph]" src="../assets/images/placeholder-electric-graph-sm.jpg" />
+												<a class="chart-toggle" href="#">toggle</a>
+											</div>
+											<div class="text col-xs-5 relativeWrap">
+												<div class="carousel-caption">
+													<h2>You Spent 55% More Than Last June</h2>
+													<h3>Install Programmable Thermometers</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu.</p>
+													<p class="notes">Up to $400 in instant rebates<br />Expires: 01/11/14</p>
+													<p class="button"><a href="#" class="btn btn-primary">I'm Interested</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // Item END -->
+											<!-- Item -->
+									<div class="item">
+										<div class="row">
+											<div class="chart col-xs-7">
+												<div class="header">
+													<h2>Your Electric Cost</h2>
+													<select class="selectpicker col-md-4">
+														<option>2012 Vs 2013 Cost</option>
+														<option>2012 Vs 2013 Cost</option>
+														<option>2012 Vs 2013 Cost</option>
+													</select>
+												</div>
+												<img alt="[Image: Graph]" src="../assets/images/placeholder-electric-graph-sm.jpg" />
+												<a class="chart-toggle" href="#">toggle</a>
+											</div>
+											<div class="text col-xs-5 relativeWrap">
+												<div class="carousel-caption">
+													<h2>You Spent 55% More Than Last June</h2>
+													<h3>Install Programmable Thermometers</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu.</p>
+													<p class="notes">Up to $400 in instant rebates<br />Expires: 01/11/14</p>
+													<p class="button"><a href="#" class="btn btn-primary">I'm Interested</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // Item END -->
+								</div>
+							</div>
+						</div> <!-- .carousel -->
+
+						<div id="billing" class="carousel carousel-1 slide widget clearfix">
+							<div class="widget-head">
+								<ol class="carousel-indicators">
+									<li data-target="#billing" data-slide-to="0" class="active">Current Bill</li>
+                                    <!--
+									<li data-target="#billing" data-slide-to="1">Payment History</li>
+									-->
+								</ol>
+							</div>
+							<div class="widget-body col-md-12">
+								<div class="carousel-inner">
+											<!-- Item -->
+									<div class="item active clearfix">
+										<div class="col-md-3">
+											<ul>
+												<li><strong>Acct:</strong> 123456789</li>
+												<li><strong>From:</strong> 05/31/13 <strong>To:</strong> 06/31/13</li>
+												<li><strong>Rate:</strong> $0.13 per kWh</li>
+											</ul>
+										</div>
+										<div class="col-md-3">
+											<table>
+												<tr>
+													<th>Electric Service:</th>
+													<td>$000.00</td>
+												</tr>
+												<tr>
+													<th>Gas Service:</th>
+													<td>$000.00</td>
+												</tr>
+												<tr>
+													<th>Taxes:</th>
+													<td>$0.00</td>
+												</tr>
+												<tr>
+													<th>Previous Balance:</th>
+													<td>$000.00</td>
+												</tr>
+												<tr>
+													<th>Payments Received:</th>
+													<td>$00.00 <span>05/14/13</span></td>
+												</tr>
+											</table>
+										</div>
+										<div class="balance col-md-3">
+											<p><strong>Balance Carried Forward:</strong></p>
+											<p class="value">$000.00</p>
+
+											<button class="btn btn-default">Pay Bill Now</button>
+										</div>
+										<div class="col-md-3">
+											<div class="chart">
+												<img alt="[Chart: Billing]" src="../assets/images/charts/billing.jpg" />
+											</div>
+										</div>
+									</div>
+									<!-- // Item END -->
+											<!-- Item -->
+									<div class="item clearfix">
+										<p>&hellip; TBD &hellip;</p>
+									</div>
+									<!-- // Item END -->
+								</div>
+							</div>
+						</div>
+
+						<div id="recommendations" class="horizontal clearfix">
+							<div class="well col-md-4">
+								<h2>Lower Your Bill</h2>
+								<img alt="[Image: Graph]" src="../assets/images/placeholder-dashboard-image.jpg" />
+
+								<div class="well-content">
+									<h3>Save up to $200/Year</h3>
+									<h4>Install Power Strips</h4>
+									<p>Consider using "smart" power strips to reduce the power consumed by task lighting, computer accessories, fans, space heaters, and other miscellaneous plug loads.</p>
+
+									<div class="actions">
+										<p><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#schedule-audit">I'm Interested</a></p>
+										<p class="secondary-links"><a href="#">Done</a> <a href="#">No Thanks</a></p>
+									</div>
+								</div>
+								<i class="fa fa-caret-down"></i>
+							</div>
+
+							<div class="well col-md-4 highlight">
+								<h2>Special Rebate</h2>
+								<img alt="[Image: Graph]" src="../assets/images/placeholder-dashboard-image.jpg" />
+
+								<div class="well-content">
+									<h3>Earn a $500 Instant Rebate</h3>
+									<p class="note">Expires 10/20/14</p>
+									<h4>When you update your lighting to LED bulbs.</h4>
+									<p>Modern fluorescent tube lighting can also save about one quarter when compared to their older vintage.</p>
+
+									<div class="actions">
+										<p><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#special-rebate">Learn More</a></p>
+										<p class="secondary-links"><a href="#">Done</a> <a href="#">No Thanks</a></p>
+									</div>
+								</div>
+								<i class="fa fa-caret-down"></i>
+							</div>
+
+							<div class="well col-md-4">
+								<h2>Highest Savings</h2>
+								<img alt="[Image: Graph]" src="../assets/images/placeholder-dashboard-image.jpg" />
+
+								<div class="well-content">
+									<h3>Save up to $1500/Year</h3>
+									<p class="note"><strong>Up to $400 in rebates</strong><br />Expires 10/20/14</p>
+									<h4>Install Programmable Thermostats</h4>
+									<p>This surprisingly easy fix will keep you from heating and cooling your space when no one is around.</p>
+
+									<div class="actions">
+										<p><a href="#" class="btn btn-primary">Learn More</a></p>
+										<p class="secondary-links"><a href="#">Done</a> <a href="#">No Thanks</a></p>
+									</div>
+								</div>
+								<i class="fa fa-caret-down"></i>
+							</div>
+						</div>
+					</div> <!-- .primary-content -->
+
+				</div>	
+			</div> <!-- #dashboard -->
+
+			<div id="footer" class="container-960 innerLR hidden-print">
+				
+					<div class="footer-content col-md-12">
+						<!--  Copyright Line -->
+						<div class="copy">
+							<a href="site-map.html?lang=en">Site Map</a>
+							<span class="appbrand">Powered by FirstFuel</span>
+						</div>
+						<!--  End Copyright Line -->
+					</div>
+
+			</div>
+			<!-- // Footer END -->
+		<!-- // Content END -->
+	</div> 
+	
+
+	
+		<div id="special-rebate" class="modal clearfix recommendation-modal energy-star-rebate" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<h2>Special Rebate: Earn up to $500</h2>
+				<h3>Save Money &amp; Energy with Efficient Refrigerators &amp; Freezers</h3>
+				<img alt="[Image: Energy Star]" src="#" />
+				<p>Mule, cabin jug fell java, pick-up rodeo firewood java a. Heapin' penny java gritts redblooded tarnation fiddle.Mule, cabin jug fell java, pick-up rodeo firewood java a. Heapin' penny java gritts redblooded tarnation fiddle.</p>
+				<p>Mule, cabin jug fell java, pick-up rodeo firewood java a. Heapin' penny java gritts redblooded tarnation fiddle.Mule, cabin jug fell java, pick-up rodeo firewood java a. Heapin' penny java gritts redblooded tarnation fiddle.</p>
+
+				<div class="controls clearfix">
+					<button type="button" class="download-form btn btn-primary">Download Form</button>
+				</div>
+
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+		  </div>
+		</div>
+
+		<div id="schedule-audit" class="modal clearfix recommendation-modal form-modal schedule-audit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<h2>Schedule an onsite Audit</h2>
+				<h3>Save big with an onsite audit.</h3>
+				<img alt="[Image: Onsite Audit]" src="#" />
+				<p>Mule, cabin jug fell java, pick-up rodeo firewood java a. Heapin' penny java gritts redblooded tarnation fiddle.Mule, cabin jug fell java, pick-up rodeo firewood java a. Heapin' penny java gritts redblooded tarnation fiddle.</p>
+
+				<form class="audit-form form-horizontal content-block col-md-12 clearfix" role="form">
+					<div class="user-info-01 col-md-6">
+						<div class="form-group">
+							<label for="inputFirstName" class="col-sm-4 control-label">First Name</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputLastName" class="col-sm-4 control-label">Last Name</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-4 control-label">Email</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPhone" class="col-sm-4 control-label">Phone</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+							</div>
+						</div>
+					</div>
+
+					<div class="user-info-02 col-md-6">
+						<div class="form-group">
+							<label for="inputAddress01" class="col-sm-4 control-label">Address 1</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputAddress01" placeholder="Address 1">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputAddress02" class="col-sm-4 control-label">Address 2</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputAddress02" placeholder="Address 2">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputCity" class="col-sm-4 control-label">City</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="inputCity" placeholder="City">
+							</div>
+							<div class="col-sm-4">
+								<select class="form-control" id="inputState">
+									<option>State</option>
+									<option>MA</option>
+									<option>NH</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputZip" class="col-sm-4 control-label">Zip</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="inputZip" placeholder="Zip">
+							</div>
+						</div>
+					</div>
+
+					<div class="date-info col-md-12">
+						<div class="form-group date-picker col-md-3">
+							<label for="datepicker2" class="control-label">Preferred Date</label>
+							<div class="date">
+								<input class="form-control" type="text" value="" id="datepicker2" />
+							</div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="timepicker3" class="control-label">Preferred Time of Day</label>
+							<div class="bootstrap-timepicker">
+								<input id="timepicker3" type="text" class="form-control">
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<div class="controls clearfix col-md-12">
+					<button type="button" class="cancel-form btn btn-primary">Cancel</button>
+					<button type="button" class="submit-form btn btn-primary">Submit</button>
+				</div>
+
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+		  </div>
+		</div>
+
+		<div id="onboarding" class="modal clearfix" data-backdrop="static">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div id="question-01" class="pane question-01 active">
+						<div class="question"><h2>What is your primary business activity?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+						<div class="answers">
+							<form class="input-group col-md-4">
+								<input type="text" class="form-control" placeholder="Type your keywords .. " />
+								<span class="input-group-btn"><button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button></span>
+							</form>
+							<ul class="options clearfix">
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+							</ul>
+						</div>
+					</div> <!-- end .pane -->
+
+					<div id="question-02" class="pane question-02">
+						<div class="question"><h2>What type of occupant are you?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+						<div class="answers">
+							<ul class="options clearfix">
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+							</ul>
+						</div>
+					</div> <!-- end .pane -->
+
+					<div id="question-03" class="pane question-03">
+						<div class="question"><h2>How many employees do you have?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</div>
+						<div class="answers">
+							<select class="selectpicker col-md-3" data-style="btn-primary">
+								<option value="1-4">1-4</option>
+								<option value="5-9">5-9</option>
+								<option value="10-19">10-19</option>
+								<option value="20-49">20-49</option>
+								<option value="50+">50+</option>
+							</select>
+						</div>
+					</div> <!-- end .pane -->
+
+					<div id="question-04" class="pane question-04">
+						<div class="question"><h2>How big is your business?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</div>
+						<div class="answers">
+							<h3>Do you know the actual size of your business?</h3>
+							<div class="business-size">
+								<label><input type="radio" name="business-size" value="yes" checked="checked" /> yes</label>
+								<label><input type="radio" name="business-size" value="no" /> no</label>
+							</div>
+
+							<div class="yes-options clearfix">
+								<input type="text" class="form-control size-value" />
+								<select class="form-control size-units">
+									<option>option 01</option>
+									<option>option 02</option>
+									<option>option 03</option>
+								</select>
+							</div>
+							<div class="no-options clearfix">
+								<ul class="options clearfix">
+									<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+									<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+									<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div> <!-- end .pane -->
+
+					<div id="question-05" class="pane question-05">
+						<div class="question"><h2>How much do you care about energy efficiency?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+						<div class="answers">
+							<ul class="options clearfix">
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+								<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+							</ul>
+
+							<h3>Would you like to recieve email updates?</h3>
+							<label><input type="checkbox" name="email-notification" value="yes" /> Yes, send me email notifications</label>
+						</div>
+					</div> <!-- end .pane -->
+
+					<ul class="indicators">
+						<li class="question-01 fa fa-circle-o fa-circle"></li>
+						<li class="question-02 fa fa-circle-o"></li>
+						<li class="question-03 fa fa-circle-o"></li>
+						<li class="question-04 fa fa-circle-o"></li>
+						<li class="question-05 fa fa-circle-o"></li>
+					</ul>
+
+					<div class="controls">
+						<button class="btn btn-primary no-thanks">No Thanks</button>
+						<a class="skip-link" href="#">Skip Question</a>
+						<button class="btn btn-primary next">Next</button>
+					</div>
+
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+			</div>
+		</div> <!-- end #onboarding -->
+	
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/widgets/widget-progress/assets/js/widget-progress.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	<script src="../assets/js/firstengage.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form-wizard-5 example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.form-wizard-5.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.form-wizard-5.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">form-wizard-5 example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>form-wizard-5 component</strong></p>
+			</div>
+
+
+<!-- Form Wizard / Arrow navigation & Progress bar -->
+<div id="rootwizard" class="wizard">
+
+	<!-- Wizard heading -->
+	<div class="wizard-head">
+		<ul>
+			<li><a href="#tab1" data-toggle="tab">First</a></li>
+			<li><a href="#tab2" data-toggle="tab">Second</a></li>
+			<li><a href="#tab3" data-toggle="tab">Third</a></li>
+			<li><a href="#tab4" data-toggle="tab">Fourth</a></li>
+			<li><a href="#tab5" data-toggle="tab">Fifth</a></li>
+			<li><a href="#tab6" data-toggle="tab">Sixth</a></li>
+			<li><a href="#tab7" data-toggle="tab">Seventh</a></li>
+		</ul>
+	</div>
+	<!-- // Wizard heading END -->
+	
+	<div class="widget">
+	
+		<!-- Wizard Progress bar -->
+		<div class="widget-head progress" id="bar">
+			<div class="progress-bar progress-bar-primary">Step <strong class="step-current">1</strong> of <strong class="steps-total">3</strong> - <strong class="steps-percent">100%</strong></div>
+		</div>
+		<!-- // Wizard Progress bar END -->
+		
+		<div class="widget-body">
+			<div class="tab-content">
+			
+				<!-- Step 1 -->
+				<div class="tab-pane active" id="tab1">
+					<div class="row">
+						<div class="col-md-3">
+							<strong>Product title</strong>
+							<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="col-md-9">
+							<label for="inputTitle">Title</label>
+							<input type="text" id="inputTitle" class="col-md-6 form-control" value="" placeholder="Enter product title ..." />
+							<div class="separator"></div>
+						</div>
+					</div>
+				</div>
+				<!-- // Step 1 END -->
+				
+				<!-- Step 2 -->
+				<div class="tab-pane" id="tab2">
+					<div class="row">
+						<div class="col-md-3">
+							<strong>Description</strong>
+							<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="col-md-9">
+							<label for="textDescription">Description</label>
+							<textarea id="textDescription" class="wysihtml5 form-control" style="width: 96%;" rows="5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</textarea>
+						</div>
+					</div>
+				</div>
+				<!-- // Step 2 END -->
+				
+				<!-- Step 3 -->
+				<div class="tab-pane" id="tab3">
+					<h4>Third tab</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices libero vel massa egestas facilisis. Mauris convallis augue nec dolor dignissim vestibulum. Praesent imperdiet elit posuere arcu posuere consectetur. Morbi dignissim eleifend nibh, eget tincidunt nibh dignissim hendrerit. Cras iaculis congue lorem, eget gravida augue vehicula sed. Nam lorem sem, consectetur ac tempus quis, consectetur ut lectus. In bibendum luctus pharetra. Morbi lacinia sem sem. Phasellus quis tellus magna.</p>
+				</div>
+				<!-- // Step 3 END -->
+				
+				<!-- Step 4 -->
+				<div class="tab-pane" id="tab4">
+					<h4>Fourth tab</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices libero vel massa egestas facilisis. Mauris convallis augue nec dolor dignissim vestibulum. Praesent imperdiet elit posuere arcu posuere consectetur. Morbi dignissim eleifend nibh, eget tincidunt nibh dignissim hendrerit. Cras iaculis congue lorem, eget gravida augue vehicula sed. Nam lorem sem, consectetur ac tempus quis, consectetur ut lectus. In bibendum luctus pharetra. Morbi lacinia sem sem. Phasellus quis tellus magna.</p>
+				</div>
+				<!-- // Step 4 END -->
+				
+				<!-- Step 5 -->
+				<div class="tab-pane" id="tab5">
+					<h4>Fifth tab</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices libero vel massa egestas facilisis. Mauris convallis augue nec dolor dignissim vestibulum. Praesent imperdiet elit posuere arcu posuere consectetur. Morbi dignissim eleifend nibh, eget tincidunt nibh dignissim hendrerit. Cras iaculis congue lorem, eget gravida augue vehicula sed. Nam lorem sem, consectetur ac tempus quis, consectetur ut lectus. In bibendum luctus pharetra. Morbi lacinia sem sem. Phasellus quis tellus magna.</p>
+				</div>
+				<!-- // Step 5 END -->
+				
+				<!-- Step 6 -->
+				<div class="tab-pane" id="tab6">
+					<h4>Sixth tab</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices libero vel massa egestas facilisis. Mauris convallis augue nec dolor dignissim vestibulum. Praesent imperdiet elit posuere arcu posuere consectetur. Morbi dignissim eleifend nibh, eget tincidunt nibh dignissim hendrerit. Cras iaculis congue lorem, eget gravida augue vehicula sed. Nam lorem sem, consectetur ac tempus quis, consectetur ut lectus. In bibendum luctus pharetra. Morbi lacinia sem sem. Phasellus quis tellus magna.</p>
+				</div>
+				<!-- // Step 6 END -->
+				
+				<!-- Step 7 -->
+				<div class="tab-pane" id="tab7">
+					<h4>Seventh tab</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices libero vel massa egestas facilisis. Mauris convallis augue nec dolor dignissim vestibulum. Praesent imperdiet elit posuere arcu posuere consectetur. Morbi dignissim eleifend nibh, eget tincidunt nibh dignissim hendrerit. Cras iaculis congue lorem, eget gravida augue vehicula sed. Nam lorem sem, consectetur ac tempus quis, consectetur ut lectus. In bibendum luctus pharetra. Morbi lacinia sem sem. Phasellus quis tellus magna.</p>
+				</div>
+				<!-- // Step 7 END -->
+				
+			</div>
+			
+			<!-- Wizard pagination controls -->
+			<ul class="pagination margin-bottom-none">
+				<li class="primary previous first"><a href="#" class="no-ajaxify">First</a></li>
+				<li class="primary previous"><a href="#" class="no-ajaxify">Previous</a></li>
+				<li class="last primary"><a href="#" class="no-ajaxify">Last</a></li>
+			  	<li class="next primary"><a href="#" class="no-ajaxify">Next</a></li>
+				<li class="next finish primary" style="display:none;"><a href="#" class="no-ajaxify">Finish</a></li>
+			</ul>
+			<!-- // Wizard pagination controls END -->
+			
+		</div>
+	</div>
+</div>
+<!-- // Form Wizard / Arrow navigation & Progress bar END -->	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/wizards/assets/lib/jquery.bootstrap.wizard.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/wizards/assets/custom/js/form-wizards.init.js?v=v2.3.0"></script>
+</body>
+</html>

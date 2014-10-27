@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.bootstrap-timepicker.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.bootstrap-timepicker.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'bootstrap-timepicker'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.bootstrap-timepicker</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-a30c6ed6d40e049cec755b3bdd92adbf" data-toggle="collapse">bootstrap-timepicker-1</a></h4>
+							<div class="collapse in" id="view-a30c6ed6d40e049cec755b3bdd92adbf">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-a30c6ed6d40e049cec755b3bdd92adbf" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-a30c6ed6d40e049cec755b3bdd92adbf" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-a30c6ed6d40e049cec755b3bdd92adbf" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-a30c6ed6d40e049cec755b3bdd92adbf" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/bootstrap-timepicker-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-a30c6ed6d40e049cec755b3bdd92adbf">
+												<div class="input-group bootstrap-timepicker">
+	<input id="timepicker1" type="text" class="form-control">
+	<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+</div>
+											</div>
+											<div class="tab-pane" id="source-a30c6ed6d40e049cec755b3bdd92adbf">
+												<pre class="prettyprint">&lt;div class=&quot;input-group bootstrap-timepicker&quot;&gt;
+	&lt;input id=&quot;timepicker1&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+	&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-a30c6ed6d40e049cec755b3bdd92adbf">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/css/bootstrap-timepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/less/bootstrap-timepicker.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-a30c6ed6d40e049cec755b3bdd92adbf">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-e3beffdb6c8041ce324ccb48837e7349" data-toggle="collapse">bootstrap-timepicker-2</a></h4>
+							<div class="collapse in" id="view-e3beffdb6c8041ce324ccb48837e7349">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-e3beffdb6c8041ce324ccb48837e7349" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-e3beffdb6c8041ce324ccb48837e7349" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-e3beffdb6c8041ce324ccb48837e7349" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-e3beffdb6c8041ce324ccb48837e7349" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/bootstrap-timepicker-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-e3beffdb6c8041ce324ccb48837e7349">
+												<div class="bootstrap-timepicker">
+    <input id="timepicker3" type="text" class="form-control" />
+</div>
+											</div>
+											<div class="tab-pane" id="source-e3beffdb6c8041ce324ccb48837e7349">
+												<pre class="prettyprint">&lt;div class=&quot;bootstrap-timepicker&quot;&gt;
+    &lt;input id=&quot;timepicker3&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-e3beffdb6c8041ce324ccb48837e7349">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/css/bootstrap-timepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/less/bootstrap-timepicker.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-e3beffdb6c8041ce324ccb48837e7349">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-7b24fd7e11013f416534287c5f795ec7" data-toggle="collapse">bootstrap-timepicker-3</a></h4>
+							<div class="collapse in" id="view-7b24fd7e11013f416534287c5f795ec7">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-7b24fd7e11013f416534287c5f795ec7" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-7b24fd7e11013f416534287c5f795ec7" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-7b24fd7e11013f416534287c5f795ec7" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-7b24fd7e11013f416534287c5f795ec7" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/bootstrap-timepicker-3.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-7b24fd7e11013f416534287c5f795ec7">
+												<input id="timepicker5" type="text" class="form-control">
+											</div>
+											<div class="tab-pane" id="source-7b24fd7e11013f416534287c5f795ec7">
+												<pre class="prettyprint">&lt;input id=&quot;timepicker5&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-7b24fd7e11013f416534287c5f795ec7">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/css/bootstrap-timepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/less/bootstrap-timepicker.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-7b24fd7e11013f416534287c5f795ec7">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-2da15e5efa070cb8cbeea0f08efab9fb" data-toggle="collapse">bootstrap-timepicker-modal-1</a></h4>
+							<div class="collapse in" id="view-2da15e5efa070cb8cbeea0f08efab9fb">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-2da15e5efa070cb8cbeea0f08efab9fb" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-2da15e5efa070cb8cbeea0f08efab9fb" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-2da15e5efa070cb8cbeea0f08efab9fb" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-2da15e5efa070cb8cbeea0f08efab9fb" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/bootstrap-timepicker-modal-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-2da15e5efa070cb8cbeea0f08efab9fb">
+												<div class="input-group bootstrap-timepicker">
+    <input id="timepicker2" type="text" class="form-control" />
+    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+</div>
+											</div>
+											<div class="tab-pane" id="source-2da15e5efa070cb8cbeea0f08efab9fb">
+												<pre class="prettyprint">&lt;div class=&quot;input-group bootstrap-timepicker&quot;&gt;
+    &lt;input id=&quot;timepicker2&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+    &lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-2da15e5efa070cb8cbeea0f08efab9fb">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/css/bootstrap-timepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/less/bootstrap-timepicker.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-2da15e5efa070cb8cbeea0f08efab9fb">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-297efa31d5eaf7bd3c65effa703a7e64" data-toggle="collapse">bootstrap-timepicker-modal-2</a></h4>
+							<div class="collapse in" id="view-297efa31d5eaf7bd3c65effa703a7e64">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-297efa31d5eaf7bd3c65effa703a7e64" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-297efa31d5eaf7bd3c65effa703a7e64" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-297efa31d5eaf7bd3c65effa703a7e64" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-297efa31d5eaf7bd3c65effa703a7e64" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/bootstrap-timepicker-modal-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-297efa31d5eaf7bd3c65effa703a7e64">
+												<div id="timepicker4Modal" class="modal fade"> 
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header"><h3 class="modal-title">A Timepicker Inside A Modal</h3></div>
+			<div class="modal-body" style="overflow: visible;">
+				 <div class="bootstrap-timepicker relativeWrapp" style="vertical-align: middle;">
+					 <input id="timepicker4" class="form-control" value="10:35 AM" type="text" />
+				 </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<a class="btn btn-primary" href="#timepicker4Modal" data-toggle="modal">Open Modal</a>
+
+											</div>
+											<div class="tab-pane" id="source-297efa31d5eaf7bd3c65effa703a7e64">
+												<pre class="prettyprint">&lt;div id=&quot;timepicker4Modal&quot; class=&quot;modal fade&quot;&gt; 
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;&lt;h3 class=&quot;modal-title&quot;&gt;A Timepicker Inside A Modal&lt;/h3&gt;&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot; style=&quot;overflow: visible;&quot;&gt;
+				 &lt;div class=&quot;bootstrap-timepicker relativeWrapp&quot; style=&quot;vertical-align: middle;&quot;&gt;
+					 &lt;input id=&quot;timepicker4&quot; class=&quot;form-control&quot; value=&quot;10:35 AM&quot; type=&quot;text&quot; /&gt;
+				 &lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-dismiss=&quot;modal&quot;&gt;OK&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;a class=&quot;btn btn-primary&quot; href=&quot;#timepicker4Modal&quot; data-toggle=&quot;modal&quot;&gt;Open Modal&lt;/a&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-297efa31d5eaf7bd3c65effa703a7e64">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/css/bootstrap-timepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/less/bootstrap-timepicker.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-297efa31d5eaf7bd3c65effa703a7e64">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/lib/js/bootstrap-timepicker.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-timepicker/assets/custom/js/bootstrap-timepicker.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

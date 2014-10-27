@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.tables-responsive.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.tables-responsive.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'tables-responsive'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.tables-responsive</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-c6cf9ecfd04e9e4b57767ab22a2c9917" data-toggle="collapse">table-responsive-css</a></h4>
+							<div class="collapse in" id="view-c6cf9ecfd04e9e4b57767ab22a2c9917">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-c6cf9ecfd04e9e4b57767ab22a2c9917" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-c6cf9ecfd04e9e4b57767ab22a2c9917" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-c6cf9ecfd04e9e4b57767ab22a2c9917" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/table-responsive-css.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-c6cf9ecfd04e9e4b57767ab22a2c9917">
+												<div class="widget">
+	<div class="widget-head">
+		<h4 class="heading">Example Using CSS Only</h4>
+	</div>
+	<div class="widget-body innerAll inner-2x">
+
+		<!-- Table -->
+		<table class="table table-striped table-responsive swipe-horizontal table-primary">
+		
+			<!-- Table heading -->
+			<thead>
+				<tr>
+					<th>Rendering eng.</th>
+					<th>Browser</th>
+					<th>Platform(s)</th>
+					<th>Eng. vers.</th>
+					<th>CSS grade</th>
+				</tr>
+			</thead>
+			<!-- // Table heading END -->
+			
+			<!-- Table body -->
+			<tbody>
+			
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Camino 1.0</td>
+					<td>OSX.2+</td>
+					<td class="center">1.8</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Camino 1.5</td>
+					<td>OSX.3+</td>
+					<td class="center">1.8</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Netscape 7.2</td>
+					<td>Win 95+ / Mac OS 8.6-9.2</td>
+					<td class="center">1.7</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Netscape Browser 8</td>
+					<td>Win 98SE+</td>
+					<td class="center">1.7</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Netscape Navigator 9</td>
+					<td>Win 98+ / OSX.2+</td>
+					<td class="center">1.8</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Mozilla 1.0</td>
+					<td>Win 95+ / OSX.1+</td>
+					<td class="center">1</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Mozilla 1.1</td>
+					<td>Win 95+ / OSX.1+</td>
+					<td class="center">1.1</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Mozilla 1.2</td>
+					<td>Win 95+ / OSX.1+</td>
+					<td class="center">1.2</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Mozilla 1.3</td>
+					<td>Win 95+ / OSX.1+</td>
+					<td class="center">1.3</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Mozilla 1.4</td>
+					<td>Win 95+ / OSX.1+</td>
+					<td class="center">1.4</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+			</tbody>
+			<!-- // Table body END -->
+			
+		</table>
+		<!-- // Table END -->
+		
+	</div>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-c6cf9ecfd04e9e4b57767ab22a2c9917">
+												<pre class="prettyprint">&lt;div class=&quot;widget&quot;&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;h4 class=&quot;heading&quot;&gt;Example Using CSS Only&lt;/h4&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;widget-body innerAll inner-2x&quot;&gt;
+
+		&lt;!-- Table --&gt;
+		&lt;table class=&quot;table table-striped table-responsive swipe-horizontal table-primary&quot;&gt;
+		
+			&lt;!-- Table heading --&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Rendering eng.&lt;/th&gt;
+					&lt;th&gt;Browser&lt;/th&gt;
+					&lt;th&gt;Platform(s)&lt;/th&gt;
+					&lt;th&gt;Eng. vers.&lt;/th&gt;
+					&lt;th&gt;CSS grade&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;!-- // Table heading END --&gt;
+			
+			&lt;!-- Table body --&gt;
+			&lt;tbody&gt;
+			
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Camino 1.0&lt;/td&gt;
+					&lt;td&gt;OSX.2+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.8&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Camino 1.5&lt;/td&gt;
+					&lt;td&gt;OSX.3+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.8&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Netscape 7.2&lt;/td&gt;
+					&lt;td&gt;Win 95+ / Mac OS 8.6-9.2&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.7&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Netscape Browser 8&lt;/td&gt;
+					&lt;td&gt;Win 98SE+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.7&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Netscape Navigator 9&lt;/td&gt;
+					&lt;td&gt;Win 98+ / OSX.2+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.8&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Mozilla 1.0&lt;/td&gt;
+					&lt;td&gt;Win 95+ / OSX.1+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Mozilla 1.1&lt;/td&gt;
+					&lt;td&gt;Win 95+ / OSX.1+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.1&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Mozilla 1.2&lt;/td&gt;
+					&lt;td&gt;Win 95+ / OSX.1+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.2&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Mozilla 1.3&lt;/td&gt;
+					&lt;td&gt;Win 95+ / OSX.1+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.3&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Mozilla 1.4&lt;/td&gt;
+					&lt;td&gt;Win 95+ / OSX.1+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.4&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+			&lt;/tbody&gt;
+			&lt;!-- // Table body END --&gt;
+			
+		&lt;/table&gt;
+		&lt;!-- // Table END --&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-c6cf9ecfd04e9e4b57767ab22a2c9917">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/responsive/assets/custom/less/tables-responsive.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-d0121ee31a2f985dcae32b91da4973b2" data-toggle="collapse">table-responsive-footable</a></h4>
+							<div class="collapse in" id="view-d0121ee31a2f985dcae32b91da4973b2">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-d0121ee31a2f985dcae32b91da4973b2" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-d0121ee31a2f985dcae32b91da4973b2" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-d0121ee31a2f985dcae32b91da4973b2" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-d0121ee31a2f985dcae32b91da4973b2" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/table-responsive-footable.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-d0121ee31a2f985dcae32b91da4973b2">
+												<div class="widget">
+	<div class="widget-head">
+		<h4 class="heading">Example Using jQuery</h4>
+	</div>
+	<div class="widget-body innerAll inner-2x">
+
+		<!-- Table -->
+		<table class="footable table table-striped table-primary">
+
+			<!-- Table heading -->
+			<thead>
+				<tr>
+					<th data-class="expand">Rendering eng.</th>
+					<th data-hide="phone,tablet">Browser</th>
+					<th data-hide="phone,tablet">Platform(s)</th>
+					<th data-hide="phone">Eng. vers.</th>
+					<th>CSS grade</th>
+				</tr>
+			</thead>
+			<!-- // Table heading END -->
+			
+			<!-- Table body -->
+			<tbody>
+			
+				<!-- Table row -->
+				<tr class="gradeX">
+					<td>Trident</td>
+					<td>Internet Explorer 4.0</td>
+					<td>Win 95+</td>
+					<td class="center">4</td>
+					<td class="center">X</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeC">
+					<td>Trident</td>
+					<td>Internet Explorer 5.0</td>
+					<td>Win 95+</td>
+					<td class="center">5</td>
+					<td class="center">C</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Trident</td>
+					<td>Internet Explorer 5.5</td>
+					<td>Win 95+</td>
+					<td class="center">5.5</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Trident</td>
+					<td>Internet Explorer 6</td>
+					<td>Win 98+</td>
+					<td class="center">6</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Trident</td>
+					<td>Internet Explorer 7</td>
+					<td>Win XP SP2+</td>
+					<td class="center">7</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Trident</td>
+					<td>AOL browser (AOL desktop)</td>
+					<td>Win XP</td>
+					<td class="center">6</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Firefox 1.0</td>
+					<td>Win 98+ / OSX.2+</td>
+					<td class="center">1.7</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Firefox 1.5</td>
+					<td>Win 98+ / OSX.2+</td>
+					<td class="center">1.8</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Firefox 2.0</td>
+					<td>Win 98+ / OSX.2+</td>
+					<td class="center">1.8</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+				<!-- Table row -->
+				<tr class="gradeA">
+					<td>Gecko</td>
+					<td>Firefox 3.0</td>
+					<td>Win 2k+ / OSX.3+</td>
+					<td class="center">1.9</td>
+					<td class="center">A</td>
+				</tr>
+				<!-- // Table row END -->
+				
+			</tbody>
+			<!-- // Table body END -->
+			
+		</table>
+		<!-- // Table END -->
+
+	</div>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-d0121ee31a2f985dcae32b91da4973b2">
+												<pre class="prettyprint">&lt;div class=&quot;widget&quot;&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;h4 class=&quot;heading&quot;&gt;Example Using jQuery&lt;/h4&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;widget-body innerAll inner-2x&quot;&gt;
+
+		&lt;!-- Table --&gt;
+		&lt;table class=&quot;footable table table-striped table-primary&quot;&gt;
+
+			&lt;!-- Table heading --&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th data-class=&quot;expand&quot;&gt;Rendering eng.&lt;/th&gt;
+					&lt;th data-hide=&quot;phone,tablet&quot;&gt;Browser&lt;/th&gt;
+					&lt;th data-hide=&quot;phone,tablet&quot;&gt;Platform(s)&lt;/th&gt;
+					&lt;th data-hide=&quot;phone&quot;&gt;Eng. vers.&lt;/th&gt;
+					&lt;th&gt;CSS grade&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;!-- // Table heading END --&gt;
+			
+			&lt;!-- Table body --&gt;
+			&lt;tbody&gt;
+			
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeX&quot;&gt;
+					&lt;td&gt;Trident&lt;/td&gt;
+					&lt;td&gt;Internet Explorer 4.0&lt;/td&gt;
+					&lt;td&gt;Win 95+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;4&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;X&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeC&quot;&gt;
+					&lt;td&gt;Trident&lt;/td&gt;
+					&lt;td&gt;Internet Explorer 5.0&lt;/td&gt;
+					&lt;td&gt;Win 95+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;5&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;C&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Trident&lt;/td&gt;
+					&lt;td&gt;Internet Explorer 5.5&lt;/td&gt;
+					&lt;td&gt;Win 95+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;5.5&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Trident&lt;/td&gt;
+					&lt;td&gt;Internet Explorer 6&lt;/td&gt;
+					&lt;td&gt;Win 98+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;6&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Trident&lt;/td&gt;
+					&lt;td&gt;Internet Explorer 7&lt;/td&gt;
+					&lt;td&gt;Win XP SP2+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;7&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Trident&lt;/td&gt;
+					&lt;td&gt;AOL browser (AOL desktop)&lt;/td&gt;
+					&lt;td&gt;Win XP&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;6&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Firefox 1.0&lt;/td&gt;
+					&lt;td&gt;Win 98+ / OSX.2+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.7&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Firefox 1.5&lt;/td&gt;
+					&lt;td&gt;Win 98+ / OSX.2+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.8&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Firefox 2.0&lt;/td&gt;
+					&lt;td&gt;Win 98+ / OSX.2+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.8&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+				&lt;!-- Table row --&gt;
+				&lt;tr class=&quot;gradeA&quot;&gt;
+					&lt;td&gt;Gecko&lt;/td&gt;
+					&lt;td&gt;Firefox 3.0&lt;/td&gt;
+					&lt;td&gt;Win 2k+ / OSX.3+&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;1.9&lt;/td&gt;
+					&lt;td class=&quot;center&quot;&gt;A&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- // Table row END --&gt;
+				
+			&lt;/tbody&gt;
+			&lt;!-- // Table body END --&gt;
+			
+		&lt;/table&gt;
+		&lt;!-- // Table END --&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-d0121ee31a2f985dcae32b91da4973b2">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/tables/responsive/assets/lib/css/footable.core.min.css&quot;;
+@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/responsive/assets/custom/less/tables-responsive.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-d0121ee31a2f985dcae32b91da4973b2">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/tables/responsive/assets/lib/js/footable.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/tables/responsive/assets/custom/js/tables-responsive-footable.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/tables/responsive/assets/lib/js/footable.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/tables/responsive/assets/custom/js/tables-responsive-footable.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.carousels.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.carousels.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'carousels'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.carousels</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-e63bb8d8b1b01802713319c64a9dadc1" data-toggle="collapse">carousel-1</a></h4>
+							<div class="collapse in" id="view-e63bb8d8b1b01802713319c64a9dadc1">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-e63bb8d8b1b01802713319c64a9dadc1" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-e63bb8d8b1b01802713319c64a9dadc1" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-e63bb8d8b1b01802713319c64a9dadc1" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/carousel-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-e63bb8d8b1b01802713319c64a9dadc1">
+												<div id="carousel-1" class="carousel slide">
+		
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-1" data-slide-to="1"></li>
+		<li data-target="#carousel-1" data-slide-to="2"></li>
+		<li data-target="#carousel-1" data-slide-to="3"></li>
+		<li data-target="#carousel-1" data-slide-to="4"></li>
+	</ol>
+	<!-- // Indicators END -->
+	
+	<!-- Items -->
+	<div class="carousel-inner">
+	
+				<!-- Item -->
+		<div class="item active">
+			<img src="../assets/images/gallery-2/1.jpg" alt="" class="img-responsive" />
+			<div class="carousel-caption">
+				<h4>Thumbnail heading</h4>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+		<!-- // Item END -->
+				<!-- Item -->
+		<div class="item">
+			<img src="../assets/images/gallery-2/2.jpg" alt="" class="img-responsive" />
+			<div class="carousel-caption">
+				<h4>Thumbnail heading</h4>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+		<!-- // Item END -->
+				<!-- Item -->
+		<div class="item">
+			<img src="../assets/images/gallery-2/3.jpg" alt="" class="img-responsive" />
+			<div class="carousel-caption">
+				<h4>Thumbnail heading</h4>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+		<!-- // Item END -->
+				<!-- Item -->
+		<div class="item">
+			<img src="../assets/images/gallery-2/4.jpg" alt="" class="img-responsive" />
+			<div class="carousel-caption">
+				<h4>Thumbnail heading</h4>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+		<!-- // Item END -->
+				<!-- Item -->
+		<div class="item">
+			<img src="../assets/images/gallery-2/5.jpg" alt="" class="img-responsive" />
+			<div class="carousel-caption">
+				<h4>Thumbnail heading</h4>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+		<!-- // Item END -->
+				
+	</div>
+	<!-- // Items END -->
+	
+	<!-- Navigation -->
+	<a class="left carousel-control" href="#carousel-1" data-slide="prev"><span class="fa fa-prev"></span></a>
+	<a class="right carousel-control" href="#carousel-1" data-slide="next"><span class="fa fa-next"></span></a>
+	<!-- // Navigation END -->
+	
+</div>
+											</div>
+											<div class="tab-pane" id="source-e63bb8d8b1b01802713319c64a9dadc1">
+												<pre class="prettyprint">&lt;div id=&quot;carousel-1&quot; class=&quot;carousel slide&quot;&gt;
+		
+	&lt;!-- Indicators --&gt;
+	&lt;ol class=&quot;carousel-indicators&quot;&gt;
+		&lt;li data-target=&quot;#carousel-1&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+		&lt;li data-target=&quot;#carousel-1&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+		&lt;li data-target=&quot;#carousel-1&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+		&lt;li data-target=&quot;#carousel-1&quot; data-slide-to=&quot;3&quot;&gt;&lt;/li&gt;
+		&lt;li data-target=&quot;#carousel-1&quot; data-slide-to=&quot;4&quot;&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+	&lt;!-- // Indicators END --&gt;
+	
+	&lt;!-- Items --&gt;
+	&lt;div class=&quot;carousel-inner&quot;&gt;
+	
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item active&quot;&gt;
+			&lt;img src=&quot;../assets/images/gallery-2/1.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Thumbnail heading&lt;/h4&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;../assets/images/gallery-2/2.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Thumbnail heading&lt;/h4&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;../assets/images/gallery-2/3.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Thumbnail heading&lt;/h4&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;../assets/images/gallery-2/4.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Thumbnail heading&lt;/h4&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;img src=&quot;../assets/images/gallery-2/5.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+			&lt;div class=&quot;carousel-caption&quot;&gt;
+				&lt;h4&gt;Thumbnail heading&lt;/h4&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				
+	&lt;/div&gt;
+	&lt;!-- // Items END --&gt;
+	
+	&lt;!-- Navigation --&gt;
+	&lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-1&quot; data-slide=&quot;prev&quot;&gt;&lt;span class=&quot;fa fa-prev&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+	&lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-1&quot; data-slide=&quot;next&quot;&gt;&lt;span class=&quot;fa fa-next&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+	&lt;!-- // Navigation END --&gt;
+	
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-e63bb8d8b1b01802713319c64a9dadc1">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/gallery/carousels/assets/less/carousels.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-6ea85950d19dfefb557096a56cf64162" data-toggle="collapse">carousel-2</a></h4>
+							<div class="collapse in" id="view-6ea85950d19dfefb557096a56cf64162">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-6ea85950d19dfefb557096a56cf64162" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-6ea85950d19dfefb557096a56cf64162" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-6ea85950d19dfefb557096a56cf64162" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/carousel-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-6ea85950d19dfefb557096a56cf64162">
+												<div class="carousel carousel-1 slide" id="myCarousel">
+	<div class="carousel-inner">
+				<!-- Item -->
+		<div class="item">
+			<div class="row">
+				<div class="col-xs-5 relativeWrap">
+					<div class="carousel-caption">
+						<h4>Get this item now!</h4>
+						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.<br/> <a href="" class="separator top" target="_blank">Buy FLAT KIT!</a></p>
+					</div>
+				</div>
+				<div class="col-xs-7">
+					<img src="../assets/images/gallery-2/6.jpg" alt="" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+		<!-- // Item END -->
+				<!-- Item -->
+		<div class="item">
+			<div class="row">
+				<div class="col-xs-5 relativeWrap">
+					<div class="carousel-caption">
+						<h4>Get this item now!</h4>
+						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.<br/> <a href="" class="separator top" target="_blank">Buy FLAT KIT!</a></p>
+					</div>
+				</div>
+				<div class="col-xs-7">
+					<img src="../assets/images/gallery-2/7.jpg" alt="" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+		<!-- // Item END -->
+				<!-- Item -->
+		<div class="item active">
+			<div class="row">
+				<div class="col-xs-5 relativeWrap">
+					<div class="carousel-caption">
+						<h4>Get this item now!</h4>
+						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.<br/> <a href="" class="separator top" target="_blank">Buy FLAT KIT!</a></p>
+					</div>
+				</div>
+				<div class="col-xs-7">
+					<img src="../assets/images/gallery-2/8.jpg" alt="" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+		<!-- // Item END -->
+			</div>
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-6ea85950d19dfefb557096a56cf64162">
+												<pre class="prettyprint">&lt;div class=&quot;carousel carousel-1 slide&quot; id=&quot;myCarousel&quot;&gt;
+	&lt;div class=&quot;carousel-inner&quot;&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;col-xs-5 relativeWrap&quot;&gt;
+					&lt;div class=&quot;carousel-caption&quot;&gt;
+						&lt;h4&gt;Get this item now!&lt;/h4&gt;
+						&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.&lt;br/&gt; &lt;a href=&quot;&quot; class=&quot;separator top&quot; target=&quot;_blank&quot;&gt;Buy FLAT KIT!&lt;/a&gt;&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;col-xs-7&quot;&gt;
+					&lt;img src=&quot;../assets/images/gallery-2/6.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;col-xs-5 relativeWrap&quot;&gt;
+					&lt;div class=&quot;carousel-caption&quot;&gt;
+						&lt;h4&gt;Get this item now!&lt;/h4&gt;
+						&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.&lt;br/&gt; &lt;a href=&quot;&quot; class=&quot;separator top&quot; target=&quot;_blank&quot;&gt;Buy FLAT KIT!&lt;/a&gt;&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;col-xs-7&quot;&gt;
+					&lt;img src=&quot;../assets/images/gallery-2/7.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+				&lt;!-- Item --&gt;
+		&lt;div class=&quot;item active&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;col-xs-5 relativeWrap&quot;&gt;
+					&lt;div class=&quot;carousel-caption&quot;&gt;
+						&lt;h4&gt;Get this item now!&lt;/h4&gt;
+						&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.&lt;br/&gt; &lt;a href=&quot;&quot; class=&quot;separator top&quot; target=&quot;_blank&quot;&gt;Buy FLAT KIT!&lt;/a&gt;&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;col-xs-7&quot;&gt;
+					&lt;img src=&quot;../assets/images/gallery-2/8.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Item END --&gt;
+			&lt;/div&gt;
+	&lt;ol class=&quot;carousel-indicators&quot;&gt;
+		&lt;li data-target=&quot;#myCarousel&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+		&lt;li data-target=&quot;#myCarousel&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+		&lt;li data-target=&quot;#myCarousel&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-6ea85950d19dfefb557096a56cf64162">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/gallery/carousels/assets/less/carousels.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

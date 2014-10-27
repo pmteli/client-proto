@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!--><html class="animations front fluid top-full menuh-top"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | User Profile</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.user-profile.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.user-profile.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+</head>
+<body>
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="container-960 innerLR secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-960 innerLR breadcrumb-nav clearfix">
+					<ul class="breadcrumb">
+						<li><a href="index.html">Portfolio</a></li>
+						<li>User Profile</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="user-profile" class="main">
+				<div class="container-960 innerLR clearfix">
+					<div class="primary-content col-md-12">
+						<form class="general-information form-horizontal content-block clearfix" role="form">
+							<h2>General Information</h2>
+
+							<div class="profile-image col-md-3">
+								<div class="form-group">
+									<img alt="[Image: Profile Image]" src="#" />
+								</div>
+							</div>
+
+							<div class="user-info-01 col-md-4">
+								<div class="form-group">
+									<label for="inputFirstName" class="col-sm-4 control-label">First Name</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputLastName" class="col-sm-4 control-label">Last Name</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputEmail" class="col-sm-4 control-label">Email</label>
+									<div class="col-sm-8">
+										<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputPhone" class="col-sm-4 control-label">Phone</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+									</div>
+								</div>
+							</div>
+
+							<div class="user-info-02 col-md-5">
+								<div class="form-group">
+									<label for="inputAddress01" class="col-sm-4 control-label">Address 1</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="inputAddress01" placeholder="Address 1">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputAddress02" class="col-sm-4 control-label">Address 2</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="inputAddress02" placeholder="Address 2">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputCity" class="col-sm-4 control-label">City</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="inputCity" placeholder="City">
+									</div>
+									<div class="col-sm-4">
+										<select class="form-control" id="inputState">
+											<option>State</option>
+											<option>MA</option>
+											<option>NH</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputZip" class="col-sm-4 control-label">Zip</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="inputZip" placeholder="Zip">
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="notifications content-block clearfix">
+							<h2>Email &amp; Notifications</h2>
+							<p><em>&hellip;content goes here&hellip;</em></p>
+						</div>
+
+						<p class="separator"></p>
+
+						<div class="form-controls content-block clearfix">
+							<button class="btn btn-default back-button">Back to Portfolio</button>
+
+							<input type="submit" name="submit" value="Save Profile" class="btn btn-primary submit" />
+						</div>
+					</div> <!-- .primary-content -->
+
+				</div>	
+			</div> <!-- #user-profile -->
+
+			<div id="footer" class="container-960 innerLR hidden-print">
+				
+					<div class="footer-content col-md-12">
+						<!--  Copyright Line -->
+						<div class="copy">
+							<a href="site-map.html?lang=en">Site Map</a>
+							<span class="appbrand">Powered by FirstFuel</span>
+						</div>
+						<!--  End Copyright Line -->
+					</div>
+
+			</div>
+			<!-- // Footer END -->
+		<!-- // Content END -->
+	</div> 
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/widgets/widget-progress/assets/js/widget-progress.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	<script src="../assets/js/firstengage.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>widget-chat example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.widget-chat.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.widget-chat.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">widget-chat example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>widget-chat component</strong></p>
+			</div>
+<!-- Chat -->
+<div class="widget widget-heading-simple widget-body-white widget-chat" data-builder-exclude>
+
+	<div class="widget-head">
+		<h4 class="heading glyphicons chat"><i></i>Chat</h4>
+	</div>
+	<div class="widget-body">
+	
+	<!-- Slim Scroll -->
+	<div class="slim-scroll chat-items" data-scroll-height="190px" data-scroll-size="0">
+		
+		<!-- Media item -->
+		<div class="media">
+			<small class="author"><a href="#" title="" class="strong">Martin</a></small>
+			<div class="media-object pull-left thumb"><img src="../../assets//images/avatar-51x51.jpg" alt="Image" /></div>
+			<div class="media-body">
+				<blockquote>
+					<small class="date"><cite>just now</cite></small>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien.</p>
+				</blockquote>
+			</div>
+		</div>
+		<!-- // Media item END -->
+		
+		<!-- Media item -->
+		<div class="media right">
+			<small class="author"><a href="#" title="" class="strong">John Doe</a></small>
+			<div class="media-object pull-right thumb"><img src="../../assets//images/avatar-51x51.jpg" alt="Image" /></div>
+			<div class="media-body">
+				<blockquote class="pull-right">
+					<small class="date"><cite>15 seconds ago</cite></small>
+					<p>In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla.</p>
+				</blockquote>
+			</div>
+		</div>
+		<!-- // Media item END -->
+		
+		<!-- Media item -->
+		<div class="media">
+			<small class="author"><a href="#" title="" class="strong">Ricky</a></small>
+			<div class="media-object pull-left thumb"><img src="../../assets//images/avatar-51x51.jpg" alt="Image" /></div>
+			<div class="media-body">
+				<blockquote>
+					<small class="date"><cite>5 minutes ago</cite></small>
+					<p>Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod.</p>
+				</blockquote>
+			</div>
+		</div>
+		<!-- // Media item END -->
+		
+	</div>
+	<!-- // Slim Scroll END -->
+	
+	</div>
+	
+	<div class="chat-controls">
+		<div class="innerLR">
+			<form class="margin-none">
+				<div class="row">
+					<div class="col-md-10 col-xs-10">
+						<input type="text" name="message" class="form-control" placeholder="Type your message .." />
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<button type="submit" class="btn btn-block btn-primary">Send</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</div>
+<!-- // Chat END -->
+
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/widgets/widget-chat/assets/js/widget-chat.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+</body>
+</html>

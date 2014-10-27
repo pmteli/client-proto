@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.widget-analytics.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.widget-analytics.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'widget-analytics'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.widget-analytics</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-82d139dbcf31f0c2b3eafa97a70991a9" data-toggle="collapse">widget-analytics-1</a></h4>
+							<div class="collapse in" id="view-82d139dbcf31f0c2b3eafa97a70991a9">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-82d139dbcf31f0c2b3eafa97a70991a9" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-82d139dbcf31f0c2b3eafa97a70991a9" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-82d139dbcf31f0c2b3eafa97a70991a9" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-82d139dbcf31f0c2b3eafa97a70991a9">
+												<div class="widget ">
+	<div class="widget-body innerAll inner-2x">
+		<div class="left">
+			<h4>1.324</h4>
+			<strong>SUBJECT</strong>
+		</div>
+		<div class="right">
+			<i class="fa fa-arrow-up text-success"></i>
+			<span>+33%</span>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+											</div>
+											<div class="tab-pane" id="source-82d139dbcf31f0c2b3eafa97a70991a9">
+												<pre class="prettyprint">&lt;div class=&quot;widget &quot;&gt;
+	&lt;div class=&quot;widget-body innerAll inner-2x&quot;&gt;
+		&lt;div class=&quot;left&quot;&gt;
+			&lt;h4&gt;1.324&lt;/h4&gt;
+			&lt;strong&gt;SUBJECT&lt;/strong&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;right&quot;&gt;
+			&lt;i class=&quot;fa fa-arrow-up text-success&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;+33%&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-82d139dbcf31f0c2b3eafa97a70991a9">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/widgets/widget-analytics/assets/less/widget-analytics.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-d9864ad356c5177d1c49a945854ee5eb" data-toggle="collapse">widget-analytics-2</a></h4>
+							<div class="collapse in" id="view-d9864ad356c5177d1c49a945854ee5eb">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-d9864ad356c5177d1c49a945854ee5eb" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-d9864ad356c5177d1c49a945854ee5eb" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-d9864ad356c5177d1c49a945854ee5eb" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-d9864ad356c5177d1c49a945854ee5eb">
+												<div class="widget widget-analytics primary">
+	<div class="widget-body innerAll inner-2x">
+		<div class="left">
+			<h4>1.324</h4>
+			<strong>TRAFFIC</strong>
+		</div>
+		<div class="right">
+			<i class="fa fa-arrow-down"></i>
+			<span>+33%</span>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+											</div>
+											<div class="tab-pane" id="source-d9864ad356c5177d1c49a945854ee5eb">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-analytics primary&quot;&gt;
+	&lt;div class=&quot;widget-body innerAll inner-2x&quot;&gt;
+		&lt;div class=&quot;left&quot;&gt;
+			&lt;h4&gt;1.324&lt;/h4&gt;
+			&lt;strong&gt;TRAFFIC&lt;/strong&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;right&quot;&gt;
+			&lt;i class=&quot;fa fa-arrow-down&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;+33%&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-d9864ad356c5177d1c49a945854ee5eb">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/widgets/widget-analytics/assets/less/widget-analytics.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-644a7b1038148e259a5900846de72a73" data-toggle="collapse">widget-analytics-3</a></h4>
+							<div class="collapse in" id="view-644a7b1038148e259a5900846de72a73">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-644a7b1038148e259a5900846de72a73" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-644a7b1038148e259a5900846de72a73" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-644a7b1038148e259a5900846de72a73" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-3.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-644a7b1038148e259a5900846de72a73">
+												<div class="widget widget-analytics info">
+	<div class="widget-body innerAll inner-2x">
+		<div class="left">
+			<h4>1.324</h4>
+			<strong>SUBJECT</strong>
+		</div>
+		<div class="right">
+			<i class="fa fa-arrow-up text-info"></i>
+			<span>+33%</span>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+											</div>
+											<div class="tab-pane" id="source-644a7b1038148e259a5900846de72a73">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-analytics info&quot;&gt;
+	&lt;div class=&quot;widget-body innerAll inner-2x&quot;&gt;
+		&lt;div class=&quot;left&quot;&gt;
+			&lt;h4&gt;1.324&lt;/h4&gt;
+			&lt;strong&gt;SUBJECT&lt;/strong&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;right&quot;&gt;
+			&lt;i class=&quot;fa fa-arrow-up text-info&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;+33%&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-644a7b1038148e259a5900846de72a73">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/widgets/widget-analytics/assets/less/widget-analytics.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-adf0084a7eb67e4023aec621e946fb0d" data-toggle="collapse">widget-analytics-4</a></h4>
+							<div class="collapse in" id="view-adf0084a7eb67e4023aec621e946fb0d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-adf0084a7eb67e4023aec621e946fb0d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-adf0084a7eb67e4023aec621e946fb0d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-adf0084a7eb67e4023aec621e946fb0d" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-adf0084a7eb67e4023aec621e946fb0d" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/widget-analytics-4.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-adf0084a7eb67e4023aec621e946fb0d">
+												<div class="text-center innerAll inner-2x border-bottom">
+	<div class="innerTB">
+		<div data-percent="85" data-size="100" class="easy-pie inline-block easy-pie-gender primary" data-scale-color="false" data-track-color="#efefef" data-line-width="5">
+			<div class="value text-center">
+				<span class="strong"><i class="icon-graph-up-1 fa-3x text-primary"></i></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="text-center innerAll inner-2x bg-primary">
+	<p class="lead margin-none"><span class="text-large text-white">8,320</span><span class="clearfix"></span> <span class="text-white">Visits</span></p>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-adf0084a7eb67e4023aec621e946fb0d">
+												<pre class="prettyprint">&lt;div class=&quot;text-center innerAll inner-2x border-bottom&quot;&gt;
+	&lt;div class=&quot;innerTB&quot;&gt;
+		&lt;div data-percent=&quot;85&quot; data-size=&quot;100&quot; class=&quot;easy-pie inline-block easy-pie-gender primary&quot; data-scale-color=&quot;false&quot; data-track-color=&quot;#efefef&quot; data-line-width=&quot;5&quot;&gt;
+			&lt;div class=&quot;value text-center&quot;&gt;
+				&lt;span class=&quot;strong&quot;&gt;&lt;i class=&quot;icon-graph-up-1 fa-3x text-primary&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-center innerAll inner-2x bg-primary&quot;&gt;
+	&lt;p class=&quot;lead margin-none&quot;&gt;&lt;span class=&quot;text-large text-white&quot;&gt;8,320&lt;/span&gt;&lt;span class=&quot;clearfix&quot;&gt;&lt;/span&gt; &lt;span class=&quot;text-white&quot;&gt;Visits&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-adf0084a7eb67e4023aec621e946fb0d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/charts/easy-pie/assets/lib/css/jquery.easy-pie-chart.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-adf0084a7eb67e4023aec621e946fb0d">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-302ab73985fca555995efc4ba8082d77" data-toggle="collapse">widget-analytics-5</a></h4>
+							<div class="collapse in" id="view-302ab73985fca555995efc4ba8082d77">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-302ab73985fca555995efc4ba8082d77" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-302ab73985fca555995efc4ba8082d77" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-302ab73985fca555995efc4ba8082d77" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-302ab73985fca555995efc4ba8082d77" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/widget-analytics-5.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-302ab73985fca555995efc4ba8082d77">
+												<div class="text-center innerAll inner-2x border-bottom">
+	<div class="innerTB">
+		<div data-percent="70" data-size="100" class="easy-pie inline-block easy-pie-gender success" data-scale-color="false" data-track-color="#efefef" data-line-width="5">
+			<div class="value text-center">
+				<span class="strong"><i class="icon-cash-bag fa-4x text-success"></i></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="text-center innerAll inner-2x bg-success">
+	<p class="lead margin-none"><span class="text-large text-white">&euro;3,470</span><span class="clearfix"></span> <span class="text-white">Income</span></p>
+</div>
+											</div>
+											<div class="tab-pane" id="source-302ab73985fca555995efc4ba8082d77">
+												<pre class="prettyprint">&lt;div class=&quot;text-center innerAll inner-2x border-bottom&quot;&gt;
+	&lt;div class=&quot;innerTB&quot;&gt;
+		&lt;div data-percent=&quot;70&quot; data-size=&quot;100&quot; class=&quot;easy-pie inline-block easy-pie-gender success&quot; data-scale-color=&quot;false&quot; data-track-color=&quot;#efefef&quot; data-line-width=&quot;5&quot;&gt;
+			&lt;div class=&quot;value text-center&quot;&gt;
+				&lt;span class=&quot;strong&quot;&gt;&lt;i class=&quot;icon-cash-bag fa-4x text-success&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-center innerAll inner-2x bg-success&quot;&gt;
+	&lt;p class=&quot;lead margin-none&quot;&gt;&lt;span class=&quot;text-large text-white&quot;&gt;&amp;euro;3,470&lt;/span&gt;&lt;span class=&quot;clearfix&quot;&gt;&lt;/span&gt; &lt;span class=&quot;text-white&quot;&gt;Income&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-302ab73985fca555995efc4ba8082d77">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/charts/easy-pie/assets/lib/css/jquery.easy-pie-chart.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-302ab73985fca555995efc4ba8082d77">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-71e33c586bc28232a1f790afdaa6330d" data-toggle="collapse">widget-analytics-6</a></h4>
+							<div class="collapse in" id="view-71e33c586bc28232a1f790afdaa6330d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-71e33c586bc28232a1f790afdaa6330d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-71e33c586bc28232a1f790afdaa6330d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-71e33c586bc28232a1f790afdaa6330d" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-71e33c586bc28232a1f790afdaa6330d" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/widget-analytics-6.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-71e33c586bc28232a1f790afdaa6330d">
+												<div class="text-center innerAll inner-2x border-bottom">
+	<div class="innerTB">
+		<div data-percent="45" data-size="100" class="easy-pie inline-block easy-pie-gender warning" data-scale-color="false" data-track-color="#efefef" data-line-width="5">
+			<div class="value text-center">
+				<span class="strong"><i class="icon-shopping-bag fa-3x text-warning"></i></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="text-center innerAll inner-2x bg-warning">
+	<p class="lead margin-none"><span class="text-large text-white">683</span> <span class="clearfix"></span> <span class="text-white">Sales</span></p>
+</div>
+											</div>
+											<div class="tab-pane" id="source-71e33c586bc28232a1f790afdaa6330d">
+												<pre class="prettyprint">&lt;div class=&quot;text-center innerAll inner-2x border-bottom&quot;&gt;
+	&lt;div class=&quot;innerTB&quot;&gt;
+		&lt;div data-percent=&quot;45&quot; data-size=&quot;100&quot; class=&quot;easy-pie inline-block easy-pie-gender warning&quot; data-scale-color=&quot;false&quot; data-track-color=&quot;#efefef&quot; data-line-width=&quot;5&quot;&gt;
+			&lt;div class=&quot;value text-center&quot;&gt;
+				&lt;span class=&quot;strong&quot;&gt;&lt;i class=&quot;icon-shopping-bag fa-3x text-warning&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-center innerAll inner-2x bg-warning&quot;&gt;
+	&lt;p class=&quot;lead margin-none&quot;&gt;&lt;span class=&quot;text-large text-white&quot;&gt;683&lt;/span&gt; &lt;span class=&quot;clearfix&quot;&gt;&lt;/span&gt; &lt;span class=&quot;text-white&quot;&gt;Sales&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-71e33c586bc28232a1f790afdaa6330d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/charts/easy-pie/assets/lib/css/jquery.easy-pie-chart.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-71e33c586bc28232a1f790afdaa6330d">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-96b78459e7888dea1e5f61067ef82e3b" data-toggle="collapse">widget-analytics-7</a></h4>
+							<div class="collapse in" id="view-96b78459e7888dea1e5f61067ef82e3b">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-96b78459e7888dea1e5f61067ef82e3b" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-96b78459e7888dea1e5f61067ef82e3b" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-96b78459e7888dea1e5f61067ef82e3b" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-96b78459e7888dea1e5f61067ef82e3b" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/widget-analytics-7.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-96b78459e7888dea1e5f61067ef82e3b">
+												<div class="text-center innerAll inner-2x border-bottom">
+	<div class="innerTB">
+		<div data-percent="85" data-size="100" class="easy-pie inline-block easy-pie-gender inverse" data-scale-color="false" data-track-color="#efefef" data-line-width="5">
+			<div class="value text-center">
+				<span class="strong"><i class="icon-user-2 fa-3x text-inverse"></i></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="text-center innerAll inner-2x bg-inverse">
+	<p class="lead margin-none"><span class="text-large text-white">1209</span> <span class="clearfix"></span><span class="text-white">Total Sign Ups</span></p>
+</div>
+											</div>
+											<div class="tab-pane" id="source-96b78459e7888dea1e5f61067ef82e3b">
+												<pre class="prettyprint">&lt;div class=&quot;text-center innerAll inner-2x border-bottom&quot;&gt;
+	&lt;div class=&quot;innerTB&quot;&gt;
+		&lt;div data-percent=&quot;85&quot; data-size=&quot;100&quot; class=&quot;easy-pie inline-block easy-pie-gender inverse&quot; data-scale-color=&quot;false&quot; data-track-color=&quot;#efefef&quot; data-line-width=&quot;5&quot;&gt;
+			&lt;div class=&quot;value text-center&quot;&gt;
+				&lt;span class=&quot;strong&quot;&gt;&lt;i class=&quot;icon-user-2 fa-3x text-inverse&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-center innerAll inner-2x bg-inverse&quot;&gt;
+	&lt;p class=&quot;lead margin-none&quot;&gt;&lt;span class=&quot;text-large text-white&quot;&gt;1209&lt;/span&gt; &lt;span class=&quot;clearfix&quot;&gt;&lt;/span&gt;&lt;span class=&quot;text-white&quot;&gt;Total Sign Ups&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-96b78459e7888dea1e5f61067ef82e3b">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/charts/easy-pie/assets/lib/css/jquery.easy-pie-chart.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-96b78459e7888dea1e5f61067ef82e3b">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-4aa469c3129effa90954dde0425af97b" data-toggle="collapse">widget-analytics-8</a></h4>
+							<div class="collapse in" id="view-4aa469c3129effa90954dde0425af97b">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-4aa469c3129effa90954dde0425af97b" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-4aa469c3129effa90954dde0425af97b" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-4aa469c3129effa90954dde0425af97b" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-8.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-4aa469c3129effa90954dde0425af97b">
+												<!-- Demographics Widget -->
+
+<div class="widget ">
+	<div class="widget-body padding-none">
+		
+		<div class="innerAll inner-2x text-center border-bottom">
+			<p class="lead margin-none"><span class="text-large3">1,210</span> of <span class="text-primary">your customers</span></p>
+		</div>
+		<div class="innerAll inner-2x">
+			<div class="innerLR text-center">
+				<div class="progress progress-mini ">
+					<div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+				</div>
+				<p class="margin-none">living in <span class="strong">United States</span>, aged <span class="strong">45+</span></p>
+				<p class="margin-none">suffer from a <span class="strong text-primary">deadly disease</span></p>
+			</div>
+		</div>
+				
+	</div>
+</div>
+											</div>
+											<div class="tab-pane" id="source-4aa469c3129effa90954dde0425af97b">
+												<pre class="prettyprint">&lt;!-- Demographics Widget --&gt;
+
+&lt;div class=&quot;widget &quot;&gt;
+	&lt;div class=&quot;widget-body padding-none&quot;&gt;
+		
+		&lt;div class=&quot;innerAll inner-2x text-center border-bottom&quot;&gt;
+			&lt;p class=&quot;lead margin-none&quot;&gt;&lt;span class=&quot;text-large3&quot;&gt;1,210&lt;/span&gt; of &lt;span class=&quot;text-primary&quot;&gt;your customers&lt;/span&gt;&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;innerAll inner-2x&quot;&gt;
+			&lt;div class=&quot;innerLR text-center&quot;&gt;
+				&lt;div class=&quot;progress progress-mini &quot;&gt;
+					&lt;div class=&quot;progress-bar progress-bar-primary&quot; style=&quot;width: 30%&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;p class=&quot;margin-none&quot;&gt;living in &lt;span class=&quot;strong&quot;&gt;United States&lt;/span&gt;, aged &lt;span class=&quot;strong&quot;&gt;45+&lt;/span&gt;&lt;/p&gt;
+				&lt;p class=&quot;margin-none&quot;&gt;suffer from a &lt;span class=&quot;strong text-primary&quot;&gt;deadly disease&lt;/span&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+				
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-4aa469c3129effa90954dde0425af97b">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/widgets/widget-analytics/assets/less/widget-analytics.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-ccb35b3639a218ad392a75cfa0a59795" data-toggle="collapse">widget-analytics-icon-1</a></h4>
+							<div class="collapse in" id="view-ccb35b3639a218ad392a75cfa0a59795">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-ccb35b3639a218ad392a75cfa0a59795" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-ccb35b3639a218ad392a75cfa0a59795" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-ccb35b3639a218ad392a75cfa0a59795" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-icon-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-ccb35b3639a218ad392a75cfa0a59795">
+												<a href="" class="widget widget-icon inverse innerAll inner-2x text-center text-regular">
+	<i class="display-block icon-alarm-clock text-xlarge"></i>
+	<span class="lead">3 Alerts</span>
+</a>
+											</div>
+											<div class="tab-pane" id="source-ccb35b3639a218ad392a75cfa0a59795">
+												<pre class="prettyprint">&lt;a href=&quot;&quot; class=&quot;widget widget-icon inverse innerAll inner-2x text-center text-regular&quot;&gt;
+	&lt;i class=&quot;display-block icon-alarm-clock text-xlarge&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;lead&quot;&gt;3 Alerts&lt;/span&gt;
+&lt;/a&gt;
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-ccb35b3639a218ad392a75cfa0a59795">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-ab9919072edd52db068d1c9eba646962" data-toggle="collapse">widget-analytics-icon-2</a></h4>
+							<div class="collapse in" id="view-ab9919072edd52db068d1c9eba646962">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-ab9919072edd52db068d1c9eba646962" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-ab9919072edd52db068d1c9eba646962" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-ab9919072edd52db068d1c9eba646962" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-icon-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-ab9919072edd52db068d1c9eba646962">
+												<a href="" class="widget widget-icon primary innerAll inner-2x text-center text-regular">
+	<i class="display-block  icon-graduation text-xlarge"></i>
+	<span class="lead">5 Graduates</span>
+</a>	
+												</div>
+											<div class="tab-pane" id="source-ab9919072edd52db068d1c9eba646962">
+												<pre class="prettyprint">&lt;a href=&quot;&quot; class=&quot;widget widget-icon primary innerAll inner-2x text-center text-regular&quot;&gt;
+	&lt;i class=&quot;display-block  icon-graduation text-xlarge&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;lead&quot;&gt;5 Graduates&lt;/span&gt;
+&lt;/a&gt;	
+	</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-ab9919072edd52db068d1c9eba646962">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-d1ef6c74b18bc77950d77875e747a71d" data-toggle="collapse">widget-analytics-icon-3</a></h4>
+							<div class="collapse in" id="view-d1ef6c74b18bc77950d77875e747a71d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-d1ef6c74b18bc77950d77875e747a71d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-d1ef6c74b18bc77950d77875e747a71d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-d1ef6c74b18bc77950d77875e747a71d" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/widget-analytics-icon-3.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-d1ef6c74b18bc77950d77875e747a71d">
+												<a href="" class="widget widget-icon success innerAll inner-2x text-center text-regular">
+	<i class="display-block icon-envelope-2 text-xlarge"></i>
+	<span class="lead">9 Messages</span>
+</a>	
+												</div>
+											<div class="tab-pane" id="source-d1ef6c74b18bc77950d77875e747a71d">
+												<pre class="prettyprint">&lt;a href=&quot;&quot; class=&quot;widget widget-icon success innerAll inner-2x text-center text-regular&quot;&gt;
+	&lt;i class=&quot;display-block icon-envelope-2 text-xlarge&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;lead&quot;&gt;9 Messages&lt;/span&gt;
+&lt;/a&gt;	
+	</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-d1ef6c74b18bc77950d77875e747a71d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

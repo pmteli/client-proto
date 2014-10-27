@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full"> <![endif]-->
+<!--[if gt IE 8]> <html class="front ie gt-ie8 fluid top-full"> <![endif]-->
+<!--[if !IE]><!--><html class="front fluid top-full"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | Configuration</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.configuration.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.configuration.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+</head>
+<body class="configuration">
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="container-960 innerLR secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-960 innerLR clearfix">
+					<select class="selectpicker col-md-6">
+						<option>123 Main St, Boston MA 12345</option>
+						<option>987 A St, Boston MA 12345</option>
+						<option>567 First St, Boston MA 12345</option>
+					</select>
+					<a class="back-link" href="#">back to portfolio &raquo;</a>
+					<p class="document-links"><a href="#" class="fa fa-print"></a><a href="#" class="fa fa-download"></a></p>
+				</div>
+				
+				<div class="container-960 innerLR nav-container">
+					<ul class="topnav col-md-9">
+						
+						<li><a href="your-cost.html"><span class="tab-icon icon-usd fa fa-circle"><i class="fa fa-usd"></i></span><span class="name data">Your Cost</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-electric.html"><span class="tab-icon icon-bolt fa fa-circle"><i class="fa fa-bolt"></i></span><span class="name data">Your Electric</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-gas.html"><span class="tab-icon icon-fire fa fa-circle"><i class="fa fa-fire"></i></span><span class="name data">Your Gas</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="savings.html"><span class="tab-icon icon-money fa fa-circle"><i class="fa fa-money"></i></span><span class="name data">Savings</span><span class="amount data">$000,000</span></a></li>
+					</ul>
+					<!-- // Top Menu Left END -->
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="configuration" class="main">
+				<div class="container-960 innerLR clearfix">
+					<div class="primary-content col-md-12">
+					
+						<h1>Configuration</h1>
+					
+						<!-- Box -->
+						<div class="widget widget-body-simple">
+							
+							<div class="widget-body">
+							
+								<!-- Form -->
+								<form method="post" action="configuration.html?lang=en">
+									<div class="box-generic">
+										<h2>Logo</h2>
+										<div class="fileupload fileupload-new margin-none" data-provides="fileupload">
+											<div class="input-group">
+												<div class="form-control col-md-3"><i class="fa fa-file fileupload-exists"></i> <span class="fileupload-preview"></span></div>
+												<span class="input-group-btn">
+													<span class="btn btn-default btn-file btn-primary"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" class="margin-none" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+												</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="box-generic">
+										<h2>Background Type</h2>
+										<div class="row">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default btn-radio active">
+													<input type="radio" name="options" id="option1" checked="checked" value="solid">Solid Color
+												</label>
+												<label class="btn btn-default btn-radio">
+													<input type="radio" name="options" id="option2" value="gradient">Gradient
+												</label>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="background-color box-generic">
+												<label>Background Color</label>
+												<div class="input-group">
+													<input class="form-control" id="background-color" type="text" placeholder="" />
+													<div class="input-group-btn"><button data-toggle="modal" href="#color-picker-modal" class="btn btn-default btn-primary" type="button">Select a Color</button></div>
+												</div>
+											</div> <!-- end .background-color -->
+										</div>
+
+										<div class="row">
+											<div class="background-gradient box-generic">
+												<label>Background Gradient</label>
+
+												<div class="input-group">
+													<input class="form-control" id="gradient-start-color" type="text" placeholder="Starting Color" />
+													<div class="input-group-btn"><button data-toggle="modal" href="#color-picker-modal" class="btn btn-default btn-primary" type="button">Select a Color</button></div>
+												</div>
+												<p>To</p>
+												<div class="input-group">
+													<input class="form-control" id="gradient-end-color" type="text" placeholder="Ending Color" />
+													<div class="input-group-btn"><button data-toggle="modal" href="#color-picker-modal" class="btn btn-default btn-primary" type="button">Select a Color</button></div>
+												</div>
+											</div> <!-- end .background-gradient -->
+										</div>
+									</div>
+
+									<div class="box-generic">
+										<h2>Customer Information</h2>
+										<div class="row">
+											<input type="text" id="utility-name" placeholder="Utility Name" class="form-control" />
+										</div>
+										<div class="row">
+											<input type="text" id="manager-name" placeholder="Manager Name" class="form-control" />
+										</div>
+										<div class="row">
+											<input type="text" id="manager-email" placeholder="Manager Email" class="form-control" />
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-2 center">
+											<button class="btn btn-block btn-primary" type="submit">Save</button>
+										</div>
+									</div>
+								</form>
+								<!-- // Form END -->
+										
+							</div>
+						</div>
+						<!-- // Box END -->
+					</div>
+					
+				
+			</div> <!-- .primary-content -->
+			</div> <!-- #dashboard -->
+
+			<div id="footer" class="container-960 innerLR hidden-print">
+				
+					<div class="footer-content col-md-12">
+						<!--  Copyright Line -->
+						<div class="copy">
+							<a href="site-map.html?lang=en">Site Map</a>
+							<span class="appbrand">Powered by FirstFuel</span>
+						</div>
+						<!--  End Copyright Line -->
+					</div>
+
+			</div>
+			<!-- // Footer END -->
+		<!-- // Content END -->
+	</div> 
+	
+
+
+	
+
+	<div class="modal fade" id="color-picker-modal">
+		
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal heading -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 class="modal-title">Color Picker</h3>
+				</div>
+				<!-- // Modal heading END -->
+				
+				<!-- Modal body -->
+				<div class="modal-body">
+					<input type="text" value="#84B341" class="form-control" id="colorpickerColor" style="background-color: rgb(132, 179, 65); color: rgb(255, 255, 255);">
+					<div class="separator bottom"></div>
+					<div id="colorpicker"><div class="farbtastic"><div class="color" style="background-color: rgb(150, 255, 0);"></div><div class="wheel"></div><div class="overlay"></div><div class="h-marker marker" style="left: 181px; top: 89px;"></div><div class="sl-marker marker" style="left: 100px; top: 99px;"></div></div></div>
+
+					<button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Ok</button>
+				</div>
+				<!-- // Modal body END -->
+		
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/modals/assets/js/bootbox.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/modals/assets/js/modals.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/colorpicker-farbtastic/assets/js/farbtastic.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/colorpicker-farbtastic/assets/js/colorpicker-farbtastic.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	
+</body>
+</html>

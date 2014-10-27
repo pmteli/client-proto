@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.profile-my-account.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.profile-my-account.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'profile-my-account'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.profile-my-account</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-bb705a246b86ea789e83e13ed8e402e9" data-toggle="collapse">profile-my-account</a></h4>
+							<div class="collapse in" id="view-bb705a246b86ea789e83e13ed8e402e9">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-bb705a246b86ea789e83e13ed8e402e9" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-bb705a246b86ea789e83e13ed8e402e9" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-bb705a246b86ea789e83e13ed8e402e9" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-bb705a246b86ea789e83e13ed8e402e9" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/profile-my-account.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-bb705a246b86ea789e83e13ed8e402e9">
+												<!-- Widget -->
+<div class="widget widget-tabs widget-tabs-gray border-bottom-none">
+
+	<!-- Widget heading -->
+	<div class="widget-head">
+		<ul>
+			<li class="active"><a class="glyphicons edit" href="#account-details" data-toggle="tab"><i></i>Account details</a></li>
+			<li><a class="glyphicons settings" href="#account-settings" data-toggle="tab"><i></i>Account settings</a></li>
+		</ul>
+	</div>
+	<!-- // Widget heading END -->
+	
+	<div class="widget-body">
+		<form class="form-horizontal">
+			<div class="tab-content">
+			
+				<!-- Tab content -->
+				<div class="tab-pane active" id="account-details">
+				
+					<!-- Row -->
+					<div class="row">
+					
+						<!-- Column -->
+						<div class="col-md-6">
+						
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">First name</label>
+								<div class="col-md-9">
+									<div class="input-group">
+										<input type="text" value="John" class="form-control" />
+										<span class="input-group-addon" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="First name is mandatory"><i class="icon-question-sign"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Last name</label>
+								<div class="col-md-9">
+									<div class="input-group">
+										<input type="text" value="Doe" class="form-control" />
+										<span class="input-group-addon" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="Last name is mandatory"><i class="icon-question-sign"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Date of birth</label>
+								<div class="col-md-9">
+									<div class="input-group">
+										<input type="text" id="datepicker1" class="form-control" value="13/06/1988" />
+										<span class="input-group-addon"><i class="icon-calendar"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+						</div>
+						<!-- // Column END -->
+						
+						<!-- Column -->
+						<div class="col-md-6">
+						
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Gender</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+							<!-- Group -->
+							<div class="form-group">
+								<label class="col-md-3 control-label">Age</label>
+								<div class="col-md-9">
+									<input type="text" value="25" class="form-control" />
+								</div>
+							</div>
+							<!-- // Group END -->
+							
+						</div>
+						<!-- // Column END -->
+						
+					</div>
+					<!-- // Row END -->
+					
+					<div class="separator line bottom"></div>
+					
+					<textarea id="mustHaveId" class="wysihtml5 form-control" rows="5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</textarea>
+					
+					<!-- Form actions -->
+					<div class="separator top">
+						<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save changes</button>
+						<button type="button" class="btn btn-icon btn-default glyphicons circle_remove"><i></i>Cancel</button>
+					</div>
+					<!-- // Form actions END -->
+					
+				</div>
+				<!-- // Tab content END -->
+				
+				<!-- Tab content -->
+				<div class="tab-pane" id="account-settings">
+				
+					<!-- Row -->
+					<div class="row">
+					
+						<!-- Column -->
+						<div class="col-md-3">
+							<strong>Change password</strong>
+							<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<!-- // Column END -->
+						
+						<!-- Column -->
+						<div class="col-md-9">
+							<label for="inputUsername">Username</label>
+							<div class="input-group">
+								<input type="text" id="inputUsername" class="form-control" value="john.doe2012" disabled="disabled" />
+								<span class="input-group-addon" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Username can't be changed"><i class="icon-question-sign"></i></span>
+							</div>
+							<div class="separator bottom"></div>
+									
+							<label for="inputPasswordOld">Old password</label>
+							<div class="input-group">
+								<input type="password" id="inputPasswordOld" class="form-control" value="" placeholder="Leave empty for no change" />
+								<span class="input-group-addon" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Leave empty if you don't wish to change the password"><i class="icon-question-sign"></i></span>
+							</div>
+							<div class="separator bottom"></div>
+							
+							<label for="inputPasswordNew">New password</label>
+							<input type="password" id="inputPasswordNew" class="form-control" value="" placeholder="Leave empty for no change" />
+							<div class="separator bottom"></div>
+							
+							<label for="inputPasswordNew2">Repeat new password</label>
+							<input type="password" id="inputPasswordNew2" class="form-control" value="" placeholder="Leave empty for no change" />
+							<div class="separator bottom"></div>
+						</div>
+						<!-- // Column END -->
+						
+					</div>
+					<!-- // Row END -->
+					
+					<div class="separator line bottom"></div>
+					
+					<!-- Row -->
+					<div class="row">
+					
+						<!-- Column -->
+						<div class="col-md-3">
+							<strong>Contact details</strong>
+							<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<!-- // Column END -->
+						
+						<!-- Column -->
+						<div class="col-md-9">
+							<div class="row">
+								<div class="col-md-6">
+									<label for="inputPhone">Phone</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-phone"></i></span>
+										<input type="text" id="inputPhone" class="form-control" placeholder="01234567897" />
+									</div>
+									<div class="separator bottom"></div>
+										
+									<label for="inputEmail">E-mail</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-envelope"></i></span>
+										<input type="text" id="inputEmail" class="form-control" placeholder="contact@mosaicpro.biz" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputWebsite">Website</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-link"></i></span>
+										<input type="text" id="inputWebsite" class="form-control" placeholder="http://www.mosaicpro.biz" />
+									</div>
+									<div class="separator bottom"></div>
+								</div>
+								<div class="col-md-6">
+									<label for="inputFacebook">Facebook</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-facebook"></i></span>
+										<input type="text" id="inputFacebook" class="form-control" placeholder="mosaicpro" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputTwitter">Twitter</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-twitter"></i></span>
+										<input type="text" id="inputTwitter" class="form-control" placeholder="mosaicpro" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputSkype">Skype ID</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-skype"></i></span>
+										<input type="text" id="inputSkype" class="form-control" placeholder="mySkypeID" />
+									</div>
+									<div class="separator bottom"></div>
+									
+									<label for="inputgplus">Google</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-google-plus-sign"></i></span>
+										<input type="text" id="inputgplus" class="form-control" placeholder="google ID" />
+									</div>
+									<div class="separator bottom"></div>
+								</div>
+							</div>
+						</div>
+						<!-- // Column END -->
+						
+					</div>
+					<!-- // Row END -->
+					
+					<!-- Form actions -->
+					<div class="form-actions" style="margin: 0;">
+						<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save changes</button>
+					</div>
+					<!-- // Form actions END -->
+					
+				</div>
+				<!-- // Tab content END -->
+			</div>
+		</form>
+	</div>
+</div>
+<!-- // Widget END -->
+
+											</div>
+											<div class="tab-pane" id="source-bb705a246b86ea789e83e13ed8e402e9">
+												<pre class="prettyprint">&lt;!-- Widget --&gt;
+&lt;div class=&quot;widget widget-tabs widget-tabs-gray border-bottom-none&quot;&gt;
+
+	&lt;!-- Widget heading --&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;active&quot;&gt;&lt;a class=&quot;glyphicons edit&quot; href=&quot;#account-details&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Account details&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;glyphicons settings&quot; href=&quot;#account-settings&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Account settings&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;!-- // Widget heading END --&gt;
+	
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;form class=&quot;form-horizontal&quot;&gt;
+			&lt;div class=&quot;tab-content&quot;&gt;
+			
+				&lt;!-- Tab content --&gt;
+				&lt;div class=&quot;tab-pane active&quot; id=&quot;account-details&quot;&gt;
+				
+					&lt;!-- Row --&gt;
+					&lt;div class=&quot;row&quot;&gt;
+					
+						&lt;!-- Column --&gt;
+						&lt;div class=&quot;col-md-6&quot;&gt;
+						
+							&lt;!-- Group --&gt;
+							&lt;div class=&quot;form-group&quot;&gt;
+								&lt;label class=&quot;col-md-3 control-label&quot;&gt;First name&lt;/label&gt;
+								&lt;div class=&quot;col-md-9&quot;&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;input type=&quot;text&quot; value=&quot;John&quot; class=&quot;form-control&quot; /&gt;
+										&lt;span class=&quot;input-group-addon&quot; data-toggle=&quot;tooltip&quot; data-container=&quot;body&quot; data-placement=&quot;top&quot; data-original-title=&quot;First name is mandatory&quot;&gt;&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- // Group END --&gt;
+							
+							&lt;!-- Group --&gt;
+							&lt;div class=&quot;form-group&quot;&gt;
+								&lt;label class=&quot;col-md-3 control-label&quot;&gt;Last name&lt;/label&gt;
+								&lt;div class=&quot;col-md-9&quot;&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;input type=&quot;text&quot; value=&quot;Doe&quot; class=&quot;form-control&quot; /&gt;
+										&lt;span class=&quot;input-group-addon&quot; data-toggle=&quot;tooltip&quot; data-container=&quot;body&quot; data-placement=&quot;top&quot; data-original-title=&quot;Last name is mandatory&quot;&gt;&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- // Group END --&gt;
+							
+							&lt;!-- Group --&gt;
+							&lt;div class=&quot;form-group&quot;&gt;
+								&lt;label class=&quot;col-md-3 control-label&quot;&gt;Date of birth&lt;/label&gt;
+								&lt;div class=&quot;col-md-9&quot;&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;input type=&quot;text&quot; id=&quot;datepicker1&quot; class=&quot;form-control&quot; value=&quot;13/06/1988&quot; /&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-calendar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- // Group END --&gt;
+							
+						&lt;/div&gt;
+						&lt;!-- // Column END --&gt;
+						
+						&lt;!-- Column --&gt;
+						&lt;div class=&quot;col-md-6&quot;&gt;
+						
+							&lt;!-- Group --&gt;
+							&lt;div class=&quot;form-group&quot;&gt;
+								&lt;label class=&quot;col-md-3 control-label&quot;&gt;Gender&lt;/label&gt;
+								&lt;div class=&quot;col-md-9&quot;&gt;
+									&lt;select class=&quot;form-control&quot;&gt;
+										&lt;option&gt;Male&lt;/option&gt;
+										&lt;option&gt;Female&lt;/option&gt;
+									&lt;/select&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- // Group END --&gt;
+							
+							&lt;!-- Group --&gt;
+							&lt;div class=&quot;form-group&quot;&gt;
+								&lt;label class=&quot;col-md-3 control-label&quot;&gt;Age&lt;/label&gt;
+								&lt;div class=&quot;col-md-9&quot;&gt;
+									&lt;input type=&quot;text&quot; value=&quot;25&quot; class=&quot;form-control&quot; /&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- // Group END --&gt;
+							
+						&lt;/div&gt;
+						&lt;!-- // Column END --&gt;
+						
+					&lt;/div&gt;
+					&lt;!-- // Row END --&gt;
+					
+					&lt;div class=&quot;separator line bottom&quot;&gt;&lt;/div&gt;
+					
+					&lt;textarea id=&quot;mustHaveId&quot; class=&quot;wysihtml5 form-control&quot; rows=&quot;5&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/textarea&gt;
+					
+					&lt;!-- Form actions --&gt;
+					&lt;div class=&quot;separator top&quot;&gt;
+						&lt;button type=&quot;submit&quot; class=&quot;btn btn-icon btn-primary glyphicons circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;Save changes&lt;/button&gt;
+						&lt;button type=&quot;button&quot; class=&quot;btn btn-icon btn-default glyphicons circle_remove&quot;&gt;&lt;i&gt;&lt;/i&gt;Cancel&lt;/button&gt;
+					&lt;/div&gt;
+					&lt;!-- // Form actions END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Tab content END --&gt;
+				
+				&lt;!-- Tab content --&gt;
+				&lt;div class=&quot;tab-pane&quot; id=&quot;account-settings&quot;&gt;
+				
+					&lt;!-- Row --&gt;
+					&lt;div class=&quot;row&quot;&gt;
+					
+						&lt;!-- Column --&gt;
+						&lt;div class=&quot;col-md-3&quot;&gt;
+							&lt;strong&gt;Change password&lt;/strong&gt;
+							&lt;p class=&quot;muted&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;!-- // Column END --&gt;
+						
+						&lt;!-- Column --&gt;
+						&lt;div class=&quot;col-md-9&quot;&gt;
+							&lt;label for=&quot;inputUsername&quot;&gt;Username&lt;/label&gt;
+							&lt;div class=&quot;input-group&quot;&gt;
+								&lt;input type=&quot;text&quot; id=&quot;inputUsername&quot; class=&quot;form-control&quot; value=&quot;john.doe2012&quot; disabled=&quot;disabled&quot; /&gt;
+								&lt;span class=&quot;input-group-addon&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; data-container=&quot;body&quot; data-original-title=&quot;Username can't be changed&quot;&gt;&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									
+							&lt;label for=&quot;inputPasswordOld&quot;&gt;Old password&lt;/label&gt;
+							&lt;div class=&quot;input-group&quot;&gt;
+								&lt;input type=&quot;password&quot; id=&quot;inputPasswordOld&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Leave empty for no change&quot; /&gt;
+								&lt;span class=&quot;input-group-addon&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; data-container=&quot;body&quot; data-original-title=&quot;Leave empty if you don't wish to change the password&quot;&gt;&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+							
+							&lt;label for=&quot;inputPasswordNew&quot;&gt;New password&lt;/label&gt;
+							&lt;input type=&quot;password&quot; id=&quot;inputPasswordNew&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Leave empty for no change&quot; /&gt;
+							&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+							
+							&lt;label for=&quot;inputPasswordNew2&quot;&gt;Repeat new password&lt;/label&gt;
+							&lt;input type=&quot;password&quot; id=&quot;inputPasswordNew2&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Leave empty for no change&quot; /&gt;
+							&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- // Column END --&gt;
+						
+					&lt;/div&gt;
+					&lt;!-- // Row END --&gt;
+					
+					&lt;div class=&quot;separator line bottom&quot;&gt;&lt;/div&gt;
+					
+					&lt;!-- Row --&gt;
+					&lt;div class=&quot;row&quot;&gt;
+					
+						&lt;!-- Column --&gt;
+						&lt;div class=&quot;col-md-3&quot;&gt;
+							&lt;strong&gt;Contact details&lt;/strong&gt;
+							&lt;p class=&quot;muted&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;!-- // Column END --&gt;
+						
+						&lt;!-- Column --&gt;
+						&lt;div class=&quot;col-md-9&quot;&gt;
+							&lt;div class=&quot;row&quot;&gt;
+								&lt;div class=&quot;col-md-6&quot;&gt;
+									&lt;label for=&quot;inputPhone&quot;&gt;Phone&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-phone&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputPhone&quot; class=&quot;form-control&quot; placeholder=&quot;01234567897&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+										
+									&lt;label for=&quot;inputEmail&quot;&gt;E-mail&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputEmail&quot; class=&quot;form-control&quot; placeholder=&quot;contact@mosaicpro.biz&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									
+									&lt;label for=&quot;inputWebsite&quot;&gt;Website&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputWebsite&quot; class=&quot;form-control&quot; placeholder=&quot;http://www.mosaicpro.biz&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;col-md-6&quot;&gt;
+									&lt;label for=&quot;inputFacebook&quot;&gt;Facebook&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-facebook&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputFacebook&quot; class=&quot;form-control&quot; placeholder=&quot;mosaicpro&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									
+									&lt;label for=&quot;inputTwitter&quot;&gt;Twitter&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-twitter&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputTwitter&quot; class=&quot;form-control&quot; placeholder=&quot;mosaicpro&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									
+									&lt;label for=&quot;inputSkype&quot;&gt;Skype ID&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-skype&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputSkype&quot; class=&quot;form-control&quot; placeholder=&quot;mySkypeID&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									
+									&lt;label for=&quot;inputgplus&quot;&gt;Google&lt;/label&gt;
+									&lt;div class=&quot;input-group&quot;&gt;
+										&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;icon-google-plus-sign&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+										&lt;input type=&quot;text&quot; id=&quot;inputgplus&quot; class=&quot;form-control&quot; placeholder=&quot;google ID&quot; /&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- // Column END --&gt;
+						
+					&lt;/div&gt;
+					&lt;!-- // Row END --&gt;
+					
+					&lt;!-- Form actions --&gt;
+					&lt;div class=&quot;form-actions&quot; style=&quot;margin: 0;&quot;&gt;
+						&lt;button type=&quot;submit&quot; class=&quot;btn btn-icon btn-primary glyphicons circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;Save changes&lt;/button&gt;
+					&lt;/div&gt;
+					&lt;!-- // Form actions END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Tab content END --&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Widget END --&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-bb705a246b86ea789e83e13ed8e402e9">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/css/bootstrap-datepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/less/bootstrap-datepicker.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/editors/wysihtml5/assets/lib/css/bootstrap-wysihtml5-0.0.2.css&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/modules/admin/tabs/assets/tabs.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-bb705a246b86ea789e83e13ed8e402e9">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+.input-group.input-append .input-group-addon:first-child, .input-group.input-append .btn:first-child, .input-group.input-append .input-group-addon:last-child, .input-group.input-append .btn:last-child, .input-group .input-group-addon:first-child, .input-group .btn:first-child, .input-append input, .input-append select, .input-append .uneditable-input, .fileupload-new .input-append .btn-file, .btn-group > .btn:first-child, .btn-group > .btn:last-child, .btn-group > .dropdown-toggle, .input-append .input-group-addon:last-child, .input-append .btn:last-child, .input-append .btn-group:last-child > .dropdown-toggle {
+	border: 1px solid @secondaryDark;
+	border-radius: 5px;
+}
+
+html.front.top-full .navbar.main .secondary {
+	background: @widgetBgGray;
+	border-bottom: @defaultSpacing solid @white;
+	color: inherit;
+	margin-bottom: 0;
+}
+
+html.front.top-full .navbar.main > .nav-container > .topnav {
+	background: @widgetBgGray;
+	border-radius: 6px 6px 0 0;
+	bottom: -7px;
+}
+html.front.top-full .navbar.main > .nav-container > .topnav > li.active,
+html.front.top-full .navbar.main > .nav-container > .topnav > li.active a {
+	border-radius: 6px 6px 0 0;
+}
+html.front.top-full .navbar.main > .nav-container > .topnav > li {
+	border-right: 1px solid @secondaryColor;
+	width: 18%;
+}
+html.front.top-full .navbar.main > .nav-container > .topnav > li.active {
+	top: -6px;
+}
+html.front.top-full .navbar.main > .nav-container > .topnav > li a {
+	border-right: 1px solid @white;
+	padding: 10px 20px @defaultSpacing 55px
+}
+html.front.top-full .navbar.main > .nav-container > .topnav > li.active a {
+	padding: @defaultSpacing 20px @defaultSpacing 55px
+}
+
+.container-960 {
+	background: @white;
+}
+
+.breadcrumb {
+	border: none;
+	float: left;
+	height: auto;
+	margin: 0 0 @defaultSpacing 0;
+	overflow: visible;
+
+	.separator {
+		font-size: 20px;
+		padding: 0 10px;
+	}
+	.bootstrap-select.btn-group  {
+		margin: 0;
+
+		.btn-default {
+			color: @linkHover;
+		}
+	}
+	li {
+		a.back-link {
+			color: @primaryColor;
+			font-size: 14px;
+		}
+	}
+}
+.breadcrumb > li {
+	float: left;
+}
+.breadcrumb > li + li:before {
+	content: none;
+	padding: 0;
+}
+
+.document-links {
+	.btn {
+		color: @linkHover;
+		border: 1px solid @secondaryDark;
+	}
+	.location-profile {
+		font-size: 13px;
+
+		span {
+			color: #ff0000;
+		}
+	}
+}
+
+.main .primary-content {
+	padding: @defaultSpacing;
+}
+
+.main .primary-content .widget {
+	margin-bottom: @defaultSpacing;
+}
+.main .primary-content .widget .widget-head {
+	background: @widgetBgGray;
+	border-radius: 6px 6px 0 0;
+}
+.main .primary-content .widget .widget-body {
+	border: 1px solid @contentBorder;
+	padding: 0;
+}
+
+.carousel.carousel-1 {
+	margin: 0;
+	padding: 0;
+}
+.carousel.carousel-1 .carousel-indicators {
+	margin: 0;
+}
+.carousel.carousel-1 .carousel-indicators li {
+	border: none;
+	color: @secondaryDarker;
+	font-size: inherit;
+	margin: 0 @defaultSpacing;
+}
+.carousel.carousel-1 .carousel-indicators li.active {
+	color: @primaryColor;	
+}
+
+.carousel.carousel-1 .item {
+	overflow: visible;
+}
+.carousel.carousel-1 .item .row div {
+	padding: @defaultSpacing;
+}
+.carousel.carousel-1 .item h2 {
+	font-size: 20px;
+	line-height: 1.2;
+}
+.carousel.carousel-1 .item h3 {
+	font-size: 16px;
+	line-height: 1.2;
+}
+.carousel.carousel-1 .item .chart {
+	background: @contentGradient2 url('../images/right-gray-arrow.gif') no-repeat right 0;
+	position: relative;
+}
+.carousel.carousel-1 .item .chart .header {
+	padding: 0;
+	position: relative;
+}
+.carousel.carousel-1 .item .chart .bootstrap-select.btn-group {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+		top: 0;
+		right: 7px;
+}
+.carousel.carousel-1 .item h2 {
+	font-size: 20px;
+	line-height: 1.2;
+}
+.carousel.carousel-1 .item img {
+	min-height: 1px;
+}
+.carousel.carousel-1 .item .chart img {
+	width: 100%;
+}
+.chart-toggle {
+	background: url('../assets/images/trans-1x1.gif') 0 0;
+	height: 0;
+	left: 83px;
+	overflow: hidden;
+	padding-top: 30px;
+	position: absolute;
+	top: 56px;
+	width: 30px;
+}
+.carousel.carousel-1 .item .text h2 {
+	border-bottom: 1px solid @containerBorder;
+	color: @primaryColor;
+	font-weight: bold;
+	margin-bottom: 18px;
+	padding-bottom: 20px;
+}
+.carousel.carousel-1 .item .text h3 {
+	color: @black;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+.carousel.carousel-1 .item .text .notes {
+	color: @secondaryDarker;
+}
+
+.carousel.carousel-1 .item.full-chart {	
+	height: auto;
+
+	.chart {
+		background-image: none;
+		width: 100%;
+
+		.chart-toggle {
+			left: 45px;
+		}
+	}
+	.text {
+		padding: 0;
+		position: relative;
+		width: 100%;
+
+		p {
+			width: 80%;
+		}
+		.button {
+			position: absolute;
+			right: 20px;
+			top: 100px;
+			width: auto;
+		}
+	}
+	.carousel-caption {
+		height: auto;
+		position: static;
+	}
+}
+
+#billing {
+	.widget-body {
+		font-size: 11px;
+		line-height: 1.5;
+	}
+	.item {
+		height: auto;
+		padding: @defaultSpacing;
+
+		div {
+			margin-bottom: @defaultSpacing;
+		}
+	}
+	ul {
+		list-style: none;
+	}
+	td {
+		padding-left: 3px;
+	}
+	.balance {
+		line-height: 1;
+
+		.value {
+			color: #ff0000;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+	.chart {
+		background: none;
+
+		img {
+			width: auto;
+		}
+	}
+}
+
+
+@media (min-width: 1025px)
+{
+	.carousel.carousel-1 .item img {
+		width: 100%;
+	}
+
+	#billing {
+		.item div {
+			margin-bottom: 0;
+		}
+		.balance {
+			text-align: right;
+		}
+		.chart {
+			border-left: 1px solid @contentBorder;
+			padding-left: 7px;
+		}
+	}
+}

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.ratings.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.ratings.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'ratings'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.ratings</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-c40da351e714e5dfed00317676e84822" data-toggle="collapse">rating-table</a></h4>
+							<div class="collapse in" id="view-c40da351e714e5dfed00317676e84822">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-c40da351e714e5dfed00317676e84822" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-c40da351e714e5dfed00317676e84822" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-c40da351e714e5dfed00317676e84822" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-c40da351e714e5dfed00317676e84822" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/rating-table.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-c40da351e714e5dfed00317676e84822">
+												
+<table class="table table-white table-vertical-center margin-none table-striped footable">
+	<thead>
+		<tr>
+			<th data-class="expand" class="center">Photo</th>
+			<th data-hide="phone" class="center">Full name</th>
+			<th data-hide="phone" class="center">Location</th>
+			<th data-hide="phone,tablet" class="center">Rating</th>
+			<th data-hide="phone" class="center">Bonus</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+			<td class="strong center">Lorem Ipsum Dolor</td>
+			<td class="center">Romania <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+			<td class="center">
+				<div class="rating text-medium text-faded read-only">
+		        	<span class="star active"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        </div>
+			</td>
+			<td class="center"><span class="strong text-medium">5 <i class="fa fa-gift"></i></span></td>
+		</tr>
+		<tr>
+			<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+			<td class="strong center">John Doe</td>
+			<td class="center">United States <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+			<td class="center">
+				<div class="rating text-medium read-only">
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star active"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        </div>
+			</td>
+			<td class="center"><span class="strong text-medium">4 <i class="fa fa-gift"></i></span></td>
+		</tr>
+		<tr>
+			<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+			<td class="strong center">Jane Doe</td>
+			<td class="center">Europe <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+			<td class="center">
+				<div class="rating text-medium text-faded read-only">
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        </div>
+			</td>
+			<td class="center"><span class="strong text-medium text-faded">2 <i class="fa fa-gift"></i></span></td>
+		</tr>
+		<tr>
+			<td class="center"><img data-src="holder.js/50x50/dark" alt="Image" /></td>
+			<td class="strong center">Hulky Bean</td>
+			<td class="center">On the Moon <a href="" class="innerL text-underline">view on map <i class="fa fa-map-marker"></i></a></td>
+			<td class="center">
+				<div class="rating text-medium text-faded read-only">
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        	<span class="star"></span>
+		        </div>
+			</td>
+			<td class="center"><span class="strong text-medium text-faded">1 <i class="fa fa-gift"></i></span></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-c40da351e714e5dfed00317676e84822">
+												<pre class="prettyprint">
+&lt;table class=&quot;table table-white table-vertical-center margin-none table-striped footable&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th data-class=&quot;expand&quot; class=&quot;center&quot;&gt;Photo&lt;/th&gt;
+			&lt;th data-hide=&quot;phone&quot; class=&quot;center&quot;&gt;Full name&lt;/th&gt;
+			&lt;th data-hide=&quot;phone&quot; class=&quot;center&quot;&gt;Location&lt;/th&gt;
+			&lt;th data-hide=&quot;phone,tablet&quot; class=&quot;center&quot;&gt;Rating&lt;/th&gt;
+			&lt;th data-hide=&quot;phone&quot; class=&quot;center&quot;&gt;Bonus&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;strong center&quot;&gt;Lorem Ipsum Dolor&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;Romania &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;div class=&quot;rating text-medium text-faded read-only&quot;&gt;
+		        	&lt;span class=&quot;star active&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        &lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;strong text-medium&quot;&gt;5 &lt;i class=&quot;fa fa-gift&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;strong center&quot;&gt;John Doe&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;United States &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;div class=&quot;rating text-medium read-only&quot;&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star active&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        &lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;strong text-medium&quot;&gt;4 &lt;i class=&quot;fa fa-gift&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;strong center&quot;&gt;Jane Doe&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;Europe &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;div class=&quot;rating text-medium text-faded read-only&quot;&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        &lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;strong text-medium text-faded&quot;&gt;2 &lt;i class=&quot;fa fa-gift&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;img data-src=&quot;holder.js/50x50/dark&quot; alt=&quot;Image&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;strong center&quot;&gt;Hulky Bean&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;On the Moon &lt;a href=&quot;&quot; class=&quot;innerL text-underline&quot;&gt;view on map &lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;div class=&quot;rating text-medium text-faded read-only&quot;&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+		        &lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;strong text-medium text-faded&quot;&gt;1 &lt;i class=&quot;fa fa-gift&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-c40da351e714e5dfed00317676e84822">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ratings/assets/less/rating.less&quot;;
+@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/responsive/assets/lib/css/footable.core.min.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/responsive/assets/custom/less/tables-responsive.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-c40da351e714e5dfed00317676e84822">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/tables/responsive/assets/lib/js/footable.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/tables/responsive/assets/custom/js/tables-responsive-footable.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/holder/holder.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-b0d93046aa6ec3ecff27af8d33e62846" data-toggle="collapse">rating-widget-1</a></h4>
+							<div class="collapse in" id="view-b0d93046aa6ec3ecff27af8d33e62846">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-b0d93046aa6ec3ecff27af8d33e62846" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-b0d93046aa6ec3ecff27af8d33e62846" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-b0d93046aa6ec3ecff27af8d33e62846" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/rating-widget-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-b0d93046aa6ec3ecff27af8d33e62846">
+												<div class="widget widget-heading-simple widget-body-white">
+	<div class="widget-body padding-none">
+		<div class="row row-merge">
+			<div class="col-md-6">
+				<h5 class="innerAll margin-none bg-gray border-bottom text-center strong muted text-uppercase"><i class="fa fa-fw fa-coffee text-faded"></i> Guest</h5>
+				<div class="innerAll center inner-2x">
+					<span class="text-xxlarge strong text-primary">4</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h5 class="innerAll margin-none bg-gray border-bottom text-center strong muted text-uppercase"><i class="fa fa-fw fa-beer text-faded"></i> Host</h5>
+				<div class="innerAll center inner-2x muted">
+					<span class="text-xxlarge strong">1</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+											</div>
+											<div class="tab-pane" id="source-b0d93046aa6ec3ecff27af8d33e62846">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-heading-simple widget-body-white&quot;&gt;
+	&lt;div class=&quot;widget-body padding-none&quot;&gt;
+		&lt;div class=&quot;row row-merge&quot;&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;
+				&lt;h5 class=&quot;innerAll margin-none bg-gray border-bottom text-center strong muted text-uppercase&quot;&gt;&lt;i class=&quot;fa fa-fw fa-coffee text-faded&quot;&gt;&lt;/i&gt; Guest&lt;/h5&gt;
+				&lt;div class=&quot;innerAll center inner-2x&quot;&gt;
+					&lt;span class=&quot;text-xxlarge strong text-primary&quot;&gt;4&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;
+				&lt;h5 class=&quot;innerAll margin-none bg-gray border-bottom text-center strong muted text-uppercase&quot;&gt;&lt;i class=&quot;fa fa-fw fa-beer text-faded&quot;&gt;&lt;/i&gt; Host&lt;/h5&gt;
+				&lt;div class=&quot;innerAll center inner-2x muted&quot;&gt;
+					&lt;span class=&quot;text-xxlarge strong&quot;&gt;1&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-b0d93046aa6ec3ecff27af8d33e62846">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ratings/assets/less/rating.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-5f56c4394d50ce644defc22b9015a491" data-toggle="collapse">rating-widget-2</a></h4>
+							<div class="collapse in" id="view-5f56c4394d50ce644defc22b9015a491">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-5f56c4394d50ce644defc22b9015a491" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-5f56c4394d50ce644defc22b9015a491" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-5f56c4394d50ce644defc22b9015a491" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/rating-widget-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-5f56c4394d50ce644defc22b9015a491">
+												<div class="widget widget-body-white">
+	<div class="widget-head"><h4 class="heading text-uppercase">Icon ratings</h4></div>
+	<div class="widget-body center innerAll inner-2x" data-height="111px">
+		<span class="text-medium text-primary"><i class="fa fa-trophy"></i></span>
+		<span class="text-medium text-primary"><i class="fa fa-trophy"></i></span>
+		<span class="text-medium text-primary"><i class="fa fa-trophy"></i></span>
+		<span class="text-medium text-faded"><i class="fa fa-trophy"></i></span>
+		<span class="text-medium text-faded"><i class="fa fa-trophy"></i></span>
+		<div class="separator bottom"></div>
+		<p class="lead">Total rating: <strong>3.4</strong></p>
+	</div>
+</div>
+
+
+											</div>
+											<div class="tab-pane" id="source-5f56c4394d50ce644defc22b9015a491">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-body-white&quot;&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;&lt;h4 class=&quot;heading text-uppercase&quot;&gt;Icon ratings&lt;/h4&gt;&lt;/div&gt;
+	&lt;div class=&quot;widget-body center innerAll inner-2x&quot; data-height=&quot;111px&quot;&gt;
+		&lt;span class=&quot;text-medium text-primary&quot;&gt;&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+		&lt;span class=&quot;text-medium text-primary&quot;&gt;&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+		&lt;span class=&quot;text-medium text-primary&quot;&gt;&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+		&lt;span class=&quot;text-medium text-faded&quot;&gt;&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+		&lt;span class=&quot;text-medium text-faded&quot;&gt;&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		&lt;p class=&quot;lead&quot;&gt;Total rating: &lt;strong&gt;3.4&lt;/strong&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-5f56c4394d50ce644defc22b9015a491">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ratings/assets/less/rating.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-45aca7edcc045ddce7ec7774372d5e4a" data-toggle="collapse">rating-widget-3</a></h4>
+							<div class="collapse in" id="view-45aca7edcc045ddce7ec7774372d5e4a">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-45aca7edcc045ddce7ec7774372d5e4a" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-45aca7edcc045ddce7ec7774372d5e4a" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-45aca7edcc045ddce7ec7774372d5e4a" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/rating-widget-3.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-45aca7edcc045ddce7ec7774372d5e4a">
+												<div class="widget widget-body-white">
+	<div class="widget-head"><h4 class="heading text-uppercase">Users</h4></div>
+	<div class="widget-body padding-none">
+		<table class="table table-striped table-vertical-center margin-none">
+			<tbody>
+				<tr>
+					<td class="text-faded center strong border-none">4</td>
+					<td class="text-primary border-none">mosaicpro</td>
+					<td class="text-right">
+						<a href=""><i class="fa fa-thumbs-up"></i></a>
+						<a href=""><i class="fa fa-thumbs-down"></i></a>
+					</td>
+				</tr>
+				<!-- <tr>
+					<td class="text-faded center strong">3</td>
+					<td class="text-primary">some dude</td>
+					<td class="text-right">
+						<a href=""><i class="fa fa-thumbs-up"></i></a>
+						<a href=""><i class="fa fa-thumbs-down"></i></a>
+					</td>
+				</tr> -->
+				<tr>
+					<td class="text-faded center strong">2</td>
+					<td class="text-primary">themeyard</td>
+					<td class="text-right">
+						<a href=""><i class="fa fa-thumbs-up"></i></a>
+						<a href=""><i class="fa fa-thumbs-down"></i></a>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-faded center strong">1</td>
+					<td class="text-primary">gonzales</td>
+					<td class="text-right">
+						<a href=""><i class="fa fa-thumbs-up"></i></a>
+						<a href=""><i class="fa fa-thumbs-down"></i></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+											</div>
+											<div class="tab-pane" id="source-45aca7edcc045ddce7ec7774372d5e4a">
+												<pre class="prettyprint">&lt;div class=&quot;widget widget-body-white&quot;&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;&lt;h4 class=&quot;heading text-uppercase&quot;&gt;Users&lt;/h4&gt;&lt;/div&gt;
+	&lt;div class=&quot;widget-body padding-none&quot;&gt;
+		&lt;table class=&quot;table table-striped table-vertical-center margin-none&quot;&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;text-faded center strong border-none&quot;&gt;4&lt;/td&gt;
+					&lt;td class=&quot;text-primary border-none&quot;&gt;mosaicpro&lt;/td&gt;
+					&lt;td class=&quot;text-right&quot;&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!-- &lt;tr&gt;
+					&lt;td class=&quot;text-faded center strong&quot;&gt;3&lt;/td&gt;
+					&lt;td class=&quot;text-primary&quot;&gt;some dude&lt;/td&gt;
+					&lt;td class=&quot;text-right&quot;&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt; --&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;text-faded center strong&quot;&gt;2&lt;/td&gt;
+					&lt;td class=&quot;text-primary&quot;&gt;themeyard&lt;/td&gt;
+					&lt;td class=&quot;text-right&quot;&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;text-faded center strong&quot;&gt;1&lt;/td&gt;
+					&lt;td class=&quot;text-primary&quot;&gt;gonzales&lt;/td&gt;
+					&lt;td class=&quot;text-right&quot;&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+						&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-45aca7edcc045ddce7ec7774372d5e4a">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ratings/assets/less/rating.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-d3248ba3e23166c682109ea99a2c3f1d" data-toggle="collapse">rating-widget-4-a</a></h4>
+							<div class="collapse in" id="view-d3248ba3e23166c682109ea99a2c3f1d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-d3248ba3e23166c682109ea99a2c3f1d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-d3248ba3e23166c682109ea99a2c3f1d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-d3248ba3e23166c682109ea99a2c3f1d" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/rating-widget-4-a.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-d3248ba3e23166c682109ea99a2c3f1d">
+												<div class="rating text-faded">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star active"></span>
+        <span class="star"></span>
+</div>  
+
+
+											</div>
+											<div class="tab-pane" id="source-d3248ba3e23166c682109ea99a2c3f1d">
+												<pre class="prettyprint">&lt;div class=&quot;rating text-faded&quot;&gt;
+        &lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;star active&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;  
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-d3248ba3e23166c682109ea99a2c3f1d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ratings/assets/less/rating.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-14b7c2aec70aa9985bdee53291eeb6e0" data-toggle="collapse">rating-widget-4</a></h4>
+							<div class="collapse in" id="view-14b7c2aec70aa9985bdee53291eeb6e0">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-14b7c2aec70aa9985bdee53291eeb6e0" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-14b7c2aec70aa9985bdee53291eeb6e0" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-14b7c2aec70aa9985bdee53291eeb6e0" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/rating-widget-4.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-14b7c2aec70aa9985bdee53291eeb6e0">
+												<div class="widget">
+    <div class="widget-head">
+        <h4 class="heading">CSS Star rating</h4>
+    </div>
+	<div class="widget-body center innerAll inner-2x" data-height="111px">
+		<div class="rating text-medium text-faded margin-top-none">
+        	<span class="star"></span>
+        	<span class="star"></span>
+        	<span class="star"></span>
+        	<span class="star active"></span>
+        	<span class="star"></span>
+        </div>
+        <div class="separator bottom"></div>
+		<p class="lead">Current rating: <strong>2/5</strong></p>
+	</div>
+</div>
+
+
+											</div>
+											<div class="tab-pane" id="source-14b7c2aec70aa9985bdee53291eeb6e0">
+												<pre class="prettyprint">&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;widget-head&quot;&gt;
+        &lt;h4 class=&quot;heading&quot;&gt;CSS Star rating&lt;/h4&gt;
+    &lt;/div&gt;
+	&lt;div class=&quot;widget-body center innerAll inner-2x&quot; data-height=&quot;111px&quot;&gt;
+		&lt;div class=&quot;rating text-medium text-faded margin-top-none&quot;&gt;
+        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        	&lt;span class=&quot;star active&quot;&gt;&lt;/span&gt;
+        	&lt;span class=&quot;star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		&lt;p class=&quot;lead&quot;&gt;Current rating: &lt;strong&gt;2/5&lt;/strong&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-14b7c2aec70aa9985bdee53291eeb6e0">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/ratings/assets/less/rating.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/tables/responsive/assets/lib/js/footable.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/tables/responsive/assets/custom/js/tables-responsive-footable.init.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

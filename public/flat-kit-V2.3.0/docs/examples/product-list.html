@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>product-list example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.product-list.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.product-list.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">product-list example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>product-list component</strong></p>
+			</div>
+<!-- Total products & Sort by options -->
+<div class="form-inline separator bottom small">
+	Total products: 26
+	<span class="pull-right">
+		<label class="strong">Sort by:</label>
+		<select class="selectpicker" data-style="btn-default btn-xs">
+			<option>Option</option>
+			<option>Option</option>
+			<option>Option</option>
+		</select>
+	</span>
+</div>
+<!-- // Total products & Sort by options END -->
+
+
+
+<!-- Products table -->
+<table class="table table-bordered table-condensed table-striped table-primary table-vertical-center checkboxs js-table-sortable">
+	<thead>
+		<tr>
+			<th style="width: 1%;" class="uniformjs"><input type="checkbox" /></th>
+			<th style="width: 1%;" class="center">No.</th>
+			<th>Title</th>
+			<th style="width: 1%;" class="center">Drag</th>
+			<th class="center">Preview</th>
+			<th class="center">Stock</th>
+			<th class="center">Price</th>
+			<th class="center" style="width: 100px;">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+						<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">1</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="1" />
+			</td>
+			<td class="center">&euro;39</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable selected">
+			<td class="center uniformjs"><input type="checkbox" checked="checked" /></td>
+			<td class="center">2</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 3 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="3" />
+			</td>
+			<td class="center">&euro;26</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable selected">
+			<td class="center uniformjs"><input type="checkbox" checked="checked" /></td>
+			<td class="center">3</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="9" />
+			</td>
+			<td class="center">&euro;34</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">4</td>
+			<td class="important">Lorem Amet Dolor</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="10" />
+			</td>
+			<td class="center">&euro;44</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">5</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="4" />
+			</td>
+			<td class="center">&euro;46</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">6</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 3 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="8" />
+			</td>
+			<td class="center">&euro;21</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">7</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 3 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="8" />
+			</td>
+			<td class="center">&euro;26</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">8</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="3" />
+			</td>
+			<td class="center">&euro;19</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">9</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="4" />
+			</td>
+			<td class="center">&euro;42</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">10</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="3" />
+			</td>
+			<td class="center">&euro;42</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+			</tbody>
+</table>
+<!-- // Products table END -->
+
+<!-- Options -->
+<div class="">
+
+	<!-- With selected actions -->
+	<div class="pull-left checkboxs_actions" style="display: none;">
+		<label>With selected:
+		<select class="selectpicker margin-none dropup" data-style="btn-default btn-xs">
+			<option>Action</option>
+			<option>Action</option>
+			<option>Action</option>
+		</select>
+		</label>
+	</div>
+	<!-- // With selected actions END -->
+	
+	<div class="pull-right"><ul class="pagination margin-none">
+	<li class="disabled"><a href="#">&laquo;</a></li>
+	<li class="active"><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+
+	<div class="clearfix"></div>
+	<!-- // Pagination END -->
+	
+</div>
+<!-- // Options END -->
+
+
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/tables/classic/assets/js/tables-classic.init.js?v=v2.3.0"></script>
+</body>
+</html>

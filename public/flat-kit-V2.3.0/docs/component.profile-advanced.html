@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.profile-advanced.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.profile-advanced.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'profile-advanced'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.profile-advanced</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-9562a8d00bc05a08a49b01c9d4a02760" data-toggle="collapse">profile-advanced</a></h4>
+							<div class="collapse in" id="view-9562a8d00bc05a08a49b01c9d4a02760">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-9562a8d00bc05a08a49b01c9d4a02760" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-9562a8d00bc05a08a49b01c9d4a02760" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-9562a8d00bc05a08a49b01c9d4a02760" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-9562a8d00bc05a08a49b01c9d4a02760" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/profile-advanced.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-9562a8d00bc05a08a49b01c9d4a02760">
+												<!-- Widget -->
+<div class="widget widget-tabs widget-tabs-gray widget-tabs-double-2 border-bottom-none">
+
+	<!-- Widget heading -->
+	<div class="widget-head">
+		<ul>
+			<li class="active"><a class="glyphicons display" href="#overview" data-toggle="tab"><i></i>Overview</a></li>
+			<li><a class="glyphicons edit" href="#edit-account" data-toggle="tab"><i></i>Edit account</a></li>
+			<li><a class="glyphicons luggage" href="#projects" data-toggle="tab"><i></i>Projects</a></li>
+		</ul>
+	</div>
+	<!-- // Widget heading END -->
+	
+	<div class="widget-body">
+	
+		<form class="form-horizontal">
+			<div class="tab-content">
+			
+				<div class="tab-pane active widget-body-regular padding-none" id="overview">
+				
+					<div class="innerL row row-merge">
+						<div class="col-md-3 center innerL innerTB">
+						
+							<div class="innerR innerT">
+								<!-- Profile Photo -->
+								<a href="" class="thumb"><img src="../assets/images/avatar-large.jpg" alt="Profile" class="img-responsive" /></a>
+								<div class="separator bottom"></div>
+								<!-- // Profile Photo END -->
+								
+								<!-- Social Icons -->
+								<a href="" class="glyphicons glyphicons-social standard primary facebook"><i></i></a>
+								<a href="" class="glyphicons glyphicons-social standard twitter"><i></i></a>
+								<a href="" class="glyphicons glyphicons-social standard linked_in"><i></i></a>
+								<div class="clearfix separator bottom"></div>
+								<!-- // Social Icons END -->
+								
+								<!-- Twitter Section -->
+								<h5 class="glyphicons single twitter"><i></i> Latest from Twitter</h5>
+								<section class="twitter-feed">
+									<div class="tweet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta. <span class="label label-inverse">01/11/2012</span></div>
+								</section>
+								<!-- Twitter Section END -->
+								
+							</div>
+							
+						</div>
+						<div class="col-md-9 containerBg innerTB">
+						
+							<div class="innerLR">
+								<div class="row innerTB">
+									<div class="col-md-7">
+									
+										<!-- About -->
+										<div class="widget widget-heading-simple widget-body-white margin-none">
+											<div class="widget-head"><h4 class="heading glyphicons user"><i></i>Mr.Awesome</h4></div>
+											<div class="widget-body">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis porta purus, pulvinar mattis nulla tempus ut. Curabitur quis dui orci. Ut nisi dolor, dignissim a aliquet quis, vulputate id dui. Proin ultrices ultrices ligula, dictum varius turpis faucibus non. Curabitur faucibus ultrices nunc, nec aliquet leo tempor cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</div>
+										<!-- // About END -->
+									
+									</div>
+									<div class="col-md-5">
+								
+										<!-- Bio -->
+										<div class="widget widget-heading-simple widget-body-white margin-none">
+											<div class="widget-head"><h4 class="heading glyphicons calendar"><i></i>Bio <span>Personal information</span></h4></div>
+											<div class="widget-body">
+												<ul class="unstyled icons margin-none">
+													<li class="glyphicons birthday_cake"><i></i> <span class="label label-default">10</span> <span class="label label-default">July</span> <span class="label label-default">1986</span></li>
+													<li class="glyphicons tie"><i></i> Working at <a href="http://www.mosaicpro.biz">MosaicPro</a></li>
+													<li class="glyphicons certificate"><i></i> Adobe Photoshop Certification</li>
+													<li class="glyphicons microphone"><i></i> English :: French :: Italian :: Romanian :: Polish</li>
+												</ul>
+											</div>
+										</div>
+										<!-- // Bio END -->
+										
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-7">
+									
+										<!-- Latest Orders/List Widget -->
+										<div class="widget widget-heading-simple widget-body-gray" data-toggle="collapse-widget">
+										
+											<!-- Widget Heading -->
+											<div class="widget-head">
+												<h4 class="heading glyphicons shopping_cart"><i></i>Last orders</h4>
+												<a href="" class="details pull-right">view all</a>
+											</div>
+											<!-- // Widget Heading -->
+											
+											<div class="widget-body padding-none border-none">
+												<ul class="list-group list-group-1 margin-none">
+													
+													<!-- List item -->
+													<li class="list-group-item">
+														<div class="media">
+															<div class="pull-left">
+																<img data-src="holder.js/52x52/dark" alt="">
+															</div>
+															<div class="media-body innerTB half">
+																<span class="title">10 items<br/><strong>&euro;5,900.00</strong></span>
+															</div>
+														</div>
+													</li>
+													<!-- // List item END -->
+													
+																										<!-- List item -->
+													<li class="list-group-item">
+														<div class="media">
+															<div class="pull-left">
+																<img data-src="holder.js/52x52/dark" alt="">
+															</div>
+															<div class="media-body innerTB half">
+																<span class="title">Product name<br/><strong>&euro;2,900</strong></span>
+															</div>
+														</div>
+													</li>
+													<!-- // List item END -->
+																										<!-- List item -->
+													<li class="list-group-item">
+														<div class="media">
+															<div class="pull-left">
+																<img data-src="holder.js/52x52/dark" alt="">
+															</div>
+															<div class="media-body innerTB half">
+																<span class="title">Product name<br/><strong>&euro;2,900</strong></span>
+															</div>
+														</div>
+													</li>
+													<!-- // List item END -->
+																										
+												</ul>
+											</div>
+										</div>
+										<!-- // Latest Orders/List Widget END -->
+										
+										<div class="alert alert-primary">
+											<a class="close" data-dismiss="alert">&times;</a>
+											<p>Integer quis tempor mi. Donec venenatis dui in neque fringilla at iaculis libero ullamcorper. In velit sem, sodales id hendrerit ac, fringilla et est. Pellentesque at justo urna, eu pharetra tortor. Aenean aliquam, tellus vel suscipit luctus.</p>
+										</div>
+									
+									</div>
+									<div class="col-md-5">
+										
+										<div class="widget widget-heading-simple widget-body-gray" data-toggle="collapse-widget">
+			
+											<!-- Widget Heading -->
+											<div class="widget-head">
+												<h4 class="heading glyphicons history"><i></i>Activity</h4>
+												<a href="" class="details pull-right">view all</a>
+											</div>
+											<!-- // Widget Heading END -->
+											
+											<div class="widget-body list">
+												<ul>
+												
+													<!-- List item -->
+													<li>
+														<span>Sales today</span>
+														<span class="count">&euro;5,900</span>
+													</li>
+													<!-- // List item END -->
+													
+																										<!-- List item -->
+													<li>
+														<span>Some other stats</span>
+														<span class="count">33,396</span>
+													</li>
+													<!-- // List item END -->
+																										<!-- List item -->
+													<li>
+														<span>Some other stats</span>
+														<span class="count">32,342</span>
+													</li>
+													<!-- // List item END -->
+																										
+												</ul>
+											</div>
+										</div>
+										
+										<div class="widget widget-heading-simple widget-body-gray" data-toggle="collapse-widget">
+			
+											<!-- Widget Heading -->
+											<div class="widget-head">
+												<h4 class="heading glyphicons history"><i></i>Widget</h4>
+											</div>
+											<!-- // Widget Heading END -->
+											
+											<div class="widget-body">
+												Curabitur quis dui orci. Ut nisi dolor, dignissim a aliquet quis, vulputate id dui. Proin ultrices ultrices ligula, dictum varius turpis faucibus non. Curabitur faucibus ultrices nunc, nec aliquet leo tempor cursus.
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				
+				</div>
+			
+				<!-- Tab content -->
+				<div class="tab-pane widget-body-regular containerBg" id="edit-account">
+				
+					<div class="widget widget-tabs widget-tabs-vertical row row-merge margin-none widget-body-white">
+
+						<!-- Widget heading -->
+						<div class="widget-head col-md-3">
+							<ul>
+								<li class="active"><a class="glyphicons pencil" href="#account-details" data-toggle="tab"><i></i>Account details</a></li>
+								<li><a class="glyphicons settings" href="#account-settings" data-toggle="tab"><i></i>Account settings</a></li>
+								<li><a class="glyphicons eye_open" href="#privacy-settings" data-toggle="tab"><i></i>Privacy settings</a></li>
+							</ul>
+						</div>
+						<!-- // Widget heading END -->
+						
+						<div class="widget-body col-md-9">
+						
+							<div class="tab-content">
+								<div class="tab-pane innerAll active" id="account-details">
+							
+									<!-- Row -->
+									<div class="row">
+									
+										<!-- Column -->
+										<div class="col-md-6">
+										
+											<!-- Group -->
+											<div class="form-group">
+												<label class="col-md-4 control-label">First name</label>
+												<div class="col-md-8">
+													<input type="text" value="John" class="form-control" />
+												</div>
+											</div>
+											<!-- // Group END -->
+											
+											<!-- Group -->
+											<div class="form-group">
+												<label class="col-md-4 control-label">Last name</label>
+												<div class="col-md-8">
+													<input type="text" value="Doe" class="form-control" />
+												</div>
+											</div>
+											<!-- // Group END -->
+											
+											<!-- Group -->
+											<div class="form-group">
+												<label class="col-md-4 control-label">Date of birth</label>
+												<div class="col-md-8">
+													<div class="input-group">
+														<input type="text" id="datepicker1" class="form-control" value="13/06/1988" />
+														<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+													</div>
+												</div>
+											</div>
+											<!-- // Group END -->
+											
+										</div>
+										<!-- // Column END -->
+										
+										<!-- Column -->
+										<div class="col-md-6">
+										
+											<!-- Group -->
+											<div class="form-group">
+												<label class="col-md-2 control-label">Gender</label>
+												<div class="col-md-10">
+													<select class="form-control selectpicker">
+														<option>Male</option>
+														<option>Female</option>
+													</select>
+												</div>
+											</div>
+											<!-- // Group END -->
+											
+											<!-- Group -->
+											<div class="form-group">
+												<label class="col-md-2 control-label">Age</label>
+												<div class="col-md-10">
+													<input type="text" value="25" class="form-control" />
+												</div>
+											</div>
+											<!-- // Group END -->
+											
+										</div>
+										<!-- // Column END -->
+										
+									</div>
+									<!-- // Row END -->
+								
+									<div class="separator line bottom"></div>
+									
+									<!-- Group -->
+									<div class="control-group">
+										<label class="control-label">About me</label>
+										<div class="controls">
+											<textarea id="mustHaveId" class="wysihtml5 form-control" rows="5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</textarea>
+										</div>
+									</div>
+									<!-- // Group END -->
+									
+									<!-- Form actions -->
+									<div class="separator top">
+										<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save changes</button>
+										<button type="button" class="btn btn-icon btn-default glyphicons circle_remove"><i></i>Cancel</button>
+									</div>
+									<!-- // Form actions END -->
+								
+								</div>
+								<div class="tab-pane" id="account-settings">
+								
+									<!-- Row -->
+									<div class="row">
+									
+										<!-- Column -->
+										<div class="col-md-3">
+											<strong>Change password</strong>
+											<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</div>
+										<!-- // Column END -->
+										
+										<!-- Column -->
+										<div class="col-md-9">
+											<label for="inputUsername">Username</label>
+											<div class="input-group">
+												<input type="text" id="inputUsername" class="form-control" value="john.doe2012" disabled="disabled" />
+												<span class="input-group-addon" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Username can't be changed"><i class="fa fa-question"></i></span>
+											</div>
+											<div class="separator"></div>
+													
+											<label for="inputPasswordOld">Old password</label>
+											<div class="input-group">
+												<input type="password" id="inputPasswordOld" class="form-control" value="" placeholder="Leave empty for no change" />
+												<span class="input-group-addon" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Leave empty if you don't wish to change the password"><i class="fa fa-question"></i></span>
+											</div>
+											<div class="separator"></div>
+											
+											<label for="inputPasswordNew">New password</label>
+											<input type="password" id="inputPasswordNew" class="form-control" value="" placeholder="Leave empty for no change" />
+											<div class="separator"></div>
+											
+											<label for="inputPasswordNew2">Repeat new password</label>
+											<input type="password" id="inputPasswordNew2" class="form-control" value="" placeholder="Leave empty for no change" />
+											<div class="separator"></div>
+										</div>
+										<!-- // Column END -->
+										
+									</div>
+									<!-- // Row END -->
+									
+									<div class="separator line bottom"></div>
+									
+									<!-- Row -->
+									<div class="row">
+									
+										<!-- Column -->
+										<div class="col-md-3">
+											<strong>Contact details</strong>
+											<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</div>
+										<!-- // Column END -->
+										
+										<!-- Column -->
+										<div class="col-md-9">
+											<div class="row">
+												<div class="col-md-6">
+													<label for="inputPhone">Phone</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-phone"></i></span>
+														<input type="text" id="inputPhone" class="form-control" placeholder="01234567897" />
+													</div>
+													<div class="separator"></div>
+														
+													<label for="inputEmail">E-mail</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+														<input type="text" id="inputEmail" class="form-control" placeholder="contact@mosaicpro.biz" />
+													</div>
+													<div class="separator"></div>
+														
+													<label for="inputWebsite">Website</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-link"></i></span>
+														<input type="text" id="inputWebsite" class="form-control" placeholder="http://www.mosaicpro.biz" />
+													</div>
+													<div class="separator"></div>
+												</div>
+												<div class="col-md-6">
+													<label for="inputFacebook">Facebook</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+														<input type="text" id="inputFacebook" class="form-control" placeholder="mosaicpro" />
+													</div>
+													<div class="separator"></div>
+													
+													<label for="inputTwitter">Twitter</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-twitter"></i></span>
+														<input type="text" id="inputTwitter" class="form-control" placeholder="mosaicpro" />
+													</div>
+													<div class="separator"></div>
+													
+													<label for="inputSkype">Skype ID</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-skype"></i></span>
+														<input type="text" id="inputSkype" class="form-control" placeholder="mosaicpro" />
+													</div>
+													<div class="separator"></div>
+													
+													<label for="inputgplus">Google</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-google-plus"></i></span>
+														<input type="text" id="inputgplus" class="form-control" placeholder="google ID" />
+													</div>
+													<div class="separator"></div>
+												</div>
+											</div>
+										</div>
+										<!-- // Column END -->
+										
+									</div>
+									<!-- // Row END -->
+									
+									<!-- Form actions -->
+									<div class="form-actions" style="margin: 0;">
+										<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok"><i></i>Save changes</button>
+									</div>
+									<!-- // Form actions END -->
+								
+								</div>
+								<div class="tab-pane" id="privacy-settings">
+									
+									<div class="checkbox">
+										<label class="checkbox-custom">
+											<i class="fa fa-fw fa-square-o"></i>
+											<input type="checkbox" checked="checked" /> 
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										</label>
+									</div>
+									<div class="checkbox">
+										<label class="checkbox-custom">
+											<i class="fa fa-fw fa-square-o"></i>
+											<input type="checkbox" /> 
+											Vivamus et risus vel metus feugiat semper at sed odio.
+										</label>
+									</div>
+									<div class="checkbox">
+										<label class="checkbox-custom">
+											<i class="fa fa-fw fa-square-o"></i>
+											<input type="checkbox" /> 
+											Aenean bibendum faucibus tellus, et facilisis justo imperdiet vel.
+										</label>
+									</div>
+									<div class="separator bottom"></div>
+
+									<div class="alert alert-primary">
+										<a class="close" data-dismiss="alert">&times;</a>
+										<p>Integer quis tempor mi. Donec venenatis dui in neque fringilla at iaculis libero ullamcorper. In velit sem, sodales id hendrerit ac, fringilla et est. Pellentesque at justo urna, eu pharetra tortor. Aenean aliquam, tellus vel suscipit luctus, risus enim ornare tellus, ac ultrices nisi enim sed magna.</p>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					
+				</div>
+				<!-- // Tab content END -->
+				
+				<!-- Tab content -->
+				<div class="tab-pane widget-body-regular" id="projects">
+				
+					<div class="innerAll">
+						<button type="button" class="btn btn-primary btn-icon glyphicons circle_plus pull-right"><i></i>Add project</button>
+						<p class="lead margin-none"><strong>1024</strong> sales this week</p>
+						<div class="clearfix"></div>
+					</div>
+					
+					<table class="table bg-white table-vertical-center table-projects">
+						<thead>
+							<tr>
+								<th colspan="2">Project</th>
+								<th width="120" class="center"></th>
+								<th width="120" class="center"></th>
+								<th width="160" class="center"></th>
+								<th width="120" class="center"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td width="80" class="center"><span class="thumb"><img src="http://2.s3.envato.com/files/50444644/80-avatar.jpg" alt="" /></span></td>
+								<td class="important">Smashing - Premium Admin Template</td>
+								<td class="center stats"><span>Sales today</span><span class="count">153</span></td>
+								<td class="center stats"><span>Sales total</span><span class="count">1,365</span></td>
+								<td class="center stats"><span>Earnings</span><span class="count">&dollar;25,356.00</span></td>
+								<td class="center"><button type="button" class="btn btn-default">Manage</button></td>
+							</tr>
+							<tr>
+								<td width="80" class="center"><span class="thumb"><img src="http://0.s3.envato.com/files/52347478/admin-avatar-12.jpg" alt="" /></span></td>
+								<td class="important">AdminPlus - Premium Bootstrap Admin Template</td>
+								<td class="center stats"><span>Sales today</span><span class="count">153</span></td>
+								<td class="center stats"><span>Sales total</span><span class="count">1,365</span></td>
+								<td class="center stats"><span>Earnings</span><span class="count">&dollar;25,356.00</span></td>
+								<td class="center"><button type="button" class="btn btn-default">Manage</button></td>
+							</tr>
+							<tr>
+								<td width="80" class="center"><span class="thumb"><img src="http://2.s3.envato.com/files/50868169/avatar80.jpg" alt="" /></span></td>
+								<td class="important">AIR - Responsive Bootstrap Admin Template</td>
+								<td class="center stats"><span>Sales today</span><span class="count">153</span></td>
+								<td class="center stats"><span>Sales total</span><span class="count">1,365</span></td>
+								<td class="center stats"><span>Earnings</span><span class="count">&dollar;25,356.00</span></td>
+								<td class="center"><button type="button" class="btn btn-default">Manage</button></td>
+							</tr>
+							<tr>
+								<td width="80" class="center"><span class="thumb"><img src="http://3.s3.envato.com/files/47008628/boot-admin-80_v13.jpg" alt="" /></span></td>
+								<td class="important">BootAdmin - All-In-One Admin Responsive Template</td>
+								<td class="center stats"><span>Sales today</span><span class="count">153</span></td>
+								<td class="center stats"><span>Sales total</span><span class="count">1,365</span></td>
+								<td class="center stats"><span>Earnings</span><span class="count">&dollar;25,356.00</span></td>
+								<td class="center"><button type="button" class="btn btn-default">Manage</button></td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+				<!-- // Tab content END -->
+			</div>
+		</form>
+	</div>
+</div>
+<!-- // Widget END -->
+
+
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-9562a8d00bc05a08a49b01c9d4a02760">
+												<pre class="prettyprint">&lt;!-- Widget --&gt;
+&lt;div class=&quot;widget widget-tabs widget-tabs-gray widget-tabs-double-2 border-bottom-none&quot;&gt;
+
+	&lt;!-- Widget heading --&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;active&quot;&gt;&lt;a class=&quot;glyphicons display&quot; href=&quot;#overview&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Overview&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;glyphicons edit&quot; href=&quot;#edit-account&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Edit account&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;glyphicons luggage&quot; href=&quot;#projects&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Projects&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;!-- // Widget heading END --&gt;
+	
+	&lt;div class=&quot;widget-body&quot;&gt;
+	
+		&lt;form class=&quot;form-horizontal&quot;&gt;
+			&lt;div class=&quot;tab-content&quot;&gt;
+			
+				&lt;div class=&quot;tab-pane active widget-body-regular padding-none&quot; id=&quot;overview&quot;&gt;
+				
+					&lt;div class=&quot;innerL row row-merge&quot;&gt;
+						&lt;div class=&quot;col-md-3 center innerL innerTB&quot;&gt;
+						
+							&lt;div class=&quot;innerR innerT&quot;&gt;
+								&lt;!-- Profile Photo --&gt;
+								&lt;a href=&quot;&quot; class=&quot;thumb&quot;&gt;&lt;img src=&quot;../assets/images/avatar-large.jpg&quot; alt=&quot;Profile&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;
+								&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+								&lt;!-- // Profile Photo END --&gt;
+								
+								&lt;!-- Social Icons --&gt;
+								&lt;a href=&quot;&quot; class=&quot;glyphicons glyphicons-social standard primary facebook&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+								&lt;a href=&quot;&quot; class=&quot;glyphicons glyphicons-social standard twitter&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+								&lt;a href=&quot;&quot; class=&quot;glyphicons glyphicons-social standard linked_in&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+								&lt;div class=&quot;clearfix separator bottom&quot;&gt;&lt;/div&gt;
+								&lt;!-- // Social Icons END --&gt;
+								
+								&lt;!-- Twitter Section --&gt;
+								&lt;h5 class=&quot;glyphicons single twitter&quot;&gt;&lt;i&gt;&lt;/i&gt; Latest from Twitter&lt;/h5&gt;
+								&lt;section class=&quot;twitter-feed&quot;&gt;
+									&lt;div class=&quot;tweet&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta. &lt;span class=&quot;label label-inverse&quot;&gt;01/11/2012&lt;/span&gt;&lt;/div&gt;
+								&lt;/section&gt;
+								&lt;!-- Twitter Section END --&gt;
+								
+							&lt;/div&gt;
+							
+						&lt;/div&gt;
+						&lt;div class=&quot;col-md-9 containerBg innerTB&quot;&gt;
+						
+							&lt;div class=&quot;innerLR&quot;&gt;
+								&lt;div class=&quot;row innerTB&quot;&gt;
+									&lt;div class=&quot;col-md-7&quot;&gt;
+									
+										&lt;!-- About --&gt;
+										&lt;div class=&quot;widget widget-heading-simple widget-body-white margin-none&quot;&gt;
+											&lt;div class=&quot;widget-head&quot;&gt;&lt;h4 class=&quot;heading glyphicons user&quot;&gt;&lt;i&gt;&lt;/i&gt;Mr.Awesome&lt;/h4&gt;&lt;/div&gt;
+											&lt;div class=&quot;widget-body&quot;&gt;
+												&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis porta purus, pulvinar mattis nulla tempus ut. Curabitur quis dui orci. Ut nisi dolor, dignissim a aliquet quis, vulputate id dui. Proin ultrices ultrices ligula, dictum varius turpis faucibus non. Curabitur faucibus ultrices nunc, nec aliquet leo tempor cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;!-- // About END --&gt;
+									
+									&lt;/div&gt;
+									&lt;div class=&quot;col-md-5&quot;&gt;
+								
+										&lt;!-- Bio --&gt;
+										&lt;div class=&quot;widget widget-heading-simple widget-body-white margin-none&quot;&gt;
+											&lt;div class=&quot;widget-head&quot;&gt;&lt;h4 class=&quot;heading glyphicons calendar&quot;&gt;&lt;i&gt;&lt;/i&gt;Bio &lt;span&gt;Personal information&lt;/span&gt;&lt;/h4&gt;&lt;/div&gt;
+											&lt;div class=&quot;widget-body&quot;&gt;
+												&lt;ul class=&quot;unstyled icons margin-none&quot;&gt;
+													&lt;li class=&quot;glyphicons birthday_cake&quot;&gt;&lt;i&gt;&lt;/i&gt; &lt;span class=&quot;label label-default&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;label label-default&quot;&gt;July&lt;/span&gt; &lt;span class=&quot;label label-default&quot;&gt;1986&lt;/span&gt;&lt;/li&gt;
+													&lt;li class=&quot;glyphicons tie&quot;&gt;&lt;i&gt;&lt;/i&gt; Working at &lt;a href=&quot;http://www.mosaicpro.biz&quot;&gt;MosaicPro&lt;/a&gt;&lt;/li&gt;
+													&lt;li class=&quot;glyphicons certificate&quot;&gt;&lt;i&gt;&lt;/i&gt; Adobe Photoshop Certification&lt;/li&gt;
+													&lt;li class=&quot;glyphicons microphone&quot;&gt;&lt;i&gt;&lt;/i&gt; English :: French :: Italian :: Romanian :: Polish&lt;/li&gt;
+												&lt;/ul&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;!-- // Bio END --&gt;
+										
+									&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;row&quot;&gt;
+									&lt;div class=&quot;col-md-7&quot;&gt;
+									
+										&lt;!-- Latest Orders/List Widget --&gt;
+										&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot; data-toggle=&quot;collapse-widget&quot;&gt;
+										
+											&lt;!-- Widget Heading --&gt;
+											&lt;div class=&quot;widget-head&quot;&gt;
+												&lt;h4 class=&quot;heading glyphicons shopping_cart&quot;&gt;&lt;i&gt;&lt;/i&gt;Last orders&lt;/h4&gt;
+												&lt;a href=&quot;&quot; class=&quot;details pull-right&quot;&gt;view all&lt;/a&gt;
+											&lt;/div&gt;
+											&lt;!-- // Widget Heading --&gt;
+											
+											&lt;div class=&quot;widget-body padding-none border-none&quot;&gt;
+												&lt;ul class=&quot;list-group list-group-1 margin-none&quot;&gt;
+													
+													&lt;!-- List item --&gt;
+													&lt;li class=&quot;list-group-item&quot;&gt;
+														&lt;div class=&quot;media&quot;&gt;
+															&lt;div class=&quot;pull-left&quot;&gt;
+																&lt;img data-src=&quot;holder.js/52x52/dark&quot; alt=&quot;&quot;&gt;
+															&lt;/div&gt;
+															&lt;div class=&quot;media-body innerTB half&quot;&gt;
+																&lt;span class=&quot;title&quot;&gt;10 items&lt;br/&gt;&lt;strong&gt;&amp;euro;5,900.00&lt;/strong&gt;&lt;/span&gt;
+															&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/li&gt;
+													&lt;!-- // List item END --&gt;
+													
+																										&lt;!-- List item --&gt;
+													&lt;li class=&quot;list-group-item&quot;&gt;
+														&lt;div class=&quot;media&quot;&gt;
+															&lt;div class=&quot;pull-left&quot;&gt;
+																&lt;img data-src=&quot;holder.js/52x52/dark&quot; alt=&quot;&quot;&gt;
+															&lt;/div&gt;
+															&lt;div class=&quot;media-body innerTB half&quot;&gt;
+																&lt;span class=&quot;title&quot;&gt;Product name&lt;br/&gt;&lt;strong&gt;&amp;euro;2,900&lt;/strong&gt;&lt;/span&gt;
+															&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/li&gt;
+													&lt;!-- // List item END --&gt;
+																										&lt;!-- List item --&gt;
+													&lt;li class=&quot;list-group-item&quot;&gt;
+														&lt;div class=&quot;media&quot;&gt;
+															&lt;div class=&quot;pull-left&quot;&gt;
+																&lt;img data-src=&quot;holder.js/52x52/dark&quot; alt=&quot;&quot;&gt;
+															&lt;/div&gt;
+															&lt;div class=&quot;media-body innerTB half&quot;&gt;
+																&lt;span class=&quot;title&quot;&gt;Product name&lt;br/&gt;&lt;strong&gt;&amp;euro;2,900&lt;/strong&gt;&lt;/span&gt;
+															&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/li&gt;
+													&lt;!-- // List item END --&gt;
+																										
+												&lt;/ul&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;!-- // Latest Orders/List Widget END --&gt;
+										
+										&lt;div class=&quot;alert alert-primary&quot;&gt;
+											&lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/a&gt;
+											&lt;p&gt;Integer quis tempor mi. Donec venenatis dui in neque fringilla at iaculis libero ullamcorper. In velit sem, sodales id hendrerit ac, fringilla et est. Pellentesque at justo urna, eu pharetra tortor. Aenean aliquam, tellus vel suscipit luctus.&lt;/p&gt;
+										&lt;/div&gt;
+									
+									&lt;/div&gt;
+									&lt;div class=&quot;col-md-5&quot;&gt;
+										
+										&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot; data-toggle=&quot;collapse-widget&quot;&gt;
+			
+											&lt;!-- Widget Heading --&gt;
+											&lt;div class=&quot;widget-head&quot;&gt;
+												&lt;h4 class=&quot;heading glyphicons history&quot;&gt;&lt;i&gt;&lt;/i&gt;Activity&lt;/h4&gt;
+												&lt;a href=&quot;&quot; class=&quot;details pull-right&quot;&gt;view all&lt;/a&gt;
+											&lt;/div&gt;
+											&lt;!-- // Widget Heading END --&gt;
+											
+											&lt;div class=&quot;widget-body list&quot;&gt;
+												&lt;ul&gt;
+												
+													&lt;!-- List item --&gt;
+													&lt;li&gt;
+														&lt;span&gt;Sales today&lt;/span&gt;
+														&lt;span class=&quot;count&quot;&gt;&amp;euro;5,900&lt;/span&gt;
+													&lt;/li&gt;
+													&lt;!-- // List item END --&gt;
+													
+																										&lt;!-- List item --&gt;
+													&lt;li&gt;
+														&lt;span&gt;Some other stats&lt;/span&gt;
+														&lt;span class=&quot;count&quot;&gt;33,396&lt;/span&gt;
+													&lt;/li&gt;
+													&lt;!-- // List item END --&gt;
+																										&lt;!-- List item --&gt;
+													&lt;li&gt;
+														&lt;span&gt;Some other stats&lt;/span&gt;
+														&lt;span class=&quot;count&quot;&gt;32,342&lt;/span&gt;
+													&lt;/li&gt;
+													&lt;!-- // List item END --&gt;
+																										
+												&lt;/ul&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+										
+										&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot; data-toggle=&quot;collapse-widget&quot;&gt;
+			
+											&lt;!-- Widget Heading --&gt;
+											&lt;div class=&quot;widget-head&quot;&gt;
+												&lt;h4 class=&quot;heading glyphicons history&quot;&gt;&lt;i&gt;&lt;/i&gt;Widget&lt;/h4&gt;
+											&lt;/div&gt;
+											&lt;!-- // Widget Heading END --&gt;
+											
+											&lt;div class=&quot;widget-body&quot;&gt;
+												Curabitur quis dui orci. Ut nisi dolor, dignissim a aliquet quis, vulputate id dui. Proin ultrices ultrices ligula, dictum varius turpis faucibus non. Curabitur faucibus ultrices nunc, nec aliquet leo tempor cursus.
+											&lt;/div&gt;
+										&lt;/div&gt;
+										
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							
+						&lt;/div&gt;
+					&lt;/div&gt;
+				
+				&lt;/div&gt;
+			
+				&lt;!-- Tab content --&gt;
+				&lt;div class=&quot;tab-pane widget-body-regular containerBg&quot; id=&quot;edit-account&quot;&gt;
+				
+					&lt;div class=&quot;widget widget-tabs widget-tabs-vertical row row-merge margin-none widget-body-white&quot;&gt;
+
+						&lt;!-- Widget heading --&gt;
+						&lt;div class=&quot;widget-head col-md-3&quot;&gt;
+							&lt;ul&gt;
+								&lt;li class=&quot;active&quot;&gt;&lt;a class=&quot;glyphicons pencil&quot; href=&quot;#account-details&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Account details&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a class=&quot;glyphicons settings&quot; href=&quot;#account-settings&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Account settings&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a class=&quot;glyphicons eye_open&quot; href=&quot;#privacy-settings&quot; data-toggle=&quot;tab&quot;&gt;&lt;i&gt;&lt;/i&gt;Privacy settings&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;!-- // Widget heading END --&gt;
+						
+						&lt;div class=&quot;widget-body col-md-9&quot;&gt;
+						
+							&lt;div class=&quot;tab-content&quot;&gt;
+								&lt;div class=&quot;tab-pane innerAll active&quot; id=&quot;account-details&quot;&gt;
+							
+									&lt;!-- Row --&gt;
+									&lt;div class=&quot;row&quot;&gt;
+									
+										&lt;!-- Column --&gt;
+										&lt;div class=&quot;col-md-6&quot;&gt;
+										
+											&lt;!-- Group --&gt;
+											&lt;div class=&quot;form-group&quot;&gt;
+												&lt;label class=&quot;col-md-4 control-label&quot;&gt;First name&lt;/label&gt;
+												&lt;div class=&quot;col-md-8&quot;&gt;
+													&lt;input type=&quot;text&quot; value=&quot;John&quot; class=&quot;form-control&quot; /&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- // Group END --&gt;
+											
+											&lt;!-- Group --&gt;
+											&lt;div class=&quot;form-group&quot;&gt;
+												&lt;label class=&quot;col-md-4 control-label&quot;&gt;Last name&lt;/label&gt;
+												&lt;div class=&quot;col-md-8&quot;&gt;
+													&lt;input type=&quot;text&quot; value=&quot;Doe&quot; class=&quot;form-control&quot; /&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- // Group END --&gt;
+											
+											&lt;!-- Group --&gt;
+											&lt;div class=&quot;form-group&quot;&gt;
+												&lt;label class=&quot;col-md-4 control-label&quot;&gt;Date of birth&lt;/label&gt;
+												&lt;div class=&quot;col-md-8&quot;&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;input type=&quot;text&quot; id=&quot;datepicker1&quot; class=&quot;form-control&quot; value=&quot;13/06/1988&quot; /&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- // Group END --&gt;
+											
+										&lt;/div&gt;
+										&lt;!-- // Column END --&gt;
+										
+										&lt;!-- Column --&gt;
+										&lt;div class=&quot;col-md-6&quot;&gt;
+										
+											&lt;!-- Group --&gt;
+											&lt;div class=&quot;form-group&quot;&gt;
+												&lt;label class=&quot;col-md-2 control-label&quot;&gt;Gender&lt;/label&gt;
+												&lt;div class=&quot;col-md-10&quot;&gt;
+													&lt;select class=&quot;form-control selectpicker&quot;&gt;
+														&lt;option&gt;Male&lt;/option&gt;
+														&lt;option&gt;Female&lt;/option&gt;
+													&lt;/select&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- // Group END --&gt;
+											
+											&lt;!-- Group --&gt;
+											&lt;div class=&quot;form-group&quot;&gt;
+												&lt;label class=&quot;col-md-2 control-label&quot;&gt;Age&lt;/label&gt;
+												&lt;div class=&quot;col-md-10&quot;&gt;
+													&lt;input type=&quot;text&quot; value=&quot;25&quot; class=&quot;form-control&quot; /&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- // Group END --&gt;
+											
+										&lt;/div&gt;
+										&lt;!-- // Column END --&gt;
+										
+									&lt;/div&gt;
+									&lt;!-- // Row END --&gt;
+								
+									&lt;div class=&quot;separator line bottom&quot;&gt;&lt;/div&gt;
+									
+									&lt;!-- Group --&gt;
+									&lt;div class=&quot;control-group&quot;&gt;
+										&lt;label class=&quot;control-label&quot;&gt;About me&lt;/label&gt;
+										&lt;div class=&quot;controls&quot;&gt;
+											&lt;textarea id=&quot;mustHaveId&quot; class=&quot;wysihtml5 form-control&quot; rows=&quot;5&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/textarea&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+									&lt;!-- // Group END --&gt;
+									
+									&lt;!-- Form actions --&gt;
+									&lt;div class=&quot;separator top&quot;&gt;
+										&lt;button type=&quot;submit&quot; class=&quot;btn btn-icon btn-primary glyphicons circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;Save changes&lt;/button&gt;
+										&lt;button type=&quot;button&quot; class=&quot;btn btn-icon btn-default glyphicons circle_remove&quot;&gt;&lt;i&gt;&lt;/i&gt;Cancel&lt;/button&gt;
+									&lt;/div&gt;
+									&lt;!-- // Form actions END --&gt;
+								
+								&lt;/div&gt;
+								&lt;div class=&quot;tab-pane&quot; id=&quot;account-settings&quot;&gt;
+								
+									&lt;!-- Row --&gt;
+									&lt;div class=&quot;row&quot;&gt;
+									
+										&lt;!-- Column --&gt;
+										&lt;div class=&quot;col-md-3&quot;&gt;
+											&lt;strong&gt;Change password&lt;/strong&gt;
+											&lt;p class=&quot;muted&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+										&lt;/div&gt;
+										&lt;!-- // Column END --&gt;
+										
+										&lt;!-- Column --&gt;
+										&lt;div class=&quot;col-md-9&quot;&gt;
+											&lt;label for=&quot;inputUsername&quot;&gt;Username&lt;/label&gt;
+											&lt;div class=&quot;input-group&quot;&gt;
+												&lt;input type=&quot;text&quot; id=&quot;inputUsername&quot; class=&quot;form-control&quot; value=&quot;john.doe2012&quot; disabled=&quot;disabled&quot; /&gt;
+												&lt;span class=&quot;input-group-addon&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; data-container=&quot;body&quot; data-original-title=&quot;Username can't be changed&quot;&gt;&lt;i class=&quot;fa fa-question&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+											&lt;/div&gt;
+											&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+													
+											&lt;label for=&quot;inputPasswordOld&quot;&gt;Old password&lt;/label&gt;
+											&lt;div class=&quot;input-group&quot;&gt;
+												&lt;input type=&quot;password&quot; id=&quot;inputPasswordOld&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Leave empty for no change&quot; /&gt;
+												&lt;span class=&quot;input-group-addon&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; data-container=&quot;body&quot; data-original-title=&quot;Leave empty if you don't wish to change the password&quot;&gt;&lt;i class=&quot;fa fa-question&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+											&lt;/div&gt;
+											&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+											
+											&lt;label for=&quot;inputPasswordNew&quot;&gt;New password&lt;/label&gt;
+											&lt;input type=&quot;password&quot; id=&quot;inputPasswordNew&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Leave empty for no change&quot; /&gt;
+											&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+											
+											&lt;label for=&quot;inputPasswordNew2&quot;&gt;Repeat new password&lt;/label&gt;
+											&lt;input type=&quot;password&quot; id=&quot;inputPasswordNew2&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Leave empty for no change&quot; /&gt;
+											&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;!-- // Column END --&gt;
+										
+									&lt;/div&gt;
+									&lt;!-- // Row END --&gt;
+									
+									&lt;div class=&quot;separator line bottom&quot;&gt;&lt;/div&gt;
+									
+									&lt;!-- Row --&gt;
+									&lt;div class=&quot;row&quot;&gt;
+									
+										&lt;!-- Column --&gt;
+										&lt;div class=&quot;col-md-3&quot;&gt;
+											&lt;strong&gt;Contact details&lt;/strong&gt;
+											&lt;p class=&quot;muted&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+										&lt;/div&gt;
+										&lt;!-- // Column END --&gt;
+										
+										&lt;!-- Column --&gt;
+										&lt;div class=&quot;col-md-9&quot;&gt;
+											&lt;div class=&quot;row&quot;&gt;
+												&lt;div class=&quot;col-md-6&quot;&gt;
+													&lt;label for=&quot;inputPhone&quot;&gt;Phone&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputPhone&quot; class=&quot;form-control&quot; placeholder=&quot;01234567897&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+														
+													&lt;label for=&quot;inputEmail&quot;&gt;E-mail&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputEmail&quot; class=&quot;form-control&quot; placeholder=&quot;contact@mosaicpro.biz&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+														
+													&lt;label for=&quot;inputWebsite&quot;&gt;Website&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputWebsite&quot; class=&quot;form-control&quot; placeholder=&quot;http://www.mosaicpro.biz&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;div class=&quot;col-md-6&quot;&gt;
+													&lt;label for=&quot;inputFacebook&quot;&gt;Facebook&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputFacebook&quot; class=&quot;form-control&quot; placeholder=&quot;mosaicpro&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+													
+													&lt;label for=&quot;inputTwitter&quot;&gt;Twitter&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputTwitter&quot; class=&quot;form-control&quot; placeholder=&quot;mosaicpro&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+													
+													&lt;label for=&quot;inputSkype&quot;&gt;Skype ID&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputSkype&quot; class=&quot;form-control&quot; placeholder=&quot;mosaicpro&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+													
+													&lt;label for=&quot;inputgplus&quot;&gt;Google&lt;/label&gt;
+													&lt;div class=&quot;input-group&quot;&gt;
+														&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+														&lt;input type=&quot;text&quot; id=&quot;inputgplus&quot; class=&quot;form-control&quot; placeholder=&quot;google ID&quot; /&gt;
+													&lt;/div&gt;
+													&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;!-- // Column END --&gt;
+										
+									&lt;/div&gt;
+									&lt;!-- // Row END --&gt;
+									
+									&lt;!-- Form actions --&gt;
+									&lt;div class=&quot;form-actions&quot; style=&quot;margin: 0;&quot;&gt;
+										&lt;button type=&quot;submit&quot; class=&quot;btn btn-icon btn-primary glyphicons circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;Save changes&lt;/button&gt;
+									&lt;/div&gt;
+									&lt;!-- // Form actions END --&gt;
+								
+								&lt;/div&gt;
+								&lt;div class=&quot;tab-pane&quot; id=&quot;privacy-settings&quot;&gt;
+									
+									&lt;div class=&quot;checkbox&quot;&gt;
+										&lt;label class=&quot;checkbox-custom&quot;&gt;
+											&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+											&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt; 
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										&lt;/label&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;checkbox&quot;&gt;
+										&lt;label class=&quot;checkbox-custom&quot;&gt;
+											&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+											&lt;input type=&quot;checkbox&quot; /&gt; 
+											Vivamus et risus vel metus feugiat semper at sed odio.
+										&lt;/label&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;checkbox&quot;&gt;
+										&lt;label class=&quot;checkbox-custom&quot;&gt;
+											&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+											&lt;input type=&quot;checkbox&quot; /&gt; 
+											Aenean bibendum faucibus tellus, et facilisis justo imperdiet vel.
+										&lt;/label&gt;
+									&lt;/div&gt;
+									&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+
+									&lt;div class=&quot;alert alert-primary&quot;&gt;
+										&lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/a&gt;
+										&lt;p&gt;Integer quis tempor mi. Donec venenatis dui in neque fringilla at iaculis libero ullamcorper. In velit sem, sodales id hendrerit ac, fringilla et est. Pellentesque at justo urna, eu pharetra tortor. Aenean aliquam, tellus vel suscipit luctus, risus enim ornare tellus, ac ultrices nisi enim sed magna.&lt;/p&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						
+						&lt;/div&gt;
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Tab content END --&gt;
+				
+				&lt;!-- Tab content --&gt;
+				&lt;div class=&quot;tab-pane widget-body-regular&quot; id=&quot;projects&quot;&gt;
+				
+					&lt;div class=&quot;innerAll&quot;&gt;
+						&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-icon glyphicons circle_plus pull-right&quot;&gt;&lt;i&gt;&lt;/i&gt;Add project&lt;/button&gt;
+						&lt;p class=&quot;lead margin-none&quot;&gt;&lt;strong&gt;1024&lt;/strong&gt; sales this week&lt;/p&gt;
+						&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					
+					&lt;table class=&quot;table bg-white table-vertical-center table-projects&quot;&gt;
+						&lt;thead&gt;
+							&lt;tr&gt;
+								&lt;th colspan=&quot;2&quot;&gt;Project&lt;/th&gt;
+								&lt;th width=&quot;120&quot; class=&quot;center&quot;&gt;&lt;/th&gt;
+								&lt;th width=&quot;120&quot; class=&quot;center&quot;&gt;&lt;/th&gt;
+								&lt;th width=&quot;160&quot; class=&quot;center&quot;&gt;&lt;/th&gt;
+								&lt;th width=&quot;120&quot; class=&quot;center&quot;&gt;&lt;/th&gt;
+							&lt;/tr&gt;
+						&lt;/thead&gt;
+						&lt;tbody&gt;
+							&lt;tr&gt;
+								&lt;td width=&quot;80&quot; class=&quot;center&quot;&gt;&lt;span class=&quot;thumb&quot;&gt;&lt;img src=&quot;http://2.s3.envato.com/files/50444644/80-avatar.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;important&quot;&gt;Smashing - Premium Admin Template&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales today&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;153&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales total&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;1,365&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Earnings&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;&amp;dollar;25,356.00&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Manage&lt;/button&gt;&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td width=&quot;80&quot; class=&quot;center&quot;&gt;&lt;span class=&quot;thumb&quot;&gt;&lt;img src=&quot;http://0.s3.envato.com/files/52347478/admin-avatar-12.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;important&quot;&gt;AdminPlus - Premium Bootstrap Admin Template&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales today&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;153&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales total&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;1,365&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Earnings&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;&amp;dollar;25,356.00&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Manage&lt;/button&gt;&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td width=&quot;80&quot; class=&quot;center&quot;&gt;&lt;span class=&quot;thumb&quot;&gt;&lt;img src=&quot;http://2.s3.envato.com/files/50868169/avatar80.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;important&quot;&gt;AIR - Responsive Bootstrap Admin Template&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales today&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;153&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales total&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;1,365&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Earnings&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;&amp;dollar;25,356.00&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Manage&lt;/button&gt;&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td width=&quot;80&quot; class=&quot;center&quot;&gt;&lt;span class=&quot;thumb&quot;&gt;&lt;img src=&quot;http://3.s3.envato.com/files/47008628/boot-admin-80_v13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;important&quot;&gt;BootAdmin - All-In-One Admin Responsive Template&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales today&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;153&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Sales total&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;1,365&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center stats&quot;&gt;&lt;span&gt;Earnings&lt;/span&gt;&lt;span class=&quot;count&quot;&gt;&amp;dollar;25,356.00&lt;/span&gt;&lt;/td&gt;
+								&lt;td class=&quot;center&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Manage&lt;/button&gt;&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/tbody&gt;
+					&lt;/table&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Tab content END --&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Widget END --&gt;
+
+
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-9562a8d00bc05a08a49b01c9d4a02760">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/css/bootstrap-datepicker.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/less/bootstrap-datepicker.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/editors/wysihtml5/assets/lib/css/bootstrap-wysihtml5-0.0.2.css&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/uniform/assets/lib/css/uniform.default.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/uniform/assets/custom/less/uniformjs.less&quot;;
+@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/user/my-account-advanced/assets/less/my-account-advanced.less&quot;;
+@import &quot;assets/components/modules/admin/tabs/assets/tabs.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/widgets/lists/list-group/assets/custom/less/list-group.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/elements/bootstrap-select/assets/lib/css/bootstrap-select.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/elements/bootstrap-select/assets/custom/less/bootstrap-select.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-9562a8d00bc05a08a49b01c9d4a02760">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/holder/holder.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/lib/js/bootstrap-datepicker.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-datepicker/assets/custom/js/bootstrap-datepicker.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.inputmask.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.inputmask.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'inputmask'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.inputmask</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-493415e0c56527c5d0c44c15b84d3c72" data-toggle="collapse">inputmask</a></h4>
+							<div class="collapse in" id="view-493415e0c56527c5d0c44c15b84d3c72">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-493415e0c56527c5d0c44c15b84d3c72" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-493415e0c56527c5d0c44c15b84d3c72" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-493415e0c56527c5d0c44c15b84d3c72" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-493415e0c56527c5d0c44c15b84d3c72" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/inputmask.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-493415e0c56527c5d0c44c15b84d3c72">
+												<div class="row">
+	<div class="col-md-6">
+		<label class="strong">Date #1</label>
+		<input type="text" id="inputmask-date" class="form-control span8" placeholder="__/__/____" />
+		<span class="help-inline">d/m/y mask</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Date #2</label>
+		<input type="text" id="inputmask-date-1" class="form-control span8" placeholder="**/**/****" />
+		<span class="help-inline">Changing placeholder</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Date #3</label>
+		<input type="text" id="inputmask-date-2" class="form-control span8" placeholder="dd/mm/yyyy" />
+		<span class="help-inline">Multi-char placeholder</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Currency</label>
+		<input type="text" id="inputmask-currency" class="form-control span8" placeholder="&euro; 999.999.999,99" />
+		<span class="help-inline">&euro; 999.999.999,99</span>
+	</div>
+	<div class="col-md-6">
+		<label class="strong">Phone Number</label>
+		<input type="text" id="inputmask-phone" class="form-control span8" placeholder="(123) 456-7890" />
+		<span class="help-inline">(999) 999-9999</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">VAT Number</label>
+		<input type="text" id="inputmask-tax" class="form-control span8" placeholder="12-3456789" />
+		<span class="help-inline">Multi-char placeholder</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Decimal</label>
+		<input type="text" id="inputmask-decimal" class="form-control span8" placeholder="123.01" />
+		<span class="help-inline">Allow numbers &amp; decimals</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">SSN</label>
+		<input type="text" id="inputmask-ssn" class="form-control span8" placeholder="999-99-9999" />
+		<span class="help-inline">999-99-9999</span>
+	</div>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-493415e0c56527c5d0c44c15b84d3c72">
+												<pre class="prettyprint">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-md-6&quot;&gt;
+		&lt;label class=&quot;strong&quot;&gt;Date #1&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-date&quot; class=&quot;form-control span8&quot; placeholder=&quot;__/__/____&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;d/m/y mask&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		
+		&lt;label class=&quot;strong&quot;&gt;Date #2&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-date-1&quot; class=&quot;form-control span8&quot; placeholder=&quot;**/**/****&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;Changing placeholder&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		
+		&lt;label class=&quot;strong&quot;&gt;Date #3&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-date-2&quot; class=&quot;form-control span8&quot; placeholder=&quot;dd/mm/yyyy&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;Multi-char placeholder&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		
+		&lt;label class=&quot;strong&quot;&gt;Currency&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-currency&quot; class=&quot;form-control span8&quot; placeholder=&quot;&amp;euro; 999.999.999,99&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;&amp;euro; 999.999.999,99&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-md-6&quot;&gt;
+		&lt;label class=&quot;strong&quot;&gt;Phone Number&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-phone&quot; class=&quot;form-control span8&quot; placeholder=&quot;(123) 456-7890&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;(999) 999-9999&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		
+		&lt;label class=&quot;strong&quot;&gt;VAT Number&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-tax&quot; class=&quot;form-control span8&quot; placeholder=&quot;12-3456789&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;Multi-char placeholder&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		
+		&lt;label class=&quot;strong&quot;&gt;Decimal&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-decimal&quot; class=&quot;form-control span8&quot; placeholder=&quot;123.01&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;Allow numbers &amp;amp; decimals&lt;/span&gt;
+		&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+		
+		&lt;label class=&quot;strong&quot;&gt;SSN&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;inputmask-ssn&quot; class=&quot;form-control span8&quot; placeholder=&quot;999-99-9999&quot; /&gt;
+		&lt;span class=&quot;help-inline&quot;&gt;999-99-9999&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-493415e0c56527c5d0c44c15b84d3c72">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/core/less/forms.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-493415e0c56527c5d0c44c15b84d3c72">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/inputmask/assets/lib/jquery.inputmask.bundle.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/inputmask/assets/custom/inputmask.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/inputmask/assets/lib/jquery.inputmask.bundle.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/inputmask/assets/custom/inputmask.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

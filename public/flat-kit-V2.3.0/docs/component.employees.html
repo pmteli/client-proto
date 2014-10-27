@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.employees.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.employees.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'employees'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.employees</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-7bcd0cc4cd184d89820e8082f3beacce" data-toggle="collapse">employees</a></h4>
+							<div class="collapse in" id="view-7bcd0cc4cd184d89820e8082f3beacce">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-7bcd0cc4cd184d89820e8082f3beacce" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-7bcd0cc4cd184d89820e8082f3beacce" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-7bcd0cc4cd184d89820e8082f3beacce" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-7bcd0cc4cd184d89820e8082f3beacce" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/employees.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-7bcd0cc4cd184d89820e8082f3beacce">
+												<h2 class="margin-none separator bottom"><i class="fa fa-group text-primary fa-fw"></i> Employee Directory</h2>
+
+<div class="widget widget-heading-simple widget-body-gray widget-employees">
+	<div class="widget-body padding-none">
+		
+		<div class="row">
+			<div class="col-md-4 listWrapper">
+				<div class="innerAll">
+					<form autocomplete="off" class="form-inline">
+						<div class="widget-search separator bottom">
+							<button type="button" class="btn btn-default pull-right"><i class="fa fa-search"></i></button>
+							<div class="overflow-hidden">
+								<input type="text" value="" class="form-control" placeholder="Find someone ..">
+							</div>
+						</div>
+						<select style="width: 100%;">
+			               <optgroup label="Department">
+			                   <option value="design">Design</option>
+			                   <option value="development">Development</option>
+			               </optgroup>
+						</select>
+					</form>
+				</div>
+				<span class="results">1490 Employees Found <i class="fa fa-circle-arrow-down"></i></span>
+				<ul class="list unstyled">
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li class="active">
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+										<li>
+						<div class="media innerAll">
+							<div class="media-object pull-left thumb hidden-phone"><img src="../assets/images/avatar-51x51.jpg" alt="Image" /></div>
+							<div class="media-body">
+								<span class="strong">Adrian Demian</span>
+								<span class="muted">contact@mosaicpro.biz</span>
+								<i class="fa fa-envelope"></i>
+								<i class="fa fa-phone"></i> 
+								<i class="fa fa-skype"></i> 
+							</div>
+						</div>
+					</li>
+									</ul>
+			</div>
+			<div class="col-md-8 detailsWrapper">
+				<div class="ajax-loading hide">
+					<i class="fa fa-spinner fa fa-spin fa fa-4x"></i>
+				</div>
+				<div class="innerAll">
+					<div class="title">
+						<div class="row">
+							<div class="col-md-8">
+								<h3 class="text-primary">Adrian Demian</h3>
+								<span class="muted">Senior Designer</span>
+							</div>
+							<div class="col-md-4 text-right">
+								<p class="muted">4 projects <a href=""><i class="fa fa-circle-arrow-right"></i></a></p>
+								<div class="margin-bottom-none progress progress-small progress-inverse count-outside">
+									<div class="count">30%</div>
+									<div class="progress-bar" role="progressbar" aria-valuenow="30" style="width: 30%;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr/>
+					<div class="body">
+						<div class="row">
+							<div class="col-md-4 overflow-hidden">
+								<!-- Profile Photo -->
+								<div><a href="" class="thumb inline-block"><img src="../assets/images/avatar-2-large.jpg" alt="Profile" /></a></div>
+								<div class="separator bottom"></div>
+								<!-- // Profile Photo END -->
+								<ul class="icons-ul separator bottom">
+									<li><i class="fa fa-envelope fa fa-li fa-fw"></i> contac@mosaicpro.biz</li>
+									<li><i class="fa fa-phone fa fa-li fa-fw"></i> 00353 9191238101</li>
+									<li><i class="fa fa-skype fa fa-li fa-fw"></i> mosaicpro</li>
+								</ul>
+							</div>
+							<div class="col-md-8 padding-none">
+								<h5 class="strong">About</h5>
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								<div class="row">
+									<div class="col-md-4 padding-none">
+										<h5 class="strong">Reports</h5>
+										<a href="" class="btn btn-primary btn-small btn-block"><i class="fa fa-download-alt fa-fw"></i> June</a>
+										<a href="" class="btn btn-inverse btn-small btn-block"><i class="fa fa-download-alt fa-fw"></i> May</a>
+										<a href="" class="btn btn-inverse btn-small btn-block"><i class="fa fa-download-alt fa-fw"></i> April</a>
+										<div class="separator bottom"></div>
+									</div>
+
+									<div class="col-md-7 col-md-offset-1 padding-none">
+										<h5 class="strong">Skills</h5>
+										<div class="progress progress-mini count-outside-primary add-outside">
+											<div class="count">100%</div>
+											<div class="progress-bar progress-bar-primary" style="width: 100%;"></div>
+											<div class="add">HTML</div>
+										</div>
+										<div class="progress progress-mini count-outside-primary add-outside">
+											<div class="count">90%</div>
+											<div class="progress-bar progress-bar-primary" style="width: 90%;"></div>
+											<div class="add">CSS</div>
+										</div>
+										<div class="progress progress-mini count-outside-primary add-outside">
+											<div class="count">93%</div>
+											<div class="progress-bar progress-bar-primary" style="width: 93%;"></div>
+											<div class="add">jQuery</div>
+										</div>
+										<div class="progress progress-mini count-outside-primary add-outside">
+											<div class="count">79%</div>
+											<div class="progress-bar progress-bar-primary" style="width: 79%;"></div>
+											<div class="add">PHP</div>
+										</div>
+										<div class="progress progress-mini count-outside add-outside">
+											<div class="count">20%</div>
+											<div class="progress-bar" style="width: 20%;"></div>
+											<div class="add">WP</div>
+										</div>
+
+										<div class="separator bottom"></div>
+									</div>
+								</div>
+								<h5 class="text-uppercase strong text-primary"><i class="fa fa-group text-regular fa-fw"></i> MosaicPro <span class="text-lowercase strong padding-none">Team</span> <span class="text-lowercase padding-none">(2 people)</span></h5>
+								<ul class="team">
+									<li><span class="crt">1</span><span class="strong">Adrian Demian</span><span class="muted">Senior Designer</span></li>
+									<li><span class="crt">2</span><span class="strong">Laza Bogdan</span><span class="muted">Senior Developer</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!-- // Widget END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-7bcd0cc4cd184d89820e8082f3beacce">
+												<pre class="prettyprint">&lt;h2 class=&quot;margin-none separator bottom&quot;&gt;&lt;i class=&quot;fa fa-group text-primary fa-fw&quot;&gt;&lt;/i&gt; Employee Directory&lt;/h2&gt;
+
+&lt;div class=&quot;widget widget-heading-simple widget-body-gray widget-employees&quot;&gt;
+	&lt;div class=&quot;widget-body padding-none&quot;&gt;
+		
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-md-4 listWrapper&quot;&gt;
+				&lt;div class=&quot;innerAll&quot;&gt;
+					&lt;form autocomplete=&quot;off&quot; class=&quot;form-inline&quot;&gt;
+						&lt;div class=&quot;widget-search separator bottom&quot;&gt;
+							&lt;button type=&quot;button&quot; class=&quot;btn btn-default pull-right&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+							&lt;div class=&quot;overflow-hidden&quot;&gt;
+								&lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;Find someone ..&quot;&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;select style=&quot;width: 100%;&quot;&gt;
+			               &lt;optgroup label=&quot;Department&quot;&gt;
+			                   &lt;option value=&quot;design&quot;&gt;Design&lt;/option&gt;
+			                   &lt;option value=&quot;development&quot;&gt;Development&lt;/option&gt;
+			               &lt;/optgroup&gt;
+						&lt;/select&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+				&lt;span class=&quot;results&quot;&gt;1490 Employees Found &lt;i class=&quot;fa fa-circle-arrow-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;ul class=&quot;list unstyled&quot;&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li class=&quot;active&quot;&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+										&lt;li&gt;
+						&lt;div class=&quot;media innerAll&quot;&gt;
+							&lt;div class=&quot;media-object pull-left thumb hidden-phone&quot;&gt;&lt;img src=&quot;../assets/images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+							&lt;div class=&quot;media-body&quot;&gt;
+								&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;
+								&lt;span class=&quot;muted&quot;&gt;contact@mosaicpro.biz&lt;/span&gt;
+								&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+								&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; 
+								&lt;i class=&quot;fa fa-skype&quot;&gt;&lt;/i&gt; 
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+									&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-8 detailsWrapper&quot;&gt;
+				&lt;div class=&quot;ajax-loading hide&quot;&gt;
+					&lt;i class=&quot;fa fa-spinner fa fa-spin fa fa-4x&quot;&gt;&lt;/i&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;innerAll&quot;&gt;
+					&lt;div class=&quot;title&quot;&gt;
+						&lt;div class=&quot;row&quot;&gt;
+							&lt;div class=&quot;col-md-8&quot;&gt;
+								&lt;h3 class=&quot;text-primary&quot;&gt;Adrian Demian&lt;/h3&gt;
+								&lt;span class=&quot;muted&quot;&gt;Senior Designer&lt;/span&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;col-md-4 text-right&quot;&gt;
+								&lt;p class=&quot;muted&quot;&gt;4 projects &lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-circle-arrow-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+								&lt;div class=&quot;margin-bottom-none progress progress-small progress-inverse count-outside&quot;&gt;
+									&lt;div class=&quot;count&quot;&gt;30%&lt;/div&gt;
+									&lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;30&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;hr/&gt;
+					&lt;div class=&quot;body&quot;&gt;
+						&lt;div class=&quot;row&quot;&gt;
+							&lt;div class=&quot;col-md-4 overflow-hidden&quot;&gt;
+								&lt;!-- Profile Photo --&gt;
+								&lt;div&gt;&lt;a href=&quot;&quot; class=&quot;thumb inline-block&quot;&gt;&lt;img src=&quot;../assets/images/avatar-2-large.jpg&quot; alt=&quot;Profile&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+								&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+								&lt;!-- // Profile Photo END --&gt;
+								&lt;ul class=&quot;icons-ul separator bottom&quot;&gt;
+									&lt;li&gt;&lt;i class=&quot;fa fa-envelope fa fa-li fa-fw&quot;&gt;&lt;/i&gt; contac@mosaicpro.biz&lt;/li&gt;
+									&lt;li&gt;&lt;i class=&quot;fa fa-phone fa fa-li fa-fw&quot;&gt;&lt;/i&gt; 00353 9191238101&lt;/li&gt;
+									&lt;li&gt;&lt;i class=&quot;fa fa-skype fa fa-li fa-fw&quot;&gt;&lt;/i&gt; mosaicpro&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;col-md-8 padding-none&quot;&gt;
+								&lt;h5 class=&quot;strong&quot;&gt;About&lt;/h5&gt;
+								&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+								&lt;div class=&quot;row&quot;&gt;
+									&lt;div class=&quot;col-md-4 padding-none&quot;&gt;
+										&lt;h5 class=&quot;strong&quot;&gt;Reports&lt;/h5&gt;
+										&lt;a href=&quot;&quot; class=&quot;btn btn-primary btn-small btn-block&quot;&gt;&lt;i class=&quot;fa fa-download-alt fa-fw&quot;&gt;&lt;/i&gt; June&lt;/a&gt;
+										&lt;a href=&quot;&quot; class=&quot;btn btn-inverse btn-small btn-block&quot;&gt;&lt;i class=&quot;fa fa-download-alt fa-fw&quot;&gt;&lt;/i&gt; May&lt;/a&gt;
+										&lt;a href=&quot;&quot; class=&quot;btn btn-inverse btn-small btn-block&quot;&gt;&lt;i class=&quot;fa fa-download-alt fa-fw&quot;&gt;&lt;/i&gt; April&lt;/a&gt;
+										&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									&lt;/div&gt;
+
+									&lt;div class=&quot;col-md-7 col-md-offset-1 padding-none&quot;&gt;
+										&lt;h5 class=&quot;strong&quot;&gt;Skills&lt;/h5&gt;
+										&lt;div class=&quot;progress progress-mini count-outside-primary add-outside&quot;&gt;
+											&lt;div class=&quot;count&quot;&gt;100%&lt;/div&gt;
+											&lt;div class=&quot;progress-bar progress-bar-primary&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+											&lt;div class=&quot;add&quot;&gt;HTML&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;div class=&quot;progress progress-mini count-outside-primary add-outside&quot;&gt;
+											&lt;div class=&quot;count&quot;&gt;90%&lt;/div&gt;
+											&lt;div class=&quot;progress-bar progress-bar-primary&quot; style=&quot;width: 90%;&quot;&gt;&lt;/div&gt;
+											&lt;div class=&quot;add&quot;&gt;CSS&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;div class=&quot;progress progress-mini count-outside-primary add-outside&quot;&gt;
+											&lt;div class=&quot;count&quot;&gt;93%&lt;/div&gt;
+											&lt;div class=&quot;progress-bar progress-bar-primary&quot; style=&quot;width: 93%;&quot;&gt;&lt;/div&gt;
+											&lt;div class=&quot;add&quot;&gt;jQuery&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;div class=&quot;progress progress-mini count-outside-primary add-outside&quot;&gt;
+											&lt;div class=&quot;count&quot;&gt;79%&lt;/div&gt;
+											&lt;div class=&quot;progress-bar progress-bar-primary&quot; style=&quot;width: 79%;&quot;&gt;&lt;/div&gt;
+											&lt;div class=&quot;add&quot;&gt;PHP&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;div class=&quot;progress progress-mini count-outside add-outside&quot;&gt;
+											&lt;div class=&quot;count&quot;&gt;20%&lt;/div&gt;
+											&lt;div class=&quot;progress-bar&quot; style=&quot;width: 20%;&quot;&gt;&lt;/div&gt;
+											&lt;div class=&quot;add&quot;&gt;WP&lt;/div&gt;
+										&lt;/div&gt;
+
+										&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;h5 class=&quot;text-uppercase strong text-primary&quot;&gt;&lt;i class=&quot;fa fa-group text-regular fa-fw&quot;&gt;&lt;/i&gt; MosaicPro &lt;span class=&quot;text-lowercase strong padding-none&quot;&gt;Team&lt;/span&gt; &lt;span class=&quot;text-lowercase padding-none&quot;&gt;(2 people)&lt;/span&gt;&lt;/h5&gt;
+								&lt;ul class=&quot;team&quot;&gt;
+									&lt;li&gt;&lt;span class=&quot;crt&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;strong&quot;&gt;Adrian Demian&lt;/span&gt;&lt;span class=&quot;muted&quot;&gt;Senior Designer&lt;/span&gt;&lt;/li&gt;
+									&lt;li&gt;&lt;span class=&quot;crt&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;strong&quot;&gt;Laza Bogdan&lt;/span&gt;&lt;span class=&quot;muted&quot;&gt;Senior Developer&lt;/span&gt;&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Widget END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-7bcd0cc4cd184d89820e8082f3beacce">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/employees/assets/less/employees.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/ui/progress-bars/assets/less/progress-bars.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/select2/assets/lib/css/select2.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/select2/assets/custom/less/select2.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-7bcd0cc4cd184d89820e8082f3beacce">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/employees/assets/js/employees.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/select2/assets/lib/js/select2.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/select2/assets/custom/js/select2.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/employees/assets/js/employees.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/select2/assets/lib/js/select2.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/select2/assets/custom/js/select2.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

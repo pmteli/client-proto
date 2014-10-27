@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.online-shop.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.online-shop.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'online-shop'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.online-shop</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-6531af3f0fd51f7f42bbadd4b55844d0" data-toggle="collapse">filter-bar</a></h4>
+							<div class="collapse in" id="view-6531af3f0fd51f7f42bbadd4b55844d0">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-6531af3f0fd51f7f42bbadd4b55844d0" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-6531af3f0fd51f7f42bbadd4b55844d0" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-6531af3f0fd51f7f42bbadd4b55844d0" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-6531af3f0fd51f7f42bbadd4b55844d0" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/filter-bar.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-6531af3f0fd51f7f42bbadd4b55844d0">
+												<!-- Filters -->
+<div class="filter-bar">
+	<form class="form-inline">
+		
+		<!-- From -->
+		<div class="form-group col-md-2 padding-none">
+			<label>From:</label>
+			<div class="input-group">
+				<input type="text" name="from" id="dateRangeFrom" class="form-control" value="08/05/13" />
+				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+			</div>
+		</div>
+		<!-- // From END -->
+		
+		<!-- To -->
+		<div class="form-group col-md-2 padding-none">
+			<label>To:</label>
+			<div class="input-group">
+				<input type="text" name="to" id="dateRangeTo" class="form-control" value="08/18/13" />
+				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+			</div>
+		</div>
+		<!-- // To END -->
+		
+		<!-- Min -->
+		<div class="form-group col-md-2 padding-none">
+			<label>Min:</label>
+			<div class="input-group">
+				<input type="text" name="from" class="form-control" value="100" />
+				<span class="input-group-addon"><i class="fa fa-euro"></i></span>
+			</div>
+		</div>
+		<!-- // Min END -->
+		
+		<!-- Max -->
+		<div class="form-group col-md-2 padding-none">
+			<label>Max:</label>
+			<div class="input-group">
+				<input type="text" name="from" class="form-control" value="500" />
+				<span class="input-group-addon"><i class="fa fa-euro"></i></span>
+			</div>
+		</div>
+		<!-- // Max END -->
+		
+		<!-- Select -->
+		<div class="form-group col-md-3 padding-none">
+			<label class="label-control">Select:</label>
+			<div class="col-md-8 padding-none">
+				<select name="from" class="form-control">
+					<option>Some option</option>
+					<option>Other option</option>
+					<option>Some other option</option>
+				</select>
+			</div>
+		</div>
+		<!-- // Select END -->
+		
+		<div class="clearfix"></div>
+	</form>
+</div>
+<!-- // Filters END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-6531af3f0fd51f7f42bbadd4b55844d0">
+												<pre class="prettyprint">&lt;!-- Filters --&gt;
+&lt;div class=&quot;filter-bar&quot;&gt;
+	&lt;form class=&quot;form-inline&quot;&gt;
+		
+		&lt;!-- From --&gt;
+		&lt;div class=&quot;form-group col-md-2 padding-none&quot;&gt;
+			&lt;label&gt;From:&lt;/label&gt;
+			&lt;div class=&quot;input-group&quot;&gt;
+				&lt;input type=&quot;text&quot; name=&quot;from&quot; id=&quot;dateRangeFrom&quot; class=&quot;form-control&quot; value=&quot;08/05/13&quot; /&gt;
+				&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // From END --&gt;
+		
+		&lt;!-- To --&gt;
+		&lt;div class=&quot;form-group col-md-2 padding-none&quot;&gt;
+			&lt;label&gt;To:&lt;/label&gt;
+			&lt;div class=&quot;input-group&quot;&gt;
+				&lt;input type=&quot;text&quot; name=&quot;to&quot; id=&quot;dateRangeTo&quot; class=&quot;form-control&quot; value=&quot;08/18/13&quot; /&gt;
+				&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // To END --&gt;
+		
+		&lt;!-- Min --&gt;
+		&lt;div class=&quot;form-group col-md-2 padding-none&quot;&gt;
+			&lt;label&gt;Min:&lt;/label&gt;
+			&lt;div class=&quot;input-group&quot;&gt;
+				&lt;input type=&quot;text&quot; name=&quot;from&quot; class=&quot;form-control&quot; value=&quot;100&quot; /&gt;
+				&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-euro&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Min END --&gt;
+		
+		&lt;!-- Max --&gt;
+		&lt;div class=&quot;form-group col-md-2 padding-none&quot;&gt;
+			&lt;label&gt;Max:&lt;/label&gt;
+			&lt;div class=&quot;input-group&quot;&gt;
+				&lt;input type=&quot;text&quot; name=&quot;from&quot; class=&quot;form-control&quot; value=&quot;500&quot; /&gt;
+				&lt;span class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-euro&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Max END --&gt;
+		
+		&lt;!-- Select --&gt;
+		&lt;div class=&quot;form-group col-md-3 padding-none&quot;&gt;
+			&lt;label class=&quot;label-control&quot;&gt;Select:&lt;/label&gt;
+			&lt;div class=&quot;col-md-8 padding-none&quot;&gt;
+				&lt;select name=&quot;from&quot; class=&quot;form-control&quot;&gt;
+					&lt;option&gt;Some option&lt;/option&gt;
+					&lt;option&gt;Other option&lt;/option&gt;
+					&lt;option&gt;Some other option&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Select END --&gt;
+		
+		&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+&lt;!-- // Filters END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-6531af3f0fd51f7f42bbadd4b55844d0">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/online-shop/assets/less/filter-bar.less&quot;;
+@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-6531af3f0fd51f7f42bbadd4b55844d0">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-14568a9e7d2f14deeb554954b08b52b7" data-toggle="collapse">product-add</a></h4>
+							<div class="collapse in" id="view-14568a9e7d2f14deeb554954b08b52b7">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-14568a9e7d2f14deeb554954b08b52b7" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-14568a9e7d2f14deeb554954b08b52b7" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-14568a9e7d2f14deeb554954b08b52b7" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-14568a9e7d2f14deeb554954b08b52b7" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/product-add.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-14568a9e7d2f14deeb554954b08b52b7">
+												<!-- Widget -->
+<div class="widget widget-tabs widget-tabs-gray">
+
+	<!-- Widget heading -->
+	<div class="widget-head">
+		<ul>
+			<li class="active"><a href="#productDescriptionTab" data-toggle="tab" class="glyphicons font"><i></i>Description</a></li>
+			<li><a href="#productPhotosTab" data-toggle="tab" class="glyphicons picture"><i></i>Photos</a></li>
+			<li><a href="#productAttributesTab" data-toggle="tab" class="glyphicons adjust_alt"><i></i>Custom Attributes</a></li>
+			<li><a href="#productPriceTab" data-toggle="tab" class="glyphicons table"><i></i>Qty & Price</a></li>
+			<li><a href="#productSeoTab" data-toggle="tab" class="glyphicons podium"><i></i>SEO</a></li>
+		</ul>
+	</div>
+	<!-- // Widget heading END -->
+	
+	<div class="widget-body">
+		<div class="tab-content">
+		
+			<!-- Description -->
+			<div class="tab-pane active" id="productDescriptionTab">
+			
+				<!-- Row -->
+				<div class="row">
+				
+					<!-- Column -->
+					<div class="col-md-3">
+						<strong>Product title</strong>
+						<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+					<!-- // Column END -->
+					
+					<!-- Column -->
+					<div class="col-md-9">
+						<label for="inputTitle">Title</label>
+						<input type="text" id="inputTitle" class="form-control" value="" placeholder="Enter product title ..." />
+						<div class="separator"></div>
+					</div>
+					<!-- // Column END -->
+					
+				</div>
+				<!-- // Row END -->
+				
+				<hr class="separator bottom" />
+				
+				<!-- Row -->
+				<div class="row">
+				
+					<!-- Column -->
+					<div class="col-md-3">
+						<strong>Description</strong>
+						<p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+					<!-- // Column END -->
+					
+					<!-- Column -->
+					<div class="col-md-9">
+						<label for="textDescription">Description</label>
+						<textarea id="textDescription" class="wysihtml5 form-control" rows="5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</textarea>
+					</div>
+					<!-- // Column END -->
+					
+				</div>
+				<!-- // Row END -->
+				
+			</div>
+			<!-- // Description END -->
+			
+			<!-- Photos -->
+			<div class="tab-pane" id="productPhotosTab">
+			
+				<h5 class="strong text-uppercase margin-none">Photos</h5>
+				<div class="separator bottom"></div>
+				
+				<!-- Gallery Layout -->
+				<div class="gallery gallery-2">
+					<ul class="row" data-toggle="modal-gallery" data-target="#modal-gallery" id="gallery-4" data-delegate="#gallery-4">
+												<li class="col-md-2 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/8.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/8.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/7.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/7.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/6.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/6.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/5.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/5.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2 hidden-phone"><a class="thumb" href="../assets/images/gallery-2/4.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/4.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2"><a class="thumb" href="../assets/images/gallery-2/3.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/3.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2"><a class="thumb" href="../assets/images/gallery-2/2.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/2.jpg" alt="photo" class="img-responsive" /></a></li>
+												<li class="col-md-2"><a class="thumb" href="../assets/images/gallery-2/1.jpg" data-gallery="gallery"><img src="../assets/images/gallery-2/1.jpg" alt="photo" class="img-responsive" /></a></li>
+											</ul>
+				</div>
+				<!-- // Gallery Layout END -->
+			
+			</div>
+			<!-- // Photos END -->
+			
+			<!-- Attributes -->
+			<div class="tab-pane" id="productAttributesTab">
+				<h5 class="strong text-uppercase">Custom attributes</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus leo tortor, sit amet sodales mauris iaculis ac. Fusce eu euismod orci. Nam congue magna at urna varius, nec viverra risus facilisis. In eu ullamcorper enim. Suspendisse sagittis dolor quis est porttitor fringilla. Suspendisse venenatis, diam vitae tempor lacinia, metus risus tincidunt massa, a malesuada augue massa eu augue. Praesent convallis et metus vulputate euismod. Aenean ultricies dolor porta turpis bibendum, non pretium metus placerat. Donec congue tincidunt pharetra. Aliquam sed orci lectus. Mauris iaculis leo turpis. Duis auctor libero mi, non convallis lectus pellentesque in. Donec rutrum neque bibendum nulla vulputate condimentum. Sed dictum ut velit nec feugiat. Nullam aliquam enim at commodo lobortis.</p>
+			</div>
+			<!-- // Attributes END -->
+			
+			<!-- Price -->
+			<div class="tab-pane" id="productPriceTab">
+				<h5 class="strong text-uppercase">Quantity &amp; Price</h5>
+				<p>Donec sit amet lacus enim. Mauris vehicula vulputate erat, eget sagittis ipsum hendrerit id. Maecenas tristique sodales tellus vel euismod. Ut odio dolor, convallis vel auctor non, congue quis augue. Cras a tincidunt mauris. Mauris iaculis ullamcorper sapien, id vestibulum lectus dictum quis. Quisque et nunc sit amet eros tristique pellentesque ac sed purus. Fusce vel nunc varius, vestibulum ligula venenatis, facilisis ante.</p>
+			</div>
+			<!-- // Price END -->
+			
+			<!-- SEO -->
+			<div class="tab-pane" id="productSeoTab">
+				<h5 class="strong text-uppercase">Search Engine Optimization</h5>
+				<p>Aenean sollicitudin et nisi ac faucibus. Ut lacinia rhoncus posuere. Cras consectetur tincidunt consectetur. Nam egestas augue sed leo tincidunt imperdiet. Etiam eu convallis magna, sed hendrerit sem. Sed vulputate, tortor vel ullamcorper aliquet, ante nibh iaculis neque, ullamcorper dictum felis metus nec quam. Pellentesque sollicitudin turpis a mi volutpat, eget sagittis urna vehicula. Nunc vel ultrices elit. Proin eros justo, hendrerit a metus non, convallis ullamcorper magna.</p>
+			</div>
+			<!-- // SEO END -->
+			
+		</div>
+	</div>
+</div>
+<!-- // Widget END -->
+
+<!-- Bottom buttons -->
+<div class="heading-buttons">
+	<div class="buttons pull-right" style="margin: 0;">
+		<a href="" class="btn btn-default btn-icon glyphicons share"><i></i> Preview</a>
+		<a href="" class="btn btn-primary btn-icon glyphicons ok_2"><i></i> Save</a>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!-- // Bottom buttons END -->
+
+
+
+
+											</div>
+											<div class="tab-pane" id="source-14568a9e7d2f14deeb554954b08b52b7">
+												<pre class="prettyprint">&lt;!-- Widget --&gt;
+&lt;div class=&quot;widget widget-tabs widget-tabs-gray&quot;&gt;
+
+	&lt;!-- Widget heading --&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#productDescriptionTab&quot; data-toggle=&quot;tab&quot; class=&quot;glyphicons font&quot;&gt;&lt;i&gt;&lt;/i&gt;Description&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#productPhotosTab&quot; data-toggle=&quot;tab&quot; class=&quot;glyphicons picture&quot;&gt;&lt;i&gt;&lt;/i&gt;Photos&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#productAttributesTab&quot; data-toggle=&quot;tab&quot; class=&quot;glyphicons adjust_alt&quot;&gt;&lt;i&gt;&lt;/i&gt;Custom Attributes&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#productPriceTab&quot; data-toggle=&quot;tab&quot; class=&quot;glyphicons table&quot;&gt;&lt;i&gt;&lt;/i&gt;Qty &amp; Price&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#productSeoTab&quot; data-toggle=&quot;tab&quot; class=&quot;glyphicons podium&quot;&gt;&lt;i&gt;&lt;/i&gt;SEO&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;!-- // Widget heading END --&gt;
+	
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;div class=&quot;tab-content&quot;&gt;
+		
+			&lt;!-- Description --&gt;
+			&lt;div class=&quot;tab-pane active&quot; id=&quot;productDescriptionTab&quot;&gt;
+			
+				&lt;!-- Row --&gt;
+				&lt;div class=&quot;row&quot;&gt;
+				
+					&lt;!-- Column --&gt;
+					&lt;div class=&quot;col-md-3&quot;&gt;
+						&lt;strong&gt;Product title&lt;/strong&gt;
+						&lt;p class=&quot;muted&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;!-- // Column END --&gt;
+					
+					&lt;!-- Column --&gt;
+					&lt;div class=&quot;col-md-9&quot;&gt;
+						&lt;label for=&quot;inputTitle&quot;&gt;Title&lt;/label&gt;
+						&lt;input type=&quot;text&quot; id=&quot;inputTitle&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Enter product title ...&quot; /&gt;
+						&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Column END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Row END --&gt;
+				
+				&lt;hr class=&quot;separator bottom&quot; /&gt;
+				
+				&lt;!-- Row --&gt;
+				&lt;div class=&quot;row&quot;&gt;
+				
+					&lt;!-- Column --&gt;
+					&lt;div class=&quot;col-md-3&quot;&gt;
+						&lt;strong&gt;Description&lt;/strong&gt;
+						&lt;p class=&quot;muted&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;!-- // Column END --&gt;
+					
+					&lt;!-- Column --&gt;
+					&lt;div class=&quot;col-md-9&quot;&gt;
+						&lt;label for=&quot;textDescription&quot;&gt;Description&lt;/label&gt;
+						&lt;textarea id=&quot;textDescription&quot; class=&quot;wysihtml5 form-control&quot; rows=&quot;5&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/textarea&gt;
+					&lt;/div&gt;
+					&lt;!-- // Column END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Row END --&gt;
+				
+			&lt;/div&gt;
+			&lt;!-- // Description END --&gt;
+			
+			&lt;!-- Photos --&gt;
+			&lt;div class=&quot;tab-pane&quot; id=&quot;productPhotosTab&quot;&gt;
+			
+				&lt;h5 class=&quot;strong text-uppercase margin-none&quot;&gt;Photos&lt;/h5&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				
+				&lt;!-- Gallery Layout --&gt;
+				&lt;div class=&quot;gallery gallery-2&quot;&gt;
+					&lt;ul class=&quot;row&quot; data-toggle=&quot;modal-gallery&quot; data-target=&quot;#modal-gallery&quot; id=&quot;gallery-4&quot; data-delegate=&quot;#gallery-4&quot;&gt;
+												&lt;li class=&quot;col-md-2 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/8.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/8.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/7.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/7.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/6.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/6.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/5.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/5.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2 hidden-phone&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/4.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/4.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/3.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/3.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/2.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/2.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+												&lt;li class=&quot;col-md-2&quot;&gt;&lt;a class=&quot;thumb&quot; href=&quot;../assets/images/gallery-2/1.jpg&quot; data-gallery=&quot;gallery&quot;&gt;&lt;img src=&quot;../assets/images/gallery-2/1.jpg&quot; alt=&quot;photo&quot; class=&quot;img-responsive&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+											&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- // Gallery Layout END --&gt;
+			
+			&lt;/div&gt;
+			&lt;!-- // Photos END --&gt;
+			
+			&lt;!-- Attributes --&gt;
+			&lt;div class=&quot;tab-pane&quot; id=&quot;productAttributesTab&quot;&gt;
+				&lt;h5 class=&quot;strong text-uppercase&quot;&gt;Custom attributes&lt;/h5&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus leo tortor, sit amet sodales mauris iaculis ac. Fusce eu euismod orci. Nam congue magna at urna varius, nec viverra risus facilisis. In eu ullamcorper enim. Suspendisse sagittis dolor quis est porttitor fringilla. Suspendisse venenatis, diam vitae tempor lacinia, metus risus tincidunt massa, a malesuada augue massa eu augue. Praesent convallis et metus vulputate euismod. Aenean ultricies dolor porta turpis bibendum, non pretium metus placerat. Donec congue tincidunt pharetra. Aliquam sed orci lectus. Mauris iaculis leo turpis. Duis auctor libero mi, non convallis lectus pellentesque in. Donec rutrum neque bibendum nulla vulputate condimentum. Sed dictum ut velit nec feugiat. Nullam aliquam enim at commodo lobortis.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;!-- // Attributes END --&gt;
+			
+			&lt;!-- Price --&gt;
+			&lt;div class=&quot;tab-pane&quot; id=&quot;productPriceTab&quot;&gt;
+				&lt;h5 class=&quot;strong text-uppercase&quot;&gt;Quantity &amp;amp; Price&lt;/h5&gt;
+				&lt;p&gt;Donec sit amet lacus enim. Mauris vehicula vulputate erat, eget sagittis ipsum hendrerit id. Maecenas tristique sodales tellus vel euismod. Ut odio dolor, convallis vel auctor non, congue quis augue. Cras a tincidunt mauris. Mauris iaculis ullamcorper sapien, id vestibulum lectus dictum quis. Quisque et nunc sit amet eros tristique pellentesque ac sed purus. Fusce vel nunc varius, vestibulum ligula venenatis, facilisis ante.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;!-- // Price END --&gt;
+			
+			&lt;!-- SEO --&gt;
+			&lt;div class=&quot;tab-pane&quot; id=&quot;productSeoTab&quot;&gt;
+				&lt;h5 class=&quot;strong text-uppercase&quot;&gt;Search Engine Optimization&lt;/h5&gt;
+				&lt;p&gt;Aenean sollicitudin et nisi ac faucibus. Ut lacinia rhoncus posuere. Cras consectetur tincidunt consectetur. Nam egestas augue sed leo tincidunt imperdiet. Etiam eu convallis magna, sed hendrerit sem. Sed vulputate, tortor vel ullamcorper aliquet, ante nibh iaculis neque, ullamcorper dictum felis metus nec quam. Pellentesque sollicitudin turpis a mi volutpat, eget sagittis urna vehicula. Nunc vel ultrices elit. Proin eros justo, hendrerit a metus non, convallis ullamcorper magna.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;!-- // SEO END --&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Widget END --&gt;
+
+&lt;!-- Bottom buttons --&gt;
+&lt;div class=&quot;heading-buttons&quot;&gt;
+	&lt;div class=&quot;buttons pull-right&quot; style=&quot;margin: 0;&quot;&gt;
+		&lt;a href=&quot;&quot; class=&quot;btn btn-default btn-icon glyphicons share&quot;&gt;&lt;i&gt;&lt;/i&gt; Preview&lt;/a&gt;
+		&lt;a href=&quot;&quot; class=&quot;btn btn-primary btn-icon glyphicons ok_2&quot;&gt;&lt;i&gt;&lt;/i&gt; Save&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Bottom buttons END --&gt;
+
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-14568a9e7d2f14deeb554954b08b52b7">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/forms/editors/wysihtml5/assets/lib/css/bootstrap-wysihtml5-0.0.2.css&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/modules/admin/tabs/assets/tabs.less&quot;;
+@import &quot;assets/components/core/less/gallery.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-14568a9e7d2f14deeb554954b08b52b7">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-556e5c13514bb0fa2fb4f4eef467523d" data-toggle="collapse">product-list</a></h4>
+							<div class="collapse in" id="view-556e5c13514bb0fa2fb4f4eef467523d">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-556e5c13514bb0fa2fb4f4eef467523d" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-556e5c13514bb0fa2fb4f4eef467523d" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-556e5c13514bb0fa2fb4f4eef467523d" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-556e5c13514bb0fa2fb4f4eef467523d" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/product-list.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-556e5c13514bb0fa2fb4f4eef467523d">
+												<!-- Total products & Sort by options -->
+<div class="form-inline separator bottom small">
+	Total products: 26
+	<span class="pull-right">
+		<label class="strong">Sort by:</label>
+		<select class="selectpicker" data-style="btn-default btn-xs">
+			<option>Option</option>
+			<option>Option</option>
+			<option>Option</option>
+		</select>
+	</span>
+</div>
+<!-- // Total products & Sort by options END -->
+
+
+
+<!-- Products table -->
+<table class="table table-bordered table-condensed table-striped table-primary table-vertical-center checkboxs js-table-sortable">
+	<thead>
+		<tr>
+			<th style="width: 1%;" class="uniformjs"><input type="checkbox" /></th>
+			<th style="width: 1%;" class="center">No.</th>
+			<th>Title</th>
+			<th style="width: 1%;" class="center">Drag</th>
+			<th class="center">Preview</th>
+			<th class="center">Stock</th>
+			<th class="center">Price</th>
+			<th class="center" style="width: 100px;">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+						<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">1</td>
+			<td class="important">Lorem Amet Dolor</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 3 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="5" />
+			</td>
+			<td class="center">&euro;20</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable selected">
+			<td class="center uniformjs"><input type="checkbox" checked="checked" /></td>
+			<td class="center">2</td>
+			<td class="important">Lorem Amet Dolor</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="4" />
+			</td>
+			<td class="center">&euro;20</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable selected">
+			<td class="center uniformjs"><input type="checkbox" checked="checked" /></td>
+			<td class="center">3</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 3 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="7" />
+			</td>
+			<td class="center">&euro;47</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">4</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 2 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="2" />
+			</td>
+			<td class="center">&euro;32</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">5</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="2" />
+			</td>
+			<td class="center">&euro;42</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">6</td>
+			<td class="important">Lorem Amet Dolor</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="7" />
+			</td>
+			<td class="center">&euro;28</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">7</td>
+			<td class="important">Lorem Dolor Ipsum</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="1" />
+			</td>
+			<td class="center">&euro;11</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">8</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="1" />
+			</td>
+			<td class="center">&euro;25</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">9</td>
+			<td class="important">Lorem Amet Dolor</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 3 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="4" />
+			</td>
+			<td class="center">&euro;38</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+				<tr class="selectable">
+			<td class="center uniformjs"><input type="checkbox" /></td>
+			<td class="center">10</td>
+			<td class="important">Lorem Ipsum Sit</td>
+			<td class="center js-sortable-handle"><span class="fa fa-arrows move"></span></td>
+			<td class="center"><span class="fa fa-fw fa-picture-o"></span> 1 photos</td>
+			<td class="text-center">
+				<input type="text" class="form-control" style="width: 50px; margin: 0 auto;" value="9" />
+			</td>
+			<td class="center">&euro;15</td>
+			<td class="center">
+				<a href="product_edit.html?lang=en" class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+				<a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+			</tbody>
+</table>
+<!-- // Products table END -->
+
+<!-- Options -->
+<div class="">
+
+	<!-- With selected actions -->
+	<div class="pull-left checkboxs_actions" style="display: none;">
+		<label>With selected:
+		<select class="selectpicker margin-none dropup" data-style="btn-default btn-xs">
+			<option>Action</option>
+			<option>Action</option>
+			<option>Action</option>
+		</select>
+		</label>
+	</div>
+	<!-- // With selected actions END -->
+	
+	<div class="pull-right"><ul class="pagination margin-none">
+	<li class="disabled"><a href="#">&laquo;</a></li>
+	<li class="active"><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+
+	<div class="clearfix"></div>
+	<!-- // Pagination END -->
+	
+</div>
+<!-- // Options END -->
+
+
+
+											</div>
+											<div class="tab-pane" id="source-556e5c13514bb0fa2fb4f4eef467523d">
+												<pre class="prettyprint">&lt;!-- Total products &amp; Sort by options --&gt;
+&lt;div class=&quot;form-inline separator bottom small&quot;&gt;
+	Total products: 26
+	&lt;span class=&quot;pull-right&quot;&gt;
+		&lt;label class=&quot;strong&quot;&gt;Sort by:&lt;/label&gt;
+		&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-default btn-xs&quot;&gt;
+			&lt;option&gt;Option&lt;/option&gt;
+			&lt;option&gt;Option&lt;/option&gt;
+			&lt;option&gt;Option&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- // Total products &amp; Sort by options END --&gt;
+
+
+
+&lt;!-- Products table --&gt;
+&lt;table class=&quot;table table-bordered table-condensed table-striped table-primary table-vertical-center checkboxs js-table-sortable&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th style=&quot;width: 1%;&quot; class=&quot;uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/th&gt;
+			&lt;th style=&quot;width: 1%;&quot; class=&quot;center&quot;&gt;No.&lt;/th&gt;
+			&lt;th&gt;Title&lt;/th&gt;
+			&lt;th style=&quot;width: 1%;&quot; class=&quot;center&quot;&gt;Drag&lt;/th&gt;
+			&lt;th class=&quot;center&quot;&gt;Preview&lt;/th&gt;
+			&lt;th class=&quot;center&quot;&gt;Stock&lt;/th&gt;
+			&lt;th class=&quot;center&quot;&gt;Price&lt;/th&gt;
+			&lt;th class=&quot;center&quot; style=&quot;width: 100px;&quot;&gt;Actions&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+						&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;1&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Amet Dolor&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 3 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;5&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;20&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable selected&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;2&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Amet Dolor&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 1 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;4&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;20&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable selected&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;3&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Ipsum Sit&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 3 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;7&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;47&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;4&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Dolor Ipsum&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 2 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;2&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;32&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;5&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Dolor Ipsum&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 1 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;2&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;42&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;6&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Amet Dolor&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 1 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;7&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;28&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;7&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Dolor Ipsum&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 1 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;1&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;11&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;8&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Ipsum Sit&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 1 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;1&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;25&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;9&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Amet Dolor&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 3 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;4&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;38&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;selectable&quot;&gt;
+			&lt;td class=&quot;center uniformjs&quot;&gt;&lt;input type=&quot;checkbox&quot; /&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;10&lt;/td&gt;
+			&lt;td class=&quot;important&quot;&gt;Lorem Ipsum Sit&lt;/td&gt;
+			&lt;td class=&quot;center js-sortable-handle&quot;&gt;&lt;span class=&quot;fa fa-arrows move&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;fa fa-fw fa-picture-o&quot;&gt;&lt;/span&gt; 1 photos&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width: 50px; margin: 0 auto;&quot; value=&quot;9&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&amp;euro;15&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;a href=&quot;product_edit.html?lang=en&quot; class=&quot;btn btn-sm btn-success&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+			&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- // Products table END --&gt;
+
+&lt;!-- Options --&gt;
+&lt;div class=&quot;&quot;&gt;
+
+	&lt;!-- With selected actions --&gt;
+	&lt;div class=&quot;pull-left checkboxs_actions&quot; style=&quot;display: none;&quot;&gt;
+		&lt;label&gt;With selected:
+		&lt;select class=&quot;selectpicker margin-none dropup&quot; data-style=&quot;btn-default btn-xs&quot;&gt;
+			&lt;option&gt;Action&lt;/option&gt;
+			&lt;option&gt;Action&lt;/option&gt;
+			&lt;option&gt;Action&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;!-- // With selected actions END --&gt;
+	
+	&lt;div class=&quot;pull-right&quot;&gt;&lt;ul class=&quot;pagination margin-none&quot;&gt;
+	&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+	&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;!-- // Pagination END --&gt;
+	
+&lt;/div&gt;
+&lt;!-- // Options END --&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-556e5c13514bb0fa2fb4f4eef467523d">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/ui/pagination/pagination-bootstrap/assets/pagination.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/elements/bootstrap-select/assets/lib/css/bootstrap-select.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/elements/bootstrap-select/assets/custom/less/bootstrap-select.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/uniform/assets/lib/css/uniform.default.css&quot;;
+@import &quot;assets/components/modules/admin/forms/elements/uniform/assets/custom/less/uniformjs.less&quot;;
+@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-556e5c13514bb0fa2fb4f4eef467523d">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/tables/classic/assets/js/tables-classic.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-5125fbdd4e87ef7d3846eab849f43488" data-toggle="collapse">shop-alerts</a></h4>
+							<div class="collapse in" id="view-5125fbdd4e87ef7d3846eab849f43488">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-5125fbdd4e87ef7d3846eab849f43488" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-5125fbdd4e87ef7d3846eab849f43488" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-5125fbdd4e87ef7d3846eab849f43488" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-5125fbdd4e87ef7d3846eab849f43488" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/shop-alerts.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-5125fbdd4e87ef7d3846eab849f43488">
+												<div class="row">
+	<!-- Row -->
+	
+	
+		<!-- Column -->
+		<div class="col-md-4">
+		
+			<!-- Widget -->
+			<div class="widget widget-heading-simple widget-body-gray">
+				
+				<!-- Widget heading -->
+				<div class="widget-head">
+					<h4 class="heading">Last order</h4>
+					<a href="" class="details pull-right">view all</a>
+				</div>
+				<!-- // Widget heading END -->
+				
+				<div class="widget-body">
+					<ul class="unstyled">
+						<li>
+							<div class="media">
+								<a class="pull-left thumb"><img data-src="holder.js/40x40/dark" class="media-object img-responsive" alt="40x40"></a>
+								<div class="media-body">
+									<p class="margin-none text-uppercase">10 items</p>
+									<p><strong>&euro;5,900</strong></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // Widget END -->
+			
+		</div>
+		<!-- // Column END -->
+		
+		<!-- Column -->
+		<div class="col-md-4">
+		
+			<!-- Widget -->
+			<div class="widget widget-heading-simple widget-body-gray">
+			
+				<!-- Widget heading -->
+				<div class="widget-head">
+					<h4 class="heading">Best seller</h4>
+					<a href="" class="details pull-right">view all</a>
+				</div>
+				<!-- // Widget heading END -->
+				
+				<div class="widget-body">
+					<ul class="unstyled">
+						<li>
+							<div class="media">
+								<a class="pull-left thumb"><img data-src="holder.js/40x40/dark" class="media-object img-responsive" alt="40x40"></a>
+								<div class="media-body">
+									<p class="margin-none">Product name</p>
+									<p><strong>&euro;2,900</strong></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // Widget END -->
+			
+		</div>
+		<!-- // Column END -->
+		
+		<!-- Column -->
+		<div class="col-md-4">
+		
+			<!-- Widget -->
+			<div class="widget widget-heading-simple widget-body-gray">
+			
+				<!-- Widget heading -->
+				<div class="widget-head">
+					<h4 class="heading">Promotion</h4>
+					<a href="" class="details pull-right">view all</a>
+				</div>
+				<!-- // Widget heading END -->
+				
+				<div class="widget-body">
+					<ul class="unstyled">
+						<li>
+							<div class="media">
+								<a class="pull-left thumb"><img data-src="holder.js/40x40/dark" class="media-object img-responsive" alt="40x40"></a>
+								<div class="media-body">
+									<p class="margin-none">Product name</p>
+									<p><strong>&euro;1,800</strong></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // Widget END -->
+			
+		</div>
+		<!-- // Column END -->
+		
+	
+	<!-- // Row END -->
+</div>
+
+
+
+											</div>
+											<div class="tab-pane" id="source-5125fbdd4e87ef7d3846eab849f43488">
+												<pre class="prettyprint">&lt;div class=&quot;row&quot;&gt;
+	&lt;!-- Row --&gt;
+	
+	
+		&lt;!-- Column --&gt;
+		&lt;div class=&quot;col-md-4&quot;&gt;
+		
+			&lt;!-- Widget --&gt;
+			&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot;&gt;
+				
+				&lt;!-- Widget heading --&gt;
+				&lt;div class=&quot;widget-head&quot;&gt;
+					&lt;h4 class=&quot;heading&quot;&gt;Last order&lt;/h4&gt;
+					&lt;a href=&quot;&quot; class=&quot;details pull-right&quot;&gt;view all&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- // Widget heading END --&gt;
+				
+				&lt;div class=&quot;widget-body&quot;&gt;
+					&lt;ul class=&quot;unstyled&quot;&gt;
+						&lt;li&gt;
+							&lt;div class=&quot;media&quot;&gt;
+								&lt;a class=&quot;pull-left thumb&quot;&gt;&lt;img data-src=&quot;holder.js/40x40/dark&quot; class=&quot;media-object img-responsive&quot; alt=&quot;40x40&quot;&gt;&lt;/a&gt;
+								&lt;div class=&quot;media-body&quot;&gt;
+									&lt;p class=&quot;margin-none text-uppercase&quot;&gt;10 items&lt;/p&gt;
+									&lt;p&gt;&lt;strong&gt;&amp;euro;5,900&lt;/strong&gt;&lt;/p&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- // Widget END --&gt;
+			
+		&lt;/div&gt;
+		&lt;!-- // Column END --&gt;
+		
+		&lt;!-- Column --&gt;
+		&lt;div class=&quot;col-md-4&quot;&gt;
+		
+			&lt;!-- Widget --&gt;
+			&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot;&gt;
+			
+				&lt;!-- Widget heading --&gt;
+				&lt;div class=&quot;widget-head&quot;&gt;
+					&lt;h4 class=&quot;heading&quot;&gt;Best seller&lt;/h4&gt;
+					&lt;a href=&quot;&quot; class=&quot;details pull-right&quot;&gt;view all&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- // Widget heading END --&gt;
+				
+				&lt;div class=&quot;widget-body&quot;&gt;
+					&lt;ul class=&quot;unstyled&quot;&gt;
+						&lt;li&gt;
+							&lt;div class=&quot;media&quot;&gt;
+								&lt;a class=&quot;pull-left thumb&quot;&gt;&lt;img data-src=&quot;holder.js/40x40/dark&quot; class=&quot;media-object img-responsive&quot; alt=&quot;40x40&quot;&gt;&lt;/a&gt;
+								&lt;div class=&quot;media-body&quot;&gt;
+									&lt;p class=&quot;margin-none&quot;&gt;Product name&lt;/p&gt;
+									&lt;p&gt;&lt;strong&gt;&amp;euro;2,900&lt;/strong&gt;&lt;/p&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- // Widget END --&gt;
+			
+		&lt;/div&gt;
+		&lt;!-- // Column END --&gt;
+		
+		&lt;!-- Column --&gt;
+		&lt;div class=&quot;col-md-4&quot;&gt;
+		
+			&lt;!-- Widget --&gt;
+			&lt;div class=&quot;widget widget-heading-simple widget-body-gray&quot;&gt;
+			
+				&lt;!-- Widget heading --&gt;
+				&lt;div class=&quot;widget-head&quot;&gt;
+					&lt;h4 class=&quot;heading&quot;&gt;Promotion&lt;/h4&gt;
+					&lt;a href=&quot;&quot; class=&quot;details pull-right&quot;&gt;view all&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- // Widget heading END --&gt;
+				
+				&lt;div class=&quot;widget-body&quot;&gt;
+					&lt;ul class=&quot;unstyled&quot;&gt;
+						&lt;li&gt;
+							&lt;div class=&quot;media&quot;&gt;
+								&lt;a class=&quot;pull-left thumb&quot;&gt;&lt;img data-src=&quot;holder.js/40x40/dark&quot; class=&quot;media-object img-responsive&quot; alt=&quot;40x40&quot;&gt;&lt;/a&gt;
+								&lt;div class=&quot;media-body&quot;&gt;
+									&lt;p class=&quot;margin-none&quot;&gt;Product name&lt;/p&gt;
+									&lt;p&gt;&lt;strong&gt;&amp;euro;1,800&lt;/strong&gt;&lt;/p&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- // Widget END --&gt;
+			
+		&lt;/div&gt;
+		&lt;!-- // Column END --&gt;
+		
+	
+	&lt;!-- // Row END --&gt;
+&lt;/div&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-5125fbdd4e87ef7d3846eab849f43488">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/core/less/gallery.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-5125fbdd4e87ef7d3846eab849f43488">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/plugins/holder/holder.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/wysihtml5-0.3.0_rc2.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/lib/js/bootstrap-wysihtml5-0.0.2.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/editors/wysihtml5/assets/custom/wysihtml5.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/uniform/assets/lib/js/jquery.uniform.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/uniform/assets/custom/js/uniform.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/tables/classic/assets/js/tables-classic.init.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

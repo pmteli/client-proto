@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buttons example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.buttons.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.buttons.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">buttons example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>buttons component</strong></p>
+			</div>
+<!-- Buttons -->
+<div class="widget widget-heading-simple widget-body-white widget-body-simple">
+	<div class="widget-head"><h4 class="heading glyphicons show_thumbnails"><i></i>Buttons</h4></div>
+	<div class="widget-body">
+		
+		<table class="table table-responsive  table-vertical-center" id="demo_buttons">
+			<thead>
+				<tr>
+					<th class="center">Regular Buttons</th>
+					<th class="center">Buttons + Icons</th>
+					<th class="center">Buttons + Dropdown</th>
+					<th style="width: 35%" class="center">Double Buttons</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-default">Default</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-default btn-icon glyphicons home"><i></i>Default</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								Dropdown Default
+							    <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-icon-stacked btn-block btn-default glyphicons glyphicons-social facebook"><i></i><span>Join using your</span><span class="strong">Facebook Account</span></span>
+					</td>
+				</tr>	
+				<tr>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-primary">Primary</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-primary btn-icon glyphicons home"><i></i>Primary</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+								Dropdown Primary
+							    <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-icon-stacked btn-block btn-primary glyphicons glyphicons-social facebook"><i></i><span>Join using your</span><span class="strong">Facebook Account</span></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-warning">Warning</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-warning btn-icon glyphicons home"><i></i>Warning</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<div class="btn-group">
+							<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+								Dropdown Warning
+							    <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-icon-stacked btn-block btn-warning glyphicons glyphicons-social facebook"><i></i><span>Join using your</span><span class="strong">Facebook Account</span></span>
+					</td>
+				</tr>
+				<tr>	
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-success">Success</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-success btn-icon glyphicons home"><i></i>Success</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<div class="btn-group">
+							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+								Dropdown Success
+							    <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-icon-stacked btn-block btn-success glyphicons glyphicons-social facebook"><i></i><span>Join using your</span><span class="strong">Facebook Account</span></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-danger">Danger</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-danger btn-icon glyphicons home"><i></i>Danger</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<div class="btn-group">
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+								Dropdown Danger
+							    <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-icon-stacked btn-block btn-danger glyphicons glyphicons-social facebook"><i></i><span>Join using your</span><span class="strong">Facebook Account</span></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-inverse">Inverse</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-block btn-inverse btn-icon glyphicons home"><i></i>Inverse</span>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<div class="btn-group">
+							<button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+								Dropdown Inverse
+							    <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="center padding-left-none padding-right-none">
+						<span class="btn btn-icon-stacked btn-block btn-inverse glyphicons glyphicons-social facebook"><i></i><span>Join using your</span><span class="strong">Facebook Account</span></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+<!-- // Buttons END -->
+
+
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+</body>
+</html>

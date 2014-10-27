@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.tables-pricing.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.tables-pricing.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'tables-pricing'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.tables-pricing</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-0e31575875f2f6bcd79c1b45cc12bd5f" data-toggle="collapse">table-pricing-1</a></h4>
+							<div class="collapse in" id="view-0e31575875f2f6bcd79c1b45cc12bd5f">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-0e31575875f2f6bcd79c1b45cc12bd5f" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-0e31575875f2f6bcd79c1b45cc12bd5f" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-0e31575875f2f6bcd79c1b45cc12bd5f" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/table-pricing-1.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-0e31575875f2f6bcd79c1b45cc12bd5f">
+												<!-- Pricing table -->
+<table class="table table-white table-vertical-center table-pricing">
+
+	<!-- Table heading -->
+	<thead>
+		<tr>
+			<th class="center heading">Choose your plan</th>
+			<th class="center" style="width: 15%">
+				<span class="plan">Free</span>
+				<span class="price">&dollar;0.00</span>
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary btn-block">Sign up</button>
+			</th>
+			<th class="center" style="width: 15%">
+				<span class="plan">Bronze</span>
+				<span class="price">&dollar;9.99</span>
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary btn-block">Sign up</button>
+			</th>
+			<th class="center" style="width: 15%">
+				<span class="plan">Silver</span>
+				<span class="price">&dollar;19.99</span>
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary btn-block">Sign up</button>
+			</th>
+			<th class="center" style="width: 15%">
+				<span class="plan">Gold</span>
+				<span class="price">&dollar;49.99</span>
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary btn-block">Sign up</button>
+			</th>
+		</tr>
+	</thead>
+	<!-- // Table heading END -->
+	
+	<!-- Table body -->
+	<tbody>
+	
+		<!-- Table row -->
+		<tr>
+			<td>Setup &amp; Installation</td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr>
+			<td>HTML Templates</td>
+			<td class="center"><span class="glyphicons standard remove_2"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard remove_2"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr>
+			<td>SMS Templates</td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr>
+			<td>API Included</td>
+			<td class="center"><span class="glyphicons standard remove_2"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr>
+			<td>Tracking System</td>
+			<td class="center">Basic Tracking</td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+			<td class="center"><span class="glyphicons standard circle_ok"><i></i></span></td>
+		</tr>
+		<!-- // Table row END -->
+		
+	</tbody>
+	<!-- // Table body END -->
+	
+</table>
+<!-- // Pricing table END -->
+
+											</div>
+											<div class="tab-pane" id="source-0e31575875f2f6bcd79c1b45cc12bd5f">
+												<pre class="prettyprint">&lt;!-- Pricing table --&gt;
+&lt;table class=&quot;table table-white table-vertical-center table-pricing&quot;&gt;
+
+	&lt;!-- Table heading --&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;center heading&quot;&gt;Choose your plan&lt;/th&gt;
+			&lt;th class=&quot;center&quot; style=&quot;width: 15%&quot;&gt;
+				&lt;span class=&quot;plan&quot;&gt;Free&lt;/span&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;0.00&lt;/span&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary btn-block&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/th&gt;
+			&lt;th class=&quot;center&quot; style=&quot;width: 15%&quot;&gt;
+				&lt;span class=&quot;plan&quot;&gt;Bronze&lt;/span&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;9.99&lt;/span&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary btn-block&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/th&gt;
+			&lt;th class=&quot;center&quot; style=&quot;width: 15%&quot;&gt;
+				&lt;span class=&quot;plan&quot;&gt;Silver&lt;/span&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;19.99&lt;/span&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary btn-block&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/th&gt;
+			&lt;th class=&quot;center&quot; style=&quot;width: 15%&quot;&gt;
+				&lt;span class=&quot;plan&quot;&gt;Gold&lt;/span&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;49.99&lt;/span&gt;
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary btn-block&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;!-- // Table heading END --&gt;
+	
+	&lt;!-- Table body --&gt;
+	&lt;tbody&gt;
+	
+		&lt;!-- Table row --&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Setup &amp;amp; Installation&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table row END --&gt;
+		
+		&lt;!-- Table row --&gt;
+		&lt;tr&gt;
+			&lt;td&gt;HTML Templates&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard remove_2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard remove_2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table row END --&gt;
+		
+		&lt;!-- Table row --&gt;
+		&lt;tr&gt;
+			&lt;td&gt;SMS Templates&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table row END --&gt;
+		
+		&lt;!-- Table row --&gt;
+		&lt;tr&gt;
+			&lt;td&gt;API Included&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard remove_2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table row END --&gt;
+		
+		&lt;!-- Table row --&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Tracking System&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;Basic Tracking&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;&lt;span class=&quot;glyphicons standard circle_ok&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table row END --&gt;
+		
+	&lt;/tbody&gt;
+	&lt;!-- // Table body END --&gt;
+	
+&lt;/table&gt;
+&lt;!-- // Pricing table END --&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-0e31575875f2f6bcd79c1b45cc12bd5f">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/pricing/assets/less/tables-pricing.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-b2eb2c1f6fbbf46737c4a7d6e4c730da" data-toggle="collapse">table-pricing-2</a></h4>
+							<div class="collapse in" id="view-b2eb2c1f6fbbf46737c4a7d6e4c730da">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-b2eb2c1f6fbbf46737c4a7d6e4c730da" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-b2eb2c1f6fbbf46737c4a7d6e4c730da" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-b2eb2c1f6fbbf46737c4a7d6e4c730da" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/table-pricing-2.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-b2eb2c1f6fbbf46737c4a7d6e4c730da">
+												<!-- Pricing table -->
+<table class="table table-vertical-center table-pricing table-pricing-2">
+
+	<!-- Table heading -->
+	<thead>
+		<tr>
+			<th class="center">Free Plan</th>
+			<th class="center">Bronze Plan</th>
+			<th class="center">Silver Plan</th>
+			<th class="center">Gold Plan</th>
+		</tr>
+	</thead>
+	<!-- // Table heading END -->
+	
+	<!-- Table body -->
+	<tbody>
+	
+		<!-- Table pricing row -->
+		<tr class="pricing">
+			<td class="center">
+				<span class="price">&dollar;0.00</span>
+				<span>per month</span>
+			</td>
+			<td class="center">
+				<span class="price">&dollar;9.99</span>
+				<span>per month</span>
+			</td>
+			<td class="center">
+				<span class="price">&dollar;19.99</span>
+				<span>per month</span>
+			</td>
+			<td class="center">
+				<span class="price">&dollar;49.99</span>
+				<span>per month</span>
+			</td>
+		</tr>
+		<!-- // Table pricing row END -->
+		
+		<!-- Table row -->
+		<tr>
+			<td class="center">
+				Setup &amp; Installation<br/>
+				HTML Templates<br/>
+				SMS Templates<br/>
+				API Included<br/>
+				Tracking system
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary">Sign up</button>
+			</td>
+			<td class="center">
+				Setup &amp; Installation<br/>
+				HTML Templates<br/>
+				SMS Templates<br/>
+				API Included<br/>
+				Tracking system
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary">Sign up</button>
+			</td>
+			<td class="center">
+				Setup &amp; Installation<br/>
+				HTML Templates<br/>
+				SMS Templates<br/>
+				API Included<br/>
+				Tracking system
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary">Sign up</button>
+			</td>
+			<td class="center">
+				Setup &amp; Installation<br/>
+				HTML Templates<br/>
+				SMS Templates<br/>
+				API Included<br/>
+				Tracking system
+				<div class="separator bottom"></div>
+				<button class="btn btn-primary">Sign up</button>
+			</td>
+		</tr>
+		<!-- // Table row END -->
+		
+	</tbody>
+	<!-- // Table body END -->
+	
+</table>
+<!-- // Pricing table END -->
+
+											</div>
+											<div class="tab-pane" id="source-b2eb2c1f6fbbf46737c4a7d6e4c730da">
+												<pre class="prettyprint">&lt;!-- Pricing table --&gt;
+&lt;table class=&quot;table table-vertical-center table-pricing table-pricing-2&quot;&gt;
+
+	&lt;!-- Table heading --&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;center&quot;&gt;Free Plan&lt;/th&gt;
+			&lt;th class=&quot;center&quot;&gt;Bronze Plan&lt;/th&gt;
+			&lt;th class=&quot;center&quot;&gt;Silver Plan&lt;/th&gt;
+			&lt;th class=&quot;center&quot;&gt;Gold Plan&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;!-- // Table heading END --&gt;
+	
+	&lt;!-- Table body --&gt;
+	&lt;tbody&gt;
+	
+		&lt;!-- Table pricing row --&gt;
+		&lt;tr class=&quot;pricing&quot;&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;0.00&lt;/span&gt;
+				&lt;span&gt;per month&lt;/span&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;9.99&lt;/span&gt;
+				&lt;span&gt;per month&lt;/span&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;19.99&lt;/span&gt;
+				&lt;span&gt;per month&lt;/span&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				&lt;span class=&quot;price&quot;&gt;&amp;dollar;49.99&lt;/span&gt;
+				&lt;span&gt;per month&lt;/span&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table pricing row END --&gt;
+		
+		&lt;!-- Table row --&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				Setup &amp;amp; Installation&lt;br/&gt;
+				HTML Templates&lt;br/&gt;
+				SMS Templates&lt;br/&gt;
+				API Included&lt;br/&gt;
+				Tracking system
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				Setup &amp;amp; Installation&lt;br/&gt;
+				HTML Templates&lt;br/&gt;
+				SMS Templates&lt;br/&gt;
+				API Included&lt;br/&gt;
+				Tracking system
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				Setup &amp;amp; Installation&lt;br/&gt;
+				HTML Templates&lt;br/&gt;
+				SMS Templates&lt;br/&gt;
+				API Included&lt;br/&gt;
+				Tracking system
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;center&quot;&gt;
+				Setup &amp;amp; Installation&lt;br/&gt;
+				HTML Templates&lt;br/&gt;
+				SMS Templates&lt;br/&gt;
+				API Included&lt;br/&gt;
+				Tracking system
+				&lt;div class=&quot;separator bottom&quot;&gt;&lt;/div&gt;
+				&lt;button class=&quot;btn btn-primary&quot;&gt;Sign up&lt;/button&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;!-- // Table row END --&gt;
+		
+	&lt;/tbody&gt;
+	&lt;!-- // Table body END --&gt;
+	
+&lt;/table&gt;
+&lt;!-- // Pricing table END --&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-b2eb2c1f6fbbf46737c4a7d6e4c730da">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/pricing/assets/less/tables-pricing.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-2124dd7387e7f7cf8ee8345600dc663c" data-toggle="collapse">table-pricing-3</a></h4>
+							<div class="collapse in" id="view-2124dd7387e7f7cf8ee8345600dc663c">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-2124dd7387e7f7cf8ee8345600dc663c" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-2124dd7387e7f7cf8ee8345600dc663c" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-2124dd7387e7f7cf8ee8345600dc663c" data-toggle="tab">Styles</a></li>																					</ul>
+										<a href="../docs/examples/table-pricing-3.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-2124dd7387e7f7cf8ee8345600dc663c">
+												<div class="table-pricing-3">
+	<ul class="list-unstyled row">
+		<li class="col-md-4">
+			<div class="innerAll">
+				<h3>Starter</h3>
+				<div class="body">
+					<div class="price">
+						Free
+					</div>
+				</div>
+				<div class="features">
+					<ul>
+						<li>Basic Support</li>
+						<li>Unlimited Email Alerts</li>
+						<li>Free Weekly Digests</li>
+						<li><strong>5 Email</strong> Templates</li>
+						<li>Customizable Profile Page</li>
+						<li><strong>2 months</strong> listing</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="#" class="btn btn-success">Get Started</a>
+				</div>
+			</div>
+		</li>
+		<li class="col-md-4 active">
+			<div class="innerAll">
+				<h3>Silver</h3>
+				<div class="body">
+					<div class="price">
+						<span class="figure">&euro;19.99</span>
+						<span class="term">per month</span>
+					</div>
+				</div>
+				<div class="features">
+					<ul>
+						<li>Dedicated Support</li>
+						<li>Unlimited Email Alerts</li>
+						<li>Free Weekly Digests</li>
+						<li><strong>20 Email</strong> Templates</li>
+						<li>Customizable Profile Page</li>
+						<li><strong>6 months</strong> listing</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="#" class="btn btn-success">Get Started</a>
+				</div>
+			</div>
+		</li>
+		<li class="col-md-4">
+			<div class="innerAll">
+				<h3>Gold</h3>
+				<div class="body">
+					<div class="price">
+						<span class="figure">&euro;49</span>
+						<span class="term">per month</span>
+					</div>
+				</div>
+				<div class="features">
+					<ul>
+						<li>Premium Support</li>
+						<li>Unlimited Email Alerts</li>
+						<li>Free Weekly Digests</li>
+						<li><strong>50 Email</strong> Templates</li>
+						<li>Customizable Profile Page</li>
+						<li><strong>Lifetime</strong> listing</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="#" class="btn btn-success">Get Started</a>
+				</div>
+			</div>
+		</li>
+		<div class="clearfix"></div>
+	</ul>
+</div>
+
+											</div>
+											<div class="tab-pane" id="source-2124dd7387e7f7cf8ee8345600dc663c">
+												<pre class="prettyprint">&lt;div class=&quot;table-pricing-3&quot;&gt;
+	&lt;ul class=&quot;list-unstyled row&quot;&gt;
+		&lt;li class=&quot;col-md-4&quot;&gt;
+			&lt;div class=&quot;innerAll&quot;&gt;
+				&lt;h3&gt;Starter&lt;/h3&gt;
+				&lt;div class=&quot;body&quot;&gt;
+					&lt;div class=&quot;price&quot;&gt;
+						Free
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;features&quot;&gt;
+					&lt;ul&gt;
+						&lt;li&gt;Basic Support&lt;/li&gt;
+						&lt;li&gt;Unlimited Email Alerts&lt;/li&gt;
+						&lt;li&gt;Free Weekly Digests&lt;/li&gt;
+						&lt;li&gt;&lt;strong&gt;5 Email&lt;/strong&gt; Templates&lt;/li&gt;
+						&lt;li&gt;Customizable Profile Page&lt;/li&gt;
+						&lt;li&gt;&lt;strong&gt;2 months&lt;/strong&gt; listing&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;footer&quot;&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Get Started&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li class=&quot;col-md-4 active&quot;&gt;
+			&lt;div class=&quot;innerAll&quot;&gt;
+				&lt;h3&gt;Silver&lt;/h3&gt;
+				&lt;div class=&quot;body&quot;&gt;
+					&lt;div class=&quot;price&quot;&gt;
+						&lt;span class=&quot;figure&quot;&gt;&amp;euro;19.99&lt;/span&gt;
+						&lt;span class=&quot;term&quot;&gt;per month&lt;/span&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;features&quot;&gt;
+					&lt;ul&gt;
+						&lt;li&gt;Dedicated Support&lt;/li&gt;
+						&lt;li&gt;Unlimited Email Alerts&lt;/li&gt;
+						&lt;li&gt;Free Weekly Digests&lt;/li&gt;
+						&lt;li&gt;&lt;strong&gt;20 Email&lt;/strong&gt; Templates&lt;/li&gt;
+						&lt;li&gt;Customizable Profile Page&lt;/li&gt;
+						&lt;li&gt;&lt;strong&gt;6 months&lt;/strong&gt; listing&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;footer&quot;&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Get Started&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li class=&quot;col-md-4&quot;&gt;
+			&lt;div class=&quot;innerAll&quot;&gt;
+				&lt;h3&gt;Gold&lt;/h3&gt;
+				&lt;div class=&quot;body&quot;&gt;
+					&lt;div class=&quot;price&quot;&gt;
+						&lt;span class=&quot;figure&quot;&gt;&amp;euro;49&lt;/span&gt;
+						&lt;span class=&quot;term&quot;&gt;per month&lt;/span&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;features&quot;&gt;
+					&lt;ul&gt;
+						&lt;li&gt;Premium Support&lt;/li&gt;
+						&lt;li&gt;Unlimited Email Alerts&lt;/li&gt;
+						&lt;li&gt;Free Weekly Digests&lt;/li&gt;
+						&lt;li&gt;&lt;strong&gt;50 Email&lt;/strong&gt; Templates&lt;/li&gt;
+						&lt;li&gt;Customizable Profile Page&lt;/li&gt;
+						&lt;li&gt;&lt;strong&gt;Lifetime&lt;/strong&gt; listing&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;footer&quot;&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Get Started&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-2124dd7387e7f7cf8ee8345600dc663c">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/modules/admin/tables/classic/assets/less/tables.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/tables/pricing/assets/less/tables-pricing.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

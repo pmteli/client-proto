@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.form-validator.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.form-validator.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'form-validator'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.form-validator</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-98f3d7718ea1e48ceefb025306674605" data-toggle="collapse">form-validator</a></h4>
+							<div class="collapse in" id="view-98f3d7718ea1e48ceefb025306674605">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-98f3d7718ea1e48ceefb025306674605" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-98f3d7718ea1e48ceefb025306674605" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-98f3d7718ea1e48ceefb025306674605" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-98f3d7718ea1e48ceefb025306674605" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/form-validator.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-98f3d7718ea1e48ceefb025306674605">
+												<!-- Form -->
+<form class="form-horizontal margin-none" id="validateSubmitForm" method="get" autocomplete="off">
+	
+	<!-- Widget -->
+	<div class="widget">
+	
+		<!-- Widget heading -->
+		<div class="widget-head">
+			<h4 class="heading">Validate a form with jQuery</h4>
+		</div>
+		<!-- // Widget heading END -->
+		
+		<div class="widget-body innerAll inner-2x">
+		
+			<!-- Row -->
+			<div class="row innerLR">
+			
+				<!-- Column -->
+				<div class="col-md-4">
+				
+					<!-- Group -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="firstname">First name</label>
+						<div class="col-md-8"><input class="form-control" id="firstname" name="firstname" type="text" /></div>
+					</div>
+					<!-- // Group END -->
+					
+					<!-- Group -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="lastname">Last name</label>
+						<div class="col-md-8"><input class="form-control" id="lastname" name="lastname" type="text" /></div>
+					</div>
+					<!-- // Group END -->
+					
+					<!-- Group -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="username">Username</label>
+						<div class="col-md-8"><input class="form-control" id="username" name="username" type="text" /></div>
+					</div>
+					<!-- // Group END -->
+					
+				</div>
+				<!-- // Column END -->
+				
+				<!-- Column -->
+				<div class="col-md-8">
+				
+					<!-- Group -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="password">Password</label>
+						<div class="col-md-8"><input class="form-control" id="password" name="password" type="password" /></div>
+					</div>
+					<!-- // Group END -->
+					
+					<!-- Group -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="confirm_password">Confirm password</label>
+						<div class="col-md-8"><input class="form-control" id="confirm_password" name="confirm_password" type="password" /></div>
+					</div>
+					<!-- // Group END -->
+					
+					<!-- Group -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="email">E-mail</label>
+						<div class="col-md-8"><input class="form-control" id="email" name="email" type="email" /></div>
+					</div>
+					<!-- // Group END -->
+					
+				</div>
+				<!-- // Column END -->
+				
+			</div>
+			<!-- // Row END -->
+			
+			<!-- Row -->
+			<div class="bg-gray innerAll inner-2x">
+				<div class="row">
+			
+					<!-- Column -->
+					<div class="col-md-4">
+						<h4>Policy &amp; Newsletter</h4>
+			            <div class="checkbox">
+							<label class="checkbox-custom" for="agree">
+								<i class="fa fa-fw fa-square-o"></i>
+								<input type="checkbox" class="checkbox" id="agree" name="agree" />
+								Please agree to our policy
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox-custom" for="newsletter">
+								<i class="fa fa-fw fa-square-o"></i>
+								<input type="checkbox" class="checkbox" id="newsletter" name="newsletter" checked="checked" />
+								Receive Newsletter
+							</label>
+						</div>
+					</div>
+					<!-- // Column END -->
+					
+					<!-- Column -->
+					<div class="col-md-8">
+						<div id="newsletter_topics">
+							<h4>Topics</h4>
+							<p>Select at least two topics you would like to receive in the newsletter.</p>
+							<div class="checkbox">
+								<label for="topic_marketflash" class="checkbox-custom">
+									<i class="fa fa-fw fa-square-o"></i>
+									<input type="checkbox" id="topic_marketflash" value="marketflash" name="topic" checked="checked" />
+									Marketflash
+								</label>
+							</div>
+							<div class="checkbox">
+								<label for="topic_fuzz" class="checkbox-custom">
+									<i class="fa fa-fw fa-square-o"></i>
+									<input type="checkbox" id="topic_fuzz" value="fuzz" name="topic" />
+									Latest fuzz
+								</label>
+							</div>
+							<div class="checkbox">
+								<label for="topic_digester" class="checkbox-custom">
+									<i class="fa fa-fw fa-square-o"></i>
+									<input type="checkbox" id="topic_digester" value="digester" name="topic" />
+									Mailing list digester
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- // Column END -->
+					
+				</div>
+				<!-- // Row END -->	
+			</div>
+
+			<div class="separator"></div>
+			
+			<!-- Form actions -->
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary"><i class="fa fa-check-circle"></i> Save</button>
+				<button type="button" class="btn btn-default"><i class="fa fa-times"></i> Cancel</button>
+			</div>
+			<!-- // Form actions END -->
+			
+		</div>
+	</div>
+	<!-- // Widget END -->
+	
+</form>
+<!-- // Form END -->
+
+
+
+											</div>
+											<div class="tab-pane" id="source-98f3d7718ea1e48ceefb025306674605">
+												<pre class="prettyprint">&lt;!-- Form --&gt;
+&lt;form class=&quot;form-horizontal margin-none&quot; id=&quot;validateSubmitForm&quot; method=&quot;get&quot; autocomplete=&quot;off&quot;&gt;
+	
+	&lt;!-- Widget --&gt;
+	&lt;div class=&quot;widget&quot;&gt;
+	
+		&lt;!-- Widget heading --&gt;
+		&lt;div class=&quot;widget-head&quot;&gt;
+			&lt;h4 class=&quot;heading&quot;&gt;Validate a form with jQuery&lt;/h4&gt;
+		&lt;/div&gt;
+		&lt;!-- // Widget heading END --&gt;
+		
+		&lt;div class=&quot;widget-body innerAll inner-2x&quot;&gt;
+		
+			&lt;!-- Row --&gt;
+			&lt;div class=&quot;row innerLR&quot;&gt;
+			
+				&lt;!-- Column --&gt;
+				&lt;div class=&quot;col-md-4&quot;&gt;
+				
+					&lt;!-- Group --&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;firstname&quot;&gt;First name&lt;/label&gt;
+						&lt;div class=&quot;col-md-8&quot;&gt;&lt;input class=&quot;form-control&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Group END --&gt;
+					
+					&lt;!-- Group --&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;lastname&quot;&gt;Last name&lt;/label&gt;
+						&lt;div class=&quot;col-md-8&quot;&gt;&lt;input class=&quot;form-control&quot; id=&quot;lastname&quot; name=&quot;lastname&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Group END --&gt;
+					
+					&lt;!-- Group --&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;username&quot;&gt;Username&lt;/label&gt;
+						&lt;div class=&quot;col-md-8&quot;&gt;&lt;input class=&quot;form-control&quot; id=&quot;username&quot; name=&quot;username&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Group END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Column END --&gt;
+				
+				&lt;!-- Column --&gt;
+				&lt;div class=&quot;col-md-8&quot;&gt;
+				
+					&lt;!-- Group --&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;password&quot;&gt;Password&lt;/label&gt;
+						&lt;div class=&quot;col-md-8&quot;&gt;&lt;input class=&quot;form-control&quot; id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; /&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Group END --&gt;
+					
+					&lt;!-- Group --&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;confirm_password&quot;&gt;Confirm password&lt;/label&gt;
+						&lt;div class=&quot;col-md-8&quot;&gt;&lt;input class=&quot;form-control&quot; id=&quot;confirm_password&quot; name=&quot;confirm_password&quot; type=&quot;password&quot; /&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Group END --&gt;
+					
+					&lt;!-- Group --&gt;
+					&lt;div class=&quot;form-group&quot;&gt;
+						&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;email&quot;&gt;E-mail&lt;/label&gt;
+						&lt;div class=&quot;col-md-8&quot;&gt;&lt;input class=&quot;form-control&quot; id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; /&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Group END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Column END --&gt;
+				
+			&lt;/div&gt;
+			&lt;!-- // Row END --&gt;
+			
+			&lt;!-- Row --&gt;
+			&lt;div class=&quot;bg-gray innerAll inner-2x&quot;&gt;
+				&lt;div class=&quot;row&quot;&gt;
+			
+					&lt;!-- Column --&gt;
+					&lt;div class=&quot;col-md-4&quot;&gt;
+						&lt;h4&gt;Policy &amp;amp; Newsletter&lt;/h4&gt;
+			            &lt;div class=&quot;checkbox&quot;&gt;
+							&lt;label class=&quot;checkbox-custom&quot; for=&quot;agree&quot;&gt;
+								&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+								&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; id=&quot;agree&quot; name=&quot;agree&quot; /&gt;
+								Please agree to our policy
+							&lt;/label&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;checkbox&quot;&gt;
+							&lt;label class=&quot;checkbox-custom&quot; for=&quot;newsletter&quot;&gt;
+								&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+								&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; id=&quot;newsletter&quot; name=&quot;newsletter&quot; checked=&quot;checked&quot; /&gt;
+								Receive Newsletter
+							&lt;/label&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Column END --&gt;
+					
+					&lt;!-- Column --&gt;
+					&lt;div class=&quot;col-md-8&quot;&gt;
+						&lt;div id=&quot;newsletter_topics&quot;&gt;
+							&lt;h4&gt;Topics&lt;/h4&gt;
+							&lt;p&gt;Select at least two topics you would like to receive in the newsletter.&lt;/p&gt;
+							&lt;div class=&quot;checkbox&quot;&gt;
+								&lt;label for=&quot;topic_marketflash&quot; class=&quot;checkbox-custom&quot;&gt;
+									&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+									&lt;input type=&quot;checkbox&quot; id=&quot;topic_marketflash&quot; value=&quot;marketflash&quot; name=&quot;topic&quot; checked=&quot;checked&quot; /&gt;
+									Marketflash
+								&lt;/label&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;checkbox&quot;&gt;
+								&lt;label for=&quot;topic_fuzz&quot; class=&quot;checkbox-custom&quot;&gt;
+									&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+									&lt;input type=&quot;checkbox&quot; id=&quot;topic_fuzz&quot; value=&quot;fuzz&quot; name=&quot;topic&quot; /&gt;
+									Latest fuzz
+								&lt;/label&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;checkbox&quot;&gt;
+								&lt;label for=&quot;topic_digester&quot; class=&quot;checkbox-custom&quot;&gt;
+									&lt;i class=&quot;fa fa-fw fa-square-o&quot;&gt;&lt;/i&gt;
+									&lt;input type=&quot;checkbox&quot; id=&quot;topic_digester&quot; value=&quot;digester&quot; name=&quot;topic&quot; /&gt;
+									Mailing list digester
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- // Column END --&gt;
+					
+				&lt;/div&gt;
+				&lt;!-- // Row END --&gt;	
+			&lt;/div&gt;
+
+			&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+			
+			&lt;!-- Form actions --&gt;
+			&lt;div class=&quot;form-actions&quot;&gt;
+				&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;fa fa-check-circle&quot;&gt;&lt;/i&gt; Save&lt;/button&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt; Cancel&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;!-- // Form actions END --&gt;
+			
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- // Widget END --&gt;
+	
+&lt;/form&gt;
+&lt;!-- // Form END --&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-98f3d7718ea1e48ceefb025306674605">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-98f3d7718ea1e48ceefb025306674605">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/forms/validator/assets/lib/jquery-validation/dist/jquery.validate.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/validator/assets/custom/form-validator.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/validator/assets/lib/jquery-validation/dist/jquery.validate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/validator/assets/custom/form-validator.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

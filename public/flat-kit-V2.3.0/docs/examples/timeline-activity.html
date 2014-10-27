@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>timeline-activity example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.timeline-activity.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.timeline-activity.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">timeline-activity example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>timeline-activity component</strong></p>
+			</div>
+<ul class="timeline-activity list-unstyled">
+	<li class="active">
+		<i class="list-icon fa fa-share"></i>
+		<div class="block block-inline">
+			<div class="caret"></div>
+			<div class="box-generic">
+				<div class="timeline-top-info content-filled border-bottom">
+					<i class="fa fa-user"></i> <a href="">mosaicpro</a> replied to <a href="" class="text-primary">Having A Great Day!</a> from <a href="#"><img src="../../assets/images/people/80/8.jpg" alt="photo" width="20"></a> <a href="">Andrew M.</a>
+					<div class="timeline-bottom">
+						<i class="fa fa-clock-o"></i> 2 days ago 
+					 
+					</div>
+				</div>
+				<div class="media innerAll margin-none">
+			        <a class="pull-left" href="#"><img src="../../assets/images/people/80/8.jpg" alt="photo" class="media-object" width="35"></a>
+			        <div class="media-body">
+			          	<a href="" class="strong">Andrew</a> Good Job. Congrats and hope to see more admin templates like this in the future.
+		     			<div class="timeline-bottom">
+							<i class="fa fa-clock-o"></i> 2 days ago  
+						</div>
+			        </div>
+			    </div>
+		     	<div class="media innerAll margin-none bg-gray border-top border-bottom">
+			       	<a class="pull-left" href="#"><img src="../../assets/images/people/80/2.jpg" alt="photo" width="35" class="media-object"></a>
+			        <div class="media-body">
+			        	<a href="" class="strong">mosaicpro</a> Thanks, I  apreciate it!
+			     		<div class="timeline-bottom">
+							<i class="fa fa-clock-o"></i> 5 days ago   
+						</div>
+			        </div>
+		      	</div>
+				<div class="innerAll">
+					<input class="form-control" placeholder="Comment here..."/>
+				</div>
+			</div>
+			
+		</div>
+	</li>
+	<li>
+		<i class="list-icon fa fa-map-marker"></i>
+		<div class="block block-inline">
+			<div class="caret"></div>
+			<div class="box-generic">
+				<div class="timeline-top-info">
+					<i class="fa fa-user"></i> 
+					<a href="">mosaicpro</a> visited 
+					<a href="" class="text-primary"><i class="text-primary fa fa-location-arrow"></i> Dracula's Castle</a>
+				</div>
+				<div class="media margin-none">
+					<div class="row innerLR innerB">
+						<div class="col-sm-4 col-lg-3">
+							<div class="innerT">
+								<div class="icon-block text-center ">
+									<span class="glyphicons tower"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8 col-lg-9">
+							<div class="innerT">
+								<h5 class="strong">Bran Castle</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, aspernatur ut fuga eum cumque delectus voluptate impedit quaerat sapiente officiis fugit voluptates sit neque quibusdam beatae est modi repudiandae unde.</p>
+								<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 3.5
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="timeline-bottom innerT half">
+				<i class="fa fa-clock-o"></i> 2 days ago  <span class="innerL"><i class="fa fa-calendar fa-fw"></i> 25 Oct 2013</span>
+			</div>
+		</div>
+	</li>
+	<li>
+		<i class="list-icon fa fa-comments"></i>
+		<div class="block block-inline">
+			<div class="caret"></div>
+			<div class="box-generic">
+				<div class="timeline-top-info">
+					<i class="fa fa-user"></i> <a href="">mosaicpro</a> wrote a <a href="" class="text-primary">comment</a> to <a href="#"><img data-src="holder.js/20x20/dark"/></a> <a href="">Jane S.</a>
+					<div class="timeline-bottom">
+						<i class="fa fa-clock-o"></i> 6 days ago  
+					</div>
+				</div>
+				<div class="content-filled">Good Job. Congrats and hope to see you soon.</div>
+			</div>
+		
+		</div>
+	</li>
+	<li>
+		<i class="list-icon fa fa-user"></i>
+		<div class="block">
+			<div class="caret"></div>
+			<!-- <div class="box-generic "> -->
+				<div class="inline-block box-generic">
+					<div class="timeline-top-info content-filled border-bottom">
+						<i class="fa fa-user"></i> <a href="">mosaicpro</a> is following <a href="#"><img  src="../../assets/images/people/80/1.jpg" width="20"/></a> <a href="">Jane S.</a>
+					</div>			
+					<div class="media innerAll margin-none">
+				        <a class="pull-left" href="#">
+				          <img src="../../assets/images/people/80/1.jpg" alt="photo" class="media-object" width="35">
+				        </a>
+				        <div class="media-body">
+				          <a href="" class="strong">Jane Smith</a>
+				          <a href="" class="clearfix text-primary strong">www.domain.com</a>
+				     	<div class="media-icons">
+								<a href=""><i class="fa fa-clock-o"></i></a>
+								<a href=""><i class="fa fa-calendar"></i></a>
+								<a href=""><i class="fa fa-user"></i></a>
+								<a href=""><i class="fa fa-star"></i></a>
+							</div>
+				        </div>
+			      </div>
+				</div>
+
+				<div class="inline-block box-generic">
+					<div class="timeline-top-info content-filled border-bottom">
+						<i class="fa fa-user"></i> <a href="">mosaicpro</a> is following <a href="#"><img  src="../../assets/images/people/80/1.jpg" width="20"/></a> <a href="">Jane S.</a>
+					</div>	
+					
+					<div class="media innerAll margin-none ">
+				        <a class="pull-left" href="#">
+				          <img src="../../assets/images/people/80/1.jpg" alt="photo" class="media-object" width="35">
+				        </a>
+				        <div class="media-body">
+				          <a href="" class="strong">Jane Smith</a>
+				          <a href="" class="clearfix text-primary strong">www.domain.com</a>
+				     	<div class="media-icons">
+								<a href=""><i class="fa fa-clock-o"></i></a>
+								<a href=""><i class="fa fa-calendar"></i></a>
+								<a href=""><i class="fa fa-user"></i></a>
+								<a href=""><i class="fa fa-star"></i></a>
+							</div>
+				        </div>
+			      </div>
+				</div>
+
+			<!-- </div> -->
+		</div>
+	</li>
+	<li>
+		<i class="list-icon fa fa-camera"></i>
+		<div class="block block-inline">
+			<div class="caret"></div>
+			<div class="box-generic">
+				<div class="timeline-top-info">
+					<i class="fa fa-user"></i> <a href="">mosaicpro</a> has uploaded 10 photos in <a href="" class="text-primary"><i class="text-primary fa fa-location-arrow"></i> Album Name #2</a>
+				</div>
+				<div class="innerLR innerB">
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/1.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/2.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/3.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/4.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/5.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/6.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/7.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/8.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/9.jpg" alt="photo" width="35"/></a>	
+					  	
+					<a href="#" class="thumbnail pull-left border-none"><img src="../../assets/images/people/80/10.jpg" alt="photo" width="35"/></a>	
+										<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="separator bottom"></div>
+		</div>
+	</li>
+</ul>
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/blueimp-gallery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/jquery.blueimp-gallery.min.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!--><html class="animations front fluid top-full menuh-top"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | Location Profile</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.location-profile.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.location-profile.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+
+<script src="../../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+</head>
+<body>
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="container-960 innerLR secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-960 innerLR breadcrumb-nav clearfix">
+					<ul class="breadcrumb">
+						<li><a href="index.html">Building Portfolio</a></li>
+						<li><a href="#">123 Main St Boston&hellip;</a></li>
+						<li>User Profile</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="user-profile" class="main">
+				<div class="container-960 innerLR clearfix">
+					<div class="primary-content col-md-12">
+						<form class="form-horizontal content-block clearfix" role="form">
+							<div class="location-profile clearfix">
+								<h2>Location Profile</h2>
+
+								<div class="building-image col-md-3">
+									<div class="form-group">
+										<img alt="[Image: Building Image]" src="#" />
+									</div>
+								</div>
+
+								<div class="user-info-01 col-md-5">
+									<div class="form-group">
+										<label for="inputBuildingName" class="col-sm-4 control-label">Building Name</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="inputBusinessName" placeholder="Building Name">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputPhone" class="col-sm-4 control-label">Phone</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputAddress01" class="col-sm-4 control-label">Address 1</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="inputAddress01" placeholder="Address 1">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputAddress02" class="col-sm-4 control-label">Address 2</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="inputAddress02" placeholder="Address 2">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputCity" class="col-sm-4 control-label">City</label>
+										<div class="col-sm-4">
+											<input type="text" class="form-control" id="inputCity" placeholder="City">
+										</div>
+										<div class="col-sm-4">
+											<select class="form-control" id="inputState">
+												<option>State</option>
+												<option>MA</option>
+												<option>NH</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputZip" class="col-sm-4 control-label">Zip</label>
+										<div class="col-sm-4">
+											<input type="text" class="form-control" id="inputZip" placeholder="Zip">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<p class="separator"></p>
+
+							<div class="location-details content-block clearfix">
+								<h2>Location Details</h2>
+
+								<div class="colOne col-md-4">
+									<p><strong>Business Type</strong> <a data-toggle="modal" data-target="#onboarding" href="#">Edit Business Type</a></p>
+									<div class="business-image col-md-5">
+										<div class="form-group">
+											<img alt="[Image: Business Image]" src="#" />
+										</div>
+									</div>
+									<div class="business-summary col-md-7">
+										<h4>Primary Business Type</h4>
+										<p>Retail Strore</p>
+
+										<h4>Primary Business Activity</h4>
+										<p>Bike Repair</p>
+									</div>
+
+									<div class="building-size col-md-12">
+										<h4>Do you know the size of your building</h4>
+										<div class="business-size">
+											<label><input type="radio" name="business-size" value="yes" checked="checked" /> Yes I do</label>
+											<label><input type="radio" name="business-size" value="no" /> No I do not</label>
+										</div>
+
+										<div class="yes-options clearfix">
+											<input type="text" class="form-control size-value col-md-6" />
+											<select class="form-control size-units col-md-6">
+												<option>option 01</option>
+												<option>option 02</option>
+												<option>option 03</option>
+											</select>
+										</div>
+										<div class="no-options clearfix">
+											<select class="form-control size-value col-md-6">
+												<option>0-5000</option>
+												<option>5000-10000</option>
+												<option>10000+</option>
+											</select>
+											<select class="form-control size-units col-md-6">
+												<option>option 01</option>
+												<option>option 02</option>
+												<option>option 03</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="occupant-type col-md-12">
+										<h4>What type of occupant are you?</h4>
+										<select class="form-control occupant-type col-md-6">
+											<option>Owner</option>
+											<option>Renter</option>
+										</select>
+									</div>
+								</div> <!-- .colOne -->
+
+								<div class="colTwo col-md-4">
+									<div class="employee-count slider-container col-md-12">
+										<h4>How many employees do you have?</h4>
+										<div id="employee-count" class="slider" data-type="step" data-min="0" data-max="500" data-step="100"></div>
+									</div>
+
+									<div class="energy-savings slider-container col-md-12">
+										<h4>Do you care about energy savings?</h4>
+										<div id="energy-savings" class="slider" data-type="step" data-min="1" data-max="3" data-step="1"></div>
+									</div>
+
+									<div class="special-offers-container col-md-12">
+										<h4>Do you want to receive special offers?</h4>
+										<div class="special-offers">
+											<label><input type="radio" name="special-offers" value="yes" checked="checked" /> Yes</label>
+											<label><input type="radio" name="special-offers" value="no" /> No</label>
+										</div>
+									</div>
+
+									<div class="email-notifications-container col-md-12">
+										<h4>Do you want to receive email notifications?</h4>
+										<div class="email-notifications">
+											<label><input type="radio" name="email-notifications" value="yes" checked="checked" /> Yes</label>
+											<label><input type="radio" name="email-notifications" value="no" /> No</label>
+										</div>
+									</div>
+								</div> <!-- .colTwo -->
+
+								<div class="colThree col-md-4">
+									<div class="well">
+										<h4>Why do you need to know?</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+								</div> <!-- .colThree -->
+							</div>
+
+							<p class="separator"></p>
+
+							<div class="form-controls content-block clearfix">
+								<button class="btn btn-default back-button">Back to Portfolio</button>
+
+								<input type="submit" name="submit" value="Save Profile" class="btn btn-primary submit" />
+							</div>
+						</form>
+					</div> <!-- .primary-content -->
+
+				</div>	
+			</div> <!-- #user-profile -->
+
+			<div id="footer" class="container-960 innerLR hidden-print">
+				
+					<div class="footer-content col-md-12">
+						<!--  Copyright Line -->
+						<div class="copy">
+							<a href="site-map.html?lang=en">Site Map</a>
+							<span class="appbrand">Powered by FirstFuel</span>
+						</div>
+						<!--  End Copyright Line -->
+					</div>
+
+			</div>
+			<!-- // Footer END -->
+		<!-- // Content END -->
+	</div> 
+
+
+				<div id="onboarding" class="modal clearfix" data-backdrop="static">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div id="question-01" class="pane question-01 active">
+								<div class="question"><h2>What is your primary business activity?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+								<div class="answers">
+									<form class="input-group col-md-4">
+										<input type="text" class="form-control" placeholder="Type your keywords .. " />
+										<span class="input-group-btn"><button type="submit" class="btn btn-inverse"><i class="fa fa-search"></i></button></span>
+									</form>
+									<ul class="options clearfix">
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+									</ul>
+								</div>
+							</div> <!-- end .pane -->
+
+							<div id="question-02" class="pane question-02">
+								<div class="question"><h2>What type of occupant are you?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+								<div class="answers">
+									<ul class="options clearfix">
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+									</ul>
+								</div>
+							</div> <!-- end .pane -->
+
+							<div id="question-03" class="pane question-03">
+								<div class="question"><h2>How many employees do you have?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+								<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</div>
+								<div class="answers">
+									<select class="selectpicker col-md-3" data-style="btn-primary">
+										<option value="1-4">1-4</option>
+										<option value="5-9">5-9</option>
+										<option value="10-19">10-19</option>
+										<option value="20-49">20-49</option>
+										<option value="50+">50+</option>
+									</select>
+								</div>
+							</div> <!-- end .pane -->
+
+							<div id="question-04" class="pane question-04">
+								<div class="question"><h2>How big is your business?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+								<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</div>
+								<div class="answers">
+									<h3>Do you know the actual size of your business?</h3>
+									<div class="business-size">
+										<label><input type="radio" name="business-size" value="yes" checked="checked" /> yes</label>
+										<label><input type="radio" name="business-size" value="no" /> no</label>
+									</div>
+
+									<div class="yes-options clearfix">
+										<input type="text" class="form-control size-value" />
+										<select class="form-control size-units">
+											<option>option 01</option>
+											<option>option 02</option>
+											<option>option 03</option>
+										</select>
+									</div>
+									<div class="no-options clearfix">
+										<ul class="options clearfix">
+											<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+											<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+											<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div> <!-- end .pane -->
+
+							<div id="question-05" class="pane question-05">
+								<div class="question"><h2>How much do you care about energy efficiency?<span class="info fa fa-question-circle" data-toggle="tooltip" data-placement="left" title="This is the tool tip text"></span></h2></div>
+								<div class="answers">
+									<ul class="options clearfix">
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+										<li class="option"><a href="#"><img alt="option" src="../assets/images/placeholder-option.jpg" /><span>Option</span></a></li>
+									</ul>
+
+									<h3>Would you like to recieve email updates?</h3>
+									<label><input type="checkbox" name="email-notification" value="yes" /> Yes, send me email notifications</label>
+								</div>
+							</div> <!-- end .pane -->
+
+							<ul class="indicators">
+								<li class="question-01 fa fa-circle-o fa-circle"></li>
+								<li class="question-02 fa fa-circle-o"></li>
+								<li class="question-03 fa fa-circle-o"></li>
+								<li class="question-04 fa fa-circle-o"></li>
+								<li class="question-05 fa fa-circle-o"></li>
+							</ul>
+
+							<div class="controls">
+								<button class="btn btn-inverse no-thanks">No Thanks</button>
+								<a class="skip-link" href="#">Skip Question</a>
+								<button class="btn btn-primary next">Next</button>
+							</div>
+
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						</div>
+					</div>
+				</div> <!-- end #onboarding -->
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/widgets/widget-progress/assets/js/widget-progress.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	<script src="../assets/js/firstengage.js"></script>
+	
+</body>
+</html>

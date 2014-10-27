@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.widget-chat.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.widget-chat.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'widget-chat'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.widget-chat</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-255c82a9611e079dfed1c719654e55ca" data-toggle="collapse">widget-chat</a></h4>
+							<div class="collapse in" id="view-255c82a9611e079dfed1c719654e55ca">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-255c82a9611e079dfed1c719654e55ca" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-255c82a9611e079dfed1c719654e55ca" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-255c82a9611e079dfed1c719654e55ca" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-255c82a9611e079dfed1c719654e55ca" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/widget-chat.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-255c82a9611e079dfed1c719654e55ca">
+												<!-- Chat -->
+<div class="widget widget-heading-simple widget-body-white widget-chat" data-builder-exclude>
+
+	<div class="widget-head">
+		<h4 class="heading glyphicons chat"><i></i>Chat</h4>
+	</div>
+	<div class="widget-body">
+	
+	<!-- Slim Scroll -->
+	<div class="slim-scroll chat-items" data-scroll-height="190px" data-scroll-size="0">
+		
+		<!-- Media item -->
+		<div class="media">
+			<small class="author"><a href="#" title="" class="strong">Martin</a></small>
+			<div class="media-object pull-left thumb"><img src="../assets//images/avatar-51x51.jpg" alt="Image" /></div>
+			<div class="media-body">
+				<blockquote>
+					<small class="date"><cite>just now</cite></small>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien.</p>
+				</blockquote>
+			</div>
+		</div>
+		<!-- // Media item END -->
+		
+		<!-- Media item -->
+		<div class="media right">
+			<small class="author"><a href="#" title="" class="strong">John Doe</a></small>
+			<div class="media-object pull-right thumb"><img src="../assets//images/avatar-51x51.jpg" alt="Image" /></div>
+			<div class="media-body">
+				<blockquote class="pull-right">
+					<small class="date"><cite>15 seconds ago</cite></small>
+					<p>In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla.</p>
+				</blockquote>
+			</div>
+		</div>
+		<!-- // Media item END -->
+		
+		<!-- Media item -->
+		<div class="media">
+			<small class="author"><a href="#" title="" class="strong">Ricky</a></small>
+			<div class="media-object pull-left thumb"><img src="../assets//images/avatar-51x51.jpg" alt="Image" /></div>
+			<div class="media-body">
+				<blockquote>
+					<small class="date"><cite>5 minutes ago</cite></small>
+					<p>Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod.</p>
+				</blockquote>
+			</div>
+		</div>
+		<!-- // Media item END -->
+		
+	</div>
+	<!-- // Slim Scroll END -->
+	
+	</div>
+	
+	<div class="chat-controls">
+		<div class="innerLR">
+			<form class="margin-none">
+				<div class="row">
+					<div class="col-md-10 col-xs-10">
+						<input type="text" name="message" class="form-control" placeholder="Type your message .." />
+					</div>
+					<div class="col-md-2 col-xs-2">
+						<button type="submit" class="btn btn-block btn-primary">Send</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</div>
+<!-- // Chat END -->
+
+
+											</div>
+											<div class="tab-pane" id="source-255c82a9611e079dfed1c719654e55ca">
+												<pre class="prettyprint">&lt;!-- Chat --&gt;
+&lt;div class=&quot;widget widget-heading-simple widget-body-white widget-chat&quot; data-builder-exclude&gt;
+
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;h4 class=&quot;heading glyphicons chat&quot;&gt;&lt;i&gt;&lt;/i&gt;Chat&lt;/h4&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+	
+	&lt;!-- Slim Scroll --&gt;
+	&lt;div class=&quot;slim-scroll chat-items&quot; data-scroll-height=&quot;190px&quot; data-scroll-size=&quot;0&quot;&gt;
+		
+		&lt;!-- Media item --&gt;
+		&lt;div class=&quot;media&quot;&gt;
+			&lt;small class=&quot;author&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;&quot; class=&quot;strong&quot;&gt;Martin&lt;/a&gt;&lt;/small&gt;
+			&lt;div class=&quot;media-object pull-left thumb&quot;&gt;&lt;img src=&quot;../assets//images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+			&lt;div class=&quot;media-body&quot;&gt;
+				&lt;blockquote&gt;
+					&lt;small class=&quot;date&quot;&gt;&lt;cite&gt;just now&lt;/cite&gt;&lt;/small&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien.&lt;/p&gt;
+				&lt;/blockquote&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Media item END --&gt;
+		
+		&lt;!-- Media item --&gt;
+		&lt;div class=&quot;media right&quot;&gt;
+			&lt;small class=&quot;author&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;&quot; class=&quot;strong&quot;&gt;John Doe&lt;/a&gt;&lt;/small&gt;
+			&lt;div class=&quot;media-object pull-right thumb&quot;&gt;&lt;img src=&quot;../assets//images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+			&lt;div class=&quot;media-body&quot;&gt;
+				&lt;blockquote class=&quot;pull-right&quot;&gt;
+					&lt;small class=&quot;date&quot;&gt;&lt;cite&gt;15 seconds ago&lt;/cite&gt;&lt;/small&gt;
+					&lt;p&gt;In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla.&lt;/p&gt;
+				&lt;/blockquote&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Media item END --&gt;
+		
+		&lt;!-- Media item --&gt;
+		&lt;div class=&quot;media&quot;&gt;
+			&lt;small class=&quot;author&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;&quot; class=&quot;strong&quot;&gt;Ricky&lt;/a&gt;&lt;/small&gt;
+			&lt;div class=&quot;media-object pull-left thumb&quot;&gt;&lt;img src=&quot;../assets//images/avatar-51x51.jpg&quot; alt=&quot;Image&quot; /&gt;&lt;/div&gt;
+			&lt;div class=&quot;media-body&quot;&gt;
+				&lt;blockquote&gt;
+					&lt;small class=&quot;date&quot;&gt;&lt;cite&gt;5 minutes ago&lt;/cite&gt;&lt;/small&gt;
+					&lt;p&gt;Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod.&lt;/p&gt;
+				&lt;/blockquote&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- // Media item END --&gt;
+		
+	&lt;/div&gt;
+	&lt;!-- // Slim Scroll END --&gt;
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;chat-controls&quot;&gt;
+		&lt;div class=&quot;innerLR&quot;&gt;
+			&lt;form class=&quot;margin-none&quot;&gt;
+				&lt;div class=&quot;row&quot;&gt;
+					&lt;div class=&quot;col-md-10 col-xs-10&quot;&gt;
+						&lt;input type=&quot;text&quot; name=&quot;message&quot; class=&quot;form-control&quot; placeholder=&quot;Type your message ..&quot; /&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;col-md-2 col-xs-2&quot;&gt;
+						&lt;button type=&quot;submit&quot; class=&quot;btn btn-block btn-primary&quot;&gt;Send&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;!-- // Chat END --&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-255c82a9611e079dfed1c719654e55ca">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/widgets/widget-chat/assets/less/widget-chat.less&quot;;
+@import &quot;assets/components/core/less/widgets.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;assets/components/core/less/forms.less&quot;;
+@import &quot;http://localhost/shared/components/library/jquery-ui/css/jquery-ui.min.css&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-255c82a9611e079dfed1c719654e55ca">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">HEAD</span> You should include the following scripts in the head section of the document, right before the closing <code>&lt;/head&gt;</code> tag, after styles.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+													
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/widgets/widget-chat/assets/js/widget-chat.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/widgets/widget-chat/assets/js/widget-chat.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

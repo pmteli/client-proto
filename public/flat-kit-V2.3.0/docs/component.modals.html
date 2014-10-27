@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	 
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../assets/less/docs/module.docs.page.index.component.modals.less" /> -->
+
+	<link rel="stylesheet" href="../assets/css/docs/module.docs.page.index.component.modals.min.css" />
+
+	
+	
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+<script src="../assets/components/library/angular/angular.min.js?v=v2.3.0"></script>
+</head>
+<body id="docs">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default margin-none">
+  <!-- <div class="container"> -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FLAT KIT Documentation</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core packages <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="component.core.minimal.html">Minimal</a></li>
+            <li><a href="component.core.html">Complete</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top</a></li>
+      </ul> -->
+    </div><!--/.nav-collapse -->
+  <!-- </div> -->
+</div>
+
+<div class="innerAll">
+<div class="widget widget-tabs">
+	<div class="widget-body">
+
+		<div class="row">
+			<div class="col-md-3" ng-app="App" ng-controller="ComponentsCtrl" ng-init="search = 'modals'">
+				<input class="form-control" type="text" ng-model="search" placeholder="Search .." />
+				<tree collection="components" search="search"></tree>
+			</div>
+			<div class="col-md-9">
+										
+						<div class="jumbotron center">
+							<h1>component.modals</h1>
+						</div>
+
+													<h4 class="separator bottom"><a href="#view-14e59edd17fe8c4d5f7fb79afe32fdcd" data-toggle="collapse">bootbox</a></h4>
+							<div class="collapse in" id="view-14e59edd17fe8c4d5f7fb79afe32fdcd">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-14e59edd17fe8c4d5f7fb79afe32fdcd" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-14e59edd17fe8c4d5f7fb79afe32fdcd" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-14e59edd17fe8c4d5f7fb79afe32fdcd" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-14e59edd17fe8c4d5f7fb79afe32fdcd" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/bootbox.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-14e59edd17fe8c4d5f7fb79afe32fdcd">
+												<div class="widget">
+	<div class="widget-head">
+		<h4 class="heading">Bootbox <span>Manage modals with JavaScript API</span></h4>
+	</div>
+	<div class="widget-body">
+		<button id="modals-bootbox-alert" class="btn btn-primary">Alert</button>
+		<button id="modals-bootbox-confirm" class="btn btn-primary">Confirm</button>
+		<button id="modals-bootbox-prompt" class="btn btn-primary">Prompt</button>
+		<button id="modals-bootbox-custom" class="btn btn-primary">Custom Dialog</button>
+	</div>
+</div>
+
+
+											</div>
+											<div class="tab-pane" id="source-14e59edd17fe8c4d5f7fb79afe32fdcd">
+												<pre class="prettyprint">&lt;div class=&quot;widget&quot;&gt;
+	&lt;div class=&quot;widget-head&quot;&gt;
+		&lt;h4 class=&quot;heading&quot;&gt;Bootbox &lt;span&gt;Manage modals with JavaScript API&lt;/span&gt;&lt;/h4&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;widget-body&quot;&gt;
+		&lt;button id=&quot;modals-bootbox-alert&quot; class=&quot;btn btn-primary&quot;&gt;Alert&lt;/button&gt;
+		&lt;button id=&quot;modals-bootbox-confirm&quot; class=&quot;btn btn-primary&quot;&gt;Confirm&lt;/button&gt;
+		&lt;button id=&quot;modals-bootbox-prompt&quot; class=&quot;btn btn-primary&quot;&gt;Prompt&lt;/button&gt;
+		&lt;button id=&quot;modals-bootbox-custom&quot; class=&quot;btn btn-primary&quot;&gt;Custom Dialog&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-14e59edd17fe8c4d5f7fb79afe32fdcd">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/modals/assets/less/modals.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/notifications/gritter/assets/lib/css/jquery.gritter.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/notifications/gritter/assets/custom/less/gritter.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-14e59edd17fe8c4d5f7fb79afe32fdcd">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/modals/assets/js/bootbox.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/modals/assets/js/modals.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/notifications/gritter/assets/lib/js/jquery.gritter.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/notifications/gritter/assets/custom/js/gritter.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+														<h4 class="separator bottom"><a href="#view-5b4862a8399e76d4631ffcbb0f373237" data-toggle="collapse">modal-inline</a></h4>
+							<div class="collapse in" id="view-5b4862a8399e76d4631ffcbb0f373237">
+								<div class="widget widget-tabs">
+									<div class="widget-head padding-none">
+										<ul>
+											<li class="active"><a href="#preview-5b4862a8399e76d4631ffcbb0f373237" data-toggle="tab">Preview</a></li>
+											<li><a href="#source-5b4862a8399e76d4631ffcbb0f373237" data-toggle="tab">Source</a></li>
+											<li><a href="#styles-5b4862a8399e76d4631ffcbb0f373237" data-toggle="tab">Styles</a></li>											<li><a href="#scripts-5b4862a8399e76d4631ffcbb0f373237" data-toggle="tab">Scripts</a></li>										</ul>
+										<a href="../docs/examples/modal-inline.html" target="_blank" class="pull-right btn btn-success">Live Example</a>
+									</div>
+									<div class="widget-body">
+										<div class="tab-content">
+											<div class="tab-pane active" id="preview-5b4862a8399e76d4631ffcbb0f373237">
+												<!-- Modal inline -->
+<div class="modal modal-inline">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal heading -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Modal header</h4>
+			</div>
+			<!-- // Modal heading END -->
+			
+			<!-- Modal body -->
+			<div class="modal-body">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			</div>
+			<!-- // Modal body END -->
+			
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default">Just a button</a> 
+				<a href="#modal-simple" data-toggle="modal" class="btn btn-primary">Open Live Modal</a>
+			</div>
+			<!-- // Modal footer END -->
+
+		</div>
+	</div>
+	
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-simple">
+	
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal heading -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 class="modal-title">Modal header</h3>
+			</div>
+			<!-- // Modal heading END -->
+			
+			<!-- Modal body -->
+			<div class="modal-body">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			</div>
+			<!-- // Modal body END -->
+			
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default" data-dismiss="modal">Close</a> 
+				<a href="#" data-dismiss="modal" class="btn btn-primary">Save changes</a>
+			</div>
+			<!-- // Modal footer END -->
+
+		</div>
+	</div>
+	
+</div>
+<!-- // Modal END -->
+
+
+
+											</div>
+											<div class="tab-pane" id="source-5b4862a8399e76d4631ffcbb0f373237">
+												<pre class="prettyprint">&lt;!-- Modal inline --&gt;
+&lt;div class=&quot;modal modal-inline&quot;&gt;
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+
+			&lt;!-- Modal heading --&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+				&lt;h4 class=&quot;modal-title&quot;&gt;Modal header&lt;/h4&gt;
+			&lt;/div&gt;
+			&lt;!-- // Modal heading END --&gt;
+			
+			&lt;!-- Modal body --&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;!-- // Modal body END --&gt;
+			
+			&lt;!-- Modal footer --&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;Just a button&lt;/a&gt; 
+				&lt;a href=&quot;#modal-simple&quot; data-toggle=&quot;modal&quot; class=&quot;btn btn-primary&quot;&gt;Open Live Modal&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;!-- // Modal footer END --&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;modal-simple&quot;&gt;
+	
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+
+			&lt;!-- Modal heading --&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+				&lt;h3 class=&quot;modal-title&quot;&gt;Modal header&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;!-- // Modal heading END --&gt;
+			
+			&lt;!-- Modal body --&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;!-- // Modal body END --&gt;
+			
+			&lt;!-- Modal footer --&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/a&gt; 
+				&lt;a href=&quot;#&quot; data-dismiss=&quot;modal&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;!-- // Modal footer END --&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;!-- // Modal END --&gt;
+
+
+
+</pre>
+											</div>
+
+																						<div class="tab-pane" id="styles-5b4862a8399e76d4631ffcbb0f373237">
+
+												<h4>Code</h4>
+												<pre class="prettyprint">@import &quot;http://localhost/shared/components/modules/admin/modals/assets/less/modals.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/notifications/gritter/assets/lib/css/jquery.gritter.css&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/notifications/gritter/assets/custom/less/gritter.less&quot;;
+@import &quot;assets/components/modules/admin/ui/buttons/assets/buttons.less&quot;;
+@import &quot;http://localhost/shared/components/modules/admin/modals/assets/less/modal-inline.less&quot;;</pre>
+												<hr class="separator"/>
+
+												<h4>Usage</h4>
+												<ol>
+													<li>Create a new LESS file <em>(eg. styles.less)</em></li>
+													<li>Copy &amp; paste the above imports in the LESS file.</li>
+													<li>Place the file in your project's document root.</li>
+													<li>
+														Load the LESS file into the <code>&lt;head&gt;</code> section of your HTML document, before any JavaScript files: <p><pre class="prettyprint">&lt;link type=&quot;stylesheet/less&quot; href=&quot;styles.less&quot; /&gt;</pre>
+</p>
+														<p><span class="label label-danger">NOTE</span>&nbsp; All the styles from the CORE package also need to be imported in this file, before the component imports.</p>													</li>
+													<li>If you'd like to include other components on the same page, don't create multiple LESS files, but add all the imports in one file. You can create a LESS file for each page with just the resources used for that specific page, or you could create and use a single LESS file for the entire project.</li>
+													<li>In production, compile the LESS file and use the resulting minified CSS file in the HTML document.</li>
+												</ol>
+
+											</div>
+											
+																						<div class="tab-pane" id="scripts-5b4862a8399e76d4631ffcbb0f373237">
+
+																									
+													<h3>Scripts</h3>
+													<p><span class="label label-default">BODY</span> You should include the following scripts at the end of the HTML document, right before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+													<pre class="prettyprint">&lt;script src=&quot;assets/components/modules/admin/modals/assets/js/bootbox.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/modals/assets/js/modals.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/notifications/gritter/assets/lib/js/jquery.gritter.min.js?v=v2.3.0&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/components/modules/admin/notifications/gritter/assets/custom/js/gritter.init.js?v=v2.3.0&quot;&gt;&lt;/script&gt;</pre>
+
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="separator bottom"></div>
+							</div>
+										</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/modals/assets/js/bootbox.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/modals/assets/js/modals.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/notifications/gritter/assets/lib/js/jquery.gritter.min.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/admin/notifications/gritter/assets/custom/js/gritter.init.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/app/ng.app.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/filters/ng.filter.isarray.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/assets/angular/controllers/ng.ctrl.components.js?v=v2.3.0"></script>
+<script src="../assets/components/modules/docs/docs/assets/angular/directives/ng.docs.directive.components.js?v=v2.3.0"></script>
+<script src="../assets/components/plugins/prettyprint/assets/js/prettify.js?v=v2.3.0"></script>
+<script src="../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+</body>
+</html>

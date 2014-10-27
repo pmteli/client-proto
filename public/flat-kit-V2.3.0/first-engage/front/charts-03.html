@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!--><html class="animations front fluid top-full menuh-top"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | Your Business</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.index.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.index.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+</head>
+<body>
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+		
+		<!-- Content -->
+		<div class="container-960 innerLR">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> <span><a href="#" class="fa fa-download"></a><a href="#" class="fa fa-print"></a></span></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="ad-banner">
+					<div class="carousel slide carousel-fade" id="banner-carousel">
+						<div class="carousel-inner">
+							<!-- Item -->
+							<div class="item active">
+								<img alt="[Image: Cost Banner]" src="../assets/images/banners/cost_banner.png" />
+							</div>
+							<!-- // Item END -->
+							<!-- Item -->
+							<div class="item">
+								<img alt="[Image: Energy Banner]" src="../assets/images/banners/energy_banner.png" />
+							</div>
+							<!-- // Item END -->
+							<!-- Item -->
+							<div class="item">
+								<img alt="[Image: Gas Banner]" src="../assets/images/banners/gas_banner.png" />
+							</div>
+							<!-- // Item END -->
+							<!-- Item -->
+							<div class="item">
+								<img alt="[Image: Plan Banner]" src="../assets/images/banners/plan_banner.png" />
+							</div>
+							<!-- // Item END -->
+						</div>
+					</div> <!-- .carousel -->
+				</div>
+
+				<div class="container-fluid clearfix">
+					<select class="selectpicker col-md-6">
+						<option>123 Main St, Boston MA 12345</option>
+						<option>987 A St, Boston MA 12345</option>
+						<option>567 First St, Boston MA 12345</option>
+					</select>
+					<a class="back-link" href="#">&laquo; back to portfolio</a>
+				</div>
+				
+				<div class="container-fluid nav-container">
+					<ul class="topnav col-md-9">
+						
+						<li class="active"><a href="index.html?lang=en"><span class="tab-icon icon-usd fa fa-circle"><i class="fa fa-usd"></i></span><span class="name data">Your Business</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-electricity.html?lang=en"><span class="tab-icon icon-bolt fa fa-circle"><i class="fa fa-bolt"></i></span><span class="name data">Your Electricity</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-gas.html?lang=en"><span class="tab-icon icon-fire fa fa-circle"><i class="fa fa-fire"></i></span><span class="name data">Your Gas</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="savings.html?lang=en"><span class="tab-icon icon-money fa fa-circle"><i class="fa fa-money"></i></span><span class="name data">Est. Savings</span><span class="amount data">$000,000</span></a></li>
+					</ul>
+					<!-- // Top Menu Left END -->
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="dashboard" class="main">
+				<div class="container-fluid clearfix">
+					<div class="primary-content col-md-9">
+
+						<div class="carousel carousel-1 slide" id="dashboard-carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#dashboard-carousel" data-slide-to="0" class="active">Total Consumption</li>
+								<li data-target="#dashboard-carousel" data-slide-to="1">HVAC</li>
+								<li data-target="#dashboard-carousel" data-slide-to="2">Operational</li>
+							</ol>
+							<div class="carousel-inner">
+										<!-- Item -->
+								<div class="item active">
+									<div class="row">
+										<div class="col-xs-5">
+											<img alt="[Image: Graph]" src="../assets/images/charts/total-consumption-03.jpg" />
+										</div>
+										<div class="col-xs-6 relativeWrap">
+											<div class="carousel-caption">
+												<h2>Save $2,630 this winter</h2>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu. Vestibulum ante ipsum primis in faucibus orci.</p>
+												<p><a href="#" class="btn btn-inverse">Take Action</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // Item END -->
+										<!-- Item -->
+								<div class="item">
+									<div class="row">
+										<div class="col-xs-5">
+											<img alt="[Image: Graph]" src="../assets/images/charts/hvac-03.jpg" />
+										</div>
+										<div class="col-xs-6 relativeWrap">
+											<div class="carousel-caption">
+												<h2>Save $5,640 with efficient cooling</h2>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu. Vestibulum ante ipsum primis in faucibus orci.</p>
+												<p><a href="#" class="btn btn-inverse">Take Action</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // Item END -->
+										<!-- Item -->
+								<div class="item">
+									<div class="row">
+										<div class="col-xs-5">
+											<img alt="[Image: Graph]" src="../assets/images/charts/operational-03.jpg" />
+										</div>
+										<div class="col-xs-6 relativeWrap">
+											<div class="carousel-caption">
+												<h2>Save $6,860 on Start-Up and Shut-Down</h2>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu. Vestibulum ante ipsum primis in faucibus orci.</p>
+												<p><a href="#" class="btn btn-inverse">Take Action</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // Item END -->
+									</div>
+						</div> <!-- .carousel -->
+
+						<div id="recommendations" class="clearfix">
+							<div class="well col-md-4">
+								<h2>Low/No Cost</h2>
+								<img alt="[Image: Graph]" src="../assets/images/placeholder-dashboard-image.jpg" />
+
+								<div class="well-content">
+									<h3>Headline</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu.</p>
+
+									<p class="note">Save up to $000.00</p>
+									<p><a href="#" class="btn btn-inverse">Take Action</a></p>
+									<p class="secondary-links"><a href="#">Already Done</a> <a href="#">No Thanks</a></p>
+								</div>
+							</div>
+
+							<div class="well col-md-4 highlight">
+								<h2>Low/No Cost</h2>
+								<img alt="[Image: Graph]" src="../assets/images/placeholder-dashboard-image.jpg" />
+
+								<div class="well-content">
+									<h3>Headline</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu.</p>
+
+									<p class="note">Save up to $000.00</p>
+									<p><a href="#" class="btn btn-inverse">Take Action</a></p>
+									<p class="secondary-links"><a href="#">Already Done</a> <a href="#">No Thanks</a></p>
+								</div>
+							</div>
+
+							<div class="well col-md-4">
+								<h2>Low/No Cost</h2>
+								<img alt="[Image: Graph]" src="../assets/images/placeholder-dashboard-image.jpg" />
+
+								<div class="well-content">
+									<h3>Headline</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu.</p>
+
+									<p class="note">Save up to $000.00</p>
+									<p><a href="#" class="btn btn-inverse">Take Action</a></p>
+									<p class="secondary-links"><a href="#">Already Done</a> <a href="#">No Thanks</a></p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .primary-content -->
+
+
+					<div class="secondary-content col-md-3">
+						<div class="building-details">
+							<!--
+							<div id="building-health-score" class="widget widget-heading-simple widget-body-primary-gradient">
+								<div class="widget-body">
+									<div class="">
+										<h2>Your Building Health Score<span class="fa fa-circle"><span class="value">72</span></span></h2>
+										<p><a href="#">How to improve your score</a></p>
+									</div>
+								</div>
+							</div>
+							-->
+							<div class="well widget-container clearfix">
+								<div class="widget widget-heading-simple widget-body-gray">
+									<div class="widget-body">
+										<div class="location-details">
+											<ul>
+												<li><strong>Building Type:</strong> Retail Shop</li>
+												<li><strong>Location SqFt:</strong> 3500</li>
+												<li><strong>Occupants:</strong> 25</li>
+												<li><strong>Heating Type:</strong> gas</li>
+												<li><strong>Cooling Type:</strong> electric</li>
+											</ul>
+											<hr class="separator text-center" />
+											<a href="#">Edit Location</a>
+										</div>
+									</div>
+								</div> <!-- .widget -->
+								<div class="widget widget-heading-simple widget-body-gray">
+									<div class="widget-body">
+										<div class="billing-details">
+											<h2>Billing</h2>
+											<hr class="separator text-center" />
+											<ul>
+												<li><strong>Latest Bill:</strong> 01/02/03</li>
+												<li><strong>Total Billed:</strong> 375.00</li>
+												<li><strong>Electric:</strong> $300.00</li>
+												<li><strong>Gas:</strong> $75.00</li>
+											</ul>
+											<hr class="separator text-center" />
+											<a href="#">View Last Bill</a>
+										</div>
+									</div>
+								</div> <!-- .widget -->
+								<div class="widget widget-heading-simple widget-body-gray">
+									<div class="widget-body">
+										<div class="goals">
+											<h2>Your Goals</h2>
+											<hr class="separator text-center" />
+											<div class="widget widget-heading-simple widget-body-white">
+												<p><strong>Building Profile Progress</strong></p>
+												<div class="progress">
+													<div style="width: 70%;" class="progress-bar progress-bar-primary"></div>
+												</div>
+											</div>
+											<!-- // Widget With Progress Bar END -->
+											<div class="widget widget-heading-simple widget-body-white">
+												<p><strong>Actions Taken (2 of 10)</strong></p>
+												<div class="progress">
+													<div style="width: 20%;" class="progress-bar progress-bar-primary"></div>
+												</div>
+											</div>
+											<!-- // Widget With Progress Bar END -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="slide-toggle fa fa-angle-double-right" href="#"></a>
+					</div> <!-- .secondary-content -->
+				</div>	
+			</div> <!-- #dashboard -->
+		</div>
+		<!-- // Content END -->
+	</div> <!-- .container-fluid -->
+
+	<div id="footer" class="hidden-print">
+		
+		<div class="container-960 innerLR">
+			<div class="footer-content col-md-12">
+				<!--  Copyright Line -->
+				<div class="copy">
+					<a href="site-map.html?lang=en">Site Map</a>
+					<span class="appbrand">Powered by FirstFuel</span>
+				</div>
+				<!--  End Copyright Line -->
+			</div>
+		</div>
+
+	</div>
+	<!-- // Footer END -->
+	
+
+	
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/widgets/widget-progress/assets/js/widget-progress.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	<script src="../assets/js/firstengage.js"></script>
+	
+</body>
+</html>

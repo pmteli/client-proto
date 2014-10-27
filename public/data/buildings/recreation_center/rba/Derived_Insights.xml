@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<derivedBuildingModel>
+  <derivedBuildingDetailModel>
+    <avgDailyPeakDemandReductionPotential xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <energyStarRatio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <meanDemand>
+      <unit>kW</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">18.7</value>
+    </meanDemand>
+    <meanDemandBtuPerSqft>
+      <unit>BTU/hr</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">3.9669306404271385</value>
+    </meanDemandBtuPerSqft>
+    <meanDemandOcc>
+      <unit>kW</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">24.95</value>
+    </meanDemandOcc>
+    <meanDemandOccBtuPerSqft>
+      <unit>BTU/hr</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">5.294277524782547</value>
+    </meanDemandOccBtuPerSqft>
+    <meanDemandOccPerSqft>
+      <unit>W</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">1.5505642319288626</value>
+    </meanDemandOccPerSqft>
+    <meanDemandOccSumVac xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <meanDemandOccSumVacBtuPerSqft xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <meanDemandOccSumVacPerSqft xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <meanDemandPerSqft>
+      <unit>W</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">1.1618168357809346</value>
+    </meanDemandPerSqft>
+    <meanDemandUnocc>
+      <unit>kW</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">14.31</value>
+    </meanDemandUnocc>
+    <meanDemandUnoccBtuPerSqft>
+      <unit>BTU/hr</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">3.0358286159720733</value>
+    </meanDemandUnoccBtuPerSqft>
+    <meanDemandUnoccPerSqft>
+      <unit>W</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">0.8891198551941687</value>
+    </meanDemandUnoccPerSqft>
+    <occupiedUnoccupiedRatio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <peakDemand>
+      <unit>kW</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">32.16</value>
+    </peakDemand>
+    <peakDemandBtuPerSqft>
+      <unit>BTU/hr</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">6.8228996644712305</value>
+    </peakDemandBtuPerSqft>
+    <peakDemandPerSqft>
+      <unit>W</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">1.9982602212004472</value>
+    </peakDemandPerSqft>
+    <recommendedEnergyStarRatio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+  </derivedBuildingDetailModel>
+  <derivedBuildingFuelModel>
+    <annualFuelBtuConPerSqft>
+      <unit>kBTU</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">34.82082167972507</value>
+    </annualFuelBtuConPerSqft>
+    <annualFuelCon>
+      <unit>kWh</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">164245.69288203263</value>
+    </annualFuelCon>
+    <annualFuelConPerSqft>
+      <unit>kWh</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">10.205399085499728</value>
+    </annualFuelConPerSqft>
+    <energyTypeModel>
+      <energyTypeId>1</energyTypeId>
+      <label>Electricity</label>
+      <name>Electric</name>
+      <nativeUnit>kWh</nativeUnit>
+    </energyTypeModel>
+    <nonWeatherRelatedCon>
+      <unit>kWh</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">137706.063731642</value>
+    </nonWeatherRelatedCon>
+    <nonWeatherRelatedConBtuPerSqft>
+      <unit>kBTU</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">29.19430156905446</value>
+    </nonWeatherRelatedConBtuPerSqft>
+    <nonWeatherRelatedConPerSqft>
+      <unit>kWh</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">8.556360366076923</value>
+    </nonWeatherRelatedConPerSqft>
+    <weatherRelatedCon>
+      <unit>kWh</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">26539.629150390625</value>
+    </weatherRelatedCon>
+    <weatherRelatedConBtuPerSqft>
+      <unit>kBTU</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">5.626520110670611</value>
+    </weatherRelatedConBtuPerSqft>
+    <weatherRelatedConPerSqft>
+      <unit>kWh</unit>
+      <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">1.649038719422805</value>
+    </weatherRelatedConPerSqft>
+  </derivedBuildingFuelModel>
+  <totalCon>
+    <unit>kBTU</unit>
+    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">560406.3041134953</value>
+  </totalCon>
+  <totalConBtuPerSqft>
+    <unit>kBTU</unit>
+    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">34.82082167972507</value>
+  </totalConBtuPerSqft>
+  <totalConPerSqft>
+    <unit>kBTU</unit>
+    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:double">34.82082167972507</value>
+  </totalConPerSqft>
+</derivedBuildingModel>

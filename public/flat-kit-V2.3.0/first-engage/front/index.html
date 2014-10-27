@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!--><html class="animations front fluid top-full menuh-top"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | Portfolio</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.index.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.index.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+<script src="../../assets/components/library/jquery-ui/js/jquery-ui.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+</head>
+<body class="portfolio">
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="container-960 innerLR secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-960 innerLR clearfix">
+					<select class="selectpicker col-md-6">
+						<option>123 Main St, Boston MA 12345</option>
+						<option>987 A St, Boston MA 12345</option>
+						<option>567 First St, Boston MA 12345</option>
+					</select>
+					<a class="back-link" href="#">back to portfolio &raquo;</a>
+					<p class="document-links"><a href="#" class="fa fa-print"></a><a href="#" class="fa fa-download"></a></p>
+				</div>
+				
+				<div class="container-960 innerLR nav-container">
+					<ul class="topnav col-md-9">
+						
+						<li><a href="your-cost.html"><span class="tab-icon icon-usd fa fa-circle"><i class="fa fa-usd"></i></span><span class="name data">Your Cost</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-electric.html"><span class="tab-icon icon-bolt fa fa-circle"><i class="fa fa-bolt"></i></span><span class="name data">Your Electric</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="your-gas.htmln"><span class="tab-icon icon-fire fa fa-circle"><i class="fa fa-fire"></i></span><span class="name data">Your Gas</span><span class="amount data">$000,000</span></a></li>
+						<li><a href="savings.html"><span class="tab-icon icon-money fa fa-circle"><i class="fa fa-money"></i></span><span class="name data">Savings</span><span class="amount data">$000,000</span></a></li>
+					</ul>
+					<!-- // Top Menu Left END -->
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="portfolio" class="main">
+				<div class="container-960 innerLR clearfix">
+					<div class="primary-content col-md-9">
+						<div class="summary">
+							<!-- Tabs -->
+							<div class="relativeWrap">
+								<div class="widget widget-tabs">
+								
+									<!-- Tabs Heading -->
+									<div class="widget-head">
+										<ul>
+											<li><a href="#map-view" data-toggle="tab">Map View</a></li>
+											<li class="active"><a href="#chart-view" data-toggle="tab">Chart View</a></li>
+										</ul>
+									</div>
+									<!-- // Tabs Heading END -->
+									
+									<div class="widget-body">
+										<div class="tab-content">
+										
+											<!-- Tab content -->
+											<div id="map-view" class="tab-pane widget-body-regular">
+												<img alt="map" src="../assets/images/placeholder-portfolio-map.jpg" />
+											</div>
+											<!-- // Tab content END -->
+										
+											<!-- Tab content -->
+											<div id="chart-view" class="tab-pane active widget-body-regular chart-view clearfix">
+												<h2 class="col-md-6">Sort your portfolio by:</h2>
+												<select class="selectpicker col-md-4">
+													<option>Highest Consumption</option>
+													<option>Option 02</option>
+													<option>Option 03</option>
+												</select>
+
+												<div class="data clearfix">
+													<img alt="chart" src="../assets/images/placeholder-portfolio-chart.jpg" />
+												</div>
+											</div>
+											<!-- // Tab content END -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Tabs END -->
+						</div> <!-- .summary -->
+
+						<div class="detail widget">
+							<div class="widget-head">
+								<button class="btn"><i class="fa fa-table"></i> Columns</button>
+							</div>
+							<div class="widget-body">
+								<!-- Table -->
+								<table class="dynamicTable table">
+
+									<!-- Table heading -->
+									<thead class="bg-gray">
+										<tr>
+											<th>Building Name</th>
+											<th>Location</th>
+											<th>City</th>
+											<th>Zip</th>
+											<th>Annual Uage (kWh)</th>
+											<th>Gas (kbtu)</th>
+											<th>Incentive Amounts</th>
+											<th>Cost Sq Ft</th>
+										</tr>
+									</thead>
+									<!-- // Table heading END -->
+									
+									<!-- Table body -->
+									<tbody>
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Nokia</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>New York</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Advanced Micro</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>New York</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Sprint Nextel</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>New York</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Staples</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>Las Vegas</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Richmond Mines</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>Chicago</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Apple</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>Las Vegas</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Ford Motors</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>Chicago</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Walmart HQ</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>Chicago</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									
+										<!-- Table row -->
+										<tr>
+											<td><a href="#">Bank of America</a></td>
+											<td><a href="#">123 Main St</a></td>
+											<td>Las Vegas</td>
+											<td class="center">1234</td>
+											<td class="center">00,000</td>
+											<td class="center">00,000</td>
+											<td class="center">$00,000</td>
+											<td class="center">$00,000</td>
+										</tr>
+										<!-- // Table row END -->
+									</tbody>
+									<!-- // Table body END -->
+									
+								</table>
+								<!-- // Table END -->
+							</div>
+						</div><!-- .detail/.widget -->
+					</div> <!-- .primary-content -->
+
+
+					<div class="secondary-content col-md-3">
+						<div class="filters">
+							<div class="well widget-container clearfix">
+								<div class="widget widget-heading-simple widget-body-gray">
+									<div class="widget-body">
+										<h2>Portfolio <span>(250 buildings)</span></h2>
+										<hr class="separator text-center" />
+										<h3>Building Type</h3>
+										<ul>
+											<li><label class="checkbox-custom"><input type="checkbox" checked="checked" name="building-type" /> Office (8)</label></li>
+											<li><label class="checkbox-custom"><input type="checkbox" name="building-type" /> Government (8)</label></li>
+											<li><label class="checkbox-custom"><input type="checkbox" name="building-type" /> School (8)</label></li>
+											<li><label class="checkbox-custom"><input type="checkbox" name="building-type" /> Agriculture (8)</label></li>
+											<li><label class="checkbox-custom"><input type="checkbox" name="building-type" /> Hospital (8)</label></li>
+										</ul>
+
+										<hr class="separator text-center" />
+
+										<div class="slider-container clearfix">
+											<h3>Building Area</h3>
+											<div id="building-area" class="slider" data-min="0" data-max="30000"></div>
+										</div>
+										<div class="slider-container clearfix">
+											<h3>Annual Consumption</h3>
+											<div id="annual-consumption" class="slider" data-min="0" data-max="1000000"></div>
+										</div>
+										<div class="slider-container clearfix">
+											<h3>Savings Potential</h3>
+											<div id="savings-potential" class="slider" data-min="0" data-max="1000000"></div>
+										</div>
+										<div class="slider-container clearfix">
+											<h3>Annual Cost</h3>
+											<div id="annual-cost" class="slider" data-min="0" data-max="1000000"></div>
+										</div>
+										<div class="slider-container clearfix">
+											<h3>Cost Sq Ft</h3>
+											<div id="cost-square-foot" class="slider" data-min="0" data-max="10000000"></div>
+										</div>
+									</div>
+								</div> <!-- .widget -->
+							</div>
+						</div>
+						<a class="slide-toggle fa fa-angle-double-right" href="#"></a>
+					</div> <!-- .secondary-content -->
+				</div>	
+			</div> <!-- #dashboard -->
+
+			<div id="footer" class="container-960 innerLR hidden-print">
+				
+					<div class="footer-content col-md-12">
+						<!--  Copyright Line -->
+						<div class="copy">
+							<a href="site-map.html?lang=en">Site Map</a>
+							<span class="appbrand">Powered by FirstFuel</span>
+						</div>
+						<!--  End Copyright Line -->
+					</div>
+
+			</div>
+			<!-- // Footer END -->
+		<!-- // Content END -->
+	</div> 
+	
+
+	
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/widgets/widget-progress/assets/js/widget-progress.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/js/jquery.dataTables.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/extras/TableTools/media/js/TableTools.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/extras/ColVis/media/js/ColVis.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/custom/js/DT_bootstrap.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/custom/js/datatables.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/extras/FixedHeader/FixedHeader.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/extras/ColReorder/media/js/ColReorder.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	<script src="../assets/js/firstengage.js"></script>
+	
+</body>
+</html>

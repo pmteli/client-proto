@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>datatable-tabletools example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.datatable-tabletools.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.datatable-tabletools.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">datatable-tabletools example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>datatable-tabletools component</strong></p>
+			</div>
+<!-- Table -->
+<table class="dynamicTable tableTools table table-striped checkboxs">
+
+	<!-- Table heading -->
+	<thead>
+		<tr>
+			<th class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</th>
+			<th>Rendering eng.</th>
+			<th>Browser</th>
+			<th>Platform(s)</th>
+			<th>Eng. vers.</th>
+			<th>CSS grade</th>
+		</tr>
+	</thead>
+	<!-- // Table heading END -->
+	
+	<!-- Table body -->
+	<tbody>
+	
+		<!-- Table row -->
+		<tr class="gradeX">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox" checked="checked">
+	                </label>
+	            </div>
+			</td>
+			<td>Trident</td>
+			<td>Internet Explorer 4.0</td>
+			<td>Win 95+</td>
+			<td class="center">4</td>
+			<td class="center">X</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeC">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox" checked="checked">
+	                </label>
+	            </div>
+			</td>
+			<td>Trident</td>
+			<td>Internet Explorer 5.0</td>
+			<td>Win 95+</td>
+			<td class="center">5</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox" checked="checked">
+	                </label>
+	            </div>
+			</td>
+			<td>Trident</td>
+			<td>Internet Explorer 5.5</td>
+			<td>Win 95+</td>
+			<td class="center">5.5</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Trident</td>
+			<td>Internet Explorer 6</td>
+			<td>Win 98+</td>
+			<td class="center">6</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Trident</td>
+			<td>Internet Explorer 7</td>
+			<td>Win XP SP2+</td>
+			<td class="center">7</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Trident</td>
+			<td>AOL browser (AOL desktop)</td>
+			<td>Win XP</td>
+			<td class="center">6</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Firefox 1.0</td>
+			<td>Win 98+ / OSX.2+</td>
+			<td class="center">1.7</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Firefox 1.5</td>
+			<td>Win 98+ / OSX.2+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Firefox 2.0</td>
+			<td>Win 98+ / OSX.2+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Firefox 3.0</td>
+			<td>Win 2k+ / OSX.3+</td>
+			<td class="center">1.9</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Camino 1.0</td>
+			<td>OSX.2+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Camino 1.5</td>
+			<td>OSX.3+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Netscape 7.2</td>
+			<td>Win 95+ / Mac OS 8.6-9.2</td>
+			<td class="center">1.7</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Netscape Browser 8</td>
+			<td>Win 98SE+</td>
+			<td class="center">1.7</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Netscape Navigator 9</td>
+			<td>Win 98+ / OSX.2+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.0</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.1</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1.1</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.2</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1.2</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.3</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1.3</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.4</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1.4</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.5</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1.5</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.6</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">1.6</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.7</td>
+			<td>Win 98+ / OSX.1+</td>
+			<td class="center">1.7</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Mozilla 1.8</td>
+			<td>Win 98+ / OSX.1+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Seamonkey 1.1</td>
+			<td>Win 98+ / OSX.2+</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Gecko</td>
+			<td>Epiphany 2.20</td>
+			<td>Gnome</td>
+			<td class="center">1.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>Safari 1.2</td>
+			<td>OSX.3</td>
+			<td class="center">125.5</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>Safari 1.3</td>
+			<td>OSX.3</td>
+			<td class="center">312.8</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>Safari 2.0</td>
+			<td>OSX.4+</td>
+			<td class="center">419.3</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>Safari 3.0</td>
+			<td>OSX.4+</td>
+			<td class="center">522.1</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>OmniWeb 5.5</td>
+			<td>OSX.4+</td>
+			<td class="center">420</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>iPod Touch / iPhone</td>
+			<td>iPod</td>
+			<td class="center">420.1</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Webkit</td>
+			<td>S60</td>
+			<td>S60</td>
+			<td class="center">413</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 7.0</td>
+			<td>Win 95+ / OSX.1+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 7.5</td>
+			<td>Win 95+ / OSX.2+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 8.0</td>
+			<td>Win 95+ / OSX.2+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 8.5</td>
+			<td>Win 95+ / OSX.2+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 9.0</td>
+			<td>Win 95+ / OSX.3+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 9.2</td>
+			<td>Win 88+ / OSX.3+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera 9.5</td>
+			<td>Win 88+ / OSX.3+</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Opera for Wii</td>
+			<td>Wii</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Nokia N800</td>
+			<td>N800</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Presto</td>
+			<td>Nintendo DS browser</td>
+			<td>Nintendo DS</td>
+			<td class="center">8.5</td>
+			<td class="center">C/A<sup>1</sup></td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeC">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>KHTML</td>
+			<td>Konqureror 3.1</td>
+			<td>KDE 3.1</td>
+			<td class="center">3.1</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>KHTML</td>
+			<td>Konqureror 3.3</td>
+			<td>KDE 3.3</td>
+			<td class="center">3.3</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>KHTML</td>
+			<td>Konqureror 3.5</td>
+			<td>KDE 3.5</td>
+			<td class="center">3.5</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeX">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Tasman</td>
+			<td>Internet Explorer 4.5</td>
+			<td>Mac OS 8-9</td>
+			<td class="center">-</td>
+			<td class="center">X</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeC">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Tasman</td>
+			<td>Internet Explorer 5.1</td>
+			<td>Mac OS 7.6-9</td>
+			<td class="center">1</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeC">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Tasman</td>
+			<td>Internet Explorer 5.2</td>
+			<td>Mac OS 8-X</td>
+			<td class="center">1</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>NetFront 3.1</td>
+			<td>Embedded devices</td>
+			<td class="center">-</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeA">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>NetFront 3.4</td>
+			<td>Embedded devices</td>
+			<td class="center">-</td>
+			<td class="center">A</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeX">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>Dillo 0.8</td>
+			<td>Embedded devices</td>
+			<td class="center">-</td>
+			<td class="center">X</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeX">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>Links</td>
+			<td>Text only</td>
+			<td class="center">-</td>
+			<td class="center">X</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeX">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>Lynx</td>
+			<td>Text only</td>
+			<td class="center">-</td>
+			<td class="center">X</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeC">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>IE Mobile</td>
+			<td>Windows Mobile 6</td>
+			<td class="center">-</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeC">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Misc</td>
+			<td>PSP browser</td>
+			<td>PSP</td>
+			<td class="center">-</td>
+			<td class="center">C</td>
+		</tr>
+		<!-- // Table row END -->
+		
+		<!-- Table row -->
+		<tr class="gradeU">
+			<td class="text-center">
+				<div class="checkbox checkbox-single margin-none">
+	                <label class="checkbox-custom">
+	                    <i class="fa fa-fw fa-square-o"></i>
+	                    <input type="checkbox">
+	                </label>
+	            </div>
+			</td>
+			<td>Other browsers</td>
+			<td>All others</td>
+			<td>-</td>
+			<td class="center">-</td>
+			<td class="center">U</td>
+		</tr>
+		<!-- // Table row END -->
+		
+	</tbody>
+	<!-- // Table body END -->
+	
+</table>
+<!-- // Table END -->
+
+
+
+
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/js/jquery.dataTables.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/extras/TableTools/media/js/TableTools.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/tables/datatables/assets/lib/extras/ColVis/media/js/ColVis.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/tables/datatables/assets/custom/js/DT_bootstrap.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/tables/datatables/assets/custom/js/datatables.init.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/fuelux-checkbox/fuelux-checkbox.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!--><html class="animations front fluid top-full menuh-top"><!-- <![endif]-->
+<head>
+	<title>FirstEngage | CSR</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	
+	
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+	<link rel="stylesheet/less" href="../assets/less/module.front.page.csr-dashboard.less" />
+
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+		<!--<link rel="stylesheet" href="../assets/css/module.front.page.csr-dashboard.min.css" />-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+
+	<script>less = { env: 'development' };</script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+
+<script src="../../assets/components/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>	<script>if (/*@cc_on!@*/false && document.documentMode === 10) { document.documentElement.className+=' ie ie10'; }</script>
+
+</head>
+<body>
+	
+	<!-- Main Container Fluid -->
+	<div id="content">
+			
+			<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+			<div class="navbar main">
+				
+				<div class="container-960 innerLR secondary clearfix">
+					<div class="container-fluid">
+						<div id="logo"><a href="index.html"><img alt="[Logo: FirstFuel]" src="../assets/images/logo.png" /></a></div>
+
+						<div class="utility-nav">
+							<p>Welcome <a class="username" href="#">John Locke</a> | <a class="log-out" href="#">Log Out</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-960 innerLR breadcrumb-nav clearfix">
+					<p class="document-links"><a href="#" class="fa fa-print"></a><a href="#" class="fa fa-download"></a></p>
+				</div>
+			</div>
+			<!-- Top navbar END -->
+			<div id="csr-dashboard" class="main">
+				<div class="container-960 innerLR clearfix">
+					<div class="primary-content col-md-12">
+						<div class="content-block">
+							<div class="table-search clearfix">
+								<div class="col-md-9">
+									<span>
+										<h4>CSR User Name:</h4>
+										<input type="text" placeholder="CSR User Name" class="form-control" />
+									</span>
+									<span class="divider">Or</span>
+									<span>
+										<h4>MPR/MPAN:</h4>
+										<input type="text" placeholder="MPR/MPAN" class="form-control" />
+									</span>
+									<span class="divider">Or</span>
+									<span>
+										<h4>Email Address:</h4>
+										<input type="text" placeholder="Email Address" class="form-control" />
+									</span>
+									<span>
+										<a href="#" class="btn btn-primary">Search</a>
+									</span>
+								</div>
+								<div class="col-md-3">
+									<h4>For more questions contact:</h4>
+									<p>email: <a href="#">help@test.com</a><br />
+										Ph: <a href="#">(555) 000-0000</a></p>
+								</div>
+							</div>
+
+							<!-- Table -->
+							<table class="table table-bordered table-default">
+								
+								<!-- Table heading -->
+								<thead>
+									<tr>
+										<th class="center">No.</th>
+										<th>Column Heading</th>
+									</tr>
+								</thead>
+								<!-- // Table heading END -->
+								
+								<!-- Table body -->
+								<tbody>
+									
+									<!-- Table row -->
+									<tr>
+										<td class="center">1</td>
+										<td>Lorem ipsum dolor</td>
+									</tr>
+									<!-- // Table row END -->
+									
+									<!-- Table row -->
+									<tr>
+										<td class="center">2</td>
+										<td>Lorem ipsum dolor</td>
+									</tr>
+									<!-- // Table row END -->
+									
+									<!-- Table row -->
+									<tr>
+										<td class="center">3</td>
+										<td>Lorem ipsum dolor</td>
+									</tr>
+									<!-- // Table row END -->
+									
+								</tbody>
+								<!-- // Table body END -->
+								
+							</table>
+							<!-- // Table END -->
+						</div>
+					</div> <!-- .primary-content -->
+
+				</div>	
+			</div> <!-- #user-profile -->
+
+			<div id="footer" class="container-960 innerLR hidden-print">
+				
+					<div class="footer-content col-md-12">
+						<!--  Copyright Line -->
+						<div class="copy">
+							<a href="site-map.html?lang=en">Site Map</a>
+							<span class="appbrand">Powered by FirstFuel</span>
+						</div>
+						<!--  End Copyright Line -->
+					</div>
+
+			</div>
+			<!-- // Footer END -->
+		<!-- // Content END -->
+	</div> 
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		infoColor = '#5cc7dd',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+	<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/modules/admin/widgets/widget-progress/assets/js/widget-progress.init.js?v=v2.3.0"></script>
+	<script src="../../assets/components/core/js/core.init.js?v=v2.3.0"></script>
+	<script src="../assets/js/firstengage.js"></script>
+	
+</body>
+</html>

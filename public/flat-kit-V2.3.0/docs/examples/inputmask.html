@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inputmask example | FLAT KIT Template (v2.3.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	-->
+
+		<!-- <link rel="stylesheet/less" href="../../assets/less/docs/module.examples.page.inputmask.less" /> -->
+
+	<link rel="stylesheet" href="../../assets/css/docs/module.examples.page.inputmask.min.css" />
+
+	
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.3.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.3.0"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="innerTB">
+
+			<div class="jumbotron">
+				<h1 class="separator bottom">inputmask example</h1>
+				<p class="lead">This is an example page that loads strictly the minimal core styles &amp; scripts required by <strong>FLAT KIT</strong> and the <strong>inputmask component</strong></p>
+			</div>
+<div class="row">
+	<div class="col-md-6">
+		<label class="strong">Date #1</label>
+		<input type="text" id="inputmask-date" class="form-control span8" placeholder="__/__/____" />
+		<span class="help-inline">d/m/y mask</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Date #2</label>
+		<input type="text" id="inputmask-date-1" class="form-control span8" placeholder="**/**/****" />
+		<span class="help-inline">Changing placeholder</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Date #3</label>
+		<input type="text" id="inputmask-date-2" class="form-control span8" placeholder="dd/mm/yyyy" />
+		<span class="help-inline">Multi-char placeholder</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Currency</label>
+		<input type="text" id="inputmask-currency" class="form-control span8" placeholder="&euro; 999.999.999,99" />
+		<span class="help-inline">&euro; 999.999.999,99</span>
+	</div>
+	<div class="col-md-6">
+		<label class="strong">Phone Number</label>
+		<input type="text" id="inputmask-phone" class="form-control span8" placeholder="(123) 456-7890" />
+		<span class="help-inline">(999) 999-9999</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">VAT Number</label>
+		<input type="text" id="inputmask-tax" class="form-control span8" placeholder="12-3456789" />
+		<span class="help-inline">Multi-char placeholder</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">Decimal</label>
+		<input type="text" id="inputmask-decimal" class="form-control span8" placeholder="123.01" />
+		<span class="help-inline">Allow numbers &amp; decimals</span>
+		<div class="separator bottom"></div>
+		
+		<label class="strong">SSN</label>
+		<input type="text" id="inputmask-ssn" class="form-control span8" placeholder="999-99-9999" />
+		<span class="help-inline">999-99-9999</span>
+	</div>
+</div>
+
+	
+		</div>
+	</div>
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#e5412d',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/inputmask/assets/lib/jquery.inputmask.bundle.min.js?v=v2.3.0"></script>
+<script src="../../assets/components/modules/admin/forms/elements/inputmask/assets/custom/inputmask.init.js?v=v2.3.0"></script>
+</body>
+</html>
