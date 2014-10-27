@@ -3,31 +3,35 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
+#
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
 gem 'mysql2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
+gem 'less-rails'
+
 gem 'jquery-rails'
+
+#gem 'mobylette'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -44,6 +48,37 @@ end
 # gem 'capistrano', group: :development
 gem 'capistrano' , '2.15.5', group: :development
 
-#Use debugger
+# Use debugger
 gem 'debugger', group: [:development, :test]
+
+gem 'devise'
+
+#gem 'roadie'
+
+gem 'hpricot'
+
+#gem 'premailer-rails3'
+
+
+#gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: '9b722b1706'
+
+#gem 'thin'
+
+
+#gem 'paperclip'
+
+#gem 'comfortable_mexican_sofa'
+
+#gem 'hubspot-ruby'
+
+gem 'leaflet-rails'
+
+#gem 'd3-rails'
+
+gem 'geocoder'
+
+gem 'nokogiri'
+
+gem 'uuid'
+
 
