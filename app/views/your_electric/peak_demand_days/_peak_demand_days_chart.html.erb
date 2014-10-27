@@ -1,0 +1,544 @@
+<div id="inner-chart-container">
+  <h4>Following chart shows the hourly peak demand for 10 days with highest demand for the period between 01/01/2011 through 01/01/2012.
+  </h4>
+  <div id="chart-container-main" style="height: 500px; margin: 0 auto"></div>
+</div>
+
+<script type="text/javascript">
+
+    var chart;
+
+    function draw_monthly_consumption() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart-container-main',
+                zoomType: 'xy',
+                /*
+                 backgroundColor: {
+                 linearGradient: [0, 0, 500, 500],
+                 stops: [
+                 [0, 'rgb(255, 255, 255)'],
+                 [1, 'rgb(240, 255, 240)']
+                 ]
+                 },
+                 */
+                //backgroundColor: '#FCFCFC',
+                borderWidth: 0,
+                //plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+                //plotShadow: true,
+                plotBorderWidth: 0
+
+            },
+            loading: {
+                labelStyle: {
+                    top: '25%',
+                    fontSize: '30px',
+                    color: '#5e287a',
+                    fontWeight: '800',
+                    backgroundColor: 'transparent',
+                    opacity: 1,
+                    zIndex: 999,
+                    textShadow: '0.1em 0.1em 0.2em #CCC'
+                },
+                style: {
+                    //position: 'absolute',
+                    backgroundColor: 'transparent',
+                    opacity: 0.8
+                }
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                align: 'center',
+                verticalAlign: 'top',
+                //backgroundColor: '#FFF',
+                itemWidth: 200,
+                border: 'none',
+                borderWidth: 0,
+                itemStyle: {
+                    paddingTop: '10px',
+                    //lineHeight: '22px'
+                }
+            },
+            subtitle: {
+                // text : 'Source: FirstFuel.com'
+            },
+            credits: {
+                text: ''
+            },
+
+            xAxis: {
+                categories: ['0:15', '0:30', '0:45', '1:00', '1:15', '1:30', '1:45', '2:00', '2:15', '2:30', '2:45', '3:00', '3:15', '3:30', '3:45', '4:00', '4:15', '4:30', '4:45', '5:00', '5:15', '5:30', '5:45', '6:00', '6:15', '6:30', '6:45', '7:00', '7:15', '7:30', '7:45', '8:00', '8:15', '8:30', '8:45', '9:00', '9:15', '9:30', '9:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45', '15:00', '15:15', '15:30', '15:45', '16:00', '16:15', '16:30', '16:45', '17:00', '17:15', '17:30', '17:45', '18:00', '18:15', '18:30', '18:45', '19:00', '19:15', '19:30', '19:45', '20:00', '20:15', '20:30', '20:45', '21:00', '21:15', '21:30', '21:45', '22:00', '22:15', '22:30', '22:45', '23:00', '23:15', '23:30', '23:45', '00:00'],
+                lineColor: '#000',
+                tickColor: '#000',
+                tickInterval: 3,
+                gridLineWidth: 0,
+                lineWidth: 0.5,
+                title: {
+                    text: 'Time Interval'
+                },
+                labels: {
+                    align: 'center',
+                    rotation: -45,
+                    step: 3,
+                    y: 30
+                }
+            },
+            yAxis:
+            {
+                title: {
+                    text: 'Peak Demand (kW)'
+                },
+                gridLineWidth: 0,
+                plotLines: [{
+                    value: 0,
+                    width: 0,
+                    color: '#000'
+                }],
+                //gridLineDashStyle: 'shortdot',
+                minorGridLineDashStyle: 'dot',
+                minorTickWidth: 0,
+                minorTickInterval: 'auto',
+                lineColor: '#000',
+                //lineWidth: 1,
+                tickWidth: 0,
+                tickColor: '#000',
+                min: 0,
+                labels: {
+                    formatter: function () {
+                        return this.value + ' kW';
+                    }
+                }
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                headerFormat: '<span style="color:#7c7c7c;font-size:14px;">{point.key} Hour</span><table>',
+                pointFormat: '<tr><td style="color: {series.color};font-size:12px;">{series.name}: </td>' +
+                        '<td style="text-align: right;font-size:12px;color:#7c7c7c;"><b>{point.y} kW</b></td></tr>',
+                footerFormat: '</table>',
+                valueDecimals: 0
+                //valuePrefix: '$$ ',
+                //crosshairs: [true,true],
+            },
+            colors: [
+                '#94cc45',
+                '#4099d8',
+                '#c5789a',
+                '#f7d63b',
+                '#f7983b',
+                '#e02853',
+                '#69c2c5',
+                '#5e287a',
+                '#000',
+                '#ccc'
+
+            ],
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                    },
+                    fillOpacity: 0,
+                    states: {
+                        hover: {
+                            enabled: false
+                        }
+                    }
+                },
+                line: {
+                    lineWidth: 1,
+                    marker: {
+                        enabled: true
+                    },
+                    shadow: false,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            symbol: 'circle',
+                            radius: 5,
+                            lineWidth: 1
+                        }
+                    }
+                },
+                spline: {
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 3
+                        }
+                    },
+                    marker: {
+                        enabled: false,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                symbol: 'circle',
+                                radius: 5,
+                                lineWidth: 1
+                            }
+                        }
+                    },
+
+                    connectNulls: true,
+                    //pointInterval: 3600000, // one hour
+                    //pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+                }
+
+            },
+            //exporting: {
+            //    buttons: {
+            //        contextButton: {
+            //            menuItems: [{
+            //                text: 'Download PNG image',
+            //                onclick: function() {
+            //                    this.exportChart();
+            //                }
+            //            }, {
+            //                text: 'Download PDF document',
+            //                onclick: function() {
+            //                    this.exportChart();
+            //                },
+            //                separator: false
+            //            }]
+            //        }
+            //    }
+            //},
+            exporting: {
+                enabled: false,
+            },
+            series: [
+
+            ]
+        });
+    }
+
+
+    $(document).ready(function () {
+
+        //draw_monthly_consumption();
+        setTimeout(function () {
+            draw_monthly_consumption();
+        }, 100);
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Summer");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                animation: {
+                                    duration: 3000
+                                },
+                                name: 'Tue, Jan 03, 2012',
+                                visible: false,
+                                yAxis: 0,
+                                //color: '#5e287a',
+                                marker: {enabled: false},
+                                //lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Peak Demand at' + 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60  * 1000,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_1.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Winter");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Fri, Jan 20, 2012',
+                                yAxis: 0,
+                                visible: false,
+                                //color: '#c5789a',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    valueSuffix: ' kWh',
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_2.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Jul 02, 2012',
+                                visible: false,
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_3.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Thu, Jan 19, 2012',
+                                visible: false,
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_4.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Thu, Jun 28, 2012',
+                                visible: false,
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_5.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Mon, Sep 12, 2011',
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_6.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Tue, Jul 03, 2012',
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_7.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Tue, Jul 17, 2012',
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_8.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Thu, Jul 05, 2012',
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_9.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+        //$("#chart-container").delay(4000, "chartQueue");
+
+        $("#inner-chart-container").delay(20, "chartQueue");
+
+        $("#inner-chart-container").queue("chartQueue",
+                function (next) {
+                    //chart.showLoading("Loading Average Daily Demand for Shoulder");
+                    chart.addSeries(
+                            {
+                                type: 'line',
+                                //animation: {
+                                //    duration: 3000
+                                //},
+                                name: 'Mon, Aug 01, 2011',
+                                yAxis: 0,
+                                //color: '#4099d8',
+                                marker: {enabled: false},
+                                lineWidth: 2,
+                                tooltip: {
+                                    xDateFormat: 'Hour %H:%M'
+                                },
+                                //pointInterval:  15 * 60 * 1000,
+                                //pointStart: 0,
+                                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/peak_demand_days/peak_demand_day_10.json", "rb") {|io| io.read} %>
+                            }
+                    );
+                    setTimeout(function () {
+                        chart.hideLoading();
+                    }, 20);
+                    next();
+                }
+        );
+
+        $("#inner-chart-container").dequeue("chartQueue");
+    });
+
+
+    $("#chart-container-main").resize(function () {
+        setTimeout(function () {
+            draw_monthly_consumption();
+        }, 20);
+    });
+
+
+</script>

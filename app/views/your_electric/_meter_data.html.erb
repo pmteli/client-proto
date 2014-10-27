@@ -1,0 +1,422 @@
+<style>
+    .blue {
+        color: #e5412d;
+    }
+
+</style>
+<% content_for :sub_nav do %>
+    <div class="row">
+      <div class="btn-group pull-left">
+        <ul class="nav nav-pills">
+          <li id="nav-pills-1" class="active">
+            <%= link_to "#", :title => "", :remote => true do %>
+                Meter Data
+            <% end %>
+          </li>
+          <li id="nav-pills-2">
+            <%= link_to "#", :title => "", :remote => true do %>
+                Average Demand Profile
+            <% end %>
+          </li>
+          <li id="nav-pills-3">
+            <%= link_to "#", :title => "", :remote => true do %>
+                Load Duration Curve
+            <% end %>
+          </li>
+          <li id="nav-pills-4">
+            <%= link_to "#", :title => "", :remote => true do %>
+                Usage History
+            <% end %>
+          </li>
+          <li id="nav-pills-5">
+            <%= link_to "#", :title => "", :remote => true do %>
+                Meter Comparison
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+<% end %>
+
+<% content_for :meter_table  do %>
+    <!-- Table -->
+    <table class="dynamicTable table">
+
+      <!-- Table heading -->
+      <thead class="bg-gray">
+      <tr>
+        <th class="text-center">
+          <div class="checkbox checkbox-single margin-none">
+            <label class="checkbox-custom">
+              <i id="all_meters" class="fa fa-fw fa-square-o checked"></i>
+              <input onClick="toggle_all();" type="checkbox" checked>
+            </label>
+          </div>
+        </th>
+        <th>Meter ID</th>
+        <th>Account No</th>
+        <th>Meter Description</th>
+        <th>Dates Available</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <!-- // Table heading END -->
+
+      <!-- Table body -->
+      <tbody id="chart_list">
+
+      <!-- // Table row start -->
+      <% @meters.each do |m| %>
+          <tr class="gradeA">
+            <td class="text-center">
+              <div class="checkbox checkbox-single margin-none">
+                <label class="checkbox-custom">
+                  <i  id="<%= m.meter_number %>" class="fa fa-fw fa-square-o"></i>
+                  <input  onClick="toggle_chart('<%= m.meter_number %>');" type="checkbox" checked>
+                </label>
+              </div>
+            </td>
+            <td><%= m.meter_number %></td>
+            <td><%= m.account_number %></td>
+            <td><%= m.desc %></td>
+            <td>5/1/2010 - 4/30/2011</td>
+            <td vertical-align="middle" class="text-center">
+              <div class="btn-group btn-group-lg">
+                <a href="/your_electric/download_csv?meter_id=<%= m.meter_number %>" class=""  data-toggle="tooltip"
+                   data-original-title="Download as CSV" data-placement="top" style="border:0px;"><i class="fa fa-file-text-o"></i></a>
+              </div>
+            </td>
+          </tr>
+      <% end %>
+      <!-- // Table row END -->
+
+      </tbody>
+      <!-- // Table body END -->
+
+    </table>
+
+<% end %>
+
+<div class="separator bottom"></div>
+<div class="row innerLR">
+  <span class="lead text-primary">Select the meters from the list below and click on "Redraw Charts" button to refresh the charts.</span>
+</div>
+<div class="separator bottom"></div>
+<div class = "row innerLR">
+  <% yield :sub_nav %>
+</div>
+<div class="separator bottom"></div>
+<div class = "row innerLR">
+  <%= yield :meter_table %>
+</div>
+<div class="row innerLR">
+  <div class="btn-group pull-left">
+    <ul class="nav nav-pills">
+      <li id="chart-pills-1" class="active">
+        <%= link_to "#", :title => "", :remote => true do %>
+            Redraw Charts
+        <% end %>
+      </li>
+      <li id="chart-pills-2">
+        <%= link_to "/your_electric/aggregated_meter_chart?tab_id=navbar-3&building_id=#{@building.building_id}&content_id=primary_content", :title => "", :remote => true do %>
+            Aggregated Chart
+        <% end %>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+<div class="separator bottom"></div>
+<div class="row">
+  <div class="col-md-12">
+    <div id="chart-container">
+      <div class="chart-container">
+        <div id="container" style="height: 500px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="http://code.jugal.me/js/jugalsLib.js" ></script>
+
+<script>
+
+    console.log("drawing chart");
+
+    var chart;
+
+    function draw_highchart() {
+        $('#container').highcharts({
+
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+
+            series: [{
+                data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+            }]
+
+        });
+    };
+
+
+    function draw_chart() {
+        var chartingOptions = {
+            chart: {
+                renderTo: 'container'
+            },
+            rangeSelector: {
+                buttons: [{
+                    type: 'day',
+                    count: 1,
+                    text: '1d'
+                },
+                    {
+                        type: 'month',
+                        count: 1,
+                        text: '1m'
+                    }, {
+                        type: 'month',
+                        count: 3,
+                        text: '3m'
+                    }, {
+                        type: 'month',
+                        count: 6,
+                        text: '6m'
+                    }, {
+                        type: 'ytd',
+                        text: 'YTD'
+                    }, {
+                        type: 'year',
+                        count: 1,
+                        text: '1y'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+                buttonTheme: { // styles for the buttons
+                    fill: 'none',
+                    stroke: 'none',
+                    'stroke-width': 0,
+                    r: 4,
+                    style: {
+                        color: '#007ab3',
+                        fontWeight: '600'
+                    },
+                    states: {
+                        hover: {
+                        },
+                        select: {
+                            fill: '#007ab3',
+                            style: {
+                                color: '#eee'
+                            }
+                        }
+                    }
+                },
+                inputBoxBorderColor: 'gray',
+                inputBoxWidth: 120,
+                inputBoxHeight: 18,
+                inputStyle: {
+                    color: '#007ab3',
+                    fontWeight: 'bold'
+                },
+                labelStyle: {
+                    color: 'silver',
+                    fontWeight: 'bold'
+                },
+                selected: 1
+            },
+            credits: {
+                text: "",
+            },
+            tooltip: {
+                valueSuffix: ' kWh',
+                shared: true,
+                crosshairs: true,
+                //formatter: function () {
+                //    return '' +
+                //            this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + ' kWh';
+                //}
+            },
+            yAxis: {
+                labels: {
+                    align: 'left',
+                    x: 20,
+                    y: -3,
+                    formatter: function () {
+                        return this.value + ' kWh';
+                    }
+                },
+            },
+            exporting: {
+                buttons: {
+                    contextButton: {
+                        menuItems: [{
+                            text: 'Download PNG image',
+                            onclick: function() {
+                                this.exportChart();
+                            }
+                        }, {
+                            text: 'Download PDF document',
+                            onclick: function() {
+                                this.exportChart();
+                            },
+                            separator: false
+                        }]
+                    }
+                }
+            },
+            series: [
+            <% @meters.each do | meter | %>
+                {
+                    name: '<%= meter.meter_number %>',
+                    id: '<%= meter.meter_number %>',
+                    pointInterval: 900 * 1000,
+                    pointStart: Date.UTC(<%= @building.assessment_start_date %>),
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/meter_data/#{meter.meter_number}.json", "rb") {|io| io.read} %>,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        enabled: false
+                    }
+                },
+
+            <% end %>
+            ]
+        };
+        //chartingOptions = $.extend({}, jugalsLib.getBasicChartOptions(), chartingOptions);
+        chart = new Highcharts.StockChart(chartingOptions);
+    };
+
+    function draw_stockchart() {
+        var actualSeriesData = jugalsLib.createSeries().data;
+        console.log(actualSeriesData);
+        var chartingOptions = {
+            series: [{
+                name: 'Actual',
+                data: actualSeriesData,
+                stickyTracking: false,
+                dataGrouping: {
+                    enabled: false
+                }
+
+            },
+                {
+                    name: 'Average',
+                    data: actualSeriesData,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        groupPixelWidth: 40,
+                        approximation: "average",
+                        enabled: true,
+                        units: [[
+                            'week',
+                            [1]
+                        ]]
+                    }},
+                {
+                    name: 'Sum',
+                    data: actualSeriesData,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        approximation: "sum",
+                        enabled: true,
+                        units: [[
+                            'week',
+                            [1]
+                        ]]
+                    }}
+
+            ]
+
+
+
+
+        };
+        chartingOptions = $.extend({}, jugalsLib.getBasicChartOptions(), chartingOptions);
+        var chart = new Highcharts.StockChart(chartingOptions);
+    };
+
+    //draw_highchart();
+    //draw_stockchart();
+    draw_chart();
+
+
+    function fnInitCompleteCallback(that)
+    {
+        var p = that.parents('.dataTables_wrapper').first();
+        var l = p.find('.row').find('label');
+
+        l.each(function(index, el) {
+            var iw = $("<div>").addClass('col-md-8').appendTo($(el).parent());
+            $(el).parent().addClass('form-group margin-none').parent().addClass('form-horizontal');
+            $(el).find('input, select').addClass('form-control').removeAttr('size').appendTo(iw);
+            $(el).addClass('col-md-4 control-label');
+        });
+
+        var s = p.find('select');
+        s.addClass('.selectpicker').selectpicker();
+    }
+
+    if ($('.dynamicTable').size() > 0)
+    {
+        $('.dynamicTable').each(function()
+        {
+            if ($(this).is('.colVis'))
+            {
+                $(this).dataTable({
+                    "sPaginationType": "bootstrap",
+                    "sDom": "<'row separator bottom'<'col-md-3'f><'col-md-3'l><'col-md-6'C>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+                    "oLanguage": {
+                        "sLengthMenu": "_MENU_ per page"
+                    },
+                    "oColVis": {
+                        "buttonText": "Show / Hide Columns",
+                        "sAlign": "right"
+                    },
+                    "sScrollX": "100%",
+                    "sScrollXInner": "100%",
+                    "bScrollCollapse": true,
+                    "fnInitComplete": function () {
+                        console.log("calling fnInitCompleteCallback");
+                        fnInitCompleteCallback(this);
+                    }
+                });
+            }
+        });
+    };
+
+
+    $('.checkbox-custom > input[type=checkbox]').each(function () {
+        var $this = $(this);
+        if ($this.data('checkbox')) return;
+        $this.checkbox($this.data());
+    });
+
+    function toggle_chart(meter_id) {
+        console.log("toggle chart for " + meter_id);
+        $("#all_meters").removeClass("checked");
+        var series = chart.get(meter_id);
+        if (series.visible) {
+            series.hide();
+            $('#' + meter_id).removeClass("checked");
+        } else {
+            series.show();
+            $('#' + meter_id).addClass("checked")
+        }
+    };
+
+    function toggle_all() {
+        console.log("toggle all charts.");
+        for (var i=1; i < 5; i++) {
+            $('#0028931680_0' + i).addClass("checked");
+            chart.series[i].show();
+        }
+        $("#all_meters").addClass("checked");
+    };
+
+</script>
+
+

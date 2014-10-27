@@ -1,0 +1,73 @@
+<%= render :partial => "/your_electric/usage_slider", :locals => {:fuel_type => @fuel_type}  %>
+<% render :partial => "/your_electric/billing" %>
+<%= render :partial => "/your_electric/recommendations" %>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+
+        function initRecommendations() {
+            var $container = $('#recommendations');
+            var $horizontalRecs;
+
+            var _init = function () {
+                $horizontalRecs = $container.filter('.horizontal').find('.well');
+                console.log("adjusting height from index");
+                _setHeight();
+            };
+
+            var _setHeight = function () {
+                var _height = 0;
+                var _shim = 70;
+                var $temp, _tempHeight;
+
+                for (var x = $horizontalRecs.length; x--;) {
+                    $temp = $($horizontalRecs[x]);
+                    _tempHeight = $temp.outerHeight();
+
+                    console.log("tempheight = " + _tempHeight);
+
+                    if (_tempHeight > _height) {
+                        _height = _tempHeight;
+                    }
+                }
+                //$horizontalRecs.outerHeight((_height + _shim) + 'px');
+
+                //setTimeout(function () {
+                //    $horizontalRecs.outerHeight((_height + _shim) + 'px');
+                //}, 2500);
+            };
+
+            if ($container.length > 0) {
+                console.log("container lenght = " + $container.length);
+                _init();
+            }
+        };
+
+        var $carousel = $('#dashboard-carousel');
+        $carousel.bind('slid.bs.carousel', function(e) {
+            var active = $(e.target).find('.carousel-inner > .item.active');
+            var from = active.index();
+            var category = $(active).attr('id');
+            console.log('category = ' + category);
+            load_recommendations('recommendations', category, '/your_gas/recommendations');
+            console.log("triggering window resize event");
+            $(window).trigger('resize');
+            //var next = $(e.relatedTarget);
+            //var to = next.index();
+            //console.log('sliding' + from + ' => ' + to);
+        });
+
+        console.log("calling initRecommendations()");
+        initRecommendations();
+
+        $('.radio-custom > input[type=radio]').each(function () {
+            var $this = $(this);
+            if ($this.data('radio')) return;
+            $this.radio($this.data());
+        });
+
+        if ($('.selectpicker').length) {
+            $('.selectpicker').selectpicker();
+        };
+    });
+</script>

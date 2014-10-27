@@ -1,0 +1,22 @@
+
+  <li data-placement="top" data-original-title="Click to view details about your electric cost and usage" data-toggle="tooltip" class="active" id="topnav_1">
+    <a title="" href="/home/your_cost?building_id=<%= @building_id %>&id=primary_content&tab_id=topnav_1" data-remote="true">
+      <span class="tab-icon icon-bolt fa fa-circle"><i class="fa fa-bolt"></i></span><span class="name data">Electric (Jan)</span><span class="amount data">$?????</span>
+    </a>
+  </li>
+  <li data-placement="top" data-original-title="Click to view details about your gas cost and usage" data-toggle="tooltip" id="topnav_2">
+    <a title="" href="/home/your_gas?building_id=<%= @building_id %>&id=primary_content&tab_id=topnav_2" data-remote="true">
+      <span class="tab-icon icon-fire fa fa-circle"><i class="fa fa-fire"></i></span><span class="name data">Gas (Jan)</span><span class="amount data">$????</span>
+    </a>
+  </li>
+  <li data-placement="top" data-original-title="Click to view available savings" data-toggle="tooltip" id="topnav_3">
+    <a title="" href="/home/your_savings?building_id=<%= @building_id %>&id=primary_content&tab_id=topnav_3" data-remote="true">
+      <span class="tab-icon icon-money fa fa-circle"><i class="fa fa-money"></i></span><span class="name data">Available Savings</span><span class="amount data">$?????</span>
+    </a>
+  </li>
+  <!--
+  <li id="topnav_4">
+    <#%= link_to "/home/your_savings?id=primary_content&tab_id=topnav_4", :title =>"", :remote => true do %>
+        <span class="tab-icon icon-bolt fa fa-circle"><i class="fa fa-money"></i></span><span class="name data">Ways To Save</span><span class="amount data">$000,000</span>
+    <#% end %>
+  </li>

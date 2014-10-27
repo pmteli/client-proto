@@ -1,0 +1,279 @@
+<div class="col-xs-7">
+  <div id="weather_chart_1" style="height:240px;min-width:360px;"></div>
+</div>
+<div class="col-xs-5 relativeWrap">
+  <div class="carousel-caption">
+    <h4>Save up to <span style="color:green;font-weight:600;">$2,630</span> this winter</h4>
+    <p>You use <b>20%</b> less energy than your peers. Great job !</p>
+    <p>You can save even more by following energy savings tips we found for you.</p>
+    <p>Scroll to view more..<a href="#" class="" style="font-size:1.2em;font-color:#ccc;"><i class="fa
+      fa-level-down" style="color:#7d207e;font-size:1.2em;"></i></a></p>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    var chart;
+
+    function draw_bar_chart(id) {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'weather_chart_1',
+                zoomType: 'xy',
+                type: 'column',
+                /*
+                 backgroundColor: {
+                 linearGradient: [0, 0, 500, 500],
+                 stops: [
+                 [0, 'rgb(255, 255, 255)'],
+                 [1, 'rgb(240, 255, 240)']
+                 ]
+                 },
+                 */
+                //backgroundColor: '#FCFCFC',
+                borderWidth: 0,
+                //plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+                //plotShadow: true,
+                plotBorderWidth: 0
+
+            },
+            title: {
+                text: '',
+                x: -20 //center
+            },
+            xAxis: {
+                categories: ['Sep', 'Oct', 'Nov'],
+                title: {
+                    text: ''
+                },
+                labels: {
+                    align: 'center',
+                    //rotation: -45,
+                    step: 1,
+                    y: 25
+                },
+            },
+            yAxis: {
+                title: {
+                    text: 'Usage (kWh)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 0.5,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                //backgroundColor: '#333',
+                valueSuffix: ' kWh',
+                shared: false,
+                //crosshairs: [true,true],
+                formatter: function () {
+                    //return (this.point.custom || '') + ' ' + this.y + ' kWh';
+                    return this.series.name  + ':' + this.y + ' kWh';
+                },
+            },
+            legend: {
+                enabled: true,
+                verticalAlign: 'bottom',
+                layout: 'horizontal',
+                align: 'center',
+                floating: false,
+                padding: -5,
+            },
+            credits: {
+                enabled: false
+            },
+            colors: [
+                '#94cc45',
+                '#4099d8',
+                '#c5789a',
+                '#f7d63b',
+                '#f7983b',
+                '#e02853',
+                '#69c2c5',
+                '#5e287a',
+                '#000',
+                '#ccc'
+
+            ],
+            exporting: {
+                enabled: false
+            },
+            plotOptions: {
+                column: {
+                    animation: true,
+                    stacking: 'normal',
+                    borderWidth: '0',
+
+                    //dataLabels: {
+                    //    enabled: true,
+                    //    color: 'white',
+                    //    formatter: function() {
+                    //
+                    //        if (this.percentage < 10)
+                    //        {
+                    //            return ""
+                    //        }
+                    //        else
+                    //        {
+                    //            return Math.round(this.percentage,1) + "%";
+                    //        }
+                    //    },
+                    //    style: {
+                    //        fontSize: '12px'
+                    //    }
+                    //}
+                },
+                series: {
+                    grouping:true,
+                    groupPadding:0.15,
+                    borderWidth: 0,
+                    events: {
+                        legendItemClick: function () {
+                            return false;
+                        }
+                    }
+                }
+            },
+            series: [
+                {
+                    name: 'Potential Savings',
+                    //enableMouseTracking: false,
+                    //showInLegend: false,
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/3_months_savings.json", "rb") {|io| io.read} %>,
+                    stack: 'you',
+                },
+                {
+                    name: 'You',
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/3_months_your_usage.json", "rb") {|io| io.read} %>,
+                    stack: 'you',
+                },
+                {
+                    name: 'Peers',
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/3_months_peer_usage.json", "rb") {|io| io.read} %>,
+                    stack: 'peers',
+                },
+            ]
+        });
+    };
+
+    function draw_line_chart(id) {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'weather_chart_1',
+                zoomType: 'xy',
+                /*
+                 backgroundColor: {
+                 linearGradient: [0, 0, 500, 500],
+                 stops: [
+                 [0, 'rgb(255, 255, 255)'],
+                 [1, 'rgb(240, 255, 240)']
+                 ]
+                 },
+                 */
+                //backgroundColor: '#FCFCFC',
+                borderWidth: 0,
+                //plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+                //plotShadow: true,
+                plotBorderWidth: 0
+
+            },
+            title: {
+                text: '',
+                x: -20 //center
+            },
+            xAxis: {
+                categories: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+                title: {
+                    text: ''
+                },
+                labels: {
+                    align: 'center',
+                    //rotation: -45,
+                    step: 1,
+                    y: 25
+                },
+            },
+            yAxis: {
+                title: {
+                    text: 'Usage (kWh)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 0.5,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' kWh',
+                shared: true,
+                crosshairs: [true,true],
+            },
+            legend: {
+                enabled: true,
+                verticalAlign: 'bottom',
+                layout: 'horizontal',
+                align: 'center',
+                floating: false,
+                padding: -5,
+            },
+            credits: {
+                enabled: false
+            },
+            colors: [
+                '#94cc45',
+                '#4099d8',
+                '#c5789a',
+                '#f7d63b',
+                '#f7983b',
+                '#e02853',
+                '#69c2c5',
+                '#5e287a',
+                '#000',
+                '#ccc'
+
+            ],
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: 'You',
+                color: '#a129a2',
+                maxPointWidth: 20,
+                pointPadding: 0,
+                groupPadding: 0,
+                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/6_months_your_usage.json", "rb") {|io| io.read} %>
+            },
+            {
+                name: 'Potential',
+                maxPointWidth: 20,
+                pointPadding: 0,
+                groupPadding: 0,
+                showInLegend: false,
+                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/potential.json", "rb") {|io| io.read} %>
+            },
+            {
+                type: 'arearange',
+                name: 'Potenial Savings',
+                color:  '#70E270',
+                maxPointWidth: 10,
+                pointPadding: 0,
+                groupPadding: 0,
+                fillColor: '#70E270',
+                fillOpacity: 0.6,
+                connectNulls: true,
+                data:  <%= File.open("public/data/buildings/#{@building_name}x/electric/6_months_savings.json", "rb") {|io| io.read} %>
+            },
+            ]
+        });
+
+    };
+
+   // draw_line_chart("consumption_chart_1");
+   draw_bar_chart("weather_chart_1");
+
+</script>
+

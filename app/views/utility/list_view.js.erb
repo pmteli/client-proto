@@ -1,0 +1,5 @@
+$('#<%= @content_id %>').html('<%= j( render  @list_url ) %>');
+$.getScript('scripts/datatables.init.js');
+$('#view-nav').find("a.active").removeClass("active");
+$('#<%= @tab_id %>').addClass('active');
+

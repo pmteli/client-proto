@@ -1,0 +1,39 @@
+
+  <div class="carousel carousel-1 slide widget" id="dashboard-carousel">
+
+    <ul class="nav nav-pills">
+      <li id="tab-1" class="active">
+        <%= link_to "/your_electric/peak_demand_days?content_id=chart-container&tab_id=tab-1", :method => "GET", :id => "", :remote => true do %>
+            Peak Demand Days
+        <% end %>
+      </li>
+      <li id="tab-2">
+        <%= link_to "/your_electric/daily_load_profile?content_id=chart-container&tab_id=tab-2", :method => "GET", :id => "", :remote => true do %>
+            Daily Load Profile
+        <% end %>
+      </li>
+      <li id="tab-3">
+        <%= link_to "/your_electric/operating_schedule?content_id=chart-container&tab_id=tab-3", :method => "GET", :id => "", :remote => true do %>
+            Operating Schedule
+        <% end %>
+      </li>
+    </ul>
+    <div class="widget-body-noborder">
+      <div class="row innerLR">
+          <!--
+          <div class="col-md-6 col-xs-12" id="recomm-container">
+            <#%= render :partial => "/your_electric/occupancy_ratio/occupancy_ratio_recomm" %>
+          </div>
+          -->
+          <div class="col-md-12 col-xs-12" id="chart-container">
+            <!--
+            <#%= render :partial => "/home/energy_performance" %>
+            -->
+            <%= render :partial => "/your_electric/peak_demand_days/peak_demand_days_chart" %>
+
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- .carousel -->
+

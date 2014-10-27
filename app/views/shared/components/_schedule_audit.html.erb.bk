@@ -1,0 +1,95 @@
+<div id="schedule_audit" class="modal clearfix recommendation-modal form-modal schedule-audit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <h2>Schedule A Remote  Audit</h2>
+      <%= image_tag("comm-audit-pic.jpg", :width => 270, :alt => "[Remote Audit]") %>
+      <h4>Sign up for a remote building audit to identify big savings, up to 25% of your energy costs per year.</h4>
+
+      <form class="audit-form form-horizontal content-block col-md-12 clearfix" role="form">
+        <div class="user-info-01 col-md-6">
+          <div class="form-group">
+            <label for="inputFirstName" class="col-sm-4 control-label">First Name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputFirstName" value="John" placeholder="First Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="col-sm-4 control-label">Last Name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputLastName" value="Jacobs" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" id="inputEmail" value="jjcobs@federal.gov" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPhone" class="col-sm-4 control-label">Phone</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputPhone" placeholder="555-55-5555">
+            </div>
+          </div>
+        </div>
+
+        <div class="user-info-02 col-md-6">
+          <div class="form-group">
+            <label for="inputAddress01" class="col-sm-4 control-label">Address 1</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputAddress01" value="1000 Continental Dr" placeholder="Address 1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress02" class="col-sm-4 control-label">Address 2</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputAddress02" placeholder="Address 2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputCity" class="col-sm-4 control-label">City</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="inputCity" value="King of Prussia" placeholder="City">
+            </div>
+            <div class="col-sm-4">
+              <select class="form-control" id="inputState">
+                <option>State</option>
+                <option selected>PA</option>
+                <option>MA</option>
+                <option>NH</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputZip" class="col-sm-4 control-label">Zip</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="inputZip" value="19406" placeholder="Zip">
+            </div>
+          </div>
+        </div>
+
+        <div class="date-info col-md-12">
+          <div class="form-group date-picker col-md-3">
+            <label for="datepicker2" class="control-label">Preferred Date</label>
+            <div class="date">
+              <input class="form-control" type="text" value="28 June 2014" id="datepicker2" />
+            </div>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="timepicker3" class="control-label">Preferred Time of Day</label>
+            <div class="bootstrap-timepicker">
+              <input id="timepicker3" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="controls clearfix col-md-12">
+        <button type="button" class="cancel-form btn btn-primary">Cancel</button>
+        <button type="button" class="submit-form btn btn-primary">Submit</button>
+      </div>
+
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+  </div>
+</div>

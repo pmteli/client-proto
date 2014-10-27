@@ -1,0 +1,126 @@
+<% content_for :analytics do %>
+    <!-- View Controls Container This section contains all the switches and buttons to change the charts and tables -->
+    <div class="view-controls widget noBorder">
+      <!-- widget-body -->
+      <div class="widget-body noBorder clearfix">
+        <div class="pull-left">
+          <span>Select View:</span>
+          <select class="ajax-selector selectpicker" id="chart-selector" data-url="/utility/view_chart">
+            <option value="all_visits" param_1="all_visits_chart" selected="selected" autocomplete="off">All Visits</option>
+            <option value="unique_visits" param_1="unique_visits_chart" disabled="true">Unique Visits</option>
+            <option value="new_visits" param_1="new_visits_chart" disabled="true">New Visits</option>
+            <option value="repeat_visits" param_1="repeat_visits_chart" disabled="true">Repeat Visits</option>
+          </select>
+          <span>vs</span>
+          <select class="ajax-selector selectpicker" id="metric-selector" data-url="/utility/view_metric">
+            <option disabled="true">select metrics</option>
+            <option value="page_views" param_1="page_table" disabled="true">Page Views</option>
+            <option value="duration_chart" param_1="duration_table" disabled="true">Average Duration</option>
+            <option value="ecm_chart" param_1="ecm_table" selected="selected" autocomplete="off">Recommendations</option>
+            <option value="action_chart" param_1="action_table">Actions</option>
+            <option value="rebate_chart" param_1="rebate_table" disabled="true">Rebates</option>
+          </select>
+        </div>
+        <!-- Print Controls -->
+        <a class="fa fa-print btn btn-default pull-right" href="javascript:void();"></a>
+        <%= link_to "/utility/download_report?filename=users_ecm_report.pdf", :method => "GET", :class => "fa fa-download btn btn-default pull-right", :'data-toggle' => "tooltip",
+                    :'data-original-title' => "Click to download report",
+                    :'data-placement' => "bottom" do %>
+            <i></i>
+        <% end %>
+        <!--
+        <a href="/utility/download_report?filename=users_ecm_report.pdf" class="fa fa-download btn btn-default pull-right"  data-toggle="tooltip"
+           data-original-title="Download report" data-placement="top" remote="true"><i></i></a>
+        -->
+        <!-- // Print Controls -->
+
+        <!-- Chart/Table Controls  -->
+        <div id="view-nav" class="btn-group pull-left">
+          <%= link_to "/utility/chart_view?tab_id=map-button&content_id=chart-view", :method => "GET", :id => "map-button", :class => "btn btn-default active", :'data-toggle' => "tooltip",
+                      :'data-original-title' => "Click to view chart",
+                      :'data-placement' => "bottom", :remote => true do %>
+              <i class="fa fa-lg fa-bar-chart-o"></i>
+          <% end %>
+          <%= link_to "/utility/list_view?tab_id=list-button&content_id=chart-view", :method => "GET", :id => "list-button", :class => "btn btn-default", :'data-toggle' => "tooltip",
+                      :'data-original-title' => "Click to view list",
+                      :'data-placement' => "bottom", :remote => true do %>
+              <i class="fa fa-lg fa-bars"></i>
+          <% end %>
+        </div>
+        <!-- // Chart/Table Controls -->
+
+      </div>
+      <!-- // widget-body -->
+
+    </div><!-- ///////////////////// View Controls Container ///////////////////////////// -->
+<% end %>
+
+
+<h2 class="padL15 marBtm15">Utility Manager Dashboard</h2>
+
+<div class="row innerL">
+
+  <!-- Left Filter Bar -->
+  <div class="secondary-content col-md-3">
+    <%= render :partial => "filter_bar" %>
+  </div>
+  <!-- // Left Filter Bar -->
+
+
+  <!-- Right Section Content -->
+  <div class="col-md-9">
+
+    <div class="box-generic widget-tabs-gray" style="background:#fff;"><!-- This give the tabs the styling they need, remove these classes its all breaks !!! -->
+
+
+      <!-- Tabs Heading -->
+      <div class="tabsbar" id="tabsbar">
+        <ul>
+          <li class="glyphicons stats active" id="analytics-tab">
+            <%= link_to "/utility/chart_view?content_id=tab-content&tab_id=charts-tab", :"data-toggle" => "tab", :remote => true do %>
+                <i></i> Usage Analytics
+            <% end %>
+          </li>
+          <!--<li class="glyphicons notes" id="reports-tab">
+            <% link_to "/utility/reports?content_id=tab-content&tab_id=reports-tab", :"data-toggle" => "tab", :remote => true do %>
+            <i></i> Reports
+            <% end %>
+          </li>-->
+        </ul>
+      </div>
+      <!-- // Tabs Heading END -->
+
+        <div class="tab-content" id="tab-content">
+
+          <!-- Tab content -->
+          <div class="tab-pane active" id="tab1-2">
+            <%= yield :analytics %>
+            <div id="chart-view" class="innerLR dashedTop">
+              <%= render :partial => "ecm_chart", :locals => {:series_1 => @series_1} %>
+            </div>
+            <div class="separator"></div>
+            <div id="kpi-bar" class="innerLR">
+              <%= render :partial => "kpi_bar" %>
+            </div>
+            <div class="separator"></div>
+            <!--
+            <div id="widgets-view" class="innerLR">
+              <#%= render :partial => "widgets" %>
+            </div>
+            -->
+          </div>
+          <!-- // Tab content END -->
+
+          <!-- Tab content -->
+          <div class="tab-pane" id="tab2-2">
+            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+              nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+              labore wes anderson cred nesciunt sapiente ea proident.</p>
+          </div>
+          <!-- // Tab content END -->
+
+        </div>
+      </div>
+  </div>
+  <!-- // col-med-9 -->
+</div><!-- // Row -->

@@ -1,0 +1,277 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ * require jquery.mobile
+ *= require library/bootstrap/bootstrap.min.css
+ *= require library/jquery-ui/jquery-ui.min.css
+ *= require icons/font-awesome/font-awesome.min.css
+ *= require modules/forms/elements/uniform/uniform.default.css
+ *= require modules/forms/elements/bootstrap-select/bootstrap-select.css
+ *= require modules/forms/elements/bootstrap-multiselect/bootstrap-multiselect.css
+ *= require modules/forms/elements/bootstrap-switch/bootstrap-switch.css
+ *= require modules/forms/elements/bootstrap-timepicker/bootstrap-timepicker.css
+ *= require modules/forms/elements/bootstrap-datepicker/bootstrap-datepicker.css
+ *= require modules/forms/elements/select2/select2.css
+ *= require modules/forms/elements/multiselect/multi-select.css
+ *= require modules/tables/datatables/extras/TableTools/TableTools.css
+ *= require modules/tables/datatables/extras/ColVis/ColVis.css
+ *= require modules/tables/datatables/extras/ColReorder/ColReorder.css
+ *= require modules/tables/datatables/DT_bootstrap.css
+ *= require plugins/ion.rangeSlider/ion.rangeSlider.css
+ *= require plugins/ion.rangeSlider/ion.rangeSlider.skinFlat.css
+ *= require leaflet.css
+ *= require pages/dashboard.less
+*/
+
+#document-body  .navbar.main {
+    height: auto;
+}
+
+#document-body .secondary-content .widget-container {
+    background: inherit;
+}
+
+.container-960 {
+    margin: 0 auto;
+    width: 960px;
+}
+
+html.front #footer {
+    line-height: 20px !important;
+}
+
+html.front #footer .copy .appbrand {
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+}
+
+html.front #footer .copy {
+    color: #EFEFEF;
+    text-align: left;
+}
+
+html.front #footer a {
+    color: #A129A2;
+    text-decoration: none;
+}
+
+html.top-full .navbar.main .secondary .utility-nav {
+    float: right;
+    margin-top: 15px;
+}
+
+html.front.top-full .navbar.main .secondary {
+    color: #FFFFFF;
+}
+html.front.top-full .navbar.main .secondary a {
+    color: #7A96B3;
+}
+
+.secondary-content .widget-body-gray .separator {
+    background: #eee;
+    border-bottom: 0px;
+    height: 0.5px;
+}
+
+#document-body input[type=text], input[type=password], select, textarea {
+    border-color: #CCC;
+    color: #A7A7A7;
+}
+
+#document-body .leaflet-google-layer {
+    z-index: 0;
+}
+
+#document-body .dataTables_scrollBody {
+  overflow: inherit !important;
+}
+
+#location_profile .modal-content .widget-head ul li a span {
+    display: block;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+#document-body .form-title {
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+#document-body .irs-from, .irs-to, .irs-single, .irs-min, .irs-max  {
+    font-size: 12px !important;
+    padding: 4px 5px  !important;
+}
+
+
+#document-body #dashboard-carousel {
+    /* background: #ddd;   */
+}
+
+#document-body .main .primary-content .widget {
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+}
+
+.carousel.carousel-1 .horizontal-caption {
+    height: auto;
+    background: none;
+    left: auto;
+    right: auto;
+    text-shadow: none;
+    text-align: left;
+    top: 0;
+    margin-bottom: 0px;
+}
+
+#document-body .carousel.carousel-1  .horizontal-caption h2 {
+    border-bottom: 1px solid #dddddd;
+    color: #336699;
+    font-size: 22px !important;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#document-body .carousel.carousel-1  .horizontal-caption h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#document-body .carousel.carousel-1 .carousel-indicators li {
+    font-size: 15px;
+}
+
+#document-body .navbar.main > .nav-container > .topnav > li {
+    width: auto !important;
+}
+
+#document-body div.tooltip-inner {
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    background-color: #505050;
+    font-size: 14px;
+}
+
+#document-body .carousel.carousel-1 .item .chart .header {
+    margin: 0px;
+}
+
+#document-body .carousel.carousel-1 .item .text h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+#document-body .carousel.carousel-1 .item h2 {
+    font-size: 22px;
+}
+
+#document-body #recommendations .well h2, #document-body #recommendations td >  h2 {
+    border-bottom: 1px solid #dddddd;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#document-body #recommendations td >  h2 {
+    border-bottom: 1px solid #dddddd;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: #336699;
+    font-size: 20px;
+}
+
+#document-body #horz-rec .well .well-image {
+    height: 170px !important;
+}
+
+#document-body .separator {
+    padding: 10px 0;
+    display: block;
+}
+
+#document-body .navbar .bootstrap-select {
+    width: 260px;
+}
+
+#document-body .carousel.carousel-1 .carousel-indicators li.active > a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #000000;
+    font-weight: bold;
+}
+
+#kpiData {width: 100%;}
+#kpiData th, #kpiData td {padding: 0px 10px; }
+#kpiData th i {right: 10px; top: 0;}
+#kpiData th { font-size: 12px; font-weight: 600; color: #336699; text-align: left;position: relative; }
+#kpiData td {font-size: 16px; font-weight: lighter; color: #336699; text-align: center;}
+#kpi-bar {border-top: 1px dashed #ddd; padding-top: 15px;}
+.kpiSub {font-size: 11px; color: #999999; float: left; text-align: left;}
+.kpiValue {width: 100%; float: left; text-align: left;}
+
+/* copied from PGE DEMO. Rick needs to clean this up */
+.end-use-category {
+    padding:7px;
+    border-radius: 2px;
+}
+.cooling{
+    background-color: #3a74ba;
+}
+.electric-heating {
+    background-color: #d92027;
+}
+.ventilation {
+    background-color: #85c040;
+}
+.pumps{
+    background-color: #336699;
+}
+.lighting {
+    background-color: #f1cb22;
+}
+.plug-load {
+    background-color: #7c297f;
+}
+.misc-electric{
+    background-color: #f7901e;
+}
+#document-body .end-use-analysis-table tbody tr td,
+#document-body .end-use-analysis-table thead tr th,
+#document-body .manage-service-agreement-table tbody tr td,
+#document-body .manage-service-agreement-table thead tr th{
+    border:none;
+    padding: 7px;
+}
+#document-body .end-use-analysis-table tfoot tr td{
+    border-top: 2px solid #ccc;
+}
+#document-body .end-use-analysis-table td:nth-child(2){
+    text-align: left;
+}
+#document-body .end-use-analysis-table td:nth-child(3),.end-use-analysis-table th:nth-child(3),
+#document-body .end-use-analysis-table td:nth-child(4),.end-use-analysis-table th:nth-child(4),
+#document-body .end-use-analysis-table td:nth-child(5),.end-use-analysis-table th:nth-child(5),
+#document-body .end-use-analysis-table td:nth-child(6), .end-use-analysis-table th:nth-child(6)
+{
+    text-align: right;
+}
+

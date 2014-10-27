@@ -1,0 +1,6 @@
+$('#<%= @content_id %>').html('<%= j( render :partial => "reports" ) %>');
+$(".selectpicker").selectpicker();
+$("#tabsbar ul li.active").removeClass("active");
+$("#<%= @tab_id %>").addClass("active");
+$.getScript('scripts/datatables.init.js');
+init_ajax_selector();

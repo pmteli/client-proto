@@ -1,0 +1,4 @@
+$(".carousel ul.nav-pills li.active").removeClass("active");
+$('#<%= @tab_id %>').addClass('active');
+$('#<%= @content_id %>').html('<%= escape_javascript( render :partial => @chart_url ) %>');
+

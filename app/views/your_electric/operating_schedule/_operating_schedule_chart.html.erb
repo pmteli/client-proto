@@ -1,0 +1,412 @@
+<style>
+    .clock {
+        margin: 10% auto;
+        display: block;
+    }
+
+    .overlay {
+        margin: 0px 13px;
+        width: 180px;
+        top: -182px;
+        position: relative;
+        z-index: 3000;
+        left: -13px;
+    }
+    .chart_container {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .oc-hrs {
+        background: #01aeff;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;
+    }
+    .uoc-hrs {
+        background: #0280bb;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;
+    }
+    .first-trn-hrs {
+        background: #00486a;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;
+    }
+
+    .second-trn-hrs {
+        background: #98dfff;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;
+    }
+
+</style>
+<div class="separator bottom"></div>
+<div class="row">
+  <div class="pull-left">
+    <h4>Following chart shows typical daily operating schedule for the building by season.</h4>
+  </div>
+  <div class="pull-right">
+    <div style="font-size:12px; margin:auto; margin-right:5%; padding-top:10px; text-align:center; width:670px;">
+      <div style="margin: 0px 5px;"><div class="oc-hrs" style="float:left;"></div><div style="float:left; padding-right: 15px;">Occupied Period</div></div>
+      <div style="margin: 0px 5px;"><div class="uoc-hrs" style="float:left;"></div><div style="float:left; padding-right: 15px;">Unoccupied Period</div></div>
+      <div style="margin: 0px 5px;"><div class="first-trn-hrs" style="float:left;"></div><div style="float:left; padding-right: 15px;">Start Up Transition</div></div>
+      <div style="margin: 0px 5px;"><div class="second-trn-hrs" style="float:left;"></div><div style="float:left; padding-right: 15px;">Shut Down Transition</div></div>
+    </div>
+  </div>
+</div>
+<div id="inner-chart-container" class="row">
+  <div class="col-md-4">
+    <h4 class="center" style="position:relative;top:20px;">Summer</h4>
+    <div class="chart_container">
+      <div id="clock_1" style="width: 100%; height: 100%; margin: 0 auto;">
+      </div>
+      <div class="overlay">
+        <%= image_tag("dial5.png", :width => "100%") %>
+      </div>
+    </div>
+    <table class="center table" style="width:100%;">
+      <tr>
+        <td><h5>Operational Start:</h5></td>
+        <td><h5>07.45 AM</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Occupancy Ready:</h5></td>
+        <td><h5>08:45 AM</h5></td>
+      </tr>
+      <td><h5>Occupancy Ends:</h5></td>
+      <td><h5>05:45 PM</h5></td>
+      <tr>
+        <td><h5>Operational Stop:</h5></td>
+        <td><h5>10:45 AM</h5></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <h4 class="center" style="position:relative;top:20px;">Winter</h4>
+    <div class="chart_container">
+      <div id="clock_2" style="width: 100%; height: 100%; margin: 0 auto;">
+      </div>
+      <div class="overlay">
+        <%= image_tag("dial5.png", :width => "100%") %>
+      </div>
+    </div>
+    <table class="center table" style="width:100%;">
+      <tr>
+        <td><h5>Operational Start:</h5></td>
+        <td><h5>05:00 AM</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Occupancy Ready:</h5></td>
+        <td><h5>06:30 AM</h5></td>
+      </tr>
+      <td><h5>Occupancy Ends:</h5></td>
+      <td><h5>04:15 PM</h5></td>
+      <tr>
+        <td><h5>Operational Stop:</h5></td>
+        <td><h5>10:15 AM</h5></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <h4 class="center" style="position:relative;top:20px;">Shoulder</h4>
+    <div class="chart_container">
+      <div id="clock_3" style="width: 100%; height: 100%; margin: 0 auto;">
+      </div>
+      <div class="overlay">
+        <%= image_tag("dial5.png", :width => "100%") %>
+      </div>
+    </div>
+    <table class="center table" style="width:100%;">
+      <tr>
+        <td><h5>Operational Start:</h5></td>
+        <td><h5>07.15 AM</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Occupancy Ready:</h5></td>
+        <td><h5>08:15 AM</h5></td>
+      </tr>
+      <td><h5>Occupancy Ends:</h5></td>
+      <td><h5>05:15 PM</h5></td>
+      <tr>
+        <td><h5>Operational Stop:</h5></td>
+        <td><h5>10:15 AM</h5></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+    function draw_clock(divid, hour, minutes) {
+
+        // Clock look-n-feel: customize at will!
+        var width = 120,
+                height = 120,
+                strokeWidth = 3,
+                clockFillColor = "none",
+                clockBorderColor = "#B7B7B7",
+                clockHandColor = "#007ab3",
+                clockCenterColor = "#007ab3",
+                transitionEnabled = 1,
+                radius = width / 2,
+                vis, clock, hourPosition, minutePosition, clockhand, hourPositionOffset;
+
+        // Set up time
+        var now = new Date();
+        var data = [
+            {
+                'unit': 'minutes',
+                //'value': now.getMinutes()
+                'value': minutes
+
+            },
+            {
+                'unit': 'hours',
+                //'value': now.getHours()
+                'value': hour
+            }
+        ];
+
+        // Set up Scales
+        // Map 60 minutes onto a radial 360 degree range.
+        var scaleMins = d3.scale.linear()
+                .domain([0, 59 + 59 / 60])
+                .range([0, 2 * Math.PI]);
+
+        // Map 12 hours onto a radial 360 degree range.
+        var scaleHours = d3.scale.linear()
+                .domain([0, 11 + 59 / 60])
+                .range([0, 2 * Math.PI]);
+
+        // Every hour, the minute hand moves 360 degrees and the hour hand moves 30 degrees.
+        // To get the final, accurate hour hand position, the linear movement of the minute hand
+        // is mapped to a 30 degree radial angle and the resulting angular offset
+        // is added to the hour hand position (in scaleHours above).
+        var scaleBetweenHours = d3.scale.linear()
+                .domain([0, 59 + 59 / 60])
+                .range([0, Math.PI / 6]);
+
+        // Set up SVG
+        vis = d3.select(divid)
+                .append("svg:svg")
+                .attr("class", "clock")
+                .attr("width", width)
+                .attr("height", height);
+
+        clock = vis.append("svg:g")
+                .attr("transform", "translate(" + radius + "," + radius + ")");
+
+        // Clock face
+        clock.append("svg:circle")
+                .attr("class", "clockface")
+                .attr("r", radius - strokeWidth)
+                .attr("fill", clockFillColor)
+                .attr("stroke", clockBorderColor)
+                .attr("stroke-width", strokeWidth * 2);
+
+        // When animating, set 12 o’clock as the clockhand animation start position
+        minutePosition = d3.svg.arc()
+                .innerRadius(0)
+                .outerRadius((3 / 4) * radius)
+                .startAngle(0)
+                .endAngle(0);
+
+        hourPosition = d3.svg.arc()
+                .innerRadius(0)
+                .outerRadius((1 / 2) * radius)
+                .startAngle(0)
+                .endAngle(0);
+
+        // When not animating, set the clockhand positions based on time
+        minutePositionFinal = d3.svg.arc()
+                .innerRadius(0)
+                .outerRadius((2 / 3) * radius)
+                .startAngle(function (d) {
+                    return scaleMins(+d.value);
+                })
+                .endAngle(function (d) {
+                    return scaleMins(+d.value);
+                });
+
+        hourPositionFinal = d3.svg.arc()
+                .innerRadius(0)
+                .outerRadius((1 / 2) * radius)
+                .startAngle(function (d) {
+                    return (scaleHours(+d.value % 12) + scaleBetweenHours(hourPositionOffset));
+                })
+                .endAngle(function (d) {
+                    return (scaleHours(+d.value % 12) + scaleBetweenHours(hourPositionOffset));
+                });
+
+        // Add clockhands to the clockface
+        clockhand = clock.selectAll(".clockhand")
+                .data(data)
+                .enter()
+                .append("svg:path")
+                .attr("class", "clockhand")
+                .attr("stroke", clockHandColor)
+                .attr("stroke-width", strokeWidth + 4)
+                .attr("stroke-linecap", "round")
+                .attr("stroke-linejoin", "round")
+                .attr("fill", "none");
+
+        // Animate clockhands!
+        if (transitionEnabled) {
+            clockhand.attr("d", function (d) {
+                if (d.unit === "minutes") {
+                    hourPositionOffset = +d.value;
+                    return minutePosition();
+                } else if (d.unit === "hours") {
+                    return hourPosition();
+                }
+            })
+                    .transition()
+                    .delay(333)
+                    .duration(555)
+                    .ease("elastic", 1, 4)
+                    .attrTween("transform", tween);
+        } else {
+            clockhand.attr("d", function (d) {
+                if (d.unit === "minutes") {
+                    hourPositionOffset = +d.value;
+                    return minutePositionFinal(d);
+                } else if (d.unit === "hours") {
+                    return hourPositionFinal(d);
+                }
+            });
+        }
+
+        function tween(d, i, a) {
+            if (d.unit === "minutes") {
+                return d3.interpolate("rotate(0)", "rotate(" + (scaleMins(+d.value) * (180 / Math.PI)) + ")");
+            } else if (d.unit === "hours") {
+                return d3.interpolate("rotate(0)", "rotate(" + ((scaleHours(+d.value % 12) + scaleBetweenHours(hourPositionOffset)) * (180 / Math.PI)) + ")");
+            }
+        }
+
+        // Add center dial
+        return clock.append("svg:circle")
+                .attr("class", "centerdot")
+                .attr("r", strokeWidth + 2)
+                .attr("fill", "#fff")
+                .attr("stroke", clockCenterColor)
+                .attr("stroke-width", strokeWidth + 2);
+
+    }
+
+    //draw_clock("div#clock_1", 7, 15);
+    //draw_clock("div#clock_2", 8, 30);
+    //draw_clock("div#clock_3", 5, 15);
+    //draw_clock("div#clock_4", 6, 15);
+
+    function draw_pie_chart(divid, data, start_angle, name) {
+        $(divid).highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+            },
+            title: {
+                text: '',
+            },
+            tooltip: {
+                enabled: true,
+                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                percentageDecimals: 1
+            },
+            colors: [
+                '#98dfff',
+                '#00486a',
+                '#0280bb',
+                '#01aeff',
+                '#94cc45',
+                '#4099d8',
+                '#c5789a',
+                '#f7d63b',
+                '#f7983b',
+                '#e02853',
+                '#69c2c5',
+                '#5e287a',
+                '#000',
+                '#ccc'
+
+            ],
+            credits: {
+                enabled: false
+            },
+            exporting: { enabled: false },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: false,
+                    cursor: 'pointer',
+                    startAngle: start_angle,
+                    dataLabels: {
+                        enabled: false,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function () {
+                            return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %';
+                        }
+                    }
+                }
+            },
+            legend: {
+                enabled: true,
+                align: 'center',
+                verticalAlign: 'bottom',
+                floating: true,
+                x: 0,
+                y: 30,
+                labelFormatter: function() {
+                    return this.name + ' ' + this.y + '%';
+                },
+            },
+            series: [
+                {
+                    type: 'pie',
+                    name: name,
+                    data: data
+                }
+            ]
+        });
+    }
+
+
+    data = [
+        ['Unoccupied Period', 9],
+        ['Start Up Transition', 1],
+        ['Occupied Period', 9],
+        ['Shut Down Transition', 5],
+    ];
+
+    draw_pie_chart("div#clock_1", data, -17, "summer");
+    data = [
+        ['Unoccupied Period', 6],
+        ['Start Up Transition', 2.5],
+        ['Occupied Period', 8.5],
+        ['Shut Down Transition', 6],
+    ];
+    draw_pie_chart("div#clock_2", data, -25, "winter");
+    data = [
+        ['Unoccupied Period', 9],
+        ['Start Up Transition', 1],
+        ['Occupied Period', 9],
+        ['Shut Down Transition', 5],
+    ];
+    draw_pie_chart("div#clock_3", data, -32, "Shoulder");
+
+    $('#timepicker1').timepicker();
+
+</script>
+

@@ -1,0 +1,3 @@
+$('#<%= @chart_id %>').html('<%= escape_javascript( render  :partial => @chart_url, :locals => {:series_1 => @series_1} ) %>').html_safe;
+$('#view-nav').find("a.active").removeClass("active");
+$('#map-button').addClass('active');

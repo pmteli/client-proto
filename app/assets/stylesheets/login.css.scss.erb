@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require library/bootstrap/bootstrap.min
+ *= require icons/font-awesome/font-awesome.min
+ *= require icons/glyphicons/glyphicons_regular
+ *= require icons/glyphicons/glyphicons_social
+ *= require icons/glyphicons/glyphicons_filetypes
+ *= require icons/pictoicons/picto
+ *= require modules/forms/elements/uniform/uniform.default
+ *= require modules/notifications/notyfy/jquery.notyfy
+ *= require modules/notifications/notyfy/notyfy.theme.default
+ *= require pages/login
+*/
+
+.widget .widget-body {
+    display: inline-block;
+    width: 100%;
+}
+
+.widget .widget-body label {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+

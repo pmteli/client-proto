@@ -1,0 +1,6 @@
+$('#eon_navigation').html("<%= escape_javascript( render :partial => '/shared/components/eon_tabs' ) %>");
+$('#primary_content').html("<%= escape_javascript( render :partial => '/your_cost/index' ) %>");
+
+if ($('.selectpicker').length) {
+    $('.selectpicker').selectpicker();
+};

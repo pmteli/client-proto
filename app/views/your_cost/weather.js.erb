@@ -1,0 +1,16 @@
+<% if @chart == "annual" || @chart == 'recent' %>
+$('#chart_weather').removeClass("col-md-6").addClass('col-md-12');
+$('#weather_recomm').hide();
+$('#weather_full_length_recomm').show();
+$("#your-cost-carousel .item").css("height",  "370px");
+$('#<%= @chart_id %>').html('<%= escape_javascript( render  @chart_url ) %>');
+$('#weather_full_length_recomm').html('<%= escape_javascript( render  @recomm_url ) %>');
+<% else %>
+$('#chart_weather').removeClass("col-md-12").addClass('col-md-6');
+$('#weather_recomm').show();
+$('#weather_full_length_recomm').hide();
+$("#your-cost-carousel .item").css("height",  "275px");
+$('#<%= @chart_id %>').html('<%= escape_javascript( render  @chart_url ) %>');
+$('#weather_recomm').html('<%= escape_javascript( render  @recomm_url ) %>');
+<% end %>
+

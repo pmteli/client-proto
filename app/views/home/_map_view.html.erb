@@ -1,0 +1,44 @@
+<div id="buildings-map" style="height:500px;width:100%;"></div>
+
+<script type="text/javascript">
+
+    //var map = L.map('buildings-map').setView([42.356303, -71.056869], 15);
+    $(document).ready(function () {
+
+        var cloudMadeUrl = 'http://{s}.tile.cloudmade.com/e08c3b88e7324c8f93e4e0f3f012ce3c/997/256/{z}/{x}/{y}.png';
+        var attribution = 'FirstFuel Software, Inc.  &copy; 2014';
+        var bwMapUrl = 'http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png';
+
+        //var colorMap = L.tileLayer(cloudMadeUrl, {attribution: attribution});
+        var colorMap = new L.Google('ROADMAP');
+
+        var bwMap = L.tileLayer(bwMapUrl, {attribution: attribution});
+
+        var map = L.map('buildings-map', {
+            layers: [bwMap] // only add one!
+        });
+
+        map.setView([42.2538, -88.0207], 4);
+
+        var baseLayers = {
+            "Color Map": colorMap,
+            "Grey Map": bwMap
+        };
+
+        L.control.layers(baseLayers).addTo(map);
+
+        var redOfficeIcon = L.icon({iconUrl: "<%= asset_path('icons/buildings/high/generic.png') %>", iconSize: [30, 30]});
+        var yellowHotelIcon = L.icon({iconUrl:  "<%= asset_path('icons/buildings/med/hotel.png') %>", iconSize: [30, 30]});
+        var greenOfficeIcon = L.icon({iconUrl: "<%= asset_path('icons/buildings/low/office.png') %>", iconSize: [30, 30]});
+
+        <% @buildings.each do |b| %>
+            L.marker([<%= b.latitude %>, <%= b.longitude %>], {icon: redOfficeIcon}).addTo(map).bindPopup("<b><%= b.building_name %></b><br><%= b.short_address %>");
+        <% end %>
+
+        //L.marker([42.356303, -71.056869], {icon: redOfficeIcon}).addTo(map).bindPopup("<b>Office</b><br>1 Federal Street.");
+        //L.marker([42.352733, -71.055178], {icon: yellowHotelIcon}).addTo(map).bindPopup("<b>Hotel</b><br>1 Federal Street.");
+        //L.marker([42.359049, -71.057063], {icon: greenOfficeIcon}).addTo(map).bindPopup("<b>Office</b><br>1 Federal Street.");
+
+    });
+
+</script>

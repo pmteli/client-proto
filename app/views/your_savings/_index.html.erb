@@ -1,0 +1,55 @@
+<% render :partial => "shared/components/tabs" %>
+<% render :partial => "/your_savings/content_slider" %>
+<%= render :partial => "/your_savings/recommendations" %>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+
+        function initRecommendations() {
+            var $container = $('#recommendations');
+            var $horizontalRecs;
+
+            var _init = function () {
+                $horizontalRecs = $container.filter('.horizontal').find('.well');
+                console.log("adjusting height");
+                _setHeight();
+            };
+
+            var _setHeight = function () {
+                var _height = 0;
+                var _shim = 70;
+                var $temp, _tempHeight;
+
+                for (var x = $horizontalRecs.length; x--;) {
+                    $temp = $($horizontalRecs[x]);
+                    _tempHeight = $temp.outerHeight();
+
+                    console.log(_tempHeight);
+
+                    if (_tempHeight > _height) {
+                        _height = _tempHeight;
+                    }
+                }
+                $horizontalRecs.outerHeight((_height + _shim) + 'px');
+
+                //setTimeout(function () {
+                //    $horizontalRecs.outerHeight((_height + _shim) + 'px');
+                //}, 250);
+            };
+
+            if ($container.length > 0) {
+                _init();
+            }
+        };
+
+        console.log("calling initRecommendations()");
+        initRecommendations();
+
+        $('.radio-custom > input[type=radio]').each(function () {
+            var $this = $(this);
+            if ($this.data('radio')) return;
+            $this.radio($this.data());
+        });
+
+    });
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="front ie lt-ie9 lt-ie8 lt-ie7 fluid top-full menuh-top"> <![endif]-->
+<!--[if IE 7]>    <html class="front ie lt-ie9 lt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if IE 8]>    <html class="front ie lt-ie9 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if gt IE 8]> <html class="animations front ie gt-ie8 fluid top-full menuh-top sticky-top"> <![endif]-->
+<!--[if !IE]><!-->
+<html class="animations front fluid top-full menuh-top">
+<!-- <![endif]-->
+<head>
+  <title>FirstFuel | FirstEngage</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <%= csrf_meta_tags %>
+  <!--
+  **********************************************************
+  In development, use the LESS files and the less.js compiler
+  instead of the minified CSS loaded by default.
+  **********************************************************
+  -->
+
+  <!--[if lt IE 9]><%= stylesheet_link_tag "library/bootstrap/bootstrap.min", :media => "all" %><![endif]-->
+
+  <%= stylesheet_link_tag "first_engage", :media => "all" %>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <%= javascript_include_tag "first_engage" %>
+  <%= javascript_include_tag "http://maps.google.com/maps/api/js?v=3.2&sensor=false" %>
+  <%= javascript_include_tag "http://matchingnotes.com/javascripts/leaflet-google.js" %>
+
+  <script>less = { env: 'development' };</script>
+
+  <script>
+      if (/*@cc_on!@*/false && document.documentMode === 10) {
+         document.documentElement.className += ' ie ie10';
+      }
+  </script>
+
+</head>
+<body id="document-body" class="your-electric">
+
+<!-- Main Container Fluid -->
+<div id="content" class="innerLR">
+
+  <%= render :partial => "shared/navbar" %>
+
+  <!-- Content -->
+  <%= yield %>
+
+  <%= render :partial => "shared/footer" %>
+
+</div>
+<!-- Global -->
+<script>
+    var basePath = '',
+            commonPath = '../../assets/',
+            rootPath = '../../',
+            DEV = false,
+            componentsPath = '../../assets/components/';
+
+    var primaryColor = '#e5412d',
+            dangerColor = '#b55151',
+            infoColor = '#5cc7dd',
+            successColor = '#609450',
+            warningColor = '#ab7a4b',
+            inverseColor = '#45484d';
+
+    var themerPrimaryColor = primaryColor;
+</script>
+
+<%= javascript_include_tag "footer" %>
+</body>
+
+</html>

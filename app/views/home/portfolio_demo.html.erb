@@ -1,0 +1,87 @@
+<% content_for :portfolio  do %>
+
+    <div id="primary_content" class="primary-content col-md-12">
+
+      <!-- Alert -->
+      <!--
+      <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+          You have 8 remaining actions in Your Plan - Get Started Now
+        </div>
+        -->
+      <!-- // Alert END -->
+
+      <style>
+          .blackout {
+              background-color: #666;
+              color: #666;
+          }
+
+          div.ColVis_collection {
+              /* left: 992px !important; */
+              width: 225px !important;
+          }
+
+
+      </style>
+      <!-- Table -->
+      <div class="separator top"></div>
+      <div id="list-map">
+        <%= render :partial => "home/list_view" %>
+      </div>
+      <div class="separator top"></div>
+    </div> <!-- .primary-content -->
+
+    <!--
+    <div class="secondary-content col-md-3">
+      <% render :partial => "shared/components/right_column" %>
+    </div>
+    -->
+    <!-- .secondary-content -->
+<% end %>
+
+
+
+
+  <div class="container-960 clearfix">
+    <div class = "top separator"></div>
+    <div class="row innerLR">
+      <div class="pull-left">
+        <h3>Your Locations</h3>
+      </div>
+      <div id="view-nav" class="btn-group pull-right">
+        <%= link_to "list_view?tab_id=list-button&content_id=list-map", :method => "GET", :id => "list-button", :class => "btn btn-default active", :'data-toggle' => "tooltip",
+                   :'data-original-title' => "Click to view list",
+                   :'data-placement' => "bottom", :remote => true do %>
+            <i class="fa fa-lg fa-bars"></i>&nbsp;List View
+        <% end %>
+        <%= link_to "map_view?tab_id=map-button&content_id=list-map", :method => "GET", :id => "map-button", :class => "btn btn-default", :'data-toggle' => "tooltip",
+                   :'data-original-title' => "Click to view map",
+                   :'data-placement' => "bottom", :remote => true do %>
+            <i class="fa fa-lg fa-map-marker"></i>&nbsp;Map View
+        <% end %>
+      </div>
+    </div>
+    <!--
+    <div class = "row">
+      <div class="widget widget-simple widget-heading-simple">
+        <div class="widget-body">
+          <h3>Building Portfolio</h3>
+          <p class="">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+            sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+          </p>
+          <div class="separator bottom"></div>
+        </div>
+      </div>
+    </div>
+    -->
+    <div class = "bottom separator"></div>
+    <div class = "row innerLR">
+        <%= yield :portfolio %>
+    </div>
+  </div>
+

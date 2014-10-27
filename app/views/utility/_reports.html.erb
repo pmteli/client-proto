@@ -1,0 +1,144 @@
+<% content_for :analytics do %>
+    <!-- View Controls Container This section contains all the switches and buttons to change the charts and tables -->
+    <div class="view-controls widget noBorder">
+      <!-- widget-body -->
+      <div class="widget-body noBorder clearfix">
+
+        <div class="row">
+          <div class="col-md-9">
+              <span>Select Report:</span>
+              <select class="ajax-selector selectpicker col-md-6" id="report-selector" data-url="/utility/view_report">
+                <option value="recommendations_by_segments" param_1="recommendations_by_segments">Recommendations By Segments</option>
+                <option value="recommendations_by_business_type" param_1="recommendations_by_business_type">Recommendations By Business Type</option>
+                <option value="recommendations_by_primary_activity" param_1="recommendations_by_primary_activity">Recommendations By Primary Activity</option>
+                <option value="actions_by_segments" param_1="actions_by_segments">Actions By Segments</option>
+                <option value="actions_by_business_type" param_1="actions_by_business_type">Actions By Business Type</option>
+                <option value="actions_by_primary_activity" param_1="actions_by_primary_activity">Actions By Primary Activity</option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <!-- Print Controls -->
+            <a class="fa fa-print btn btn-default pull-right" href="#"></a>
+            <a class="fa fa-download btn btn-default pull-right" href="#"></a>
+            <!-- // Print Controls -->
+          </div>
+        </div>
+     </div>
+      <!-- // widget-body -->
+
+    </div><!-- ///////////////////// View Controls Container ///////////////////////////// -->
+<% end %>
+
+<% content_for :report do %>
+    <!-- Table -->
+    <div id="report-content">
+        <table class="dynamicTable tableTools table">
+
+          <!-- Table heading -->
+          <thead class="grayfade">
+          <tr>
+            <th width="" >ECM Title</th>
+            <th width="" >Segment</th>
+            <th width="" >Business Type</th>
+            <th width="" >Primary Activity</th>
+            <th width="" >Total<br/>Visitors <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Total number of visits within the date range."></i></th>
+            <th width="">Visitor<br/>Clicks <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Number of vistors who clicked on ECM"></i></th>
+            <th width="">Visitor<br/>Actions <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Number of visitors who clicked on action"></i></th>
+            <th width="">Visitor<br/>Rejects <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Number of visitors who rejected the ECM"></i></th>
+          </tr>
+          </thead>
+          <!-- // Table heading END -->
+
+          <!-- Table body -->
+          <tbody>
+
+          <!-- Table row -->
+          <tr class="gradeC">
+            <td class="left" width="" >Lighting Retrofit</td>
+            <td class="left" width="" >Segment 1</td>
+            <td class="left" width="" >Banking Finance</td>
+            <td class="left" width="" >Professional Services</td>
+            <td class="center" width="" >67</td>
+            <td class="center" width="" >38</td>
+            <td class="center" width="" >8</td>
+            <td class="center" width="" >4</td>
+          </tr>
+          <!-- // Table row END -->
+
+          <!-- Table row -->
+          <tr class="gradeC">
+            <td>Lighting Retrofit</td>
+            <td>Segment 1</td>
+            <td>Banking Finance</td>
+            <td>Accountants</td>
+            <td class="center">89</td>
+            <td class="center">28</td>
+            <td class="center">9</td>
+            <td class="center">0</td>
+          </tr>
+          <!-- // Table row END -->
+
+          <!-- Table row -->
+          <tr class="gradeC">
+            <td>Lighting Retrofit</td>
+            <td>Segment 1</td>
+            <td>Banking Finance</td>
+            <td>Insurance</td>
+            <td class="center">107</td>
+            <td class="center">68</td>
+            <td class="center">41</td>
+            <td class="center">13</td>
+          </tr>
+          <!-- Table row -->
+          <tr class="gradeC">
+            <td class="left" width="" >Reflective Window Film</td>
+            <td class="left" width="" >Segment 1</td>
+            <td class="left" width="" >Office</td>
+            <td class="left" width="" >Office</td>
+            <td class="center" width="" >67</td>
+            <td class="center" width="" >38</td>
+            <td class="center" width="" >8</td>
+            <td class="center" width="" >4</td>
+          </tr>
+          <!-- // Table row END -->
+
+          <!-- Table row -->
+          <tr class="gradeC">
+            <td>Reflective Window Film</td>
+            <td>Segment 1</td>
+            <td>Leisure</td>
+            <td>Fitness centre</td>
+            <td class="center">31</td>
+            <td class="center">9</td>
+            <td class="center">3</td>
+            <td class="center">0</td>
+          </tr>
+          <!-- // Table row END -->
+
+          <!-- Table row -->
+          <tr class="gradeC">
+            <td>Reflective Window Film</td>
+            <td>Segment 1</td>
+            <td>Lodging</td>
+            <td>Residential Care homes</td>
+            <td class="center">107</td>
+            <td class="center">68</td>
+            <td class="center">41</td>
+            <td class="center">13</td>
+          </tr>
+
+          </tbody>
+          <!-- // Table body END -->
+
+        </table>
+        <!-- // Table END -->
+    </div>
+
+<% end %>
+
+<!-- Tab content -->
+<div class="tab-pane active" id="tab2-2">
+  <%= yield :analytics %>
+  <div class="separator"></div>
+  <%= yield :report %>
+</div>

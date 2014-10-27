@@ -1,0 +1,149 @@
+<div id="usage_chart_container" style="min-width:400px;height:240px;margin-top:0px;padding-top:20px;"></div>
+
+
+
+
+<script type="text/javascript">
+
+    var chart;
+
+    function draw_line_chart(id) {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: id,
+                zoomType: 'xy',
+                /*
+                 backgroundColor: {
+                 linearGradient: [0, 0, 500, 500],
+                 stops: [
+                 [0, 'rgb(255, 255, 255)'],
+                 [1, 'rgb(240, 255, 240)']
+                 ]
+                 },
+                 */
+                backgroundColor: 'transparent',
+                borderWidth: 0,
+                //plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+                //plotShadow: true,
+                plotBorderWidth: 0
+
+            },
+            title: {
+                text: '',
+                x: -20 //center
+            },
+            xAxis: {
+                categories: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+                title: {
+                    text: ''
+                },
+                labels: {
+                    align: 'center',
+                    //rotation: -45,
+                    step: 1,
+                    y: 25
+                },
+            },
+            yAxis: {
+                title: {
+                    text: 'Usage (kWh)'
+                },
+                gridLineWidth: 0,
+                plotLines: [{
+                    value: 0,
+                    width: 0.5,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                headerFormat: '<span style="color:#7C7C7C;font-size:14px;">{point.key} Usage</span><table>',
+                pointFormat: '<tr><td style="color: {series.color};font-size:12px;">{series.name}: </td>' +
+                        '<td style="text-align: right;font-size:12px;color:#7C7C7C;"><b>{point.y} kWh</b></td></tr>',
+                footerFormat: '</table>',
+                valueDecimals: 0
+                //valuePrefix: '$$ ',
+                //crosshairs: [true,true],
+            },
+            legend: {
+                enabled: true,
+                verticalAlign: 'top',
+                layout: 'horizontal',
+                align: 'right',
+                floating: true,
+                padding: -5,
+                x: 10,
+            },
+            credits: {
+                enabled: false
+            },
+            colors: [
+                '#94cc45',
+                '#4099d8',
+                '#c5789a',
+                '#f7d63b',
+                '#f7983b',
+                '#e02853',
+                '#69c2c5',
+                '#5e287a',
+                '#000',
+                '#ccc'
+
+            ],
+            exporting: {
+                enabled: false
+            },
+            series: [
+                {
+                    name: '2012',
+                    marker: {
+                        radius: 4,
+                        lineColor: '#cc9900',
+                        lineWidth: 2,
+                        symbol: 'circle'
+                    },
+                    maxPointWidth: 20,
+                    color: '#cc9900',
+                    pointPadding: 0,
+                    groupPadding: 0,
+                    //showInLegend: false,
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/6_months_lastyear_usage.json", "rb") {|io| io.read} %>
+                },
+                {
+                name: '2013',
+                marker: {
+                    radius: 4,
+                    lineColor: '#54a0f5',
+                    lineWidth: 2,
+                    symbol: 'circle'
+                },
+                color: '#54a0f5',
+                maxPointWidth: 20,
+                pointPadding: 0,
+                groupPadding: 0,
+                data:  <%= File.open("public/data/buildings/#{@building_name}/electric/6_months_your_usage.json", "rb") {|io| io.read} %>
+            },
+//            {
+//                type: 'arearange',
+//                name: 'Potenial Savings',
+//                color:  '#70E270',
+//                maxPointWidth: 10,
+//                pointPadding: 0,
+//                groupPadding: 0,
+//                fillColor: '#70E270',
+//                fillOpacity: 0.6,
+//                connectNulls: true,
+//                data:  < File.open("public/data/buildings/#{@building_name}/electric/6_months_savings.json", "rb") {|io| io.read} >
+//            },
+            ]
+        });
+
+    };
+
+   draw_line_chart("usage_chart_container");
+   //draw_bar_chart("consumption_chart_1");
+
+</script>
+

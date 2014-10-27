@@ -1,0 +1,144 @@
+<!-- WARN: Make sure you do not have Jquery.flot loaded before running this code. It will throw elem.OwnerDocument not
+found error. See https://stackoverflow.com/questions/8333228/initializing-highstock-js-throws-a-jquery-error-in-getcomputedstyle/24791013#24791013 -->
+<div id="user_chart_container" style="height:400px;margin-top:20px;padding-top:20px;"></div>
+
+<script type="text/javascript">
+
+    function draw_chart(series_1_title) {
+        var chartingOptions = {
+            chart: {
+                renderTo: 'user_chart_container',
+                spacingBottom: 30,
+            },
+            rangeSelector: {
+                buttons: [
+                    {
+                        type: 'month',
+                        count: 1,
+                        text: '1m'
+                    }, {
+                        type: 'month',
+                        count: 3,
+                        text: '3m'
+                    }, {
+                        type: 'month',
+                        count: 6,
+                        text: '6m'
+                    }, {
+                        type: 'ytd',
+                        text: 'YTD'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+                buttonTheme: { // styles for the buttons
+                    fill: 'none',
+                    stroke: 'none',
+                    'stroke-width': 0,
+                    r: 4,
+                    style: {
+                        color: '#007ab3',
+                        fontWeight: '600'
+                    },
+                    states: {
+                        hover: {
+                        },
+                        select: {
+                            fill: '#007ab3',
+                            style: {
+                                color: '#eee'
+                            }
+                        }
+                    }
+                },
+                inputBoxBorderColor: 'gray',
+                inputBoxWidth: 120,
+                inputBoxHeight: 18,
+                inputStyle: {
+                    color: '#007ab3',
+                    fontWeight: 'bold'
+                },
+                labelStyle: {
+                    color: 'silver',
+                    fontWeight: 'bold'
+                },
+                selected: 3
+            },
+            credits: {
+                text: "",
+            },
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: true,
+                floating: true,
+                verticalAlign: 'bottom',
+                y: 25,
+                //align: 'right'
+            },
+            tooltip: {
+                //valueSuffix: ' Visitors',
+                shared: true,
+                crosshairs: true,
+                //formatter: function () {
+                //    return '' +
+                //            this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + ' kWh';
+                //}
+            },
+            yAxis: [
+                {
+                    title: {
+                        enabled: true,
+                        text: 'Duration',
+                        style: {
+                            fontWeight: 'normal'
+                        }
+                    },
+                },
+                {
+                    title: {
+                        enabled: true,
+                        text: series_1_title,
+                        style: {
+                            fontWeight: 'normal'
+                        }
+                    },
+                    opposite: false
+                },
+            ],
+            series: [
+                {
+                    name: series_1_title,
+                    pointInterval: 24 * 3600 * 1000,
+                    pointStart: Date.UTC(2013, 0, 1),
+                    data:  <%= File.open("public/data/analytics/all_users.json", "rb") {|io| io.read} %>,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        enabled: false
+                    },
+                    yAxis: 1,
+                },
+                {
+                    name: 'Duration',
+                    pointInterval: 24 * 3600 * 1000,
+                    pointStart: Date.UTC(2013, 0, 1),
+                    data:  <%= File.open("public/data/analytics/page_views.json", "rb") {|io| io.read} %>,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        enabled: false
+                    },
+                },
+            ]
+        };
+        //chartingOptions = $.extend({}, jugalsLib.getBasicChartOptions(), chartingOptions);
+        var chart = new Highcharts.StockChart(chartingOptions);
+    };
+
+
+    $( document ).ready(function() {
+        draw_chart("<%= series_1 %>");
+    });
+
+</script>
+

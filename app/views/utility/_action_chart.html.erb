@@ -1,0 +1,180 @@
+<!-- WARN: Make sure you do not have Jquery.flot loaded before running this code. It will throw elem.OwnerDocument not
+found error. See https://stackoverflow.com/questions/8333228/initializing-highstock-js-throws-a-jquery-error-in-getcomputedstyle/24791013#24791013 -->
+<div id="user_chart_container" style="height:400px;margin-top:20px;padding-top:20px;"></div>
+
+<script type="text/javascript">
+
+    function draw_chart(series_1_title) {
+        var chartingOptions = {
+            chart: {
+                renderTo: 'user_chart_container',
+                spacingBottom: 30,
+            },
+            rangeSelector: {
+                buttons: [
+                    {
+                        type: 'week',
+                        count: 1,
+                        text: '1w'
+                    },
+                    {
+                        type: 'month',
+                        count: 1,
+                        text: '1m'
+                    }, {
+                        type: 'month',
+                        count: 3,
+                        text: '3m'
+                    }, {
+                        type: 'month',
+                        count: 6,
+                        text: '6m'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+                buttonTheme: { // styles for the buttons
+                    fill: 'none',
+                    stroke: 'none',
+                    'stroke-width': 0,
+                    r: 4,
+                    style: {
+                        color: '#007ab3',
+                        fontWeight: '600'
+                    },
+                    states: {
+                        hover: {
+                        },
+                        select: {
+                            fill: '#007ab3',
+                            style: {
+                                color: '#eee'
+                            }
+                        }
+                    }
+                },
+                inputBoxBorderColor: 'gray',
+                inputBoxWidth: 120,
+                inputBoxHeight: 18,
+                inputStyle: {
+                    color: '#007ab3',
+                    fontWeight: 'bold'
+                },
+                labelStyle: {
+                    color: 'silver',
+                    fontWeight: 'bold'
+                },
+                selected: 2
+            },
+            credits: {
+                text: "",
+            },
+            colors: [
+                //'#94cc45',
+                '#4099d8',
+                //'#c5789a',
+                '#69c2c5',
+                '#5e287a',
+                //'#f7983b',
+                '#e02853',
+                '#f7d63b',
+                '#000',
+                '#ccc'
+
+            ],
+            exporting: {
+                enabled: false
+            },
+            legend: {
+                enabled: true,
+                floating: true,
+                verticalAlign: 'bottom',
+                y: 25,
+                //align: 'right'
+            },
+            tooltip: {
+                //valueSuffix: ' Visitors',
+                shared: true,
+                crosshairs: true,
+                //formatter: function () {
+                //    return '' +
+                //            this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + ' kWh';
+                //}
+            },
+            yAxis: [
+                {
+                    title: {
+                        enabled: true,
+                        text: 'Actions',
+                        style: {
+                            fontWeight: 'normal'
+                        }
+                    },
+                    min: 0,
+                    max: 1000,
+                },
+                {
+                    title: {
+                        enabled: true,
+                        text: series_1_title,
+                        style: {
+                            fontWeight: 'normal'
+                        }
+                    },
+                    opposite: false,
+                    min: 0,
+                    max: 1000,
+                },
+            ],
+            series: [
+                {
+                    name: series_1_title,
+                    id: series_1_title,
+                    pointInterval: 24 * 3600 * 1000,
+                    pointStart: Date.UTC(2012, 10, 1),
+                    data:  <%= File.open("public/data/analytics/all_users.json", "rb") {|io| io.read} %>,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        enabled: false
+                    },
+                    yAxis: 1,
+                },
+                {
+                    type: 'flags',
+                    name: 'Flags on series',
+                    showInLegend: false,
+                    data: [{
+                        x: Date.UTC(2012, 11, 02),
+                        title: 'EnergyStar Rebate<br/> Program Start',
+                        text: 'Rebate program start',
+                    }, {
+                        x: Date.UTC(2013, 00, 15),
+                        title: 'EnergyStar Rebate<br/> Program End',
+                        text: 'Rebate program end',
+                    }],
+                    onSeries: series_1_title,
+                    //shape: 'circle'
+                },
+                {
+                    name: 'Actions',
+                    pointInterval: 24 * 3600 * 1000,
+                    pointStart: Date.UTC(2012, 10, 1),
+                    data:  <%= File.open("public/data/analytics/action_views.json", "rb") {|io| io.read} %>,
+                    stickyTracking: false,
+                    dataGrouping: {
+                        enabled: false
+                    },
+                },
+            ]
+        };
+        //chartingOptions = $.extend({}, jugalsLib.getBasicChartOptions(), chartingOptions);
+        var chart = new Highcharts.StockChart(chartingOptions);
+    };
+
+
+    $( document ).ready(function() {
+        draw_chart("<%= series_1 %>");
+    });
+
+</script>
+

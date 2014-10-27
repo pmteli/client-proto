@@ -1,0 +1,73 @@
+<div class="carousel carousel-1 slide" id="dashboard-carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#dashboard-carousel" data-slide-to="0" class="active">Item 1</li>
+    <li data-target="#dashboard-carousel" data-slide-to="1">Item 2</li>
+    <li data-target="#dashboard-carousel" data-slide-to="2">Item 3</li>
+  </ol>
+  <div class="carousel-inner">
+    <!-- Item -->
+    <div class="item active">
+      <div class="row">
+        <div class="col-md-6 pull-left">
+          <ol class="list-inline">
+            <li>
+              <label class="radio-custom">
+                <input id="last_month" type="radio" onClick="load_chart('chart_content', '/first_engage/last_month_chart?building_id=<%= @building_id %>');"  name="radio">
+                <i class="fa fa-circle-o checked"></i> Last Month
+              </label>
+            </li>
+            <li>
+              <label class="radio-custom">
+                <input id="ytd" type="radio" name="radio" checked="checked" onClick="load_chart('chart_content', '/first_engage/ytd_chart?building_id=<%= @building_id %>');">
+                <i class="fa fa-circle-o checked"></i> YTD
+              </label>
+            </li>
+          </ol>
+        </div>
+        <select class="selectpicker col-md-2 pull-right">
+          <option value="last_month">Peers</option>
+          <option value="3_months">Last Year</option>
+        </select>
+      </div>
+      <div id="chart_content" class="row">
+        <div class="col-xs-12">
+          <div id="consumption_chart_1" style="height:240px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- // Item END -->
+    <!-- Item -->
+    <div class="item">
+      <div class="row">
+        <div class="col-xs-5">
+          <%= image_tag("charts/hvac-01.jpg", :alt => "[Image: Graph]") %>
+        </div>
+        <div class="col-xs-6 relativeWrap">
+          <div class="carousel-caption">
+            <h2>Lots of electricity for cooling</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu. Vestibulum ante ipsum primis in faucibus orci.</p>
+            <p><a href="#" class="btn btn-inverse">Take Action</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Item END -->
+    <!-- Item -->
+    <div class="item">
+      <div class="row">
+        <div class="col-xs-7">
+          <%= image_tag("charts/operational-01.jpg", :alt => "[Image: Graph]") %>
+        </div>
+        <div class="col-xs-5 relativeWrap">
+          <div class="carousel-caption">
+            <h2>Save $6,860 on Start-Up and Shut-Down</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique porttitor elit, faucibus convallis enim fringilla eu. Vestibulum ante ipsum primis in faucibus orci.</p>
+            <p><a href="#" class="btn btn-inverse">Take Action</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Item END -->
+  </div>
+</div> <!-- .carousel -->
+

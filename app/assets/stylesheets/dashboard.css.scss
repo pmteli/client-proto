@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require library/bootstrap/bootstrap.min.css
+ *= require library/D3Plus/d3plus.css
+ *= require library/jquery.feedbackme/jquery.feedback_me.css
+ *= require icons/font-awesome/font-awesome.min.css
+ *= require icons/glyphicons/glyphicons_regular.css
+ *= require icons/glyphicons/glyphicons_social.css
+ *= require icons/glyphicons/glyphicons_filetypes.css
+ *= require icons/pictoicons/picto.css
+ * require modules/forms/elements/uniform/uniform.default.css
+ *= require modules/forms/elements/bootstrap-select/bootstrap-select.css
+ *= require modules/forms/elements/bootstrap-multiselect/bootstrap-multiselect.css
+ *= require modules/forms/elements/bootstrap-switch/bootstrap-switch.css
+ *= require modules/forms/elements/bootstrap-timepicker/bootstrap-timepicker.css
+ *= require modules/forms/elements/bootstrap-datepicker/bootstrap-datepicker.css
+ *= require modules/forms/elements/colorpicker-farbtastic/farbtastic.css
+ *= require modules/forms/elements/wysihtml5/bootstrap-wysihtml5-0.0.2.css
+ *= require modules/forms/elements/select2/select2.css
+ *= require modules/forms/elements/multiselect//multi-select.css
+ *= require modules/forms/elements/jasny-fileupload/fileupload.css
+ *= require modules/notifications/notyfy/jquery.notyfy.css
+ *= require modules/notifications/notyfy/notyfy.theme.default.css
+ *= require modules/charts/easy-pie/jquery.easy-pie-chart.css
+ *= require leaflet.css
+ *= require pages/dashboard.less
+*/

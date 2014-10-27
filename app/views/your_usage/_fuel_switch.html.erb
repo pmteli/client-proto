@@ -1,0 +1,32 @@
+<div class="pull-right" style="margin-right:0px;" id="fuel_switch">
+  <% if fuel_type == "electric" %>
+      <div class="btn-group">
+        <%= link_to "javascript:void();", :method => "GET", :id => "electric-button", :class => "btn btn-default active",
+                    :'data-toggle' => "tooltip",
+                    :'data-original-title' => "Click to view electricity usage",
+                    :'data-placement' => "top" do %>
+            <i class="fa fa-lg fa-bolt"></i>&nbsp;Electric&nbsp;
+        <% end %>
+        <%= link_to "/your_usage/gas?type=cost&tab_id=gas-button&content_id=primary_content", :method => "GET", :id => "gas-button", :class => "btn btn-default", :'data-toggle' => "tooltip",
+                    :'data-original-title' => "Click to view gas usage",
+                    :'data-placement' => "top", :remote => true do %>
+            <i class="fa fa-lg fa-fire"></i>&nbsp;Gas&nbsp;
+        <% end %>
+      </div>
+  <% else %>
+      <div class="btn-group">
+        <%= link_to "/your_usage/electric?type=cost&tab_id=electric-button&content_id=primary_content", :method => "GET", :id => "electric-button", :class => "btn btn-default",
+                    :'data-toggle' => "tooltip",
+                    :'data-original-title' => "Click to view electricity cost",
+                    :'data-placement' => "top", :remote => true do %>
+            <i class="fa fa-lg fa-bolt"></i>&nbsp;Electric&nbsp;
+        <% end %>
+        <%= link_to "javascript:void();", :method => "GET", :id => "gas-button", :class => "btn btn-default active", :'data-toggle' => "tooltip",
+                    :'data-original-title' => "Click to view gas cost",
+                    :'data-placement' => "top" do %>
+            <i class="fa fa-lg fa-fire"></i>&nbsp;Gas&nbsp;</span>
+        <% end %>
+      </div>
+  <% end %>
+</div>
+<div class="separator"></div>

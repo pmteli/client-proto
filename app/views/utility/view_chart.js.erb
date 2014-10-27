@@ -1,0 +1,4 @@
+$('#<%= @chart_id %>').html('<%= j( render  @chart_url ) %>').html_safe;
+$('#view-nav').find("a.active").removeClass("active");
+$('#map-button').addClass('active');
+$('#metric-selector').selectpicker('val', 'select matric');

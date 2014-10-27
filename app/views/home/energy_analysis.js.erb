@@ -1,0 +1,7 @@
+$('#<%= @content_id %>').html("<%= escape_javascript( render :partial => '/your_electric/energy_analysis' ) %>");
+$('ul.topnav').find('li.active').removeClass('active');
+$('#<%= @tab_id %>').addClass('active');
+// custom select for Boostrap using dropdowns
+if ($('.selectpicker').length) {
+    $('.selectpicker').selectpicker();
+};

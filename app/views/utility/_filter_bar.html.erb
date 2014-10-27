@@ -1,0 +1,148 @@
+<div class="filters">
+  <div class="well widget-container clearfix">
+    <div class="widget widget-heading-simple widget-body-gray">
+      <div class="widget-body">
+        <!-- <h2>Select Filters</h2> -->
+        <h3>Saved Filters</h3>
+
+        <div class="row">
+          <select class="ajax-selector selectpicker col-md-12">
+            <option>Choose One</option>
+            <option>Filter 1</option>
+            <option>Filter 2</option>
+            <option>Filter 3</option>
+          </select>
+        </div>
+        <div class="separator"></div>
+        <%= form_tag "#", :remote => true do %>
+            <h3>Customer Segments:</h3>
+
+            <div class="row">
+              <select class="ajax-selector selectpicker  col-md-12" id="customer_segment" name="customer_segment">
+                <option disabled="true">Select Segment</option>
+                <option disabled="true">Small (0 - 50 kWh)</option>
+                <option selected="selected" autocomplete="off">Medium (50 - 200 kWh)</option>
+                <option disabled="true">Large ( > 200 kWh)</option>
+              </select>
+            </div>
+            <div class="separator"></div>
+            <h3>Business Type</h3>
+
+            <div class="row">
+              <select class="ajax-selector selectpicker col-md-12" id="business_type" name="business_type">
+                <option disabled="true">Select Primary Business</option>
+                <option disabled="true"> Agriculture</option>
+                <option disabled="true"> Aquarium</option>
+                <option disabled="true"> Auditorium</option>
+                <option disabled="true"> Banking Finance</option>
+                <option disabled="true"> Bowling Alley</option>
+                <option disabled="true"> Casino</option>
+                <option disabled="true"> Community Center</option>
+                <option disabled="true"> Convenience Store Gas Station</option>
+                <option disabled="true"> Convention Center</option>
+                <option disabled="true"> Courthouse</option>
+                <option selected="selected" autocomplete="off"> Education</option>
+                <option disabled="true"> Fire Station</option>
+                <option disabled="true"> Gym</option>
+              </select>
+            </div>
+            <h3>Primary Activity:</h3>
+
+            <div class="row">
+              <select class="ajax-selector selectpicker col-md-12" id="primary_activity" name="primary_activity">
+                <option disabled="true">Select Primary Activity</option>
+                <option disabled="true">Education - Adult</option>
+                <option disabled="true">Education - Other</option>
+                <option disabled="true">Education - Primary</option>
+                <option selected="selected" autocomplete="off">Education - Secondary</option>
+                <option disabled="true">Education - Training</option>
+
+              </select>
+            </div>
+            <div class="separator"></div>
+            <h3>Date Range:</h3>
+            <label>From Date: </label>
+
+            <div class="input-group date" id="start_date">
+              <input class="form-control" type="text" value="01 November 2012" id="start_date" name="start_date" disabled="true"/>
+              <span class="input-group-addon"><i class="fa fa-th"></i></span>
+            </div>
+            <label>To Date: </label>
+
+            <div class="input-group date" id="end_date">
+              <input class="form-control" type="text" value="31 January 2013" id="end_date" name="end_date" disabled="true"/>
+              <span class="input-group-addon"><i class="fa fa-th"></i></span>
+            </div>
+            <div class="separator"></div>
+            <!--  <h3>Additional Filters:</h3>
+
+          <div class="slider-container clearfix">
+              <p><label for="sqft">Building Area</label></p>
+
+              <div id="building-area" class="slider"></div>
+              <input type="text" id="sqft" readonly style="border:0; font-weight:bold;" id="building_area" name="building_area">
+            </div>
+            <!-- // Slider -->
+           <!-- <div class="slider-container clearfix">
+              <p><label for="usage">Electric Usage</label></p>
+
+              <div id="usage-slider" class="slider"></div>
+              <input type="text" id="usage" readonly style="border:0; font-weight:bold;" id="electric_usage" name="eletric_usage">
+            </div>
+            <!-- // Slider
+            <div class="separator"></div> -->
+            <div class="actions">
+              <button type="submit" class="btn btn-primary" id="submit-button">Apply</button>
+              <% link_to "/utility/filter_users?type=cost&tab_id=gas-button&content_id=primary_content", :method => "GET", :id => "gas-button", :class => "btn btn-primary", :remote => true do %>
+                  Apply
+              <% end %>
+              <%= link_to "/utility/save_filter?type=cost&tab_id=gas-button&content_id=primary_content", :method => "GET", :id => "gas-button", :class => "btn btn-default", :remote => true do %>
+                  Save
+              <% end %>
+              <button class="btn btn-default">Reset</button>
+            </div>
+        <% end %>
+      </div>
+    </div>
+    <!-- .widget -->
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#start_date").bdatepicker();
+        $("#end_date").bdatepicker();
+        $( 'option[value="myVal"]' ).prop( 'selected', 'selected' );
+    });
+
+    $(function () {
+        $("#building-area").slider({
+            range: true,
+            min: 0,
+            max: 200000,
+            step: 1000,
+            values: [ 0, 60000 ],
+            slide: function (event, ui) {
+                $("#sqft").val(ui.values[ 0 ] + " sq ft" + " - " + ui.values[ 1 ] + " sq ft");
+            }
+        });
+        $("#sqft").val($("#building-area").slider("values", 0) + " sq ft" +
+                " - " + $("#building-area").slider("values", 1) + " sq ft");
+    });
+    $(function () {
+        $("#usage-slider").slider({
+            range: true,
+            min: 0,
+            max: 1000000,
+            step: 1000,
+            values: [ 0, 500000 ],
+            slide: function (event, ui) {
+                $("#usage").val(ui.values[ 0 ] + " kWh" + " - " + ui.values[ 1 ] + " kWh");
+            }
+        });
+        $("#usage").val($("#usage-slider").slider("values", 0) + " kWh" + " - " + $("#usage-slider").slider("values", 1) + " kWh");
+        $("#usage , #sqft").css("color", "#cc9900");
+    });
+
+</script>
+

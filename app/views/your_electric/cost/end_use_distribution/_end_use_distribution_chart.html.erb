@@ -1,0 +1,144 @@
+<div class="row innerLR">
+  <div class="col-md-4 col-xs-12">
+    <div id="donutchart" style="width:300px;height:300px; margin-left:-25px;"></div>
+  </div>
+  <div class="col-md-8 col-xs-12">
+    <table class="table end-use-analysis-table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Category</th>
+        <th>Energy Intensity</th>
+        <th>Usage</th>
+        <th>Cost</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><div class="end-use-category cooling"></div></td>
+        <td>Cooling</td>
+        <td>0.8 kWh/sqft</td>
+        <td>167,440 kWh</td>
+        <td>$21,760</td>
+      </tr>
+      <tr>
+        <td><div class="end-use-category electric-heating"></div></td>
+        <td>Electric Heating</td>
+        <td>0 kWh/sqft</td>
+        <td>0 kWh</td>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <td><div class="end-use-category ventilation"></div></td>
+        <td>Ventilation</td>
+        <td>1.1 kWh/sqft</td>
+        <td>202,020 kWh</td>
+        <td>$26,260</td>
+      </tr>
+      <tr>
+        <td><div class="end-use-category pumps"></div></td>
+        <td>Pumps</td>
+        <td>0.4 kWh/sqft</td>
+        <td>63,700 kWh</td>
+        <td>$8,281</td>
+      </tr>
+      <tr>
+        <td><div class="end-use-category lighting"></div></td>
+        <td>Lighting</td>
+        <td>2.1 kWh/sqft</td>
+        <td>380,380 kWh</td>
+        <td>$49,450</td>
+      </tr>
+      <tr>
+        <td><div class="end-use-category plug-load"></div></td>
+        <td>Plug Load</td>
+        <td>0.9 kWh/sqft</td>
+        <td>169,260 kWh</td>
+        <td>$22,010</td>
+      </tr>
+      <tr>
+        <td><div class="end-use-category misc-electric"></div></td>
+        <td>Miscellaneous</td>
+        <td>0.7 kWh/sqft</td>
+        <td>132,860 kWh</td>
+        <td>$17,270</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td></td>
+        <td>Total</td>
+        <td>6.1 kWh/sqft</td>
+        <td>1,116,000 kWh</td>
+        <td>$145,080</td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("Drawing end use distribution chart");
+        $('#donutchart').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '<h2>Percent of<br/> Total Energy <br/>Cost</h2>',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: -10,
+                style: {"color": "#ccc", "fontSize": "14px","fontWeight":"bold" }
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: -30,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white',
+                            textShadow: '0px 1px 2px black'
+                        },
+                        formatter: function() { return '<strong>'+Math.round(this.percentage*100)/100 + ' %</strong>';},
+                    },
+                    startAngle: 0,
+                    endAngle: 360,
+                    center: ['50%', '50%']
+                }
+            },
+            exporting: {
+                enabled: false,
+            },
+            series: [{
+                type: 'pie',
+                name: 'Cost',
+                innerSize: '50%',
+                data:[
+                    { color: '#3a74ba', name:'Cooling', y:150060},
+                    //{ color: '#d92027', name:'Electric Heating', y:0},
+                    { color: '#85c040', name:'Ventilation', y:93330},
+                    // { color: '#336699', name:'Pumps', y:0},
+                    { color: '#f1cb22', name:'Lighting', y:528870},
+                    { color: '#7c297f', name:'Plug Load', y:170190},
+                    { color: '#f7901e', name:'Miscellaneous', y:170190},
+                ]
+            }]
+        });
+    });
+    $(".table tbody tr td").mouseover(function(){
+        $(this).parent().css('backgroundColor','#ccc');
+    });
+    $(".table tbody tr td").mouseout(function(){
+        $(this).parent().css('backgroundColor','#ffffff');
+    })
+</script>

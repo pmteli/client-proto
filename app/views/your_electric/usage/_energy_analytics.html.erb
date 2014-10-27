@@ -1,0 +1,49 @@
+<% content_for :sub_nav do %>
+    <div class="row">
+      <div class="btn-group pull-left">
+        <ul class="nav nav-pills">
+          <!--
+          <li id="nav-pills-1" class="active">
+            <#%= link_to "/your_electic/weather_impact?tab_id=nav-pills-1&content_id=chart-content", :title => "", :remote => true do %>
+                Monthly Weather
+            <#% end %>
+          </li>
+          -->
+          <li id="nav-pills-1" class="active">
+            <%= link_to "/your_electric/peak_demand_days?tab_id=nav-pills-1&content_id=chart-content", :title => "", :remote => true do %>
+                Peak Demand Days
+            <% end %>
+          </li>
+          <li id="nav-pills-2">
+            <%= link_to "/your_electric/daily_load_profile?tab_id=nav-pills-2&content_id=chart-content", :title => "", :remote => true do %>
+                Daily Load Profile
+            <% end %>
+          </li>
+          <li id="nav-pills-3">
+            <%= link_to "/your_electric/operating_schedule?tab_id=nav-pills-3&content_id=chart-content", :title => "", :remote => true do %>
+                Seasonal Operating Schedule
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+<% end %>
+
+<%= yield :sub_nav %>
+
+<div id="chart-content" class="">
+    <%= render :partial => "/your_electric/peak_demand_days/peak_demand_days_chart" %>
+</div>
+<!--
+<div class="separator"></div>
+<div class="row">
+  <div class="btn-group col-md-12 innerLR centered" style="text-align:center;">
+    <#%= link_to "/your_usage/monthly_chart?content_id=chart-container", :method => "GET", :id => "utility-button", :class => "btn-sm btn-default", :remote => true do %>
+        Monthly
+    <#% end %>
+    <#%= link_to "/your_usage/daily_chart?content_id=chart-container", :method => "GET", :id => "enduser-button", :class => "btn-sm btn-default active", :remote => true do %>
+        Daily
+    <#% end %>
+  </div>
+</div>
+-->

@@ -1,0 +1,286 @@
+<div id="weather_chart_container" style="min-width:860px;height:280px;margin-top:20px;padding-top:30px;"></div>
+
+<script type="text/javascript">
+
+    function draw_chart() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'weather_chart_container',
+                type: 'column',
+                zoomType: 'xy',
+                /*
+                 backgroundColor: {
+                 linearGradient: [0, 0, 500, 500],
+                 stops: [
+                 [0, 'rgb(255, 255, 255)'],
+                 [1, 'rgb(240, 255, 240)']
+                 ]
+                 },
+                 */
+                //backgroundColor: transparent,
+                borderWidth: 0,
+                //plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+                //plotShadow: true,
+                plotBorderWidth: 0
+            },
+            loading: {
+                labelStyle: {
+                    top: '25%',
+                    fontSize: '30px',
+                    color: '#5e287a',
+                    fontWeight: '800',
+                    backgroundColor: 'transparent',
+                    opacity: 1,
+                    zIndex: 999,
+                    textShadow: '0.1em 0.1em 0.2em #CCC'
+                },
+                style: {
+                    //position: 'absolute',
+                    backgroundColor: 'transparent',
+                    opacity: 0.8
+                }
+            },
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: [ 'Aug 12', 'Sep 12', 'Oct 12', 'Nov 12', 'Dec 12', 'Jan 13'],
+            },
+            title: {
+                text: ''
+            },
+            labels: {
+                align: 'center',
+                //rotation: -45,
+                step: 1,
+                y: 25
+            },
+            yAxis: [
+                {
+                    title: {
+                        text: 'Usage (kWh)'
+                    },
+                    min: 0,
+                    max: 150000,
+                    tickInterval: 25000,
+                    gridLineWidth: 0,
+                    plotLines: [{
+                        value: 0,
+                        width: 0.5,
+                        color: '#808080'
+                    }],
+                    //labels: {
+                    //    formatter: function () {
+                    //        return this.value + ' kWh';
+                    //    }
+                    //}
+                },
+                {
+                    title: {
+                        text: 'Temperature  (°F)'
+                    },
+                    gridLineWidth: 0,
+                    //min: 0,
+                    //max: 100,
+                    //tickInterval: 10,
+                    //labels: {
+                    //    formatter: function () {
+                    //        return this.value + '  °F';
+                    //    }
+                    //},
+                    opposite: true
+                }
+            ],
+
+            legend: {
+                //backgroundColor: '#FFFFFF',
+                reversed: true,
+                //width: 700
+            },
+            credits: {
+                text: '',
+                href: ''
+            },
+            tooltip: {
+                shared: true,
+                useHTML: true,
+                backgroundColor: 'rgba(51, 51, 51, 0.8)',
+                headerFormat: '<span style="color:#fff;font-size:18px;">{point.key} Usage</span><table>',
+                pointFormat: '<tr><td style="color: {series.color};font-size:14px;">{series.name}: </td>' +
+                        '<td style="text-align: right;font-size:14px;color:#fff;"><b>{point.y}  {series.options.unit}</b></td></tr>',
+                footerFormat: '</table>',
+                valueDecimals: 0
+                //valuePrefix: '$$ ',
+                //crosshairs: [true,true],
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    shadow: false,
+                    borderWidth: 0
+                }
+
+            },
+            colors: [
+                '#94cc45',
+                '#4099d8',
+                '#c5789a',
+                '#f7d63b',
+                '#f7983b',
+                '#e02853',
+                '#69c2c5',
+                '#5e287a',
+                '#000',
+                '#ccc'
+
+            ],
+            exporting: {
+                enabled: false,
+                buttons: {
+                    contextButton: {
+                        menuItems: [{
+                            text: 'Download PNG image',
+                            onclick: function() {
+                                this.exportChart();
+                            }
+                        }, {
+                            text: 'Download PDF document',
+                            onclick: function() {
+                                this.exportChart();
+                            },
+                            separator: false
+                        }]
+                    }
+                }
+            },
+
+            series: [
+                {
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/6_months_your_cooling_usage.json", "rb") {|io| io.read} %>,
+                    name: "Cooling",
+                    unit: 'kWh',
+                    pointWidth: 40,
+                    borderWidth: 0,
+                    valuePrefix: 'kWh',
+                    color: '#336699',
+                    //color: '#00486a',
+                    yAxis: 0,
+                    stack: 0,
+                    //tooltip: {
+                    //    valueSuffix: ' kWh',
+                    //    formatter: function () {
+                    //        return '' +
+                    //                this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + ' kWh';
+                    //    }
+                    //},
+                    //animation: {
+                    //    duration: 3000
+                    //}
+                },
+                {
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/6_months_your_heating_usage.json", "rb") {|io| io.read} %>,
+                    name: "Heating",
+                    unit: 'kWh',
+                    pointWidth: 40,
+                    borderWidth: 0,
+                    valuePrefix: 'kWh',
+                    color: '#cc9900',
+                    //color: '#00486a',
+                    yAxis: 0,
+                    stack: 0,
+                    //tooltip: {
+                    //    valueSuffix: ' kWh',
+                    //    formatter: function () {
+                    //        return '' +
+                    //                this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + ' kWh';
+                    //    }
+                    //},
+                    //animation: {
+                    //    duration: 3000
+                    //}
+                },
+                {
+                    data:  <%= File.open("public/data/buildings/#{@building_name}/electric/6_months_your_nonweather_usage.json", "rb") {|io| io.read} %>,
+                    name: "Base",
+                    unit: 'kWh',
+                    pointWidth: 40,
+                    borderWidth: 0,
+                    valuePrefix: '°F',
+                    //color: '#54a0f5',
+                    color: '#CCC',
+                    //animation: {
+                    //    duration: 3000
+                    //},
+                    //color: '#0280bb',
+                    yAxis: 0,
+                    //tooltip: {
+                    //    valueSuffix: ' kWh',
+                    //    formatter: function () {
+                    //        return '' +
+                    //                this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + ' kWh';
+                    //    }
+                    //},
+                    stack: 0
+                },
+                {
+                    data: [81, 73, 61, 47, 45, 40],
+                    name: "Average Temperature",
+                    type: 'spline',
+                    unit: '°F',
+                    min: 0,
+                    max: 100,
+                    showInLegend: true,
+                    //valuePrefix: 'kWh',
+                    //visible: false,
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000',
+                        fontSize: 14,
+                        formatter: function () {
+                            if (this.point.y != 0) {
+                                return this.point.y + ' °F';
+                            }
+                        },
+                        //borderRadius: 5,
+                        //backgroundColor: 'rgba(252, 255, 197, 0.7)',
+                        //borderWidth: 1,
+                        //borderColor: '#AAA',
+                        y: -5
+                    },
+                    yAxis: 1,
+                    color: '#000',
+                    //tooltip: {
+                    //    valueSuffix: '  (°F)',
+                    //    formatter: function () {
+                    //        return '' +
+                    //                this.series.name + ': ' + Highcharts.numberFormat(this.y, 0) + '  (°F)';
+                    //    }
+                    //},
+                    //animation: {
+                    //    duration: 5000
+                    //}
+                },
+
+            ]
+
+        });
+    }
+
+
+    var chart;
+    $(document).ready(function () {
+        console.log("calling draw_chart()");
+        draw_chart();
+    });
+
+    //$("#weather_chart_container").resize(function () {
+    //    setTimeout(function () {
+    //        draw_chart();
+    //    }, 100);
+    //});
+
+
+</script>
+
+
+

@@ -1,0 +1,311 @@
+<!-- Modal -->
+<div class="modal fade" id="location_profile">
+
+  <div class="modal-dialog modal-ex-lg">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body padding-none">
+
+        <!-- Form Wizard / Widget Tabs / Double Style -->
+        <div class="wizard_x">
+          <div class="widget widget-tabs widget-tabs-responsive margin-none border-none">
+
+            <!-- Widget heading -->
+            <div class="widget-head bg-gray">
+              <ul>
+                <li><a href="#tab1-2" data-toggle="tab"><span class="strong"><i class="fa fa-building"></i> Location Profile</span></a></li>
+                <li  class="active"><a href="#tab2-2" data-toggle="tab"><span class="strong"><i class="fa fa-list-ul"></i> Location Details</span></a></li>
+                <li><a href="#tab3-2" data-toggle="tab"><span class="strong"><i class="fa fa-cog"></i> Preferences</span></a></li>
+              </ul>
+            </div>
+            <!-- // Widget heading END -->
+
+            <div class="widget-body innerAll inner-2x">
+              <div class="tab-content">
+                <!-- Step 1 -->
+                <div class="tab-pane" id="tab1-2">
+                  <div class="row">
+                    <div class="col-md-3 form-title">
+                      <strong>Building Name</strong>
+                      <!-- <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" id="" class="col-md-6 form-control" value="Public High School" placeholder="Enter Building Name..." />
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-3 form-title">
+                      <strong>Address 1</strong>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" id="" class="col-md-6 form-control" value="1000 Continental Drive" placeholder="address 1 ..." />
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-3  form-title">
+                      <strong>Address 2</strong>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" id="" class="col-md-6 form-control" value="" placeholder="address 2 ..." />
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-3 form-title">
+                      <strong>City</strong>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" id="" class="col-md-6 form-control" value="King of Prussia" placeholder="city.." />
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-3 form-title">
+                      <strong>State</strong>
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="selectpicker hidden-print" id="inputState">
+                        <option>Select state</option>
+                        <option selected>PA</option>
+                        <option>NH</option>
+                        <option>MA</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-3 form-title">
+                      <strong>Zipcode</strong>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" id="" class="col-md-6 form-control" value="19487" placeholder="Zipcode.." />
+                    </div>
+                  </div>
+
+                </div>
+                <!-- // Step 1 END -->
+                <!-- Step 2 -->
+                <div class="tab-pane active" id="tab2-2">
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Primary Business Type</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" id="" class="form-control" value="Education" placeholder="" />
+                      <a style="position:relative;top:5px;" href="#"><span>Change Building Type</span></a>
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Primary Business Activity</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" id="" class="form-control" value="School" placeholder="" />
+                      <a style="position:relative;top:5px;" href="#"><span>Change Primary Business Activity</span></a>
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Number of Occupants</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" id="no_employees" name="no_employees" value="40"/>
+                    </div>
+                  </div>
+
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Do you know the size of your building?</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label class="radio-custom  checked">
+                            <input type="radio" checked="checked" name="building_size">
+                            <i class="fa fa-circle-o checked"></i> Yes
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="radio-custom">
+                            <input type="radio"  name="building_size">
+                            <i class="fa fa-circle-o"></i> No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-3">
+                      <select class="selectpicker  hidden-print" id="inputSize">
+                        <option>0 - 25,000 sqft</option>
+                        <option>25,000 - 50,000 sqft</option>
+                        <option>50,000 - 100,000 sqft</option>
+                        <option>> > 100,000 sqft</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Do you own or rent the building?</strong>
+                    </div>
+                    <div class="col-md-4">
+                      <select class="selectpicker  hidden-print" id="inputSize">
+                        <option selected>I own the building</option>
+                        <option>I rent the building</option>
+                        <option>I lease the building</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- // Step 2 END -->
+                <!-- Step 3 -->
+                <div class="tab-pane" id="tab3-2">
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Do you care about energy savings?</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label class="radio-custom">
+                            <input type="radio"  name="radio">
+                            <i class="fa fa-circle-o"></i> Not Much
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="radio-custom">
+                            <input type="radio" name="radio">
+                            <i class="fa fa-circle-o"></i> Somewhat
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="radio-custom checked">
+                            <input type="radio" checked="checked" name="radio">
+                            <i class="fa fa-circle-o checked"></i> A Lot
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Do you want to receive special offers?</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label class="radio-custom checked">
+                            <input type="radio" checked="checked" name="special_offer">
+                            <i class="fa fa-circle-o checked"></i> Yes
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="radio-custom">
+                            <input type="radio" name="special_offer">
+                            <i class="fa fa-circle-o"></i> No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+                  <div class="row">
+                    <div class="col-md-4 form-title">
+                      <strong>Do you want to receive email notifications?</strong>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label class="radio-custom checked">
+                            <input type="radio" checked="checked" name="email_notification">
+                            <i class="fa fa-circle-o checked"></i> Yes
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="radio-custom">
+                            <input type="radio" name="email_notification">
+                            <i class="fa fa-circle-o"></i> No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="separator"></div>
+
+                </div>
+                <!-- // Step 3 END -->
+              </div>
+
+              <!-- Wizard pagination controls -->
+              <!--
+              <ul class="pagination margin-bottom-none">
+                <li class="primary previous first"><a href="#" class="no-ajaxify">First</a></li>
+                <li class="primary previous"><a href="#" class="no-ajaxify">Previous</a></li>
+                <li class="last primary"><a href="#" class="no-ajaxify">Last</a></li>
+                <li class="next primary"><a href="#" class="no-ajaxify">Next</a></li>
+                <li class="next finish primary" style="display:none;"><a href="#" class="no-ajaxify">Finish</a></li>
+              </ul>
+              -->
+              <!-- // Wizard pagination controls END -->
+
+            </div>
+          </div>
+        </div>
+        <!-- // Form Wizard / Widget Tabs / Double Style END -->
+
+      </div>
+      <!-- // Modal body END -->
+      <div class="modal-footer center margin-none">
+        <ul class="list-inline">
+
+          <li>
+            <a href="#" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</a>
+          </li>
+          <li>
+            <a href="#" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-pencil"></i> Save</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- // Modal END -->
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $("#energy_care").ionRangeSlider({
+            values: [
+                "Not Much", "Somewhat",
+                "A Lot"
+            ],
+            type: 'double',
+            from: 'Somewhat',
+            to: 'Somewhat',
+            //hasGrid: true
+        });
+        $("#no_employees").ionRangeSlider({
+            min: 1,
+            max: 1000,
+            from: 1,
+            type: 'single',
+            step: 5,
+            postfix: "",
+            prettify: true,
+            hasGrid: true
+        });
+    });
+</script>
+
+

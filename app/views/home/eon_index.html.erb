@@ -1,0 +1,36 @@
+<% content_for :dashboard  do %>
+
+      <div id="primary_content" class="primary-content col-md-12">
+
+        <!-- Alert -->
+        <!--
+        <div class="alert alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          You have 8 remaining actions in Your Plan - Get Started Now
+        </div>
+        -->
+        <!-- // Alert END -->
+
+        <%= render :partial => "your_cost/index" %>
+
+      </div> <!-- .primary-content -->
+
+      <!--
+      <div class="secondary-content col-md-3">
+        <% render :partial => "shared/components/right_column" %>
+      </div>
+      -->
+       <!-- .secondary-content -->
+<% end %>
+
+<div id="dashboard" class="main">
+  <div class="container-960 innerLR clearfix">
+    <%= yield :dashboard %>
+  </div>
+</div>
+<% render :partial => "shared/components/on_boarding" %>
+<%= render :partial => "shared/components/location_profile" %>
+<%= render :partial => "shared/components/billing_details" %>
+<%= render :partial => "shared/components/schedule_audit" %>
+<%= render :partial => "shared/components/special_rebate" %>
+

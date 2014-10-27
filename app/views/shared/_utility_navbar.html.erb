@@ -1,0 +1,39 @@
+<!-- Top navbar (note: add class "navbar-hidden" to close the navbar by default) -->
+<div class="navbar main">
+
+  <div class="innerLR secondary clearfix">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="logo" class="col-md-6">
+          <a class="pull-left" href="index.html">
+            <%= image_tag("logos/default_logo.gif", :alt => "[Logo: FirstFuel]") %>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="btn-group mLeft15 pull-right" >
+              <%= link_to "/utility", :method => "GET", :id => "utility-button", :class => "btn btn-default active" do %>
+                  Utility Manager
+              <% end %>
+              <%= link_to "/home/portfolio", :method => "GET", :id => "enduser-button", :class => "btn btn-default" do %>
+                  End User
+              <% end %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="utility-nav pull-right">
+              <p><strong>Company:</strong> UtilityCo | <strong>Welcome:  </strong><a class="username" href="#"><%= current_user.first_name %>  <%= current_user.last_name %></a> | <%=
+                  link_to 'Sign
+            out',
+                          destroy_user_session_path, :method => :delete %>
+                <br/>
+                <span class="pull-right"><strong>Account Manager :</strong><a href="#">Steve Smith</a></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- Top navbar END -->

@@ -1,0 +1,93 @@
+<div class="wrapper signup">
+
+  <h1 class="glyphicons lock">USER SIGN UP<i></i></h1>
+
+  <!-- Box -->
+  <div class="widget widget-heading-simple">
+
+    <div class="widget-head">
+      <h3 class="heading">Create Account</h3>
+      <div class="pull-right">
+        Already a member?
+        <%= link_to "Sign in", "sign_in", :class => "btn btn-inverse btn-mini" %>
+      </div>
+
+    </div>
+
+    <div class="widget-body ">
+
+      <!-- Form -->
+
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <!-- Row -->
+          <div class="row">
+
+            <!-- Column -->
+            <div class="col-md-6 padding-none border-right">
+              <div class="innerLR">
+                <label class="strong">First Name</label>
+                <%= f.text_field :first_name, :class => "input-block-level form-control", :placeholder => "Your First Name", :autofocus => true %>
+                <label class="strong">Email Address</label>
+                <%= f.email_field :email, :class => "input-block-level form-control", :placeholder => "Your Email address", :autofocus => true %>
+                <label class="strong">Password</label>
+                <%= f.password_field :password, :class => "input-block-level form-control", :placeholder => "Your Password" %>
+                <br/>
+                <label class="strong">Select Role</label>
+                <div class="widget-body uniformjs collapse in">
+                  <label class="radio" style="font-weight:normal;line-height:25px;">
+                    <div class="radio" id=""><span><input type="radio" class="radio" id="user_role_1" name="user[role]" value="Building Engineer" style="opacity: 1;"></span></div> Building Engineer
+                  </label>
+                  <br>
+                  <label class="radio" style="font-weight:normal;line-height:25px;">
+                    <div class="radio" id=""><span><input type="radio" class="radio" id="user_role_2" name="user[role]" value="Building Manager" style="opacity: 1;"></span></div> Building Manager
+                  </label>
+                  <br>
+                  <label class="radio" style="font-weight:normal;line-height:25px;">
+                    <div class="radio" id=""><span><input type="radio" class="radio" id="user_role_3" name="user[role]" value="Portal Administrator" style="opacity: 1;"></span></div> Portal Administrator
+                  </label>
+                  <br>
+                  <label class="radio" style="font-weight:normal;line-height:25px;">
+                    <div class="radio" id=""><span><input type="radio" class="radio" id="user_role_4" name="user[role]" value="Tenant Administrator" style="opacity: 1;"></span></div> Tenant Administrator
+                  </label>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <!-- // Column END -->
+
+            <!-- Column -->
+            <div class="col-md-6 padding-none">
+              <div class="innerLR">
+                <label class="strong">Last Name</label>
+                <%= f.text_field :last_name, :class => "input-block-level form-control", :placeholder => "Your Last Name", :autofocus => true %>
+                <label class="strong">Username</label>
+                <%= f.text_field :username, :class => "input-block-level form-control", :placeholder => "Your Username" %>
+                <label class="strong">Confirm Password</label>
+                <%= f.password_field :password_confirmation, :class => "input-block-level form-control", :placeholder => "Confirm Password" %>
+                <br>
+                <br>
+                <br>
+                <br>
+                <%= f.submit "Sign up", :class => "btn btn-icon-stacked btn-block btn-success glyphicons user_add" %>
+                <p>Having troubles? <a href="#">Get Help</a></p>
+              </div>
+
+
+            </div>
+            <!-- // Column END -->
+
+          </div>
+          <!-- // Row END -->
+      <% end %>
+      <!-- // Form END -->
+
+
+    </div>
+    <!-- // Box END -->
+
+  </div>
+
+</div>
+
+

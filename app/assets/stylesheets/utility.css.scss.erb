@@ -1,0 +1,345 @@
+// Place all the styles related to the utility controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ * require jquery.mobile
+ *= require library/bootstrap/bootstrap.min.css
+ *= require library/jquery-ui/jquery-ui.min.css
+ * require library/D3Plus/d3plus
+ *= require icons/font-awesome/font-awesome.min.css
+ *= require icons/glyphicons/glyphicons_regular.css
+ *= require icons/glyphicons/glyphicons_social.css
+ *= require icons/glyphicons/glyphicons_filetypes.css
+ * require icons/pictoicons/picto.css
+ *= require modules/forms/elements/uniform/uniform.default.css
+ *= require modules/forms/elements/bootstrap-select/bootstrap-select.css
+ *= require modules/forms/elements/bootstrap-multiselect/bootstrap-multiselect.css
+ *= require modules/forms/elements/bootstrap-switch/bootstrap-switch.css
+ *= require modules/forms/elements/bootstrap-timepicker/bootstrap-timepicker.css
+ *= require modules/forms/elements/bootstrap-datepicker/bootstrap-datepicker.css
+ *= require modules/forms/elements/colorpicker-farbtastic/farbtastic.css
+ *= require modules/forms/elements/wysihtml5/bootstrap-wysihtml5-0.0.2.css
+ *= require modules/forms/elements/select2/select2.css
+ *= require modules/forms/elements/multiselect/multi-select.css
+ *= require modules/forms/elements/jasny-fileupload/fileupload.css
+ *= require modules/notifications/notyfy/jquery.notyfy.css
+ *= require modules/notifications/notyfy/notyfy.theme.default.css
+ * require modules/charts/easy-pie/jquery.easy-pie-chart.css
+ *= require modules/tables/datatables/extras/TableTools/TableTools.css
+ *= require modules/tables/datatables/extras/ColVis/ColVis.css
+ *= require modules/tables/datatables/extras/ColReorder/ColReorder.css
+ *= require modules/tables/datatables/DT_bootstrap.css
+ *= require plugins/ion.rangeSlider/ion.rangeSlider.css
+ *= require plugins/ion.rangeSlider/ion.rangeSlider.skinFlat.css
+ *= require leaflet.css
+ *= require pages/dashboard.less
+*/
+
+html {background: #f1f1f1 !important}
+
+body.portfolio {background: #f1f1f1 !important; padding-bottom: 100px;}
+
+#document-body  .navbar.main {
+    height: auto;
+}
+
+#document-body .secondary-content .widget {
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+#document-body .secondary-content .widget-container {
+    background: inherit;
+}
+
+#document-body .filters {
+    height: 100%;
+}
+.container-960 {
+    margin: 0 auto;
+    width: 960px;
+}
+
+html.front #footer {
+    background-color: #000000;
+    bottom: 0px;
+    height: 80px;
+    max-height: 90px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position: fixed;
+    width: 100%;
+}
+
+html.front #footer .copy .appbrand {
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+}
+
+html.front #footer .copy {
+    color: #EFEFEF;
+    text-align: left;
+}
+
+html.front #footer a {
+    color: #A129A2;
+    text-decoration: none;
+}
+
+html.top-full .navbar.main .secondary .utility-nav {
+    float: right;
+    margin-top: 15px;
+}
+
+html.front.top-full .navbar.main .secondary {
+    color: #FFFFFF;
+}
+html.front.top-full .navbar.main .secondary a {
+    color: #7A96B3;
+}
+
+.secondary-content .widget-body-gray .separator {
+    background: #eee;
+    border-bottom: 0px;
+    height: 0.5px;
+}
+
+#document-body input[type=text], input[type=password], select, textarea {
+    border-color: #CCC;
+    color: #A7A7A7;
+}
+
+#document-body .leaflet-google-layer {
+    z-index: 0;
+}
+
+#document-body .dataTables_scrollBody {
+    overflow: inherit !important;
+}
+
+#location_profile .modal-content .widget-head ul li a span {
+    display: block;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+#document-body .form-title {
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+#document-body .irs-from, .irs-to, .irs-single, .irs-min, .irs-max  {
+    font-size: 12px !important;
+    padding: 4px 5px  !important;
+}
+
+
+#document-body #dashboard-carousel {
+    /* background: #ddd;   */
+}
+
+.carousel.carousel-1 .horizontal-caption {
+    height: auto;
+    background: none;
+    left: auto;
+    right: auto;
+    text-shadow: none;
+    text-align: left;
+    top: 0;
+    margin-bottom: 0px;
+}
+
+#document-body .carousel.carousel-1  .horizontal-caption h2 {
+    border-bottom: 1px solid #dddddd;
+    color: #336699;
+    font-size: 22px !important;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#document-body .carousel.carousel-1  .horizontal-caption h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#document-body .carousel.carousel-1 .carousel-indicators li {
+    font-size: 15px;
+}
+
+#document-body .navbar.main > .nav-container > .topnav > li {
+    width: auto !important;
+}
+
+#document-body .tooltip {
+    overflow: visible;
+    z-index: 9999;
+}
+
+#document-body div.tooltip-inner {
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    background-color: #505050;
+    font-size: 14px;
+}
+
+#document-body .carousel.carousel-1 .item .chart .header {
+    margin: 0px;
+}
+
+#document-body .carousel.carousel-1 .item .text h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+#document-body .carousel.carousel-1 .item h2 {
+    font-size: 22px;
+}
+
+#document-body #recommendations .well h2, #document-body #recommendations td >  h2 {
+    border-bottom: 1px solid #dddddd;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#document-body #recommendations td >  h2 {
+    border-bottom: 1px solid #dddddd;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: #336699;
+    font-size: 20px;
+}
+
+#document-body #horz-rec .well .well-image {
+    height: 170px !important;
+}
+
+#document-body .separator {
+    padding: 10px 0;
+    display: block;
+}
+
+#document-body .navbar .bootstrap-select {
+    width: 260px;
+}
+
+#document-body .kpi-bar > ul.kpis {
+  bottom: -1px;
+  padding: 0;
+  position: relative;
+}
+
+#document-body .kpi-bar > ul.kpis > li {
+  height: auto;
+  margin-right: 1px;
+  width: 24.8%;
+  line-height: 57px;
+  display: block;
+  float: left;
+  padding: 4px 20px ;
+  position: relative;
+}
+
+#document-body .kpi-bar > ul.kpis > li > a {
+  transition: all 400ms ease 0s;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#document-body .kpi-bar > ul.kpis > li > a .tab-icon {
+  color: #A09F9F;
+  left: 15px;
+  position: relative;
+  text-shadow: none;
+  top: 20%;
+  font-size: 40px;
+  margin-right: 20px;
+  float: left;
+}
+
+#document-body .kpi-bar > ul.kpis > li > a .data {
+    display: block;
+    line-height: 1.3;
+}
+
+#document-body .kpi-bar > ul.kpis > li > a .amount {
+    font-size: 18px;
+}
+
+#document-body .secondary-content {
+    margin-top: 0px;
+    padding-left: 0px;
+}
+
+#utility .secondary-content .widget-body-gray {background: #f1f1f1;}
+#utility .secondary-content .filters .separator { background:#f1f1f1; margin-bottom: 10px; padding: 2px 0px; border-bottom:1px solid #ddd;}
+
+#utility .dataTables_scrollHeadInner .dynamicTable, #utility table.dynamicTable.table {
+    min-width: 600px !important;
+    width: 100% !important;
+}
+
+
+
+#utility .filters h3, #utility .filters h2 {color: #336699; font-weight: bold; text-shadow: 0 1px 0 #ffffff;}
+#utility .filters h3 {font-size: 14px;}
+#utility .filters h2 {margin-bottom: 15px; margin-top: -16px;}
+#utility .input-group {margin-bottom: 15px;}
+#utility .input-group-addon {border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #ccc;}
+#utility .filters label {color: #888888;}
+.slider-container #sqft, .slider-container #usage {background: none;}
+.ui-slider-range {background:#336699 !important; }
+
+
+#kpiData {width: 100%;}
+#kpiData th, #kpiData td {padding: 0px 10px; }
+#kpiData th i {right: 10px; top: 0;}
+#kpiData th { font-size: 12px; font-weight: 600; color: #336699; text-align: left;position: relative; }
+#kpiData td {font-size: 16px; font-weight: lighter; color: #336699; text-align: center;}
+#kpi-bar {border-top: 1px dashed #ddd; padding-top: 15px;}
+.kpiSub {font-size: 11px; color: #999999; float: left; text-align: left;}
+.kpiValue {width: 100%; float: left; text-align: center; font-size: 16px; font-weight: bold;}
+
+#utility .view-controls .bootstrap-select.btn-group {margin-bottom: 0px !important;}
+#view-nav {margin-left: 15px;}
+
+#utility .widget.widget-tabs-gray > .widget-head {
+    background: none repeat scroll 0 0 #d4d4d4;
+    margin-bottom: -1px;
+}
+#utility .widget.widget-tabs-gray > .widget-head ul li.active {
+    background: none repeat scroll 0 0 #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+#document-body .tabsbar ul li.active a {
+    background: #fff;
+}

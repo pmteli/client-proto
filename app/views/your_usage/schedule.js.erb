@@ -1,0 +1,16 @@
+<% if @chart == "annual" %>
+$('#chart_schedule').removeClass("col-md-6").addClass('col-md-12');
+$('#schedule_recomm').hide();
+$('#schedule_full_length_recomm').show();
+$("#your-gas-carousel .item").css("height",  "370px");
+$('#<%= @chart_id %>').html('<%= escape_javascript( render  @chart_url ) %>');
+$('#schedule_full_length_recomm').html('<%= escape_javascript( render  @recomm_url ) %>');
+<% else %>
+$('#chart_schedule').removeClass("col-md-12").addClass('col-md-6');
+$('#schedule_recomm').show();
+$('#schedule_full_length_recomm').hide();
+$("#your-gas-carousel .item").css("height",  "275px");
+$('#<%= @chart_id %>').html('<%= escape_javascript( render  @chart_url ) %>');
+$('#schedule_recomm').html('<%= escape_javascript( render  @recomm_url ) %>');
+<% end %>
+

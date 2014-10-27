@@ -1,0 +1,227 @@
+<div class="carousel carousel-1 slide noborder"  id="dashboard-carousel">
+    <ul class="nav nav-pills">
+      <li data-target="#dashboard-carousel" id="pill_cost" data-slide-to="0" class="active"><a href="#">Energy Cost</a></li>
+      <% if fuel_type != 'gas' %>
+        <li data-target="#dashboard-carousel" id="pill_usage" data-slide-to="1"><a href="#">Energy Usage</a></li>
+      <% end %>
+      <li data-target="#dashboard-carousel"id="pill_weather"  data-slide-to="2"><a href="#">Weather Impact</a></li>
+      <!--
+      <li data-target="#dashboard-carousel" id="pill_schedule" data-slide-to="3">Schedule Impact</li>
+      -->
+      <%= render :partial => '/your_cost/fuel_switch', :locals => {:fuel_type => @fuel_type}  %>
+    </ul>
+    <div class="separator"></div>
+  <div class="widget-body-nobprder">
+    <div id="your-gas-carousel" class="carousel-inner">
+      <!-- Item -->
+      <div class="item active" id="cost">
+        <div class="row innerR">
+
+          <div id="cost_recomm" class="text col-md-6 relativeWrap">
+            <%= render :partial => "/your_gas/cost/recent_recomm" %>
+          </div>
+          <div class="chart col-md-6" id="chart_cost">
+            <div class="header">
+              <div class="dropdown btn-group pull-right">
+                <a class="btn-xs btn-default" data-toggle="dropdown" href="#">
+                  <i class="fa fa-bars
+                  icon-excel"></i>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0);">Download data as Excel</a></li>
+                  <li><a href="javascript:void(0);">Download data as CSV</a></li>
+                  <li><a href="javascript:void(0);">Print chart as PNG</a></li>
+                  <li><a href="javascript:void(0);">Print chart as JPG</a></li>
+                </ul>
+              </div>
+              <ol class="list-inline pull-left">
+                <li>
+                  <label class="radio-custom">
+                    <input id="cost_3_months" type="radio"   onClick="load_chart('cost_chart', '/your_gas/cost?building_id=<%= @building_id %>&chart=last_month');" name="radio_1">
+                    <i class="fa fa-circle-o"></i> Last Month
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="cost_6_months" type="radio" checked="checked" onClick="load_chart('cost_chart', '/your_gas/cost?building_id=<%= @building_id %>&chart=recent');"
+                           name="radio_1">
+                    <i class="fa fa-circle-o checked"></i> 6 Months
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="cost_annual" type="radio" name="radio_1" onClick="load_chart('cost_chart', '/your_gas/cost?building_id=<%= @building_id %>&chart=annual');">
+                    <i class="fa fa-circle-o"></i> Annual
+                  </label>
+                </li>
+              </ol>
+
+            </div>
+            <div id="cost_chart">
+              <%= render :partial => "/your_gas/cost/recent_chart" %>
+            </div>
+            <a class="chart-toggle" href="#">toggle</a>
+          </div>
+        </div>
+        <div class="row" id="cost_full_length_recomm">
+
+        </div>
+      </div>
+      <!-- // Item END -->
+      <!-- Item -->
+      <div class="item"  id="usage">
+        <div class="row innerR">
+          <div id="usage_recomm" class="text col-md-6 relativeWrap">
+            <%= render :partial => "/your_gas/usage/recent_recomm" %>
+          </div>
+          <div class="chart col-md-6" id="chart_usage">
+            <div class="header">
+              <div class="dropdown btn-group pull-right">
+                <a class="btn-xs btn-default" data-toggle="dropdown" href="#">
+                  <i class="fa fa-bars
+                  icon-excel"></i>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0);">Download data as Excel</a></li>
+                  <li><a href="javascript:void(0);">Download data as CSV</a></li>
+                  <li><a href="javascript:void(0);">Print chart as PNG</a></li>
+                  <li><a href="javascript:void(0);">Print chart as JPG</a></li>
+                </ul>
+              </div>
+              <ol class="list-inline pull-left">
+                <li>
+                  <label class="radio-custom">
+                    <input id="usage_3_months" type="radio"   onClick="load_chart('usage_chart', '/your_gas/usage?building_id=<%= @building_id %>&chart=last_month');" name="radio_2">
+                    <i class="fa fa-circle-o checked"></i> Last Month
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="usage_6_months" type="radio" checked="checked" onClick="load_chart('usage_chart', '/your_gas/usage?building_id=<%= @building_id %>&chart=recent');"
+                           name="radio_2">
+                    <i class="fa fa-circle-o"></i> 6 Months
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="usage_annual" type="radio" name="radio_2" onClick="load_chart('usage_chart', '/your_gas/usage?building_id=<%= @building_id %>&chart=annual');">
+                    <i class="fa fa-circle-o"></i> Annual
+                  </label>
+                </li>
+              </ol>
+
+            </div>
+            <div id="usage_chart">
+              <%= render :partial => "/your_gas/usage/recent_chart" %>
+            </div>
+            <a class="chart-toggle" href="#">toggle</a>
+          </div>
+        </div>
+        <div class="row" id="usage_full_length_recomm">
+        </div>
+      </div>
+      <!-- // Item END -->
+      <!-- Item -->
+      <div class="item"  id="weather"  style="height:450px;">
+        <div class="row innerR">
+          <div id="weather_recomm" class="text col-md-6 relativeWrap" style="display:none;">
+          </div>
+          <div class="chart col-md-12" id="chart_weather">
+            <div class="header">
+              <div class="dropdown btn-group pull-right">
+                <a class="btn-xs btn-default" data-toggle="dropdown" href="javascript:">
+                  <i class="fa fa-bars
+                  icon-excel"></i>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0);">Download data as Excel</a></li>
+                  <li><a href="javascript:void(0);">Download data as CSV</a></li>
+                  <li><a href="javascript:void(0);">Print chart as PNG</a></li>
+                  <li><a href="javascript:void(0);">Print chart as JPG</a></li>
+                </ul>
+              </div>
+              <ol class="list-inline pull-left">
+                <li>
+                  <label class="radio-custom">
+                    <input id="weather_3_months" type="radio"   onClick="load_chart('weather_chart', '/your_gas/weather?building_id=<%= @building_id %>&chart=last_month');" name="radio_3">
+                    <i class="fa fa-circle-o checked"></i> Last Month
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="weather_6_months" type="radio" checked="checked" onClick="load_chart('weather_chart', '/your_gas/weather?building_id=<%= @building_id %>&chart=recent');"
+                           name="radio_3">
+                    <i class="fa fa-circle-o"></i> 6 Months
+                  </label>
+                </li>
+                <!--
+                <li>
+                  <label class="radio-custom">
+                    <input id="weather_annual" type="radio" name="radio_3" onClick="load_chart('weather_chart', '/your_gas/weather?building_id=<%= @building_id %>&chart=annual');">
+                    <i class="fa fa-circle-o"></i> Annual
+                  </label>
+                </li>
+                -->
+              </ol>
+
+            </div>
+            <div id="weather_chart">
+              <%= render :partial => "/your_gas/weather/recent_chart" %>
+            </div>
+            <a class="chart-toggle" href="#">toggle</a>
+          </div>
+        </div>
+        <div class="row" id="weather_full_length_recomm">
+          <%= render :partial => "/your_gas/weather/recent_recomm" %>
+        </div>
+      </div>
+      <!-- // Item END -->
+      <!-- Item -->
+      <!--
+      <div class="item"  id="schedule">
+        <div class="row innerR">
+          <div id="schedule_recomm" class="text col-md-6 relativeWrap">
+            <%= render :partial => "/your_gas/schedule/last_month_recomm" %>
+          </div>
+          <div class="chart col-md-6" id="chart_schedule">
+            <div class="header">
+              <ol class="list-inline pull-right">
+                <li>
+                  <label class="radio-custom">
+                    <input id="schedule_3_months" type="radio"  checked="checked" onClick="load_chart('schedule_chart', '/your_gas/schedule?building_id=<%= @building_id %>&chart=last_month');" name="radio_4">
+                    <i class="fa fa-circle-o checked"></i> Last Month
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="schedule_6_months" type="radio" onClick="load_chart('schedule_chart', '/your_gas/schedule?building_id=<%= @building_id %>&chart=recent');" name="radio_4">
+                    <i class="fa fa-circle-o"></i> 6 Months
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-custom">
+                    <input id="schedule_annual" type="radio" name="radio_4" onClick="load_chart('schedule_chart', '/your_gas/schedule?building_id=<%= @building_id %>&chart=annual');">
+                    <i class="fa fa-circle-o"></i> Annual
+                  </label>
+                </li>
+              </ol>
+
+            </div>
+            <div id="schedule_chart">
+              <%= render :partial => "/your_gas/schedule/last_month_chart" %>
+            </div>
+            <a class="chart-toggle" href="#">toggle</a>
+          </div>
+        </div>
+        <div class="row" id="schedule_full_length_recomm">
+        </div>
+      </div>
+      -->
+      <!-- // Item END -->
+    </div>
+  </div>
+</div> <!-- .carousel -->
+
