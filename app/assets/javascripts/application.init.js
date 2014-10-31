@@ -27,8 +27,8 @@ $( document ).ready(function() {
 
 
 function load_building(building_id) {
-    console.log('loading building' + building_id);
-    //ajaxx call to load building
+    console.log('loading buildings' + building_id);
+    //ajaxx call to load buildings
 };
 
 

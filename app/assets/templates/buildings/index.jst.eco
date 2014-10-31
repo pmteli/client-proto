@@ -1,0 +1,41 @@
+<div class="separator"></div>
+<div >
+    <div class="col-md-3 text-center"><div class="kpi_box bg-gray clearfix ">Total GSF<span class="kpiValue">218,316</span></div></div>
+    <div class="col-md-3 text-center"><div class="kpi_box bg-gray clearfix">Electric Usage (kWh)<span class="kpiValue">1,668,935</span></div></div>
+    <div class="col-md-3 text-center"><div class="kpi_box bg-gray clearfix">Peak Demand (kW)<span class="kpiValue">784</span></div></div>
+    <div class="col-md-3 text-center"><div class="kpi_box bg-gray clearfix">Efficiency (kWh/SqFt)<span class="kpiValue">36.0</span></div></div>
+</div>
+<div class="separator"></div>
+<div class="separator"></div>
+
+    <table class="dynamicTable table colVis">
+
+        <!-- Table heading -->
+        <thead class="bg-gray">
+            <tr>
+                <th width="30%">Building Name</th>
+                <th width="15%">GSF</th>
+                <th width="15%">Consumption(kWh)</th>
+                <th width="15%">Peak Demand(kW)</th>
+                <th width="15%">Energy Intensity</br>(kWh/SqFt)</th>
+        </tr>
+    </thead>
+    <!-- // Table heading END -->
+    <tbody id="buildings-list">
+        <!-- // Table row start -->
+        <% for b in @buildings.models: %>
+            <tr class="gradeA">
+                <td class="sorting_1"><%=  b.get("building_name") %></td>
+                <td class="sorting_1 number"><%=  b.get("gsf") %></td>
+                <td class="sorting_1 number"><%=  b.get('electricity_consumption') %></td>
+                <td class="sorting_1 number"><%=  b.get('peak_demand') %></td>
+                <td class="sorting_1 number"><%=  b.get('electricity_consumption')/b.get('gsf') %>&nbsp</td>
+            </tr>
+        <% end %>
+  <!-- // Table row END -->
+    </tbody>
+</table>
+
+
+
+

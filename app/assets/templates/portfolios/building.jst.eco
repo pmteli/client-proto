@@ -1,0 +1,7 @@
+<tr class="gradeA"  id="<%=  building.get("building_name") %>">
+  <td class="sorting_1"><a href="#"><%=  building.get("building_name") %> <a/></td>
+  <td class="sorting_1 number"><%=  building.get("gsf") %></td>
+  <td class="sorting_1 number"><%=  building.get('electricity_consumption') %></td>
+  <td class="sorting_1 number"><%=  building.get('peak_demand') %></td>
+  <td class="sorting_1 number"><%=  building.get('electricity_consumption')/b.get('gsf') %>&nbsp</td>
+</tr>
