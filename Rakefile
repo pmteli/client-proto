@@ -3,4 +3,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-LeanRails::Application.load_tasks
+DemoFirstengage::Application.load_tasks
+
+

@@ -81,4 +81,18 @@ gem 'nokogiri'
 
 gem 'uuid'
 
+gem 'backbone-on-rails'
+
+#handlebars template to be used with backbone
+#gem 'handlebars_assets'
+
+# EJS templates to be used with backbone
+#gem 'ejs'
+
+gem 'handlebars_assets'
+
+#use rails routes in backbone scripts
+# see http://stackoverflow.com/questions/20364247/how-to-use-rails-routes-and-helpers-in-backbone
+#gem "js-routes"
+
 

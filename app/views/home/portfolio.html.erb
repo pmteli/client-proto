@@ -27,7 +27,7 @@
       <!-- Table -->
 
       <div id="list-map">
-        <%= render :partial => "home/list_view" %>
+        <!-- this is filled in by client side backbone template -->
       </div>
 
     </div> <!-- .primary-content -->
@@ -82,5 +82,28 @@
     </div>
   </div>
 
+<script type="text/javascript">
 
-});
+    var bView;
+
+    function update_view(buildings){
+        console.log("update_view called");
+        bView = new DemoFirstengage.Views.PortfoliosIndex({collection: buildings});
+        $('#list-map').html(bView.render().el);
+        $("td.number").number(true, 0);
+        //has to run these scripts after the table is rendered by client side backbone script. Don't like it.
+        $.getScript("scripts/tables-classic.init.js");
+        $.getScript("scripts/datatables.init.js");
+    };
+
+    $( document ).ready(function() {
+            var buildings = new DemoFirstengage.Collections.Buildings();
+            buildings.on('reset', update_view, this);
+            buildings.fetch({reset:true});
+            console.log("buildings fetched");
+            //view = new DemoFirstengage.Views.BuildingsIndex(collection: @collection);
+            //$('#list-map').html(view.render().el)
+    });
+
+</script>
+

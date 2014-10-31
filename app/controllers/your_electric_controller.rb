@@ -140,7 +140,7 @@ class YourElectricController < ApplicationController
     @content_id = params[:content_id]
     @tab_id = params[:tab_id]
     puts "-------------------"
-    puts "building name  = #{@building_name}"
+    puts "buildings name  = #{@building_name}"
     puts "-------------------"
     @meters = Meter.where(:building_id => building_id)
 
@@ -151,10 +151,10 @@ class YourElectricController < ApplicationController
   def download_csv
     id = session[:building_id]
     puts "-------------------"
-    puts "building id = #{id}"
+    puts "buildings id = #{id}"
     puts "-------------------"
     @building = Building.find_by_building_id(id)
-    #@building_name = @building.building_name.parameterize.underscore
+    #@building_name = @buildings.building_name.parameterize.underscore
     @building_name = "ponderosa_high_school"
     meter_id = params['meter_id']
     send_file "public/data/buildings/#{@building_name}/electric/meter_data/#{meter_id}.csv", :type=>"application/csv"
@@ -164,13 +164,13 @@ class YourElectricController < ApplicationController
     #id = session[:building_id]
     id = "peco_demo_1"
     puts "-------------------"
-    puts "building id = #{id}"
+    puts "buildings id = #{id}"
     puts "-------------------"
     @content_id = params[:content_id]
     @tab_id = params[:tab_id]
     @building = Building.find_by_building_id(id)
     @meters = Meter.where(:building_id => id).all
-    #@building_name = @building.building_name.parameterize.underscore
+    #@building_name = @buildings.building_name.parameterize.underscore
     @building_name = "ponderosa_high_school"
 
     respond_with()
