@@ -42,5 +42,7 @@ module DemoFirstengage
       end
     end
 
+    HandlebarsAssets::Config.template_namespace = 'JST'
+
   end
 end
